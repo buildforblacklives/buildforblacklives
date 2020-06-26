@@ -1,32 +1,24 @@
-import React from "react";
-import "../styling/site-container-styling.css";
-import {Link} from "react-router-dom";
-
+import React from 'react';
+import '../styling/site-container-styling.css';
+import { Link } from 'react-router-dom';
 
 class LandingPage extends React.Component {
-    state = {
+  state = {};
 
-    }
+  render() {
+    return (
+      <div className="centered">
+        <h1 className="header-text">Build for Black Lives</h1>
 
-
-    render() {
-        return(
-            <div className="centered">
-                <h1 className="header-text">
-                    Build for Black Lives
-                </h1>
-
-                <h4 className="header-text">
-                    #TechnologyForJustice
-                </h4>
-                <Link to={`/home`}>
-                    <button type="button" className="btn btn-join-movement btn-rounded">
-                            Join the Movement
-                    </button>
-                 </Link>
-            </div>
-        )
-    }
+        <h4 className="header-text">#TechnologyForJustice</h4>
+        <Link to={`/home`}>
+          <button type="button" className="btn btn-join-movement btn-rounded">
+            Join the Movement
+          </button>
+        </Link>
+      </div>
+    );
+  }
 }
 
-export default LandingPage
+export default LandingPage;

@@ -1,28 +1,21 @@
-import React from "react";
-import "../styling/home-page-styling.css";
+import React from 'react';
 
 import blm from '../media/blm.png';
 
-
 class ContactUsPage extends React.Component {
-    state = {
+  state = {};
 
-    }
-
-
-    render() {
-        return(
-
-            <div>
-                <div class="row first-row">
-                    <div class="col-lg-3">
-                        <img src={blm} alt="BLM Logo" class="ml-5" />
-                    </div>
-                </div>
-            </div>
-
-        )
-    }
+  render() {
+    return (
+      <div>
+        <div class="row first-row">
+          <div class="col-lg-3">
+            <img src={blm} alt="BLM Logo" class="ml-5" />
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
 
-export default ContactUsPage
+export { ContactUsPage };

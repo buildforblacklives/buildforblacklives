@@ -26,30 +26,26 @@
 }
 
 .navbar-styling {
-    padding: 100px;
-    position: fixed;
-    top: 10%;
-    left: 50%;
-    /* bring your own prefixes */
-    transform: translate(-50%, -50%);
-    text-align: center;
+  padding: 100px;
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 .nav-link {
-
-    margin: 40px;
+  margin: 40px;
 }
 
 img {
-    max-width: 200px;
-    max-height: 200px;
-
+  max-width: 200px;
+  max-height: 200px;
 }
-
 
 .intro-blurb {
-    background-color:#878680;
-    min-height: 300px;
-    margin-left: 0px;
+  background-color: #878680;
+  min-height: 300px;
+  margin-left: 0px;
 }
-
