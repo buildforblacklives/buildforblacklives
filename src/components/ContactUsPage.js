@@ -1,5 +1,4 @@
-import React from "react";
-import "../styling/home-page-styling.css";
+import React from 'react';
 
 import blm from '../media/blm.png';
 
@@ -11,6 +10,6 @@ const ContactUsPage = () => (
       </div>
     </div>
   </div>
-)
+);
 
-export default ContactUsPage
+export { ContactUsPage };

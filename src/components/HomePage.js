@@ -1,16 +1,19 @@
-import React from "react";
-import "../styling/home-page-styling.css";
-
-import blm from '../media/blm.png';
+import React from 'react';
+import '../styling/HomePage.css';
+import { Container, Row } from 'react-bootstrap';
 
 const HomePage = () => (
-  <div>
-    <div class="row first-row">
-      <div class="col-lg-3">
-        <img src={blm} alt="BLM Logo" class="ml-5" />
+  <Container fluid>
+    <Row>
+      <div class="logotype">Build for Black Lives</div>
+    </Row>
+    <Row>
+      <div class="bio-blurb">
+        We provide a platform to connect black-owned bbusinesses or organizations fighting racial injustice to
+        developers and designers who would like to support the cause with their technical skills.
       </div>
-    </div>
-  </div>
-)
+    </Row>
+  </Container>
+);
 
-export default HomePage
+export { HomePage };

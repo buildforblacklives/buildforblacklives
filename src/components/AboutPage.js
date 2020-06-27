@@ -1,5 +1,4 @@
-import React from "react";
-import "../styling/home-page-styling.css";
+import React from 'react';
 
 import blm from '../media/blm.png';
 
@@ -11,6 +10,6 @@ const AboutPage = () => (
       </div>
     </div>
   </div>
-)
+);
 
-export default AboutPage
+export { AboutPage };
