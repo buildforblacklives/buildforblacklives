@@ -1,8 +1,9 @@
-import React from 'react';
+import React from "react";
+import "../styling/home-page-styling.css";
 
 import blm from '../media/blm.png';
 
-const AboutPage = () => (
+const ProjectsPage = () => (
   <div>
     <div class="row first-row">
       <div class="col-lg-3">
@@ -10,6 +11,6 @@ const AboutPage = () => (
       </div>
     </div>
   </div>
-);
+)
 
-export { AboutPage };
+export default ProjectsPage
