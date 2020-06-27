@@ -3,7 +3,7 @@ import "../styling/home-page-styling.css";
 
 import blm from '../media/blm.png';
 
-const ContactUsPage = () => (
+const RequestPage = () => (
   <div>
     <div class="row first-row">
       <div class="col-lg-3">
@@ -13,4 +13,4 @@ const ContactUsPage = () => (
   </div>
 )
 
-export default ContactUsPage
+export default RequestPage
