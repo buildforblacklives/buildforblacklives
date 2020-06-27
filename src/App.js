@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { Navbar } from './components/Navbar';
+import { MainNavbar } from './components/MainNavbar';
 import { HomePage } from './components/HomePage';
 import { AboutPage } from './components/AboutPage';
 import { ContactUsPage } from './components/ContactUsPage';
@@ -10,7 +10,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <div className="App-basics">
-        <Navbar />
+        <MainNavbar />
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route path="/about" component={AboutPage} />
