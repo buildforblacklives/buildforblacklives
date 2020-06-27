@@ -1,13 +1,13 @@
 import React from 'react';
 
-import blm from '../media/blm.png';
-
 const AboutPage = () => (
-  <div>
-    <div class="row first-row">
-      <div class="col-lg-3">
-        <img src={blm} alt="BLM Logo" class="ml-5" />
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col"></div>
+      <div class="col-8">
+        <h1>About us</h1>
       </div>
+      <div class="col"></div>
     </div>
   </div>
 );
