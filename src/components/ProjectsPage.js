@@ -1,4 +1,5 @@
 import React from "react";
+<<<<<<< HEAD
 import "../styling/projects-page-styling.css";
 
 let companies = [{id: 0, title: "Project Title 1", name: "Organization Name 1"},
@@ -81,4 +82,4 @@ class ProjectsPage extends React.Component {
          )}
 }
 
-export default ProjectsPage
+export { ProjectsPage };

@@ -1,0 +1,29 @@
+@font-face {
+  font-family: cornerstone;
+  src: url(Cornerstone.ttf);
+}
+
+.first-row {
+  margin-top: 150px;
+}
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.logotype {
+  font-family: cornerstone;
+  color: #f8ed44;
+  font-size: 2rem;
+}
+
+.bio-blurb {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #ffffff;
+  font-size: 1rem;
+}

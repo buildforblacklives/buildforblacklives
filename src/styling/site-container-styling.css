@@ -41,7 +41,7 @@ img {
 }
 
 .intro-blurb {
-  background-color:var(--main-grey);
+  background-color: var(--main-grey);
   min-height: 300px;
   margin-left: 0px;
 }
