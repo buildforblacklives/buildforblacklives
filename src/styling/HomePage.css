@@ -3,16 +3,12 @@
   src: url(Cornerstone.ttf);
 }
 
-.first-row {
-  margin-top: 150px;
-}
-
 .logotype {
   font-family: cornerstone;
   color: #f8ed44;
   font-size: 4rem;
   text-align: center;
-  margin-top: 5rem;
+  margin-top: 13rem;
 }
 
 .bio-blurb {
@@ -22,16 +18,37 @@
   text-align: center;
 }
 
+.highlighted {
+  /* background: linear-gradient(180deg, rgba(255, 255, 255, 0) 95%, #f8ed44 50%); */
+  background-image: linear-gradient(to right, yellow 75%, transparent 75%);
+  background-position: 0 1.04em;
+  background-repeat: repeat-x;
+  background-size: 8px 3px;
+}
+
+.button {
+  background-color: #f8ed44;
+  padding: 20px 32px;
+}
+
+.button-row {
+  margin-top: 10rem;
+  margin-bottom: 12rem;
+}
+
 .track-titles {
   font-family: Arial, Helvetica, sans-serif;
   color: #f8ed44;
-  font-size: 1.5rem;
+  font-size: 1.85rem;
   text-align: center;
   margin-top: 5rem;
+  margin-bottom: 1.5rem;
 }
 
-.square {
-  height: 50px;
-  width: 50px;
-  border-color: #ffffff;
+.track-body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #ffffff;
+  font-size: 1.25rem;
+  text-align: center;
+  margin-top: 1.5rem;
 }
