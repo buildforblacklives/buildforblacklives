@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 
-const ConfirmationCheckModal = ({confirmationChecks, setConfirmationChecks, canCloseModal, setShowConfirmation}) => (
+const ConfirmationCheckModal = ({
+  confirmationChecks,
+  setConfirmationChecks,
+  canCloseModal,
+  setShowConfirmation}) => (
   <div className="confirmation-checks-modal-base">
     <div className="confirmation-checks-modal">
       <h2>Before you take on this project</h2>
@@ -19,7 +23,9 @@ const ConfirmationCheckModal = ({confirmationChecks, setConfirmationChecks, canC
             setConfirmationChecks([!confirmationChecks[0], confirmationChecks[1], confirmationChecks[2]])
           }
         />
-        I am committed to listening to the needs of the team I am working for, and building what they ask rather than assuming I know what is best.
+        <span className="confirmation-checks-text">
+          I am committed to listening to the needs of the team I am working for, and building what they ask rather than assuming I know what is best.
+        </span>
       </label>
       <label>
         <input
@@ -30,7 +36,9 @@ const ConfirmationCheckModal = ({confirmationChecks, setConfirmationChecks, canC
             setConfirmationChecks([confirmationChecks[0], !confirmationChecks[1], confirmationChecks[2]])
           }
         />
-        I am committed to listening to the needs of the team I am working for, and building what they ask rather than assuming I know what is best.
+        <span className="confirmation-checks-text">
+          I am committed to listening to the needs of the team I am working for, and building what they ask rather than assuming I know what is best.
+        </span>
       </label>
       <label>
         <input
@@ -41,15 +49,19 @@ const ConfirmationCheckModal = ({confirmationChecks, setConfirmationChecks, canC
             setConfirmationChecks([confirmationChecks[0], confirmationChecks[1], !confirmationChecks[2]])
           }
         />
-        I am committed to listening to the needs of the team I am working for, and building what they ask rather than assuming I know what is best.
+        <span className="confirmation-checks-text">
+          I am committed to listening to the needs of the team I am working for, and building what they ask rather than assuming I know what is best.
+        </span>
       </label>
-      <button
-        type="button"
-        class="btn btn-light"
-        disabled={!canCloseModal}
-        onClick={() => setShowConfirmation(false)}>
-        Confirm
-      </button>
+      <div className="confirmation-btn-container">
+        <button
+          type="button"
+          class="btn btn-light confirmation-btn"
+          disabled={!canCloseModal}
+          onClick={() => setShowConfirmation(false)}>
+          Confirm
+        </button>
+      </div>
     </div>
   </div>
 )
