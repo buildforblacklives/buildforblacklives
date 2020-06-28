@@ -1,21 +1,20 @@
 import React from 'react';
 import '../styling/about.css';
-import { Button, Col } from 'react-bootstrap';
+import { Button, Col, Container, Row } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 {/* TODO 
-- request a project button
-- open projects button
-- style cleanup
-- spacing cleanup
+  - images
+  - style cleanup
+  - spacing cleanup
 */}
 
 const AboutPage = () => (
-  <div className="container mt-5">
+  <Container fluid="md">
 
-    <div className="row">
-      <div className="col"></div>
+    <Row>
       {/* TODO place image here (logo) */}
-      <div className="col-8">
+      <Col className="col"></Col>
+      <Col className="col-8">
         <h1>Build for Black Lives</h1>
         <p>
           This is a blurb about who we are and why we started this project and
@@ -29,14 +28,14 @@ const AboutPage = () => (
           about supporting Black lives. We want allies to educate themselves and
            use this platform as a way to support Black lives.
         </p>
-      </div>
-    </div>
+      </Col>
+    </Row>
 
     <hr />
     
-    <div className="row">
-      <div className="col"></div>
-      <div className="col-10">
+    <Row>
+      <Col className="col"></Col>
+      <Col className="col-10">
         <h2>Community Partners</h2>
         <p>
           These are organizations that have helped build, endorse, and promote 
@@ -53,15 +52,14 @@ const AboutPage = () => (
           <li>...</li>
           <li>...</li>
         </ul>
-      </div>
-      <div className="col-8"></div>
-    </div>
+      </Col>
+    </Row>
 
     <hr />
     
-    <div className="row">
-      <div className="col"></div>
-      <div className="col-8">
+    <Row>
+      <Col className="col"></Col>
+      <Col className="col-8">
         <h2>Request a Project</h2>
         <p>
           Are you a black business owner, activist, protest organizer, or 
@@ -77,14 +75,14 @@ const AboutPage = () => (
             </Button>
           </LinkContainer>
         </Col>
-      </div>
-    </div>
+      </Col>
+    </Row>
 
     <hr />
 
-    <div className="row">
-      <div className="col"></div>
-      <div className="col-10">
+    <Row>
+      <Col className="col"></Col>
+      <Col className="col-10">
         <h2>Work on a Project</h2>
         <p>
           Are you a designer, programmer, engineer, data scientist, writer, web 
@@ -99,10 +97,10 @@ const AboutPage = () => (
           </Button>
         </LinkContainer>
       </Col>
-      </div>
-    </div>
-    <div><br /></div>
-  </div>
+      </Col>
+    </Row>
+
+  </Container>
 );
 
 export { AboutPage };

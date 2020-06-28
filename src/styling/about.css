@@ -2,7 +2,6 @@ hr {
   border: 0;
   clear: both;
   display: block;
-  width: 80%;
   background-color: var(--main-yellow);
   height: 3px;
   margin-top: 5%;
