@@ -1,11 +1,12 @@
 import React from 'react';
-import './App.css';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { MainNavbar } from './components/MainNavbar';
 import { HomePage } from './components/HomePage';
 import { AboutPage } from './components/AboutPage';
 import { ProjectsPage } from './components/ProjectsPage';
 import { RequestPage } from './components/RequestPage';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { ProjectWorkPage } from './components/ProjectWorkPage';
+import './App.css';
 
 const App = () => {
   return (
@@ -14,8 +15,9 @@ const App = () => {
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route path="/about" component={AboutPage} />
-        <Route path="/projects" component={ProjectsPage} />
+        <Route exact path="/projects" component={ProjectsPage} />
         <Route path="/project-request" component={RequestPage} />
+        <Route path="/projects/:projectId" component={ProjectWorkPage} />
       </Switch>
     </BrowserRouter>
   );
