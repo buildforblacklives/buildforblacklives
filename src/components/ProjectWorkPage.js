@@ -66,6 +66,28 @@ const ConfirmationCheckModal = ({
   </div>
 )
 
+/*
+Assumes project object shape is:
+{
+  orgName: str,
+  orgAbout: str,
+  orgEmail: str,
+  orgPhone: str,
+  projectAbout: str,
+  projectTime: str, (??)
+}
+*/
+
+// example project, delete this later
+const example = {
+  orgName: "Hack Beanpot",
+  orgAbout: "this is what our org does",
+  orgEmail: "team@hbp.com",
+  orgPhone: null,
+  projectAbout: "This is what the project is about",
+  projectTime: "Estimated 2 weeks"
+}
+
 const ProjectWorkPage = ({ match }) => {
   const { projectId } = match.params;
   const [confirmationChecks, setConfirmationChecks] = useState([false, false, false]);
@@ -77,6 +99,9 @@ const ProjectWorkPage = ({ match }) => {
       setCanCloseModal(true);
     }
   }, [confirmationChecks])
+  // TODO add useeffect to fetch project details based on project id
+  const project = example;
+  const { orgName, orgAbout, orgEmail, orgPhone, projectAbout, projectTime } = project;
 
   return (
     <div className="project-work-page">
@@ -84,9 +109,24 @@ const ProjectWorkPage = ({ match }) => {
         <div className="row">
           <div className="col"></div>
           <div className="col-8">
-            <h1>The id is {projectId}</h1>
-            <h1>Work on this project</h1>
-            <p>some copy about working on the project and workflow images that i'll steal from cari</p>
+            <div className="project-work-flow">
+              <h1>Work on this project</h1>
+              <p>some copy about working on the project and workflow images that i'll steal from cari</p>
+            </div>
+
+            <div className="project-details-section">
+              <h1>Project description</h1>
+              <p className="project-org-name">{orgName}</p>
+              
+              <div className="project-detail-title">About the organization</div>
+              <p className="project-detail-content">{orgAbout}</p>
+              <div className="project-detail-title">About the project</div>
+              <p className="project-detail-content">{projectAbout}</p>
+              <div className="project-detail-title">Project timeline</div>
+              <p className="project-detail-content">{projectTime}</p>
+            </div>
+
+            <h1>Email template</h1>
           </div>
           <div className="col"></div>
         </div>

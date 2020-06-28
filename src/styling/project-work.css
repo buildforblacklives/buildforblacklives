@@ -27,6 +27,10 @@
   margin-bottom: 16px;
 }
 
+.confirmation-checks-modal p {
+  color: var(--main-black);
+}
+
 .confirmation-modal-button {
   margin-left: auto;
 }
@@ -57,4 +61,25 @@
 
 .confirmation-btn:disabled {
   cursor: not-allowed;
+}
+
+.project-work-flow {
+  margin-bottom: 24px;
+}
+
+.project-details-section {
+  margin-bottom: 48px;
+}
+
+.project-org-name {
+  font-size: 24px;
+}
+
+.project-detail-title {
+  font-weight: bold;
+  color: var(--white);
+}
+
+.project-detail-content {
+  font-size: 14px;
 }
