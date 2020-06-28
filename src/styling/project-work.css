@@ -1,0 +1,36 @@
+.project-work-page {
+  position: relative;
+}
+
+.confirmation-checks-modal-base {
+  position: fixed;
+  top: 72px;
+  left: 0;
+  height: calc(100vh - 72px);
+  width: 100vw;
+  background-color: rgba(1, 1, 1, 0.6);
+  align-content: center;
+}
+
+.confirmation-checks-modal {
+  color: black;
+  background-color: white;
+  border-radius: 10px;
+  padding: 32px;
+  width: 600px;
+  margin: 60px auto;
+}
+
+.confirmation-checks-modal h2 {
+  font-family: cornerstone;
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+
+.confirmation-modal-button {
+  margin-left: auto;
+}
+
+.confirmation-checks-modal input {
+  margin-right: 4px;
+}
