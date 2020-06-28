@@ -21,7 +21,7 @@ class MainNavbar extends React.Component {
             <NavLink className="header-text">Open Projects</NavLink>
           </LinkContainer>
 
-          <LinkContainer to="/projectrequest">
+          <LinkContainer to="/project-request">
             <NavLink className="header-text">Project Request</NavLink>
           </LinkContainer>
         </Nav>
