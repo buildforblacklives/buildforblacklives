@@ -7,7 +7,7 @@
 
 .description-card {
     margin: 20px;
-    padding: 20px;
+    padding: 40px;
 }
 
 .urgent-tag {
@@ -27,15 +27,16 @@
 
 .page-container {
     margin: 30px;
+    color: black;
 }
 
 .scrolling {
-  height: 95vh;
+  height: 85vh;
   overflow-y: scroll;
   overflow: visible;
 }
 
 .card-row {
-  margin-top: 50px;
+  margin-top: 10px;
 
 }
