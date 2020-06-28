@@ -1,0 +1,41 @@
+.preview-card {
+    border-radius: 35px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+.description-card {
+    margin: 20px;
+    padding: 20px;
+}
+
+.urgent-tag {
+    border-radius: 50px;
+    background-color: var(--main-yellow);
+    font-weight: bold;
+}
+
+.project-btn {
+    padding: 20px;
+    border-radius: 50px;
+    background-color: #a7e6e8;
+    font-weight: bold;
+    margin: 10px;
+
+}
+
+.page-container {
+    margin: 30px;
+}
+
+.scrolling {
+  height: 95vh;
+  overflow-y: scroll;
+  overflow: visible;
+}
+
+.card-row {
+  margin-top: 50px;
+
+}
