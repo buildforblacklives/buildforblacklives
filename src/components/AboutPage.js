@@ -2,7 +2,8 @@ import React from 'react';
 import '../styling/about.css';
 import { Button, Col, Container, Row } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
-{/* TODO 
+import { Link } from 'react-router-dom';
+{/* TODO
   - images
   - style cleanup
   - spacing cleanup
@@ -17,16 +18,22 @@ const AboutPage = () => (
       <Col className="col-8">
         <h1>Build for Black Lives</h1>
         <p>
-          This is a blurb about who we are and why we started this project and
-          about how it is more about connecting people. Our mission and values 
-          about supporting Black lives. We want allies to educate themselves and
-           use this platform as a way to support Black lives.
+          Build for Black Lives, a platform created by HackBeanpot, connects 
+          individuals who have tech/design skills with activists, organizers, 
+          and Black-owned businesses. We aim to provide pro bono work creating 
+          websites, mobile apps, data visualizations, graphics, digital 
+          marketing, and/or any other technical projects the organizations might
+           need. The length of these projects could range from a few days to 
+           more long term.
           <br />
           <br />
-          This is a blurb about who we are and why we started this project and
-          about how it is more about connecting people. Our mission and values 
-          about supporting Black lives. We want allies to educate themselves and
-           use this platform as a way to support Black lives.
+          HackBeanpot is a Boston-based hackathon, and as an organization we aim
+           to build an inclusive community and provide resources that allow our 
+          community to support each other in challenging times. Racial 
+          inequality has long been an issue in the tech space. While change 
+          does not happen overnight, we want to make an active effort to bring 
+          the tech community together to help support Black lives and fight for 
+          racial justice.
         </p>
       </Col>
     </Row>
@@ -67,7 +74,6 @@ const AboutPage = () => (
           platform, creating social media content, data visualizations, or other
            projects?
         </p>
-        {/* TODO: add request button */}
         <Col>
           <LinkContainer to="/project-request">
             <Button className="button" variant="warning" size="med">
@@ -89,14 +95,26 @@ const AboutPage = () => (
           developer, or marketing specialist looking to use your skills to do 
           pro bono work to support Black lives?
         </p>
-        {/* TODO: add open projects button */}
         <Col>
-        <LinkContainer to="/projects">
-          <Button className="button" variant="warning" size="med">
-            Work on a Project
-          </Button>
-        </LinkContainer>
+          <LinkContainer to="/projects">
+            <Button className="button" variant="warning" size="med">
+              Work on a Project
+            </Button>
+          </LinkContainer>
+        </Col>
       </Col>
+    </Row>
+
+    <hr />
+
+    <Row>
+      <Col className="col"></Col>
+      <Col className="col-8">
+        <h2>Contact Us</h2>
+        <Link mailto="buildforblacklives@hackbeanpot.com">
+          buildforblacklives@hackbeanpot.com
+        </Link>
+        {/* TODO include HBP socials */}
       </Col>
     </Row>
 
