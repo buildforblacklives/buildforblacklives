@@ -5,7 +5,7 @@
 
 .logotype {
   font-family: cornerstone;
-  color: #f8ed44;
+  color: var(--main-yellow);
   font-size: 4rem;
   text-align: center;
   margin-top: 13rem;
@@ -13,21 +13,21 @@
 
 .bio-blurb {
   font-family: Arial, Helvetica, sans-serif;
-  color: #ffffff;
+  color: var(--white);
   font-size: 1.5rem;
   text-align: center;
 }
 
 .highlighted {
   /* background: linear-gradient(180deg, rgba(255, 255, 255, 0) 95%, #f8ed44 50%); */
-  background-image: linear-gradient(to right, yellow 75%, transparent 75%);
+  background-image: linear-gradient(to right, var(--main-yellow) 75%, transparent 75%);
   background-position: 0 1.04em;
   background-repeat: repeat-x;
   background-size: 8px 3px;
 }
 
 .button {
-  background-color: #f8ed44;
+  background-color: var(--main-yellow);
   padding: 20px 32px;
 }
 
@@ -38,7 +38,7 @@
 
 .track-titles {
   font-family: Arial, Helvetica, sans-serif;
-  color: #f8ed44;
+  color: var(--main-yellow);
   font-size: 1.85rem;
   text-align: center;
   margin-top: 5rem;
@@ -47,7 +47,7 @@
 
 .track-body {
   font-family: Arial, Helvetica, sans-serif;
-  color: #ffffff;
+  color: var(--white);
   font-size: 1.25rem;
   text-align: center;
   margin-top: 1.5rem;
