@@ -1,17 +1,22 @@
 import React from 'react';
 import '../styling/HomePage.css';
-import { Container, Row } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 
 const HomePage = () => (
   <Container fluid>
     <Row>
-      <div class="logotype">Build for Black Lives</div>
+      <Col className="logotype"> Build for Black Lives</Col>
     </Row>
     <Row>
-      <div class="bio-blurb">
-        We provide a platform to connect black-owned bbusinesses or organizations fighting racial injustice to
-        developers and designers who would like to support the cause with their technical skills.
-      </div>
+      <Col className="bio-blurb" md={{ span: 6, offset: 3 }}>
+        We provide a platform to connect black-owned businesses or organizations fighting racial injustice to developers
+        and designers who would like to support the cause with their technical skills.
+      </Col>
+    </Row>
+    <Row>
+      <Col className="track-titles">Request Project Help</Col>
+      <Col xs={2}></Col>
+      <Col className="track-titles">Volunteer for Projects</Col>
     </Row>
   </Container>
 );
