@@ -1,5 +1,4 @@
 import React from "react";
-import "../styling/projects-page-styling.css";
 
 let companies = [{id: 0, title: "Project Title 1", name: "Organization Name 1"},
                  {id: 1, title: "Project Title 2", name: "Organization Name 2"},
