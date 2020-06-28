@@ -1,16 +1,15 @@
 import React from 'react';
-import '../styling/about.css';
 import { Button, Col, Container, Row } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import { Link } from 'react-router-dom';
 {/* TODO
   - images
+  - Contact Us icons
   - style cleanup
-  - spacing cleanup
 */}
 
 const AboutPage = () => (
-  <Container fluid="md">
+  <Container className="container" fluid="md">
 
     <Row>
       {/* TODO place image here (logo) */}
@@ -25,8 +24,8 @@ const AboutPage = () => (
           marketing, and/or any other technical projects the organizations might
            need. The length of these projects could range from a few days to 
            more long term.
-          <br />
-          <br />
+          </p>
+          <p>
           HackBeanpot is a Boston-based hackathon, and as an organization we aim
            to build an inclusive community and provide resources that allow our 
           community to support each other in challenging times. Racial 
@@ -50,14 +49,15 @@ const AboutPage = () => (
         </p>
         <ul>
           <li>HackBeanpot</li>
+          {/* removed placeholders. add partners as needed */}
+          {/* <li>...</li>
           <li>...</li>
           <li>...</li>
           <li>...</li>
           <li>...</li>
           <li>...</li>
           <li>...</li>
-          <li>...</li>
-          <li>...</li>
+          <li>...</li> */}
         </ul>
       </Col>
     </Row>
@@ -111,26 +111,22 @@ const AboutPage = () => (
       <Col className="col"></Col>
       <Col className="col-8">
         <h2>Contact Us</h2>
+        {/* TODO replace with icons */}
         <a href="mailto:buildforblacklives@hackbeanpot.com">
           buildforblacklives@hackbeanpot.com
-        </a>
-        <br />
+        </a> <br />
         <a href="https://www.facebook.com/hackbeanpot/">
           Facebook
-        </a>
-        <br />
+        </a> <br />
         <a href="https://www.instagram.com/hackbeanpot/">
           Instagram
-        </a>
-        <br />
+        </a> <br />
         <a href="https://www.linkedin.com/company/hackbeanpot-inc">
           LinkedIn
-        </a>
-        <br />
+        </a> <br />
         <a href="https://twitter.com/hackbeanpot">
           Twitter
         </a>
-        {/* TODO include HBP socials */}
       </Col>
     </Row>
 

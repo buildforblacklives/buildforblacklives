@@ -2,6 +2,7 @@
 @import './styling/HomePage.css';
 @import './styling/site-container-styling.css';
 @import './styling/projects-page-styling.css';
+@import './styling/about.css';
 
 body {
   margin: 0;
