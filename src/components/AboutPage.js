@@ -111,9 +111,25 @@ const AboutPage = () => (
       <Col className="col"></Col>
       <Col className="col-8">
         <h2>Contact Us</h2>
-        <Link mailto="buildforblacklives@hackbeanpot.com">
+        <a href="mailto:buildforblacklives@hackbeanpot.com">
           buildforblacklives@hackbeanpot.com
-        </Link>
+        </a>
+        <br />
+        <a href="https://www.facebook.com/hackbeanpot/">
+          Facebook
+        </a>
+        <br />
+        <a href="https://www.instagram.com/hackbeanpot/">
+          Instagram
+        </a>
+        <br />
+        <a href="https://www.linkedin.com/company/hackbeanpot-inc">
+          LinkedIn
+        </a>
+        <br />
+        <a href="https://twitter.com/hackbeanpot">
+          Twitter
+        </a>
         {/* TODO include HBP socials */}
       </Col>
     </Row>
