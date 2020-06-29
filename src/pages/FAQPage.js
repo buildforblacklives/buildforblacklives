@@ -47,7 +47,6 @@ class FAQPage extends React.Component {
   };
 
   render() {
-    console.log();
     return (
       <div className="container mt-5">
         <h1>Frequently Asked Questions</h1>
