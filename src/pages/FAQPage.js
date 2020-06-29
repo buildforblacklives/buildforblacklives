@@ -12,44 +12,57 @@ const styles = {
     cursor: 'pointer',
     minWidth: '100%',
     minHeight: '100%'
+  },
+  ButtonSelected: {
+    backgroundColor: '#ffc107',
+    cursor: 'pointer',
+    minWidth: '100%',
+    minHeight: '100%'
   }
 };
 
 class FAQPage extends React.Component {
   constructor(props) {
     super(props);
+    // set to clientFAQ initially
     this.state = {
-      faq: null,
-      title: ''
+      faqType: 'client',
+      faqData: clientFAQ,
+      title: 'Requesting a Project'
     };
   }
 
   handleClick = (e) => {
     const { value, innerHTML } = e.target;
 
-    let selectedFAQ;
+    let selectedData,
+      selectedType = value;
 
-    switch (value) {
+    switch (selectedType) {
       case 'client':
-        selectedFAQ = clientFAQ;
+        selectedData = clientFAQ;
         break;
       case 'volunteer':
-        selectedFAQ = volunteerFAQ;
+        selectedData = volunteerFAQ;
         break;
       case 'initiative':
-        selectedFAQ = initiativeFAQ;
+        selectedData = initiativeFAQ;
         break;
       default:
-        selectedFAQ = null;
+        selectedData = clientFAQ;
     }
 
-    this.setState({ faq: selectedFAQ, title: innerHTML });
+    this.setState({ faqType: selectedType, faqData: selectedData, title: innerHTML });
+  };
+
+  styleButton = (type) => {
+    return type === this.state.faqType ? styles.ButtonSelected : styles.Button;
   };
 
   render() {
     return (
       <div className="container mt-5">
-        <h1>Frequently Asked Questions</h1>
+        <h1>FAQs</h1>
         <Row>
           <Col md={4} style={styles.ButtonCol}>
             <Button
@@ -57,7 +70,7 @@ class FAQPage extends React.Component {
               className="button"
               variant="warning"
               size="md"
-              style={styles.Button}
+              style={this.styleButton('client')}
               onClick={this.handleClick}
             >
               Requesting a Project
@@ -69,7 +82,7 @@ class FAQPage extends React.Component {
               className="button"
               variant="warning"
               size="md"
-              style={styles.Button}
+              style={this.styleButton('volunteer')}
               onClick={this.handleClick}
             >
               Working on a Project
@@ -81,14 +94,14 @@ class FAQPage extends React.Component {
               className="button"
               variant="warning"
               size="md"
-              style={styles.Button}
+              style={this.styleButton('initiative')}
               onClick={this.handleClick}
             >
               This Initiative
             </Button>
           </Col>
         </Row>
-        {!!this.state.faq && <FAQSection title={this.state.title} faq={this.state.faq} />}
+        {!!this.state.faqData && <FAQSection title={this.state.title} faq={this.state.faqData} />}
       </div>
     );
   }
