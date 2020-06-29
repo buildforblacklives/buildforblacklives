@@ -4,7 +4,9 @@ let companies = [{id: 0, title: "Project Title 1", name: "Organization Name 1"},
                  {id: 1, title: "Project Title 2", name: "Organization Name 2"},
                  {id: 2, title: "Project Title 3", name: "Organization Name 3"},
                  {id: 3, title: "Project Title 4", name: "Organization Name 4"},
-                 {id: 4, title: "Project Title 5", name: "Organization Name 5"}]
+                 {id: 4, title: "Project Title 5", name: "Organization Name 5"},
+                 {id: 5, title: "Project Title 5", name: "Organization Name 5"},
+                 {id: 6, title: "Project Title 5", name: "Organization Name 5"},]
 
 class ProjectsPage extends React.Component {
 
@@ -15,14 +17,65 @@ class ProjectsPage extends React.Component {
 
     render() {
         return (
-          <div class="page-container">
 
-            <div class="row">
-                <div class="col col-md-7 overflow-auto scrolling">
-                    <div class="row card-row">
+        <div>
+
+                <div class="">
+                  <div class="page-container">
+
+                    <div class="row d-flex justify-content-center">
+
+                        { this.state.selected === -1 &&
+
+                        <React.Fragment class="float-left">
+                                        {companies.map(company =>
+
+
+                                                <div class="card preview-card broad col col-lg-3 col-md-10">
+                                                <button class="btn card-btn" type="button" onClick={() => this.setState({selected: company.id})}>
+                                                  <div class="card-body">
+                                                    <h5 class="card-title"> {company.title} </h5>
+                                                     <h6 class="card-subtitle mb-2 text-muted"> {company.name} </h6>
+                                                     <button type="button" class="btn urgent-tag"> Urgent </button>
+                                                     <p class="card-text">Project description. We are looking for a group of
+                                                                          people to help us put together a simple website for
+                                                                          people to email their state reps.
+                                                     </p>
+                                                    <a href="#" class="card-link float-right"
+                                                                onClick={() => this.setState({selected: company.id})}>More details...</a>
+                                                  </div>
+                                                  </button>
+                                                </div>
+
+
+                                        )
+                                        }
+
+                         </React.Fragment> }
+                         </div>
+                         </div>
+                         </div>
+
+
+
+        { this.state.selected !== -1 &&
+        <div class="center-div">
+
+         <div class="page-container">
+
+            <div class="row d-flex justify-content-center">
+
+
+
+
+                <div class="col col-4 overflow-auto scrolling project-col">
+
                             {companies.map(company =>
-                                <div class="col-md-6">
-                                    <div class="card preview-card">
+
+                                    <div class="card preview-card broad">
+                                     <button className = {`btn ${(this.state.selected !== company.id) ? "card-btn" : "selected-btn"}`}
+                                             type="button"
+                                             onClick={() => this.setState({selected: company.id})}>
                                       <div class="card-body">
                                         <h5 class="card-title"> {company.title} </h5>
                                          <h6 class="card-subtitle mb-2 text-muted"> {company.name} </h6>
@@ -34,23 +87,33 @@ class ProjectsPage extends React.Component {
                                         <a href="#" class="card-link float-right"
                                                     onClick={() => this.setState({selected: company.id})}>More details...</a>
                                       </div>
+                                      </button>
                                     </div>
-                                </div>
+
                             )
                             }
-                      </div>
+
                   </div>
 
 
 
-              <div class="col col-md-5 overflow-auto scrolling">
-                   <div class="row card-row">
+
+              <div class="col col-md-8 overflow-auto scrolling">
+
                     {   this.state.selected !== -1 &&
                         <div class="card description-card d-none d-md-block">
+
+
                           <div class="card-body">
-                            <button type="button" class="btn urgent-tag float-right"> Urgent </button>
+
+                          <button type="button" class="btn float-right close-btn" onClick={() => this.setState({selected: -1})}> X </button>
+
+
+
+
                             <h5 class="card-title"> {companies[this.state.selected].title }</h5>
                              <h6 class="card-subtitle mb-2 text-muted">{companies[this.state.selected].name }</h6>
+                             <button type="button" class="btn urgent-tag"> Urgent </button>
                              <h6 class="card-text pt-3"> About {companies[this.state.selected].name} </h6>
                              <p class="card-text">This is a more detailed example about what a card could say.
                                                   It would have information here about what the company does
@@ -70,13 +133,20 @@ class ProjectsPage extends React.Component {
                              <div class="text-center">
                                 <button type="button" class="btn project-btn"> Work on this project! </button>
                              </div>
-                          </div>
+
+
+                            </div>
                         </div>
                     }
-                    </div>
+
                 </div>
               </div>
           </div>
+          </div>
+          }
+
+          </div>
+
          )}
 }
 

@@ -1,12 +1,13 @@
 .preview-card {
-    border-radius: 35px;
+    border-radius: 10px;
     margin-top: 20px;
     margin-bottom: 20px;
-    padding: 5px;
+    padding: 0px;
 }
 
 .description-card {
-    margin: 20px;
+    border-radius: 10px;
+    margin-left: 20px;
     padding: 40px;
 }
 
@@ -28,15 +29,67 @@
 .page-container {
     margin: 30px;
     color: black;
+
 }
 
 .scrolling {
   height: 85vh;
   overflow-y: scroll;
   overflow: visible;
+
+}
+
+.project-col {
+  background-color: var(--main-grey);
+  border-radius: 10px;
+  padding: 10px;
 }
 
 .card-row {
   margin-top: 10px;
+}
 
+.card-text {
+    color: black;
+}
+
+
+.center-div {
+    margin: 0 auto;
+    width: 85vw;
+
+}
+
+.overview {
+    margin: 0 auto;
+    width: 90vw;
+}
+
+.broad {
+    margin: 10px;
+    padding: 10px;
+
+}
+
+.close-btn {
+    padding: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+    background-color: #a7e6e8;
+    font-weight: bold;
+    color: black;
+}
+
+.card-btn {
+    text-align: left;
+}
+
+.card-btn:hover {
+    background-color: #ffdde2;
+}
+
+.selected-btn {
+    background-color: #a7e6e8;
+    text-align: left;
 }
