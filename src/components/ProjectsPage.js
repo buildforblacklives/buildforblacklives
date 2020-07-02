@@ -6,9 +6,9 @@ let companies = [{id: 0, title: "Project Title 1", name: "Organization Name 1"},
                  {id: 1, title: "Project Title 2", name: "Organization Name 2"},
                  {id: 2, title: "Project Title 3", name: "Organization Name 3"},
                  {id: 3, title: "Project Title 4", name: "Organization Name 4"},
-                 {id: 6, title: "Project Title 5", name: "Organization Name 5"},
-                 {id: 4, title: "Project Title 6", name: "Organization Name 6"},
-                 {id: 4, title: "Project Title 7", name: "Organization Name 7"}]
+                 {id: 4, title: "Project Title 5", name: "Organization Name 5"},
+                 {id: 5, title: "Project Title 6", name: "Organization Name 6"},
+                 {id: 6, title: "Project Title 7", name: "Organization Name 7"}]
 
 
 class ProjectsPage extends React.Component {
@@ -20,9 +20,9 @@ class ProjectsPage extends React.Component {
     render() {
         return (
 
-            <div>
+            <React.Fragment>
                 { this.state.selected === -1 &&
-                <Container>
+                <Container className="pg-container">
                     <Row className="d-flex justify-content-center">
                         <Row className="d-flex justify-content-left">
                         {companies.map(company =>
@@ -52,8 +52,9 @@ class ProjectsPage extends React.Component {
 
 
 
+
                 { this.state.selected !== -1 &&
-                <Container className="center-div">
+                <Container className="pg-container center-div">
                     <Row>
                         <Col lg={4} className="overflow-auto scrolling project-col d-none d-lg-block">
                             {companies.map(company =>
@@ -112,7 +113,7 @@ class ProjectsPage extends React.Component {
                     </Row>
                 </Container>
                 }
-            </div>
+            </React.Fragment>
 
         )}
 
