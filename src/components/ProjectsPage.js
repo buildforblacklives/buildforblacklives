@@ -1,13 +1,15 @@
 import React from "react";
 import { Button, Row, Col, Card, Container } from 'react-bootstrap';
+import "../styling/projects-page-styling.css";
 
 let companies = [{id: 0, title: "Project Title 1", name: "Organization Name 1"},
                  {id: 1, title: "Project Title 2", name: "Organization Name 2"},
                  {id: 2, title: "Project Title 3", name: "Organization Name 3"},
                  {id: 3, title: "Project Title 4", name: "Organization Name 4"},
-                 {id: 4, title: "Project Title 5", name: "Organization Name 5"},
-                 {id: 5, title: "Project Title 5", name: "Organization Name 5"},
-                 {id: 6, title: "Project Title 5", name: "Organization Name 5"}]
+                 {id: 6, title: "Project Title 5", name: "Organization Name 5"},
+                 {id: 4, title: "Project Title 6", name: "Organization Name 6"},
+                 {id: 4, title: "Project Title 7", name: "Organization Name 7"}]
+
 
 class ProjectsPage extends React.Component {
 
@@ -113,6 +115,7 @@ class ProjectsPage extends React.Component {
             </div>
 
         )}
+
 }
 
 export { ProjectsPage };

@@ -1,12 +1,16 @@
 
+
 /** Multiple card view **/
 
+
 .preview-card {
-    border-radius: 10px;
-    margin: 20px;
-    padding: 10px;
-    border: transparent;
+    border-radius: 35px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 5px;
 }
+
+
 .urgent-tag {
     border-radius: 50px;
     background-color: var(--main-yellow);
@@ -65,6 +69,11 @@
 
 .project-btn:hover {
     background-color: var(--main-yellow);
+
+}
+
+.page-container {
+    margin: 30px;
     color: black;
 }
 
@@ -73,12 +82,13 @@
   overflow-y: scroll;
   overflow: visible;
 
+
 }
 
 .project-col {
   background-color: var(--main-grey);
   border-radius: 10px;
-  padding: 10px;
+  padding: 20px;
   margin-right: 15px;
 }
 
@@ -117,3 +127,10 @@
     color: black;
 }
 
+
+
+
+.card-row {
+  margin-top: 10px;
+
+}
