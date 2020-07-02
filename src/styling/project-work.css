@@ -16,19 +16,20 @@
   color: black;
   background-color: white;
   border-radius: 10px;
-  padding: 32px;
-  width: 600px;
-  margin: 16px auto;
+  padding: 24px;
+  width: 650px;
+  margin:  0 auto 16px auto;
 }
 
 .confirmation-checks-modal h2 {
   font-weight: bold;
-  font-size: 32px;
+  font-size: 28px;
   margin-bottom: 16px;
 }
 
 .confirmation-checks-modal p {
   color: var(--main-black);
+  font-size: 14px;
 }
 
 .confirmation-modal-button {
@@ -41,13 +42,14 @@
 
 .confirmation-checks-modal input {
   margin: auto;
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
 }
 
 .confirmation-checks-modal .confirmation-checks-text {
   margin-left: 16px;
   font-size: 14px;
+  width: 100%;
 }
 
 .confirmation-btn-container {
@@ -82,4 +84,16 @@
 
 .project-detail-content {
   font-size: 14px;
+}
+
+.project-detail-email {
+  background: var(--white);
+  padding: 24px;
+  color: black;
+  white-space: pre-line;
+  line-height: 18px;
+}
+
+.copy-button {
+  margin: 0 0 16px auto;
 }

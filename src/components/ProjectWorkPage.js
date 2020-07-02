@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Template from '../assets/workEmailTemplate.js'
 
 const ConfirmationCheckModal = ({
   confirmationChecks,
@@ -9,7 +10,7 @@ const ConfirmationCheckModal = ({
     <div className="confirmation-checks-modal">
       <h2>Before you take on this project</h2>
       <p>
-        placeholder for history of tech and design and importance of being anti-racist
+        The tech and design industries come with a history of discrimination and racism that persists today. This appears in products such as biased facial recognition systems, AI that learns to reflect the racism in our population, and algorithms that filter and exclude black communities, in the naming of technical terms and tools we use, and in the lack of diversity in the teams that create these products. To participate in the Build for Black Lives intiative, it is critical to be actively anti-racist.
       </p>
       <p>
         Please read and check off the following checkboxes to acknowledge your agreement with and commitment to the following statements:
@@ -37,7 +38,7 @@ const ConfirmationCheckModal = ({
           }
         />
         <span className="confirmation-checks-text">
-          I am committed to listening to the needs of the team I am working for, and building what they ask rather than assuming I know what is best.
+          I am committed to  
         </span>
       </label>
       <label>
@@ -50,7 +51,7 @@ const ConfirmationCheckModal = ({
           }
         />
         <span className="confirmation-checks-text">
-          I am committed to listening to the needs of the team I am working for, and building what they ask rather than assuming I know what is best.
+          I am committed to 
         </span>
       </label>
       <div className="confirmation-btn-container">
@@ -73,6 +74,7 @@ Assumes project object shape is:
   orgAbout: str,
   orgEmail: str,
   orgPhone: str,
+  projectTitle: str,
   projectAbout: str,
   projectTime: str, (??)
 }
@@ -84,6 +86,7 @@ const example = {
   orgAbout: "this is what our org does",
   orgEmail: "team@hbp.com",
   orgPhone: null,
+  projectTitle: "Sample Website",
   projectAbout: "This is what the project is about",
   projectTime: "Estimated 2 weeks"
 }
@@ -101,7 +104,17 @@ const ProjectWorkPage = ({ match }) => {
   }, [confirmationChecks])
   // TODO add useeffect to fetch project details based on project id
   const project = example;
-  const { orgName, orgAbout, orgEmail, orgPhone, projectAbout, projectTime } = project;
+  const { orgName, orgAbout, orgEmail, orgPhone, projectTitle, projectAbout, projectTime } = project;
+  const emailContent = Template(project);
+
+  const copyEmail = () => {
+    var textArea = document.createElement("textarea");
+    textArea.value = emailContent;
+    document.body.appendChild(textArea);
+    textArea.select();
+    document.execCommand("copy");
+    document.body.removeChild(textArea);
+  }
 
   return (
     <div className="project-work-page">
@@ -127,6 +140,15 @@ const ProjectWorkPage = ({ match }) => {
             </div>
 
             <h1>Email template</h1>
+            <div className="confirmation-btn-container">
+              <button
+                type="button"
+                class="btn btn-light copy-button"
+                onClick={copyEmail}>
+                Copy template
+              </button>
+            </div>
+            <div className="project-detail-email">{emailContent}</div>
           </div>
           <div className="col"></div>
         </div>
