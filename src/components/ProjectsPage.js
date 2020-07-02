@@ -20,7 +20,7 @@ class ProjectsPage extends React.Component {
 
             <div>
                 { this.state.selected === -1 &&
-                <Container className="pg-container">
+                <Container>
                     <Row className="d-flex justify-content-center">
                         <Row className="d-flex justify-content-left">
                         {companies.map(company =>
@@ -51,7 +51,7 @@ class ProjectsPage extends React.Component {
 
 
                 { this.state.selected !== -1 &&
-                <Container className="center-div pg-container ">
+                <Container className="center-div">
                     <Row>
                         <Col lg={4} className="overflow-auto scrolling project-col d-none d-lg-block">
                             {companies.map(company =>
