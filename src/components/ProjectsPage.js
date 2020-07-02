@@ -22,7 +22,7 @@ class ProjectsPage extends React.Component {
                 { this.state.selected === -1 &&
                 <Container className="pg-container">
                     <Row className="d-flex justify-content-center">
-                        <React.Fragment class="float-left">
+                        <Row className="d-flex justify-content-left">
                         {companies.map(company =>
                             <Col lg={4}>
                                 <Card className="broad card-btn" onClick={() => this.setState({selected: company.id})}>
@@ -42,7 +42,7 @@ class ProjectsPage extends React.Component {
                                 </Card>
                             </Col>
                              )}
-                            </React.Fragment>
+                            </Row>
                         </Row>
                     </Container>
                 }
