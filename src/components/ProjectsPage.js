@@ -53,7 +53,7 @@ class ProjectsPage extends React.Component {
                 { this.state.selected !== -1 &&
                 <Container className="center-div pg-container ">
                     <Row>
-                        <Col lg={4} className="overflow-auto scrolling project-col">
+                        <Col lg={4} className="overflow-auto scrolling project-col d-none d-lg-block">
                             {companies.map(company =>
                                 <Card className = {`preview-card ${(this.state.selected !== company.id) ? "card-btn" : "selected-btn"}`}
                                       onClick={() => this.setState({selected: company.id})}>
@@ -73,13 +73,15 @@ class ProjectsPage extends React.Component {
                             )}
                         </Col>
 
-                        <Col md={8} className="overflow-auto scrolling">
+                        <Col lg={7} md={12} className="">
 
-                            <Card className="description-card d-none d-md-block">
-                                <Button type="button" className="btn float-right close-btn" onClick={() => this.setState({selected: -1})}> X </Button>
+                                <Card className="description-card">
+                                <Card.Body>
+                                <Button className="float-right close-btn" onClick={() => this.setState({selected: -1})}> X </Button>
+
                                 <Card.Title> {companies[this.state.selected].title }</Card.Title>
                                 <Card.Subtitle className="mb-2 text-muted">{companies[this.state.selected].name }</Card.Subtitle>
-                                <Button type="button" className="btn urgent-tag"> Urgent </Button>
+                                <Button className="urgent-tag"> Urgent </Button>
 
                                 <Card.Text className="pt-3 font-weight-bold"> About {companies[this.state.selected].name} </Card.Text>
                                 <Card.Text>This is a more detailed example about what a card could say.
@@ -100,6 +102,7 @@ class ProjectsPage extends React.Component {
                                  <div class="text-center">
                                     <Button className="project-btn"> Work on this project! </Button>
                                  </div>
+                                 </Card.Body>
 
 
                             </Card>
