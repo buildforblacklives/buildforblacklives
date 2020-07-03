@@ -131,6 +131,8 @@
     background: white;
     border: transparent;
     color: black;
+    cursor: pointer;
+
 }
 
 .card-btn:hover {
@@ -143,5 +145,6 @@
     text-align: left;
     border: transparent;
     color: black;
+    cursor: pointer;
 }
 
