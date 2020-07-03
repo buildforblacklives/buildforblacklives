@@ -36,8 +36,7 @@ class ProjectsPage extends React.Component {
                                                                      people to help us put together a simple website for
                                                                      people to email their state reps.
                                         </Card.Text>
-                                        <Button type="link" className="more-details-link float-right" aria-pressed="false"
-                                                onClick={() => this.setState({selected: company.id})}>More details...</Button>
+                                        <Card.Link href="#" className="float-right" onClick={() => this.setState({selected: company.id})}>More details...</Card.Link>
                                      </Card.Body>
                                 </Card>
                             </Col>
@@ -66,8 +65,7 @@ class ProjectsPage extends React.Component {
                                                     people to help us put together a simple website for
                                                     people to email their state reps.
                                         </Card.Text>
-                                        <Button type="link" className="more-details-link float-right" aria-pressed="false"
-                                             onClick={() => this.setState({selected: company.id})}>More details...</Button>
+                                        <Card.Link href="#" className="float-right" onClick={() => this.setState({selected: company.id})}>More details...</Card.Link>
                                     </Card.Body>
                                 </Card>
 
@@ -79,7 +77,7 @@ class ProjectsPage extends React.Component {
                                 <Card className="description-card">
                                 <Card.Body>
                                 <div class="d-flex justify-content-lg-end justify-content-md-start">
-                                    <Button className="close-btn my-3" onClick={() => this.setState({selected: -1})}> Close </Button>
+                                    <Button className="close-btn mb-4 mb-lg-0" onClick={() => this.setState({selected: -1})}> Close </Button>
                                 </div>
 
                                 <Card.Title> {companies[this.state.selected].title }</Card.Title>
