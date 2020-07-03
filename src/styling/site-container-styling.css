@@ -5,12 +5,12 @@
 
 .header-text {
   font-family: cornerstone;
-  color: #f8ed44;
+  color: var(--main-yellow);
 }
 
 .btn-join-movement {
   font-family: cornerstone;
-  background-color: #f8ed44;
+  background-color: var(--main-yellow);
   padding-left: 20px;
   padding-right: 20px;
   margin-top: 50px;
@@ -20,36 +20,28 @@
   position: fixed;
   top: 50%;
   left: 50%;
-  /* bring your own prefixes */
   transform: translate(-50%, -50%);
   text-align: center;
 }
 
 .navbar-styling {
-    padding: 100px;
-    position: fixed;
-    top: 10%;
-    left: 50%;
-    /* bring your own prefixes */
-    transform: translate(-50%, -50%);
-    text-align: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  text-align: center;
 }
 
 .nav-link {
-
-    margin: 40px;
+  margin: 8px;
 }
 
 img {
-    max-width: 200px;
-    max-height: 200px;
-
+  max-width: 200px;
+  max-height: 200px;
 }
-
 
 .intro-blurb {
-    background-color:#878680;
-    min-height: 300px;
-    margin-left: 0px;
+  background-color: var(--main-grey);
+  min-height: 300px;
+  margin-left: 0px;
 }
-
