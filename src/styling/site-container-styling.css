@@ -3,8 +3,8 @@
   src: url(Cornerstone.ttf);
 }
 
-.header-text {
-  font-family: cornerstone;
+#navbar-text {
+  margin: 8px;
   color: var(--main-yellow);
 }
 
@@ -31,8 +31,8 @@
   text-align: center;
 }
 
-.nav-link {
-  margin: 8px;
+.navbar {
+  background-color: var(--dark-grey);
 }
 
 img {
