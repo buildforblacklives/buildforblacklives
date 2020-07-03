@@ -2,14 +2,13 @@ import React from 'react';
 import { Button, Col, Container, Image, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { LinkContainer } from 'react-router-bootstrap';
-import business1 from '../assets/business1.png';
-import business2 from '../assets/business2.png';
-import business3 from '../assets/business3.png';
-import business4 from '../assets/business4.png';
-import business5 from '../assets/business5.png';
+import projsubmission1 from '../assets/projsubmission1.png';
+import projsubmission2 from '../assets/projsubmission2.png';
+import projsubmission3 from '../assets/projsubmission3.png';
 import volunteer1 from '../assets/volunteer1.png';
 import volunteer2 from '../assets/volunteer2.png';
 import volunteer3 from '../assets/volunteer3.png';
+import arrow from '../assets/arrow.png';
 
 const HomePage = () => (
   <Container fluid>
@@ -41,12 +40,12 @@ const HomePage = () => (
       </Col>
     </Row>
     <Row className="track-titles justify-content-center">Request Project Help</Row>
-    <Row className="justify-content-center">
-      <Image src={business1} thumbnail />
-      <Image src={business2} thumbnail />
-      <Image src={business3} thumbnail />
-      <Image src={business4} thumbnail />
-      <Image src={business5} thumbnail />
+    <Row className="justify-content-center d-flex flex-wrap align-items-center">
+      <Image src={projsubmission1} />
+      <Image src={arrow} />
+      <Image src={projsubmission2} />
+      <Image src={arrow} />
+      <Image src={projsubmission3} />
     </Row>
     <Row className="track-body">
       <Col xs={12} md={{ span: 6, offset: 3 }}>
@@ -56,11 +55,12 @@ const HomePage = () => (
       </Col>
     </Row>
     <Row className="track-titles justify-content-center">Volunteer for Projects</Row>
-    <Row className="justify-content-center">
-      <Image src={volunteer1} thumbnail />
-      <Image src={volunteer2} thumbnail />
-      <Image src={volunteer3} thumbnail />
-      <Image src={business5} thumbnail />
+    <Row className="justify-content-center d-flex flex-wrap align-items-center">
+      <Image src={volunteer1} />
+      <Image src={arrow} />
+      <Image src={volunteer2} />
+      <Image src={arrow} />
+      <Image src={volunteer3} />
     </Row>
     <Row className="track-body">
       <Col xs={12} md={{ span: 6, offset: 3 }}>
@@ -68,6 +68,7 @@ const HomePage = () => (
         specialist who is looking to use your professional skills to do pro bono work to support Black lives?{' '}
         <Link to="/projects">Work on our available projects.</Link>
       </Col>
+      <Image src={arrow} />
     </Row>
   </Container>
 );
