@@ -36,10 +36,8 @@ class ProjectsPage extends React.Component {
                                                                      people to help us put together a simple website for
                                                                      people to email their state reps.
                                         </Card.Text>
-                                        <a href="#" class="card-link float-right"
-                                                    onClick={() => this.setState({selected: company.id})}>
-                                                    More details...
-                                        </a>
+                                        <Button type="link" className="more-details-link float-right" aria-pressed="false"
+                                                onClick={() => this.setState({selected: company.id})}>More details...</Button>
                                      </Card.Body>
                                 </Card>
                             </Col>
@@ -68,8 +66,8 @@ class ProjectsPage extends React.Component {
                                                     people to help us put together a simple website for
                                                     people to email their state reps.
                                         </Card.Text>
-                                        <a href="#" class="card-link float-right"
-                                             onClick={() => this.setState({selected: company.id})}>More details...</a>
+                                        <Button type="link" className="more-details-link float-right" aria-pressed="false"
+                                             onClick={() => this.setState({selected: company.id})}>More details...</Button>
                                     </Card.Body>
                                 </Card>
 
@@ -80,7 +78,9 @@ class ProjectsPage extends React.Component {
 
                                 <Card className="description-card">
                                 <Card.Body>
-                                <Button className="float-right close-btn" onClick={() => this.setState({selected: -1})}> X </Button>
+                                <div class="d-flex justify-content-lg-end justify-content-md-start">
+                                    <Button className="close-btn my-3" onClick={() => this.setState({selected: -1})}> Close </Button>
+                                </div>
 
                                 <Card.Title> {companies[this.state.selected].title }</Card.Title>
                                 <Card.Subtitle className="mb-2 text-muted">{companies[this.state.selected].name }</Card.Subtitle>
@@ -105,6 +105,7 @@ class ProjectsPage extends React.Component {
                                  <div class="text-center">
                                     <Button className="project-btn"> Work on this project! </Button>
                                  </div>
+
                                  </Card.Body>
 
 

@@ -51,7 +51,20 @@
 
 }
 
+.more-details-link {
+    color: blue;
+    background: transparent;
+    border: transparent;
+    box-shadow: none;
+}
 
+.more-details-link:hover, .more-details-link:focus, .more-details-link:active {
+    background: transparent;
+    text-decoration: underline;
+    border: transparent;
+    color: blue;
+    box-shadow: none;
+}
 
 /** Selected card view **/
 
@@ -83,7 +96,7 @@
 }
 
 .scrolling {
-  height: 85vh;
+  height: 90vh;
   overflow-y: scroll;
   overflow: visible;
 
