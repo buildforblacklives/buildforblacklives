@@ -1,20 +1,13 @@
-
-
-
 /** Multiple card view **/
 
 .pg-container {
-
-    padding-left: 30px;
-    padding-right: 30px;
+    padding: 0px 30px 0px;
 }
 .preview-card {
     border-radius: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 20px 0px;
     padding: 5px;
 }
-
 
 .urgent-tag {
     border-radius: 50px;
@@ -24,7 +17,6 @@
     border: transparent;
 }
 
-
 .card-row {
   margin-top: 10px;
 }
@@ -32,7 +24,6 @@
 .card-text {
     color: black;
 }
-
 
 .center-div {
     margin: 0 auto;
@@ -45,25 +36,8 @@
 
 .broad {
     border-radius: 10px;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin: 15px 0px;
     padding: 10px;
-
-}
-
-.more-details-link {
-    color: blue;
-    background: transparent;
-    border: transparent;
-    box-shadow: none;
-}
-
-.more-details-link:hover, .more-details-link:focus, .more-details-link:active {
-    background: transparent;
-    text-decoration: underline;
-    border: transparent;
-    color: blue;
-    box-shadow: none;
 }
 
 /** Selected card view **/
@@ -78,7 +52,7 @@
 .project-btn {
     padding: 20px;
     border-radius: 50px;
-    background-color: #a7e6e8;
+    background-color: var(--main-blue);
     font-weight: bold;
     margin: 10px;
     color: black;
@@ -99,8 +73,6 @@
   height: 90vh;
   overflow-y: scroll;
   overflow: visible;
-
-
 }
 
 .project-col {
@@ -111,12 +83,9 @@
 }
 
 .close-btn {
-    padding: 15px;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-radius: 10px;
+    padding: 15px 20px;
     border: transparent;
-    background-color: #a7e6e8;
+    background-color: var(--main-blue);
     font-weight: bold;
     color: black;
 }
@@ -132,16 +101,15 @@
     border: transparent;
     color: black;
     cursor: pointer;
-
 }
 
 .card-btn:hover {
-    background-color: #fff0b3;
+    background-color: var(--main-light-yellow);
     color: black;
 }
 
 .selected-btn {
-    background-color: #a7e6e8;
+    background-color: var(--main-blue);
     text-align: left;
     border: transparent;
     color: black;
