@@ -63,7 +63,14 @@ const AboutPage = () => (
           <li>...</li> */}
         </ul>
         <p>
-          Contact us if you would like to get involved.
+          Contact us if you would like to get involved. We are always looking to
+           partner with organizations who are commuitted to being anti-racist 
+           and want to help work toward justice and equity through tech. You can
+            also join our&nbsp;
+          <a href="https://join.slack.com/t/northeastern-hac3935/shared_invite/zt-fctqwcqe-7~n_GXliEYbQzUeqERHH6A">
+            Slack Workspace
+          </a>
+          &nbsp;to learn more from the organizing team.
         </p>
       </Col>
     </Row>
@@ -115,10 +122,12 @@ const AboutPage = () => (
            or have questions! You can also check out our HackBeanpot social 
            media pages for more information about what we do as an organization.
         </p>
+        Email us at:&nbsp;
         <a href="mailto:buildforblacklives@hackbeanpot.com">
           buildforblacklives@hackbeanpot.com
         </a>
         <br />
+        Visit us at:&nbsp;
         <a href="https://hackbeanpot.com/"
         target="_blank" rel="noopener noreferrer">
           hackbeanpot.com
@@ -133,13 +142,13 @@ const AboutPage = () => (
           target="_blank" rel="noopener noreferrer">
             <Image src={igLogo} className="socialLogo" />
           </a>
-          <a href="https://www.linkedin.com/company/hackbeanpot-inc" 
-          target="_blank" rel="noopener noreferrer">
-            <Image src={linkedinLogo} className="socialLogo" />
-          </a>
           <a href="https://twitter.com/hackbeanpot" 
           target="_blank" rel="noopener noreferrer">
           <Image src={twitterLogo} className="socialLogo" />
+          </a>
+          <a href="https://www.linkedin.com/company/hackbeanpot-inc" 
+          target="_blank" rel="noopener noreferrer">
+            <Image src={linkedinLogo} className="socialLogo" />
           </a>
           </Col>
         </Row>
