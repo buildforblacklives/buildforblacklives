@@ -6,11 +6,6 @@ import fbLogo from '../assets/social_logos/Facebook_Logo.png';
 import igLogo from '../assets/social_logos/IG_Logo.png';
 import linkedinLogo from '../assets/social_logos/Linkedin_Logo.png';
 import twitterLogo from '../assets/social_logos/Twitter_Logo.png';
-/* TODO
-  - images
-  - Contact Us icons
-  - style cleanup
-*/
 
 const AboutPage = () => (
   <Container className="container" fluid="md">
