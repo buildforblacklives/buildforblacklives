@@ -68,7 +68,6 @@ const HomePage = () => (
         specialist who is looking to use your professional skills to do pro bono work to support Black lives?{' '}
         <Link to="/projects">Work on our available projects.</Link>
       </Col>
-      <Image src={arrow} />
     </Row>
   </Container>
 );
