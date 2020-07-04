@@ -1,10 +1,15 @@
 @font-face {
+  font-family: Archivo;
+  src: url(Archivo-Regular.ttf);
+}
+
+@font-face {
   font-family: cornerstone;
   src: url(Cornerstone.ttf);
 }
 
 .header-text {
-  font-family: cornerstone;
+  font-family: Archivo;
   color: var(--main-yellow);
 }
 
@@ -33,11 +38,6 @@
 
 .nav-link {
   margin: 8px;
-}
-
-img {
-  max-width: 200px;
-  max-height: 200px;
 }
 
 .intro-blurb {
