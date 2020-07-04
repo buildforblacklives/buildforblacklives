@@ -1,83 +1,117 @@
 import React from "react";
+import { Button, Row, Col, Card, Container } from 'react-bootstrap';
+import "../styling/projects-page-styling.css";
 
-let companies = [{id: 0, title: "Project Title 1", name: "Organization Name 1"},
-                 {id: 1, title: "Project Title 2", name: "Organization Name 2"},
-                 {id: 2, title: "Project Title 3", name: "Organization Name 3"},
-                 {id: 3, title: "Project Title 4", name: "Organization Name 4"},
-                 {id: 4, title: "Project Title 5", name: "Organization Name 5"}]
+const { Body, Title, Subtitle, Text, Link } = Card;
+const { Fragment } = React;
+
+let projects = [{id: 0, title: "Project Title 1", company: "Organization Name 1"},
+                 {id: 1, title: "Project Title 2", company: "Organization Name 2"},
+                 {id: 2, title: "Project Title 3", company: "Organization Name 3"},
+                 {id: 3, title: "Project Title 4", company: "Organization Name 4"},
+                 {id: 4, title: "Project Title 5", company: "Organization Name 5"},
+                 {id: 5, title: "Project Title 6", company: "Organization Name 6"},
+                 {id: 6, title: "Project Title 7", company: "Organization Name 7"}]
+
 
 class ProjectsPage extends React.Component {
+  state = {
+    selected: -1
+  }
 
-    state = {
-        selected: -1
-    }
+  render() {
+    return (
+      <Fragment>
+        { this.state.selected === -1 &&
+        <Container className="pg-container">
+          <Row className="d-flex justify-content-center">
+            <Row className="d-flex justify-content-left">
+              {projects.map(project =>
+                <Col lg={4}>
+                  <Card className="broad card-btn" onClick={() => this.setState({selected: project.id})}>
+                    <Body>
+                      <Title> {project.title} </Title>
+                      <Subtitle className="mb-2 text-muted"> {project.company} </Subtitle>
+                      <Button className="urgent-tag"> Urgent </Button>
+                      <Text class="card-text">Project description. We are looking for a group of
+                                                   people to help us put together a simple website for
+                                                   people to email their state reps.
+                      </Text>
+                      <Link href="#" className="float-right" onClick={() => this.setState({selected: project.id})}>More details...</Link>
+                    </Body>
+                  </Card>
+                </Col>
+              )}
+            </Row>
+          </Row>
+        </Container>
+        }
 
 
-    render() {
-        return (
-          <div class="page-container">
 
-            <div class="row">
-                <div class="col col-md-7 overflow-auto scrolling">
-                    <div class="row card-row">
-                            {companies.map(company =>
-                                <div class="col-md-6">
-                                    <div class="card preview-card">
-                                      <div class="card-body">
-                                        <h5 class="card-title"> {company.title} </h5>
-                                         <h6 class="card-subtitle mb-2 text-muted"> {company.name} </h6>
-                                         <button type="button" class="btn urgent-tag"> Urgent </button>
-                                         <p class="card-text">Project description. We are looking for a group of
-                                                              people to help us put together a simple website for
-                                                              people to email their state reps.
-                                         </p>
-                                        <a href="#" class="card-link float-right"
-                                                    onClick={() => this.setState({selected: company.id})}>More details...</a>
-                                      </div>
-                                    </div>
-                                </div>
-                            )
-                            }
-                      </div>
+
+
+        { this.state.selected !== -1 &&
+        <Container className="pg-container center-div">
+          <Row>
+            <Col lg={4} className="overflow-auto scrolling project-col d-none d-lg-block">
+              {projects.map(project =>
+                <Card className = {`preview-card ${(this.state.selected !== project.id) ? "card-btn" : "selected-btn"}`}
+                      onClick={() => this.setState({selected: project.id})}>
+                  <Body>
+                    <Title> {project.title} </Title>
+                    <Subtitle className="mb-2 text-muted"> {project.company} </Subtitle>
+                    <Button className="urgent-tag"> Urgent </Button>
+                    <Text>Project description. We are looking for a group of
+                               people to help us put together a simple website for
+                               people to email their state reps.
+                    </Text>
+                    <Link href="#" className="float-right" onClick={() => this.setState({selected: project.id})}>More details...</Link>
+                    </Body>
+                  </Card>
+              )}
+            </Col>
+
+            <Col lg={7} md={12} className="">
+              <Card className="description-card">
+                <Body>
+                  <div class="d-flex justify-content-lg-end justify-content-md-start">
+                    <Button className="close-btn mb-4 mb-lg-0" onClick={() => this.setState({selected: -1})}> Close </Button>
                   </div>
 
+                  <Title> {projects[this.state.selected].title }</Title>
+                  <Subtitle className="mb-2 text-muted">{projects[this.state.selected].company }</Subtitle>
+                  <Button className="urgent-tag"> Urgent </Button>
 
+                  <Text className="pt-3 font-weight-bold"> About {projects[this.state.selected].company} </Text>
+                  <Text>This is a more detailed example about what a card could say.
+                              It would have information here about what the company does
+                              and how people can get involved.
+                  </Text>
 
-              <div class="col col-md-5 overflow-auto scrolling">
-                   <div class="row card-row">
-                    {   this.state.selected !== -1 &&
-                        <div class="card description-card d-none d-md-block">
-                          <div class="card-body">
-                            <button type="button" class="btn urgent-tag float-right"> Urgent </button>
-                            <h5 class="card-title"> {companies[this.state.selected].title }</h5>
-                             <h6 class="card-subtitle mb-2 text-muted">{companies[this.state.selected].name }</h6>
-                             <h6 class="card-text pt-3"> About {companies[this.state.selected].name} </h6>
-                             <p class="card-text">This is a more detailed example about what a card could say.
-                                                  It would have information here about what the company does
-                                                  and how people can get involved.
-                             </p>
+                  <Text className="pt-3 font-weight-bold"> About the Project </Text>
+                  <Text>This is a more detailed example about what a card could say.
+                             It would have information here about what the company does
+                             and how people can get involved.
+                  </Text>
 
-                             <h6 class="card-text pt-3"> About the Project </h6>
-                             <p class="card-text">This is a more detailed example about what a card could say.
-                                                  It would have information here about what the company does
-                                                  and how people can get involved.
-                             </p>
+                  <Text className="pt-3 font-weight-bold"> Project Timeline </Text>
+                  <Text  class="card-text">Estimated 2 weeks - Need ASAP </Text >
 
-                             <h6 class="card-text pt-3"> Project Timeline</h6>
-                             <p class="card-text">Estimated 2 weeks - Need ASAP
-                             </p>
+                  <div class="text-center">
+                    <Button className="project-btn"> Work on this project! </Button>
+                  </div>
 
-                             <div class="text-center">
-                                <button type="button" class="btn project-btn"> Work on this project! </button>
-                             </div>
-                          </div>
-                        </div>
-                    }
-                    </div>
-                </div>
-              </div>
-          </div>
-         )}
+                </Body>
+              </Card>
+            </Col>
+          </Row>
+        </Container>
+      }
+    </Fragment>
+
+)}
+
 }
 
 export { ProjectsPage };
