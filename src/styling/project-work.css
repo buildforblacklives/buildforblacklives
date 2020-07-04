@@ -1,34 +1,17 @@
-.project-work-page {
-  position: relative;
-}
-
-.confirmation-checks-modal-base {
-  position: fixed;
-  top: 72px;
-  left: 0;
-  height: calc(100vh - 72px);
-  width: 100vw;
-  background-color: rgba(1, 1, 1, 0.6);
-  align-content: center;
-}
-
-.confirmation-checks-modal {
-  color: black;
-  background-color: white;
-  border-radius: 10px;
-  padding: 32px;
-  width: 600px;
-  margin: 16px auto;
+.collapsable-section {
+  color: var(--main-black);
+  margin-bottom: 24px;
 }
 
 .confirmation-checks-modal h2 {
   font-weight: bold;
-  font-size: 32px;
+  font-size: 24px;
   margin-bottom: 16px;
 }
 
 .confirmation-checks-modal p {
   color: var(--main-black);
+  font-size: 14px;
 }
 
 .confirmation-modal-button {
@@ -41,13 +24,14 @@
 
 .confirmation-checks-modal input {
   margin: auto;
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
 }
 
 .confirmation-checks-modal .confirmation-checks-text {
   margin-left: 16px;
   font-size: 14px;
+  width: 100%;
 }
 
 .confirmation-btn-container {
@@ -57,6 +41,8 @@
 
 .confirmation-btn {
   margin-left: auto;
+  background-color: var(--main-blue);
+  font-weight: bold;
 }
 
 .confirmation-btn:disabled {
@@ -67,19 +53,52 @@
   margin-bottom: 24px;
 }
 
-.project-details-section {
-  margin-bottom: 48px;
+.project-work-page h3 {
+  font-size: 24px;
+  margin-bottom: 4px;
 }
 
 .project-org-name {
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .project-detail-title {
   font-weight: bold;
-  color: var(--white);
 }
 
 .project-detail-content {
   font-size: 14px;
+  color: var(--main-black);
+}
+
+.project-detail-email {
+  white-space: pre-line;
+  line-height: 18px;
+}
+
+.copy-button {
+  background-color: var(--main-blue);
+  font-weight: bold;
+  border: none;
+}
+
+.collapsable-section {
+  border-radius: 10px;
+}
+
+.collapsable-header {
+  display: flex;
+  cursor: pointer;
+}
+
+.collapsable-header-title {
+  margin-left: 16px;
+}
+
+.collapsable-content {
+  padding: 24px 60px;
+}
+
+.collapsable-content p {
+  color: var(--main-black);
 }

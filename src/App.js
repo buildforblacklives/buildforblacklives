@@ -6,8 +6,7 @@ import { AboutPage } from './components/AboutPage';
 import { ProjectsPage } from './components/ProjectsPage';
 import { ProjectsPageTemp } from './components/ProjectsPageTemp';
 import { RequestPage } from './components/RequestPage';
-import { ProjectWorkPage } from './components/ProjectWorkPage';
-import './App.css';
+import { ProjectWorkPage } from './components/ProjectWork/ProjectWorkPage';
 
 const App = () => {
   return (
