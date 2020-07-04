@@ -3,23 +3,7 @@ import { Button, Row, Col } from 'react-bootstrap';
 
 import { FAQSection } from '../components/FAQSection';
 import { clientFAQ, volunteerFAQ, initiativeFAQ } from '../data/faq.json';
-
-const styles = {
-  ButtonCol: {
-    margin: '0.5em 0'
-  },
-  Button: {
-    cursor: 'pointer',
-    minWidth: '100%',
-    minHeight: '100%'
-  },
-  ButtonSelected: {
-    backgroundColor: '#ffc107',
-    cursor: 'pointer',
-    minWidth: '100%',
-    minHeight: '100%'
-  }
-};
+import '../index.css';
 
 class FAQPage extends React.Component {
   constructor(props) {
@@ -56,7 +40,7 @@ class FAQPage extends React.Component {
   };
 
   styleButton = (type) => {
-    return type === this.state.faqType ? styles.ButtonSelected : styles.Button;
+    return type === this.state.faqType ? 'faq-button-selected' : '';
   };
 
   render() {
@@ -64,37 +48,34 @@ class FAQPage extends React.Component {
       <div className="container mt-5">
         <h1>FAQs</h1>
         <Row>
-          <Col md={4} style={styles.ButtonCol}>
+          <Col md={4} className="mt-2 mb-2">
             <Button
               value="client"
-              className="button"
+              className={'button faq-button ' + this.styleButton('client')}
               variant="warning"
               size="md"
-              style={this.styleButton('client')}
               onClick={this.handleClick}
             >
               Requesting a Project
             </Button>
           </Col>
-          <Col md={4} style={styles.ButtonCol}>
+          <Col md={4} className="mt-2 mb-2">
             <Button
               value="volunteer"
-              className="button"
+              className={'button faq-button ' + this.styleButton('volunteer')}
               variant="warning"
               size="md"
-              style={this.styleButton('volunteer')}
               onClick={this.handleClick}
             >
               Working on a Project
             </Button>
           </Col>
-          <Col md={4} style={styles.ButtonCol}>
+          <Col md={4} className="mt-2 mb-2">
             <Button
               value="initiative"
-              className="button"
+              className={'button faq-button ' + this.styleButton('initiative')}
               variant="warning"
               size="md"
-              style={this.styleButton('initiative')}
               onClick={this.handleClick}
             >
               This Initiative
