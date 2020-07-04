@@ -58,7 +58,7 @@ const example = {
 }
 
 const ProjectWorkPage = ({ match }) => {
-  const { projectId } = match.params;
+  // const { projectId } = match.params;
   const [hasConfirmed, setHasConfirmed] = useState(false);
 
   // TODO add useeffect to fetch project details based on project id
