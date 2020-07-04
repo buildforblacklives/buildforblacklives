@@ -6,7 +6,7 @@ import logo from '../assets/logo.png';
 class MainNavbar extends React.Component {
   render() {
     return (
-      <Navbar variant="dark"  expand="lg">
+      <Navbar variant="dark"  expand="lg" sticky="top">
         <Navbar.Brand href="/">
           <img src={logo} href="/" width="40" height="40" className="d-inline-block align-top" alt="Build for Black Lives" />
         </Navbar.Brand>
