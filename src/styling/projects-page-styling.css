@@ -103,7 +103,7 @@
 }
 
 .card-btn:hover {
-  background-color: var(--main-light-yellow);
+  background-color: var(--light-yellow);
   color: var(--main-black);
 }
 
