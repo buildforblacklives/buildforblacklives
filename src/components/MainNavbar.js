@@ -15,7 +15,7 @@ class MainNavbar extends React.Component {
           <Nav className="ml-auto">
             <NavLink id="navbar-text" href="/about">About</NavLink>
             <NavLink id="navbar-text" href="/faq">FAQ</NavLink>
-            <NavLink id="navbar-text" href="/projects">Open Projects</NavLink>
+            <NavLink id="navbar-text" href="/projects-temp">Open Projects</NavLink>
             <NavLink id="navbar-text" href="/project-request">Project Request</NavLink>
           </Nav>
         </NavbarCollapse>

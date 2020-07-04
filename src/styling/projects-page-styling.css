@@ -1,42 +1,118 @@
-.preview-card {
-    border-radius: 35px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 5px;
-}
+/** Multiple card view **/
 
-.description-card {
-    margin: 20px;
-    padding: 40px;
+.pg-container {
+    padding: 0px 30px 0px;
+}
+.preview-card {
+    border-radius: 10px;
+    margin: 20px 0px;
+    padding: 5px;
 }
 
 .urgent-tag {
     border-radius: 50px;
     background-color: var(--main-yellow);
     font-weight: bold;
+    color: var(--main-black);
+    border: transparent;
+}
+
+.card-row {
+  margin-top: 10px;
+}
+
+.card-text {
+    color: var(--main-black);
+}
+
+.center-div {
+    margin: 0 auto;
+}
+
+.overview {
+    margin: 0 auto;
+    width: 90vw;
+}
+
+.broad {
+    border-radius: 10px;
+    margin: 15px 0px;
+    padding: 10px;
+}
+
+/** Selected card view **/
+
+.description-card {
+    border-radius: 10px;
+    padding: 30px;
+    border: transparent;
+    color: var(--main-black);
 }
 
 .project-btn {
     padding: 20px;
     border-radius: 50px;
-    background-color: #a7e6e8;
+    background-color: var(--main-blue);
     font-weight: bold;
     margin: 10px;
+    color: var(--main-black);
+    border: transparent;
+}
+
+.project-btn:hover {
+    background-color: var(--main-yellow);
 
 }
 
 .page-container {
     margin: 30px;
-    color: black;
+    color: var(--main-black);
 }
 
 .scrolling {
-  height: 85vh;
+  height: 90vh;
   overflow-y: scroll;
   overflow: visible;
 }
 
-.card-row {
-  margin-top: 10px;
-
+.project-col {
+  background-color: var(--main-grey);
+  border-radius: 10px;
+  padding: 20px;
+  margin-right: 15px;
 }
+
+.close-btn {
+    padding: 15px 20px;
+    border: transparent;
+    background-color: var(--main-blue);
+    font-weight: bold;
+    color: var(--main-black);
+}
+
+.close-btn:hover {
+    background-color: var(--main-yellow);
+    color: var(--main-black);
+}
+
+.card-btn {
+    text-align: left;
+    background: white;
+    border: transparent;
+    color: var(--main-black);
+    cursor: pointer;
+}
+
+.card-btn:hover {
+    background-color: var(--main-light-yellow);
+    color: var(--main-black);
+}
+
+.selected-btn {
+    background-color: var(--main-blue);
+    text-align: left;
+    border: transparent;
+    color: var(--main-black);
+    cursor: pointer;
+}
+
