@@ -1,3 +1,9 @@
+@import './styling/project-work.css';
+@import './styling/HomePage.css';
+@import './styling/site-container-styling.css';
+@import './styling/projects-page-styling.css';
+@import './styling/about.css';
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
@@ -10,4 +16,8 @@ body {
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+p {
+  color: var(--white);
 }

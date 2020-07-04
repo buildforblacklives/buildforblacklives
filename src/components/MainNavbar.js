@@ -1,5 +1,4 @@
 import React from 'react';
-import '../styling/site-container-styling.css';
 
 import { Nav, Navbar, NavbarBrand, NavLink } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
