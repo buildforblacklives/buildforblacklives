@@ -4,14 +4,24 @@
 @import './styling/projects-page-styling.css';
 @import './styling/about.css';
 
+
+:root {
+  --main-yellow: #F5CB5C;
+  --main-grey: #878680;
+  --main-black: #1F1F1F;
+  --white: white;
+  --main-blue: #6098BF;
+  --main-light-yellow: #fff0b3;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
     'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #ffeb00;
-  background-color: black;
+  color: var(--main-yellow);
+  background-color: var(--main-black);
 }
 
 code {

@@ -13,7 +13,7 @@
     border-radius: 50px;
     background-color: var(--main-yellow);
     font-weight: bold;
-    color: black;
+    color: var(--main-black);
     border: transparent;
 }
 
@@ -22,7 +22,7 @@
 }
 
 .card-text {
-    color: black;
+    color: var(--main-black);
 }
 
 .center-div {
@@ -46,7 +46,7 @@
     border-radius: 10px;
     padding: 30px;
     border: transparent;
-    color: black;
+    color: var(--main-black);
 }
 
 .project-btn {
@@ -55,7 +55,7 @@
     background-color: var(--main-blue);
     font-weight: bold;
     margin: 10px;
-    color: black;
+    color: var(--main-black);
     border: transparent;
 }
 
@@ -66,7 +66,7 @@
 
 .page-container {
     margin: 30px;
-    color: black;
+    color: var(--main-black);
 }
 
 .scrolling {
@@ -87,32 +87,32 @@
     border: transparent;
     background-color: var(--main-blue);
     font-weight: bold;
-    color: black;
+    color: var(--main-black);
 }
 
 .close-btn:hover {
     background-color: var(--main-yellow);
-    color: black;
+    color: var(--main-black);
 }
 
 .card-btn {
     text-align: left;
     background: white;
     border: transparent;
-    color: black;
+    color: var(--main-black);
     cursor: pointer;
 }
 
 .card-btn:hover {
     background-color: var(--main-light-yellow);
-    color: black;
+    color: var(--main-black);
 }
 
 .selected-btn {
     background-color: var(--main-blue);
     text-align: left;
     border: transparent;
-    color: black;
+    color: var(--main-black);
     cursor: pointer;
 }
 
