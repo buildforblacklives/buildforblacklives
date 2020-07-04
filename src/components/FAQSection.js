@@ -1,6 +1,6 @@
 import React from 'react';
 import { Accordion, Card } from 'react-bootstrap';
-import '../index.css';
+import '../styling/FAQPage.css';
 
 class FAQSection extends React.Component {
   render() {
