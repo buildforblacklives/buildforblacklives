@@ -1,70 +1,32 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import { Collapse } from 'react-bootstrap';
+import ConfirmationCheck from '../components/ProjectWork/ConfirmationCheck';
+import ContactSection from '../components/ProjectWork/ContactSection';
+import ProjectDetails from '../components/ProjectWork/ProjectDetails';
+import Plus from '../assets/plus';
+import Minus from '../assets/minus';
 
-const ConfirmationCheckModal = ({
-  confirmationChecks,
-  setConfirmationChecks,
-  canCloseModal,
-  setShowConfirmation}) => (
-  <div className="confirmation-checks-modal-base">
-    <div className="confirmation-checks-modal">
-      <h2>Before you take on this project</h2>
-      <p>
-        placeholder for history of tech and design and importance of being anti-racist
-      </p>
-      <p>
-        Please read and check off the following checkboxes to acknowledge your agreement with and commitment to the following statements:
-      </p>
-      <label>
-        <input
-          name="confirm0"
-          type="checkbox"
-          checked={confirmationChecks[0]}
-          onChange={() =>
-            setConfirmationChecks([!confirmationChecks[0], confirmationChecks[1], confirmationChecks[2]])
-          }
-        />
-        <span className="confirmation-checks-text">
-          I am committed to listening to the needs of the team I am working for, and building what they ask rather than assuming I know what is best.
-        </span>
-      </label>
-      <label>
-        <input
-          name="confirm1"
-          type="checkbox"
-          checked={confirmationChecks[1]}
-          onChange={() =>
-            setConfirmationChecks([confirmationChecks[0], !confirmationChecks[1], confirmationChecks[2]])
-          }
-        />
-        <span className="confirmation-checks-text">
-          I am committed to listening to the needs of the team I am working for, and building what they ask rather than assuming I know what is best.
-        </span>
-      </label>
-      <label>
-        <input
-          name="confirm2"
-          type="checkbox"
-          checked={confirmationChecks[2]}
-          onChange={() =>
-            setConfirmationChecks([confirmationChecks[0], confirmationChecks[1], !confirmationChecks[2]])
-          }
-        />
-        <span className="confirmation-checks-text">
-          I am committed to listening to the needs of the team I am working for, and building what they ask rather than assuming I know what is best.
-        </span>
-      </label>
-      <div className="confirmation-btn-container">
-        <button
-          type="button"
-          class="btn btn-light confirmation-btn"
-          disabled={!canCloseModal}
-          onClick={() => setShowConfirmation(false)}>
-          Confirm
-        </button>
+const CollapsableSection = ({ title, id, isFirst, children }) => {
+  const [open, setOpen] = useState(isFirst);
+
+  return (
+    <div class="card collapsable-section">
+      <div class="card-header">
+        <h5 class="mb-0">
+          <div class="collapsable-header" onClick={() => setOpen(!open)} aria-controls={id} aria-expanded={open}>
+            {open ? <Minus /> : <Plus />}
+            <span className="collapsable-header-title">{title}</span>
+          </div>
+        </h5>
       </div>
+      <Collapse in={open} className="collapsable-content">
+        <div id={id} class="card-body">
+          {children}
+        </div>
+      </Collapse>
     </div>
-  </div>
-)
+  );
+};
 
 /*
 Assumes project object shape is:
@@ -73,6 +35,7 @@ Assumes project object shape is:
   orgAbout: str,
   orgEmail: str,
   orgPhone: str,
+  projectTitle: str,
   projectAbout: str,
   projectTime: str, (??)
 }
@@ -80,28 +43,23 @@ Assumes project object shape is:
 
 // example project, delete this later
 const example = {
-  orgName: "Hack Beanpot",
-  orgAbout: "this is what our org does",
-  orgEmail: "team@hbp.com",
+  orgName: 'HackBeanpot',
+  orgAbout:
+    'this is what our org does. Which likely has a lot of words, resulting in multiple lines on the screen. We love beans in our org. bean bean bean bean bean bean bean bean bean bean bean bean bean bean bean bean bean bean',
+  orgEmail: 'team@hbp.com',
   orgPhone: null,
-  projectAbout: "This is what the project is about",
-  projectTime: "Estimated 2 weeks"
-}
+  projectTitle: 'Sample Website Project',
+  projectAbout:
+    'This is what the project is about. Which is about beans. bean bean bean bean bean bean bean bean bean bean bean bean bean bean bean bean bean bean',
+  projectTime: 'Estimated 2 weeks'
+};
 
 const ProjectWorkPage = ({ match }) => {
-  const { projectId } = match.params;
-  const [confirmationChecks, setConfirmationChecks] = useState([false, false, false]);
-  const [canCloseModal, setCanCloseModal] = useState(false);
-  const [showConfirmation, setShowConfirmation] = useState(true);
+  // const { projectId } = match.params;
+  const [hasConfirmed, setHasConfirmed] = useState(false);
 
-  useEffect(() => {
-    if (confirmationChecks.every((check) => check)) {
-      setCanCloseModal(true);
-    }
-  }, [confirmationChecks])
   // TODO add useeffect to fetch project details based on project id
   const project = example;
-  const { orgName, orgAbout, orgEmail, orgPhone, projectAbout, projectTime } = project;
 
   return (
     <div className="project-work-page">
@@ -110,36 +68,44 @@ const ProjectWorkPage = ({ match }) => {
           <div className="col"></div>
           <div className="col-8">
             <div className="project-work-flow">
-              <h1>Work on this project</h1>
-              <p>some copy about working on the project and workflow images that i'll steal from cari</p>
+              <h1>Ready to work on this project?</h1>
+              <p>workflow images</p>
             </div>
 
-            <div className="project-details-section">
-              <h1>Project description</h1>
-              <p className="project-org-name">{orgName}</p>
-              
-              <div className="project-detail-title">About the organization</div>
-              <p className="project-detail-content">{orgAbout}</p>
-              <div className="project-detail-title">About the project</div>
-              <p className="project-detail-content">{projectAbout}</p>
-              <div className="project-detail-title">Project timeline</div>
-              <p className="project-detail-content">{projectTime}</p>
-            </div>
-
-            <h1>Email template</h1>
+            <CollapsableSection
+              title="1. Commit to Anti-Racism"
+              id="antiracism"
+              isFirst={true}
+              children={<ConfirmationCheck hasConfirmed={hasConfirmed} setHasConfirmed={setHasConfirmed} />}
+            />
+            <CollapsableSection
+              title="2. Review Project Details"
+              id="details"
+              children={<ProjectDetails project={project} />}
+            />
+            <CollapsableSection
+              title="3. Contact Client Organization"
+              id="contact"
+              children={<ContactSection project={project} hasConfirmed={hasConfirmed} />}
+            />
+            <CollapsableSection
+              title="What's next?"
+              id="next"
+              children={
+                <p>
+                  Once you have contacted the project client, please wait some time for a response from them and to
+                  determine whether you are a good match for each other and to coordinate project details. Please keep
+                  in mind that HackBeanpot will not be facilitating the project relationship, and it will be your
+                  responsibility to decide on communications with the client.
+                </p>
+              }
+            />
           </div>
           <div className="col"></div>
         </div>
       </div>
-      {showConfirmation &&
-        <ConfirmationCheckModal
-          confirmationChecks={confirmationChecks}
-          setConfirmationChecks={setConfirmationChecks}
-          canCloseModal={canCloseModal}
-          setShowConfirmation = {setShowConfirmation}
-        />}
     </div>
   );
-}
+};
 
 export { ProjectWorkPage };
