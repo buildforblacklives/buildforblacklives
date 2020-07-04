@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Collapse } from 'react-bootstrap';
 import ConfirmationCheck from './ConfirmationCheck';
-import Template from './workEmailTemplate';
+import ContactSection from './ContactSection';
+import ProjectDetails from './ProjectDetails';
 import Plus from '../../assets/plus';
 import Minus from '../../assets/minus';
 
@@ -28,56 +29,6 @@ const CollapsableSection = ({ title, id, isFirst, children }) => {
           {children}
         </div>
       </Collapse>
-    </div>
-  )
-}
-
-const ProjectDetails = ({project}) => {
-  const { orgName, orgAbout, projectTitle, projectAbout, projectTime } = project;
-  
-  return (
-    <div className="project-details-section">
-      <h3>{projectTitle}</h3>
-      <p className="project-org-name">{orgName}</p>
-      
-      <div className="project-detail-title">About {orgName}</div>
-      <p className="project-detail-content">{orgAbout}</p>
-      <div className="project-detail-title">About the project</div>
-      <p className="project-detail-content">{projectAbout}</p>
-      <div className="project-detail-title">Project timeline</div>
-      <p className="project-detail-content">{projectTime}</p>
-    </div>
-  )
-}
-
-const ContactSection = ({ project, hasConfirmed }) => {
-  const emailContent = Template(project);
-  const { orgPhone, orgEmail } = project;
-  
-  const copyEmail = () => {
-    var textArea = document.createElement("textarea");
-    textArea.value = emailContent;
-    document.body.appendChild(textArea);
-    textArea.select();
-    document.execCommand("copy");
-    document.body.removeChild(textArea);
-  }
-
-  return (
-    <div>
-      <h3>Contact information</h3>
-      {!hasConfirmed && <p>Please agree to the anti-racism commitment in step 1 to view contact information</p>}
-      {orgEmail && hasConfirmed && <p>Email: {orgEmail}</p>}
-      {orgPhone && hasConfirmed && <p> Phone number: {orgPhone}</p>}
-      <h3>Email template</h3>
-      <div className="confirmation-btn-container">
-        <button
-          class="btn btn-light copy-button"
-          onClick={copyEmail}>
-          Copy template
-        </button>
-      </div>
-      <div className="project-detail-email">{emailContent}</div>
     </div>
   )
 }
