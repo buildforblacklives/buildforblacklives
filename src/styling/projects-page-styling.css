@@ -1,20 +1,20 @@
 /** Multiple card view **/
 
 .pg-container {
-    padding: 0px 30px 0px;
+  padding: 0px 30px 0px;
 }
 .preview-card {
-    border-radius: 10px;
-    margin: 20px 0px;
-    padding: 5px;
+  border-radius: 10px;
+  margin: 20px 0px;
+  padding: 5px;
 }
 
 .urgent-tag {
-    border-radius: 50px;
-    background-color: var(--main-yellow);
-    font-weight: bold;
-    color: black;
-    border: transparent;
+  border-radius: 50px;
+  background-color: var(--main-yellow);
+  font-weight: bold;
+  color: black;
+  border: transparent;
 }
 
 .card-row {
@@ -22,51 +22,50 @@
 }
 
 .card-text {
-    color: black;
+  color: black;
 }
 
 .center-div {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 .overview {
-    margin: 0 auto;
-    width: 90vw;
+  margin: 0 auto;
+  width: 90vw;
 }
 
 .broad {
-    border-radius: 10px;
-    margin: 15px 0px;
-    padding: 10px;
+  border-radius: 10px;
+  margin: 15px 0px;
+  padding: 10px;
 }
 
 /** Selected card view **/
 
 .description-card {
-    border-radius: 10px;
-    padding: 30px;
-    border: transparent;
-    color: black;
+  border-radius: 10px;
+  padding: 30px;
+  border: transparent;
+  color: black;
 }
 
 .project-btn {
-    padding: 20px;
-    border-radius: 50px;
-    background-color: var(--main-blue);
-    font-weight: bold;
-    margin: 10px;
-    color: black;
-    border: transparent;
+  padding: 20px;
+  border-radius: 50px;
+  background-color: var(--blue);
+  font-weight: bold;
+  margin: 10px;
+  color: black;
+  border: transparent;
 }
 
 .project-btn:hover {
-    background-color: var(--main-yellow);
-
+  background-color: var(--main-yellow);
 }
 
 .page-container {
-    margin: 30px;
-    color: black;
+  margin: 30px;
+  color: black;
 }
 
 .scrolling {
@@ -83,36 +82,35 @@
 }
 
 .close-btn {
-    padding: 15px 20px;
-    border: transparent;
-    background-color: var(--main-blue);
-    font-weight: bold;
-    color: black;
+  padding: 15px 20px;
+  border: transparent;
+  background-color: var(--blue);
+  font-weight: bold;
+  color: black;
 }
 
 .close-btn:hover {
-    background-color: var(--main-yellow);
-    color: black;
+  background-color: var(--main-yellow);
+  color: black;
 }
 
 .card-btn {
-    text-align: left;
-    background: white;
-    border: transparent;
-    color: black;
-    cursor: pointer;
+  text-align: left;
+  background: white;
+  border: transparent;
+  color: black;
+  cursor: pointer;
 }
 
 .card-btn:hover {
-    background-color: var(--main-light-yellow);
-    color: black;
+  background-color: var(--light-yellow);
+  color: black;
 }
 
 .selected-btn {
-    background-color: var(--main-blue);
-    text-align: left;
-    border: transparent;
-    color: black;
-    cursor: pointer;
+  background-color: var(--blue);
+  text-align: left;
+  border: transparent;
+  color: black;
+  cursor: pointer;
 }
-
