@@ -4,15 +4,16 @@
 @import './styling/projects-page-styling.css';
 @import './styling/about.css';
 
-
 :root {
-  --main-yellow: #F5CB5C;
+  --main-cream: #f9f5e3;
   --main-grey: #878680;
-  --main-dark-grey: #1F1F1F;
-  --main-black: #1F1F1F;
+  --main-black: #1f1f1f;
+  --main-blue: #6098bf;
+  --main-yellow: #f5cb5c;
   --white: white;
-  --main-blue: #6098BF;
-  --main-light-yellow: #fff0b3;
+  --black: black;
+  --blue: #a7e6e8;
+  --light-yellow: #fff0b3;
 }
 
 body {
