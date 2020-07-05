@@ -3,9 +3,10 @@ import { Button, Col, Container, Image, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { LinkContainer } from 'react-router-bootstrap';
 import logo from '../assets/logo.png';
-import projectFlow from '../assets/project_flow.png';
-import requestFlow from '../assets/request_flow.png';
+import projectFlow from '../assets/flow_diagrams/project_selection_flow.png';
+import requestFlow from '../assets/flow_diagrams/request_flow.png';
 import arrowDown from '../assets/arrow_down.png';
+import '../styling/HomePage.css';
 
 const HomePage = () => (
   <Container className="text-center page" fluid>

@@ -1,11 +1,11 @@
 @font-face {
   font-family: Archivo;
-  src: url(Archivo-Regular.ttf);
+  src: url(/fonts/Archivo-Regular.ttf);
 }
 
 @font-face {
-  font-family: cornerstone;
-  src: url(Cornerstone.ttf);
+  font-family: Cornerstone;
+  src: url(/fonts/Cornerstone.ttf);
 }
 
 #navbar-text {
@@ -15,7 +15,7 @@
 }
 
 .btn-join-movement {
-  font-family: cornerstone;
+  font-family: Cornerstone;
   background-color: var(--main-yellow);
   padding-left: 20px;
   padding-right: 20px;

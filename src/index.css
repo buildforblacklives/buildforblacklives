@@ -1,8 +1,4 @@
-@import './styling/project-work.css';
-@import './styling/HomePage.css';
-@import './styling/site-container-styling.css';
-@import './styling/projects-page-styling.css';
-@import './styling/about.css';
+@import './styling/SiteContainer.css';
 
 :root {
   --main-cream: #f9f5e3;
@@ -14,6 +10,16 @@
   --black: black;
   --blue: #a7e6e8;
   --light-yellow: #fff0b3;
+}
+
+@font-face {
+  font-family: Archivo;
+  src: url('styling/fonts/Archivo-Regular.ttf');
+}
+
+@font-face {
+  font-family: Cornerstone;
+  src: url('styling/fonts/Cornerstone.ttf');
 }
 
 body {
@@ -32,4 +38,9 @@ code {
 
 p {
   color: var(--white);
+}
+
+.flow-images {
+  max-width: 85%;
+  max-height: 85%;
 }
