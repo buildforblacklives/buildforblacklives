@@ -54,7 +54,9 @@ class FAQPage extends React.Component {
           <Tab eventKey="volunteer" title="Working on a Project"></Tab>
           <Tab eventKey="initiative" title="This Initiative"></Tab>
         </Tabs>
-        {!!this.state.faqData && <FAQSection title={this.state.title} faq={this.state.faqData} />}
+        <div className="pl-4 pr-4">
+          {!!this.state.faqData && <FAQSection title={this.state.title} faq={this.state.faqData} />}
+        </div>
       </div>
     );
   }

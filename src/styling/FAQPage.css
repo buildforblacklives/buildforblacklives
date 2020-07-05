@@ -29,13 +29,9 @@
 }
 
 @media only screen and (max-width: 800px) {
-  .faq .nav-link.active {
-    width: 100%;
-  }
-
   .faq .nav-link {
     flex-grow: 0;
-    width: 95%;
+    width: 100%;
     border-bottom: 5px solid var(--main-yellow) !important;
   }
 
