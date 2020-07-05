@@ -14,6 +14,10 @@
   font-family: Archivo;
 }
 
+.footer-text {
+  color: var(--main-grey);
+}
+
 .btn-join-movement {
   font-family: cornerstone;
   background-color: var(--main-yellow);
