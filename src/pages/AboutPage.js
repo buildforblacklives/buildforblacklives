@@ -1,20 +1,25 @@
 import React from 'react';
 import { Button, Col, Container, Image, Row } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
-import logo from '../media/blm.png';
+import logo from '../assets/logo.png';
+import commPartnersIcon from '../assets/community-partners.png';
+import reqProjectIcon from '../assets/form-icon.png';
+import workProjectIcon from '../assets/project-selct-icon.png';
+import mailIcon from '../assets/email-icon.png';
 import fbLogo from '../assets/social_logos/Facebook_Logo.png';
 import igLogo from '../assets/social_logos/IG_Logo.png';
 import linkedinLogo from '../assets/social_logos/Linkedin_Logo.png';
 import twitterLogo from '../assets/social_logos/Twitter_Logo.png';
 
 const AboutPage = () => (
-  <Container className="container" fluid="md">
-    <Row>
-      <Col>
-        <Image src={logo} />
+  <Container className="container" fluid>
+    <Row className="align-center">
+      <Col xs={12} md={6}>
+        <Image src={logo} className="mx-auto d-block about-icon" fluid/>
       </Col>
-      <Col className="col-9">
+      <Col>
         <h1>Build for Black Lives</h1>
+        <h4>Building pro bono projects to support Black lives</h4>
         <p>
           Build for Black Lives, a platform created by HackBeanpot, connects 
           individuals who have tech/design skills with activists, organizers, 
@@ -38,8 +43,8 @@ const AboutPage = () => (
 
     <hr />
     
-    <Row>
-      <Col>
+    <Row className="align-center">
+      <Col className="order2">
         <h2>Community Partners</h2>
         <p>
           These are organizations that have helped build, endorse, and promote 
@@ -68,11 +73,17 @@ const AboutPage = () => (
           &nbsp;to learn more from the organizing team.
         </p>
       </Col>
+      <Col xs={12} md={6}>
+        <Image src={commPartnersIcon} className="mx-auto d-block about-icon" fluid/>
+      </Col>
     </Row>
 
     <hr />
     
-    <Row>
+    <Row className="align-center">
+      <Col xs={12} md={6}>
+        <Image src={reqProjectIcon} className="mx-auto d-block about-icon" fluid/>
+      </Col>
       <Col>
         <h2>Request a Project</h2>
         <p>
@@ -91,8 +102,8 @@ const AboutPage = () => (
 
     <hr />
 
-    <Row>
-      <Col>
+    <Row className="align-center">
+      <Col className="order2">
         <h2>Work on a Project</h2>
         <p>
           Are you a designer, programmer, engineer, data scientist, writer, web 
@@ -105,11 +116,17 @@ const AboutPage = () => (
           </Button>
         </LinkContainer>
       </Col>
+      <Col xs={12} md={6}>
+        <Image src={workProjectIcon} className="mx-auto d-block about-icon" fluid/>
+      </Col>
     </Row>
 
     <hr />
 
-    <Row>
+    <Row className="align-center">
+      <Col xs={12} md={6}>
+        <Image src={mailIcon} className="mx-auto d-block about-icon" fluid/>
+      </Col>
       <Col>
         <h2>Contact Us</h2>
         <p>
