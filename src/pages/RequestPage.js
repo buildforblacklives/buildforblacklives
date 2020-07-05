@@ -1,23 +1,16 @@
 import React from 'react';
 import { Card, Col, Container, Image, Row } from 'react-bootstrap';
-import projsubmission1 from '../assets/projsubmission1.png';
-import projsubmission2 from '../assets/projsubmission2.png';
-import projsubmission3 from '../assets/projsubmission3.png';
-import arrowRight from '../assets/arrow_right.png';
+import requestFlow from '../assets/flow_diagrams/request_flow.png';
 
 const RequestPage = () => (
   <Container>
     <Row className="justify-content-md-center">
       <Col>
         <h1>Request a Project</h1>
-        <div class="m-3">
-          <Image src={projsubmission1} />
-          <Image src={arrowRight} />
-          <Image src={projsubmission2} />
-          <Image src={arrowRight} />
-          <Image src={projsubmission3} />
-        </div>
-        <Card class="bg-light">
+        <Row className="flowPhotos justify-content-center d-flex flex-wrap align-items-center">
+          <Image className="flow-images" src={requestFlow} />
+        </Row>
+        <Card className="mt-3 bg-light">
           <iframe
             title="Project Request Form"
             src="https://docs.google.com/forms/d/e/1FAIpQLSeuLALxCe0vbDnEbPMp46-r9px-YVZLJP-pJZKhnxE_spfLMA/viewform?embedded=true"

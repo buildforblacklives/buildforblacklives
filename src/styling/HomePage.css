@@ -1,8 +1,3 @@
-@font-face {
-  font-family: Archivo;
-  src: url(Archivo-Regular.ttf);
-}
-
 .page {
   margin-bottom: 4rem;
 }
@@ -16,7 +11,7 @@
 }
 
 .logotype {
-  font-family: cornerstone;
+  font-family: ArchivoBold;
   color: var(--main-yellow);
   font-size: 3rem;
   text-align: center;
