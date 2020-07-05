@@ -3,7 +3,8 @@
 :root {
   --main-cream: #f9f5e3;
   --main-grey: #878680;
-  --main-black: #1f1f1f;
+  /* --main-black: #1f1f1f; */
+  --main-black: black;
   --main-blue: #6098bf;
   --main-yellow: #f5cb5c;
   --white: white;
