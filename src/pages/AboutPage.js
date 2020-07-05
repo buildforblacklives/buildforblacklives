@@ -1,19 +1,23 @@
 import React from 'react';
 import { Button, Col, Container, Image, Row } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
-import logo from '../media/blm.png';
+import logo from '../assets/logo.png';
+import commPartnersIcon from '../assets/community-partners.png';
+import reqProjectIcon from '../assets/form-icon.png';
+import workProjectIcon from '../assets/project-selct-icon.png';
+import mailIcon from '../assets/email-icon.png';
 import fbLogo from '../assets/social_logos/Facebook_Logo.png';
 import igLogo from '../assets/social_logos/IG_Logo.png';
 import linkedinLogo from '../assets/social_logos/Linkedin_Logo.png';
 import twitterLogo from '../assets/social_logos/Twitter_Logo.png';
 
 const AboutPage = () => (
-  <Container className="container" fluid="md">
-    <Row>
+  <Container className="container" fluid>
+    <Row className="align-center">
       <Col>
-        <Image src={logo} />
+        <Image src={logo} className="rounded mx-auto d-block" fluid/>
       </Col>
-      <Col className="col-9">
+      <Col>
         <h1>Build for Black Lives</h1>
         <p>
           Build for Black Lives, a platform created by HackBeanpot, connects 
@@ -38,8 +42,8 @@ const AboutPage = () => (
 
     <hr />
     
-    <Row>
-      <Col>
+    <Row className="align-center">
+      <Col className>
         <h2>Community Partners</h2>
         <p>
           These are organizations that have helped build, endorse, and promote 
@@ -68,12 +72,18 @@ const AboutPage = () => (
           &nbsp;to learn more from the organizing team.
         </p>
       </Col>
+      <Col>
+        <Image src={commPartnersIcon} className="rounded mx-auto d-block"/>
+      </Col>
     </Row>
 
     <hr />
     
-    <Row>
+    <Row className="align-center">
       <Col>
+        <Image src={reqProjectIcon} className="rounded mx-auto d-block"/>
+      </Col>
+      <Col className>
         <h2>Request a Project</h2>
         <p>
           Are you a black business owner, activist, protest organizer, or 
@@ -91,7 +101,7 @@ const AboutPage = () => (
 
     <hr />
 
-    <Row>
+    <Row className="align-center">
       <Col>
         <h2>Work on a Project</h2>
         <p>
@@ -105,11 +115,17 @@ const AboutPage = () => (
           </Button>
         </LinkContainer>
       </Col>
+      <Col>
+        <Image src={workProjectIcon} className="rounded mx-auto d-block"/>
+      </Col>
     </Row>
 
     <hr />
 
-    <Row>
+    <Row className="align-center">
+      <Col>
+        <Image src={mailIcon} className="rounded mx-auto d-block"/>
+      </Col>
       <Col>
         <h2>Contact Us</h2>
         <p>
