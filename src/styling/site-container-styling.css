@@ -1,4 +1,9 @@
 @font-face {
+  font-family: Archivo;
+  src: url(Archivo-Regular.ttf);
+}
+
+@font-face {
   font-family: cornerstone;
   src: url(Cornerstone.ttf);
 }
@@ -6,6 +11,7 @@
 #navbar-text {
   margin: 8px;
   color: var(--main-yellow);
+  font-family: Archivo;
 }
 
 .btn-join-movement {
@@ -33,11 +39,6 @@
 
 .navbar {
   background-color: var(--main-black);
-}
-
-img {
-  max-width: 200px;
-  max-height: 200px;
 }
 
 .intro-blurb {
