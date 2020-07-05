@@ -15,10 +15,12 @@ class FAQSection extends React.Component {
       const isCurrentEventKey = currentEventKey === eventKey;
 
       return (
-        <Row className="m-3" onClick={toggleIconOnClick}>
-          <Col xs="auto"> {isCurrentEventKey ? <Minus /> : <Plus />} </Col>
-          <Col>{children}</Col>
-        </Row>
+        <Card className="faq-accordion-card faq-accordion-question" onClick={toggleIconOnClick}>
+          <Row className="m-3">
+            <Col xs="auto"> {isCurrentEventKey ? <Minus /> : <Plus />} </Col>
+            <Col>{children}</Col>
+          </Row>
+        </Card>
       );
     }
     return (
@@ -27,12 +29,12 @@ class FAQSection extends React.Component {
         {this.props.faq.map((qa, i) => {
           return (
             <Accordion key={i} className="mt-3 mb-3">
-              <Card className='faq-accordion-container'>
-                <IconToggleAccordion as={Card.Header} eventKey="1">
-                  {qa.question}
-                </IconToggleAccordion>
+              <IconToggleAccordion as={Card.Header} eventKey="1">
+                {qa.question}
+              </IconToggleAccordion>
+              <Card>
                 <Accordion.Collapse eventKey="1">
-                  <Card.Body className="faq-accordion-answer">{qa.answer}</Card.Body>
+                  <Card.Body className="faq-accordion-card faq-accordion-answer">{qa.answer}</Card.Body>
                 </Accordion.Collapse>
               </Card>
             </Accordion>

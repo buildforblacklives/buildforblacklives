@@ -51,10 +51,16 @@
 }
 
 /* Questions & Answers */
-.faq-accordion-container {
-  cursor: pointer;
+.faq-accordion-card {
   color: var(--main-black);
+}
+
+.faq-accordion-question {
+  cursor: pointer;
   background-color: var(--main-cream);
+}
+.faq-accordion-question:hover {
+  background-color: var(--light-yellow);
 }
 
 .faq-accordion-answer {
