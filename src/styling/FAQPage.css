@@ -1,0 +1,14 @@
+.faq-button {
+  cursor: pointer;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.faq-button-selected {
+  background-color: '#ffc107';
+}
+
+.faq-accordion {
+  cursor: pointer;
+  color: var(--main-black);
+}

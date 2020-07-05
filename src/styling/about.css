@@ -15,8 +15,12 @@ p {
 }
 
 ul {
-  list-style-type: none;
+  list-style-type: square;
   color: var(--white);
+}
+
+a {
+  color: var(--main-grey); /* FIXME make this blue once var is added? */
 }
 
 .button {
@@ -28,4 +32,10 @@ ul {
 .container {
   margin-top: 100px;
   margin-bottom: 100px;
+}
+
+.socialLogo {
+  height: 30px;
+  margin-right: 20px;
+  margin-top: 20px
 }

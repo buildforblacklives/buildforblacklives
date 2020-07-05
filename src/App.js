@@ -1,12 +1,13 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { MainNavbar } from './components/MainNavbar';
-import { HomePage } from './components/HomePage';
-import { AboutPage } from './components/AboutPage';
-import { ProjectsPage } from './components/ProjectsPage';
-import { RequestPage } from './components/RequestPage';
-import { ProjectWorkPage } from './components/ProjectWorkPage';
-import './App.css';
+import { HomePage } from './pages/HomePage';
+import { AboutPage } from './pages/AboutPage';
+import { ProjectsPage } from './pages/ProjectsPage';
+import { ProjectsPageTemp } from './pages/ProjectsPageTemp';
+import { RequestPage } from './pages/RequestPage';
+import { FAQPage } from './pages/FAQPage';
+import { ProjectWorkPage } from './pages/ProjectWorkPage';
 
 const App = () => {
   return (
@@ -16,7 +17,9 @@ const App = () => {
         <Route exact path="/" component={HomePage} />
         <Route path="/about" component={AboutPage} />
         <Route exact path="/projects" component={ProjectsPage} />
+        <Route exact path="/projects-temp" component={ProjectsPageTemp} />
         <Route path="/project-request" component={RequestPage} />
+        <Route path="/faq" component={FAQPage} />
         <Route path="/projects/:projectId" component={ProjectWorkPage} />
       </Switch>
     </BrowserRouter>

@@ -8,9 +8,10 @@
   src: url(Cornerstone.ttf);
 }
 
-.header-text {
-  font-family: Archivo;
+#navbar-text {
+  margin: 8px;
   color: var(--main-yellow);
+  font-family: Archivo;
 }
 
 .btn-join-movement {
@@ -36,8 +37,8 @@
   text-align: center;
 }
 
-.nav-link {
-  margin: 8px;
+.navbar {
+  background-color: var(--main-black);
 }
 
 .intro-blurb {
