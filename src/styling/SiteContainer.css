@@ -8,12 +8,6 @@
   src: url(/fonts/Cornerstone.ttf);
 }
 
-#navbar-text {
-  margin: 8px;
-  color: var(--main-yellow);
-  font-family: Archivo;
-}
-
 .btn-join-movement {
   font-family: Cornerstone;
   background-color: var(--main-yellow);
@@ -39,6 +33,22 @@
 
 .navbar {
   background-color: var(--main-black);
+}
+
+.navbar-center-align {
+  vertical-align: middle;
+}
+.navbar-logotype {
+  font-family: Cornerstone;
+  color: var(--main-yellow);
+  font-size: 16pt;
+  margin-left: 10px;
+}
+
+.navbar-text {
+  margin: 8px;
+  color: var(--main-yellow) !important;
+  font-family: Archivo;
 }
 
 .intro-blurb {
