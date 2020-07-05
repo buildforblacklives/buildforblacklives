@@ -71,7 +71,7 @@ const ProjectWorkPage = ({ match }) => {
             <div className="project-work-flow">
               <h1>Ready to work on this project?</h1>
               <div className="justify-content-center d-flex flex-wrap align-items-center">
-                <img className="flow-images" src={projectFlow} />
+                <img className="flow-images" src={projectFlow} alt="Project Steps Flow" />
               </div>
             </div>
 

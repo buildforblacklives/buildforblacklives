@@ -16,12 +16,7 @@ const ProjectsPageTemp = () => (
     <div class="row d-flex justify-content-center text-center">
       <div class="col-4">
         <h6 class="mt-5 text-white"> Want to be notified? Enter your email below: </h6>
-        <input
-          type="email"
-          class="form-control"
-          aria-describedby="email"
-          placeholder="buildforblacklives@hackbeanpot.com"
-        />
+        <input type="email" class="form-control" aria-describedby="email" placeholder="foo.bar@gmail.com" />
         <button type="submit" class="btn btn-primary mt-3">
           Submit
         </button>

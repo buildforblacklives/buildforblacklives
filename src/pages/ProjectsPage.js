@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Row, Col, Card, Container } from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
 import '../styling/ProjectsPage.css';
 
 const { Body, Title, Subtitle, Text, Link } = Card;
@@ -105,7 +106,9 @@ class ProjectsPage extends React.Component {
                     <Text class="card-text">Estimated 2 weeks - Need ASAP </Text>
 
                     <div class="text-center">
-                      <Button className="project-btn"> Work on this project! </Button>
+                      <LinkContainer to="/projects/123">
+                        <Button className="project-btn"> Work on this project! </Button>
+                      </LinkContainer>
                     </div>
                   </Body>
                 </Card>
