@@ -1,11 +1,16 @@
+h4 {
+  color: var(--main-blue);
+  margin-bottom: 20px;
+}
+
 hr {
   border: 0;
   clear: both;
   display: block;
-  background-color: var(--main-yellow);
+  background-color: var(--light-yellow);
   height: 3px;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 80px;
+  margin-bottom: 80px;
 }
 
 p {
@@ -20,7 +25,7 @@ ul {
 }
 
 a {
-  color: var(--main-grey); /* FIXME make this blue once var is added? */
+  color: var(--main-blue);
 }
 
 .button {
@@ -38,4 +43,23 @@ a {
   height: 30px;
   margin-right: 20px;
   margin-top: 20px;
+}
+
+.align-center {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-icon {
+  height: 200px;
+}
+
+@media only screen and (max-width: 786px) {
+  .order2 {
+    order: 2;
+  }
+  .mx-auto {
+    margin-bottom: 30px;
+  }
 }
