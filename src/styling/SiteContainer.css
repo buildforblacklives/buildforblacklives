@@ -8,6 +8,10 @@
   src: url(/fonts/Cornerstone.ttf);
 }
 
+.footer-text {
+  color: var(--main-grey);
+}
+
 .btn-join-movement {
   font-family: Cornerstone;
   background-color: var(--main-yellow);
