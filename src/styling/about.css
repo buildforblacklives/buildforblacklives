@@ -55,9 +55,11 @@ a {
   height: 200px;
 }
 
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 786px) {
+  .order2 {
+    order: 2;
+  }
   .mx-auto {
-    margin-top: 30px;
     margin-bottom: 30px;
   }
 }

@@ -44,7 +44,7 @@ const AboutPage = () => (
     <hr />
     
     <Row className="align-center">
-      <Col>
+      <Col className="order2">
         <h2>Community Partners</h2>
         <p>
           These are organizations that have helped build, endorse, and promote 
@@ -84,7 +84,7 @@ const AboutPage = () => (
       <Col xs={12} md={6}>
         <Image src={reqProjectIcon} className="mx-auto d-block about-icon" fluid/>
       </Col>
-      <Col className>
+      <Col>
         <h2>Request a Project</h2>
         <p>
           Are you a black business owner, activist, protest organizer, or 
@@ -103,7 +103,7 @@ const AboutPage = () => (
     <hr />
 
     <Row className="align-center">
-      <Col>
+      <Col className="order2">
         <h2>Work on a Project</h2>
         <p>
           Are you a designer, programmer, engineer, data scientist, writer, web 
