@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { MainNavbar } from './components/MainNavbar';
+import { Footer } from './components/Footer';
 import { HomePage } from './pages/HomePage';
 import { AboutPage } from './pages/AboutPage';
 import { ProjectsPage } from './pages/ProjectsPage';
@@ -22,6 +23,7 @@ const App = () => {
         <Route path="/faq" component={FAQPage} />
         <Route path="/projects/:projectId" component={ProjectWorkPage} />
       </Switch>
+      <Footer />
     </BrowserRouter>
   );
 };
