@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Row, Col } from 'react-bootstrap';
+import { Tabs, Tab } from 'react-bootstrap';
 
 import { FAQSection } from '../components/FAQSection';
 import { clientFAQ, volunteerFAQ, initiativeFAQ } from '../data/faq.json';
@@ -17,71 +17,47 @@ class FAQPage extends React.Component {
   }
 
   handleClick = (e) => {
-    const { value, innerHTML } = e.target;
+    // Prevent state change on container click
+    if (e.target.tagName !== 'NAV') {
+      const {
+        dataset: { rbEventKey: type },
+        innerHTML
+      } = e.target;
 
-    let selectedData,
-      selectedType = value;
+      let selectedData,
+        selectedType = type;
 
-    switch (selectedType) {
-      case 'client':
-        selectedData = clientFAQ;
-        break;
-      case 'volunteer':
-        selectedData = volunteerFAQ;
-        break;
-      case 'initiative':
-        selectedData = initiativeFAQ;
-        break;
-      default:
-        selectedData = clientFAQ;
+      switch (selectedType) {
+        case 'client':
+          selectedData = clientFAQ;
+          break;
+        case 'volunteer':
+          selectedData = volunteerFAQ;
+          break;
+        case 'initiative':
+          selectedData = initiativeFAQ;
+          break;
+        default:
+          selectedData = clientFAQ;
+      }
+
+      this.setState({ faqType: selectedType, faqData: selectedData, title: innerHTML });
     }
-
-    this.setState({ faqType: selectedType, faqData: selectedData, title: innerHTML });
   };
 
-  styleButton = (type) => {
-    return type === this.state.faqType ? 'faq-button-selected' : '';
+  styleTab = (type) => {
+    return type === this.state.faqType ? 'faq-tab-selected' : '';
   };
 
   render() {
     return (
-      <div className="container mt-5">
-        <h1>FAQs</h1>
-        <Row>
-          <Col md={4} className="mt-2 mb-2">
-            <Button
-              value="client"
-              className={'button faq-button ' + this.styleButton('client')}
-              variant="warning"
-              size="md"
-              onClick={this.handleClick}
-            >
-              Requesting a Project
-            </Button>
-          </Col>
-          <Col md={4} className="mt-2 mb-2">
-            <Button
-              value="volunteer"
-              className={'button faq-button ' + this.styleButton('volunteer')}
-              variant="warning"
-              size="md"
-              onClick={this.handleClick}
-            >
-              Working on a Project
-            </Button>
-          </Col>
-          <Col md={4} className="mt-2 mb-2">
-            <Button
-              value="initiative"
-              className={'button faq-button ' + this.styleButton('initiative')}
-              variant="warning"
-              size="md"
-              onClick={this.handleClick}
-            >
-              This Initiative
-            </Button>
-          </Col>
-        </Row>
+      <div className="container mt-5 mb-5 faq">
+        <h1 className="mb-3">FAQs</h1>
+        <Tabs xs="auto" onClick={this.handleClick}>
+          <Tab eventKey="client" title="Requesting a Project" className={this.styleTab('client')}></Tab>
+          <Tab eventKey="volunteer" title="Working on a Project" className={this.styleTab('volunteer')}></Tab>
+          <Tab eventKey="initiative" title="This Initiative" className={this.styleTab('initiative')}></Tab>
+        </Tabs>
         {!!this.state.faqData && <FAQSection title={this.state.title} faq={this.state.faqData} />}
       </div>
     );
