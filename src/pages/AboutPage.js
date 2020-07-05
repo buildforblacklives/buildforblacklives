@@ -14,11 +14,12 @@ import twitterLogo from '../assets/social_logos/Twitter_Logo.png';
 const AboutPage = () => (
   <Container className="container" fluid>
     <Row className="align-center">
-      <Col>
-        <Image src={logo} className="rounded mx-auto d-block" fluid/>
+      <Col xs={12} md={6}>
+        <Image src={logo} className="mx-auto d-block about-icon" fluid/>
       </Col>
       <Col>
         <h1>Build for Black Lives</h1>
+        <h4>Building pro bono projects to support Black lives</h4>
         <p>
           Build for Black Lives, a platform created by HackBeanpot, connects 
           individuals who have tech/design skills with activists, organizers, 
@@ -43,7 +44,7 @@ const AboutPage = () => (
     <hr />
     
     <Row className="align-center">
-      <Col className>
+      <Col>
         <h2>Community Partners</h2>
         <p>
           These are organizations that have helped build, endorse, and promote 
@@ -72,16 +73,16 @@ const AboutPage = () => (
           &nbsp;to learn more from the organizing team.
         </p>
       </Col>
-      <Col>
-        <Image src={commPartnersIcon} className="rounded mx-auto d-block"/>
+      <Col xs={12} md={6}>
+        <Image src={commPartnersIcon} className="mx-auto d-block about-icon" fluid/>
       </Col>
     </Row>
 
     <hr />
     
     <Row className="align-center">
-      <Col>
-        <Image src={reqProjectIcon} className="rounded mx-auto d-block"/>
+      <Col xs={12} md={6}>
+        <Image src={reqProjectIcon} className="mx-auto d-block about-icon" fluid/>
       </Col>
       <Col className>
         <h2>Request a Project</h2>
@@ -115,16 +116,16 @@ const AboutPage = () => (
           </Button>
         </LinkContainer>
       </Col>
-      <Col>
-        <Image src={workProjectIcon} className="rounded mx-auto d-block"/>
+      <Col xs={12} md={6}>
+        <Image src={workProjectIcon} className="mx-auto d-block about-icon" fluid/>
       </Col>
     </Row>
 
     <hr />
 
     <Row className="align-center">
-      <Col>
-        <Image src={mailIcon} className="rounded mx-auto d-block"/>
+      <Col xs={12} md={6}>
+        <Image src={mailIcon} className="mx-auto d-block about-icon" fluid/>
       </Col>
       <Col>
         <h2>Contact Us</h2>

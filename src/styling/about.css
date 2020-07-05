@@ -1,3 +1,8 @@
+h4 {
+  color: var(--main-blue);
+  margin-bottom: 20px;
+}
+
 hr {
   border: 0;
   clear: both;
@@ -44,4 +49,15 @@ a {
   display: flex!important;
   align-items: center;
   justify-content: center;
+}
+
+.about-icon {
+  height: 200px;
+}
+
+@media only screen and (max-width: 991px) {
+  .mx-auto {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
 }
