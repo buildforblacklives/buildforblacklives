@@ -23,7 +23,7 @@ class FAQSection extends React.Component {
     }
     return (
       <section className="mt-1 mb-1">
-        <h3 className="mt-3 mb-3">Questions: {this.props.title}</h3>
+        <h3 className="mt-4 mb-4">Questions: {this.props.title}</h3>
         {this.props.faq.map((qa, i) => {
           return (
             <Accordion key={i} className="mt-3 mb-3">
