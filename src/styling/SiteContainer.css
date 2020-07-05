@@ -12,6 +12,10 @@
   color: var(--main-cream);
 }
 
+.footer-text {
+  color: var(--main-cream);
+}
+
 .btn-join-movement {
   font-family: Cornerstone;
   background-color: var(--main-yellow);
