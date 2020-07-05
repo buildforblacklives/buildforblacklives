@@ -42,7 +42,7 @@
   .faq .nav-link:hover,
   .faq .nav-link:focus,
   .faq .nav-link:active {
-    border: 1px solid var(--main-blue) !important;
+    border-bottom: 1px solid var(--main-blue) !important;
   }
 
   .faq .nav-tabs {
