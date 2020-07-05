@@ -1,39 +1,88 @@
-@font-face {
-  font-family: cornerstone;
-  src: url(Cornerstone.ttf);
+.page {
+  margin-bottom: 4rem;
+}
+
+.logo {
+  margin-top: 4.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 25%;
+  max-height: 25%;
 }
 
 .logotype {
-  font-family: cornerstone;
+  font-family: ArchivoBold;
   color: var(--main-yellow);
-  font-size: 4rem;
+  font-size: 3rem;
   text-align: center;
-  margin-top: 13rem;
+  margin-top: 0.75rem;
 }
 
 .bio-blurb {
-  font-family: Arial, Helvetica, sans-serif;
-  color: var(--white);
-  font-size: 1.5rem;
+  font-family: Archivo;
+  color: var(--main-blue);
+  font-size: 2rem;
   text-align: center;
 }
 
-.highlighted {
-  /* background: linear-gradient(180deg, rgba(255, 255, 255, 0) 95%, #f8ed44 50%); */
-  background-image: linear-gradient(to right, var(--main-yellow) 75%, transparent 75%);
-  background-position: 0 1.04em;
-  background-repeat: repeat-x;
-  background-size: 8px 3px;
+.button-row {
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 1120px) {
+  .button-row {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.button-text {
+  color: var(--white);
+  font-size: 1.2rem;
+  margin: 0.5rem 6.75rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+@media only screen and (max-width: 1120px) {
+  .button-text {
+    color: var(--white);
+    font-size: 1.2rem;
+    margin: 0.5rem 0rem;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .button-text {
+    color: var(--white);
+    font-size: 1.2rem;
+    margin: 2rem 5rem 1rem;
+  }
+}
+
+@media only screen and (max-width: 671px) {
+  .button-text {
+    color: var(--white);
+    font-size: 1.2rem;
+    margin: 2rem 0rem 0.5rem;
+  }
+}
+
+.arrow-down {
+  margin-bottom: 2rem;
+}
+
+@media only screen and (max-width: 671px) {
+  .arrow-down {
+    margin-bottom: 0rem;
+    visibility: hidden;
+  }
 }
 
 .button {
   background-color: var(--main-yellow);
   padding: 20px 32px;
-}
-
-.button-row {
-  margin-top: 10rem;
-  margin-bottom: 12rem;
 }
 
 .track-titles {
@@ -45,10 +94,35 @@
   margin-bottom: 1.5rem;
 }
 
+@media screen and (max-width: 671px) {
+  .track-titles {
+    margin-top: 3rem;
+  }
+}
+
+@media screen and (max-width: 1066px) {
+  .track-images {
+    max-width: 640px;
+    max-height: 170px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .track-images {
+    max-width: 85%;
+    max-height: 85%;
+  }
+}
+
 .track-body {
   font-family: Arial, Helvetica, sans-serif;
   color: var(--white);
   font-size: 1.25rem;
   text-align: center;
   margin-top: 1.5rem;
+}
+
+.links {
+  color: var(--main-blue);
+  text-decoration: underline;
 }
