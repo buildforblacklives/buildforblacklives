@@ -18,6 +18,11 @@
 }
 
 @font-face {
+  font-family: ArchivoBold;
+  src: url('styling/fonts/Archivo-Bold.ttf');
+}
+
+@font-face {
   font-family: Cornerstone;
   src: url('styling/fonts/Cornerstone.ttf');
 }
