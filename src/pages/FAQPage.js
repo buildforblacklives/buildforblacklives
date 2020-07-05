@@ -45,18 +45,14 @@ class FAQPage extends React.Component {
     }
   };
 
-  styleTab = (type) => {
-    return type === this.state.faqType ? 'faq-tab-selected' : '';
-  };
-
   render() {
     return (
       <div className="container mt-5 mb-5 faq">
         <h1 className="mb-3">FAQs</h1>
         <Tabs xs="auto" onClick={this.handleClick}>
-          <Tab eventKey="client" title="Requesting a Project" className={this.styleTab('client')}></Tab>
-          <Tab eventKey="volunteer" title="Working on a Project" className={this.styleTab('volunteer')}></Tab>
-          <Tab eventKey="initiative" title="This Initiative" className={this.styleTab('initiative')}></Tab>
+          <Tab eventKey="client" title="Requesting a Project"></Tab>
+          <Tab eventKey="volunteer" title="Working on a Project"></Tab>
+          <Tab eventKey="initiative" title="This Initiative"></Tab>
         </Tabs>
         {!!this.state.faqData && <FAQSection title={this.state.title} faq={this.state.faqData} />}
       </div>
