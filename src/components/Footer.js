@@ -1,11 +1,11 @@
 import React from 'react';
 
-import { Nav, Navbar, Col, Container, Image, Row  } from 'react-bootstrap';
+import { Navbar, Col  } from 'react-bootstrap';
 
 class Footer extends React.Component {
     render() {
       return (
-        <Navbar variant="dark" expand="lg" className="mt-4 p-4 justify-content-center">
+        <Navbar variant="dark" expand="lg" className="p-4 justify-content-center text-center">
             <Col className="col-auto text-center text-nowrap">
               <a href="https://www.facebook.com/Build-for-Black-Lives-105258644589291" 
               target="_blank" rel="noopener noreferrer">
