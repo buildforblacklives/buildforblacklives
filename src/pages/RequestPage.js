@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, Col, Container, Image, Row } from 'react-bootstrap';
+import projectFlow from '../assets/project_flow.png';
 import projsubmission1 from '../assets/projsubmission1.png';
 import projsubmission2 from '../assets/projsubmission2.png';
 import projsubmission3 from '../assets/projsubmission3.png';
@@ -10,13 +11,9 @@ const RequestPage = () => (
     <Row className="justify-content-md-center">
       <Col>
         <h1>Request a Project</h1>
-        <div class="m-3">
-          <Image src={projsubmission1} />
-          <Image src={arrowRight} />
-          <Image src={projsubmission2} />
-          <Image src={arrowRight} />
-          <Image src={projsubmission3} />
-        </div>
+        <Row className="justify-content-center d-flex flex-wrap align-items-center">
+          <Image className="track-images" src={projectFlow} />
+        </Row>
         <Card class="bg-light">
           <iframe
             title="Project Request Form"
