@@ -2,6 +2,10 @@
   margin-bottom: 4rem;
 }
 
+.logoRow {
+  flex-direction: column;
+}
+
 .logo {
   margin-top: 4.5rem;
   margin-left: auto;

@@ -10,7 +10,7 @@ import '../styling/HomePage.css';
 
 const HomePage = () => (
   <Container className="text-center page" fluid>
-    <Row>
+    <Row className="logoRow">
       <Image className="logo" src={logo} />
     </Row>
     <Row>
