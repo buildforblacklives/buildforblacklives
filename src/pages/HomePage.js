@@ -9,7 +9,7 @@ import arrowDown from '../assets/arrow_down.png';
 
 const HomePage = () => (
   <Container className="text-center page" fluid>
-    <Row>
+    <Row className="logoRow">
       <Image className="logo" src={logo} />
     </Row>
     <Row>
