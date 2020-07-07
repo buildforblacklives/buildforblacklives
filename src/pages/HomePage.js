@@ -3,9 +3,10 @@ import { Button, Col, Container, Image, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { LinkContainer } from 'react-router-bootstrap';
 import logo from '../assets/logo.png';
-import projectFlow from '../assets/project_flow.png';
-import requestFlow from '../assets/request_flow.png';
+import projectFlow from '../assets/flow_diagrams/project_selection_flow.png';
+import requestFlow from '../assets/flow_diagrams/request_flow.png';
 import arrowDown from '../assets/arrow_down.png';
+import '../styling/HomePage.css';
 
 const HomePage = () => (
   <Container className="text-center page" fluid>
@@ -57,7 +58,7 @@ const HomePage = () => (
     </Row>
     <Row className="track-titles justify-content-center">Request Project Help</Row>
     <Row className="justify-content-center d-flex flex-wrap align-items-center">
-      <Image className="track-images" src={projectFlow} />
+      <Image className="track-images" src={requestFlow} />
     </Row>
     <Row className="track-body">
       <Col xs={12} md={{ span: 6, offset: 3 }}>
@@ -70,7 +71,7 @@ const HomePage = () => (
     </Row>
     <Row className="track-titles justify-content-center">Volunteer for Projects</Row>
     <Row className="justify-content-center d-flex flex-wrap align-items-center">
-      <Image className="track-images" src={requestFlow} />
+      <Image className="track-images" src={projectFlow} />
     </Row>
     <Row className="track-body">
       <Col xs={12} md={{ span: 6, offset: 3 }}>

@@ -9,11 +9,13 @@ import { ProjectsPageTemp } from './pages/ProjectsPageTemp';
 import { RequestPage } from './pages/RequestPage';
 import { FAQPage } from './pages/FAQPage';
 import { ProjectWorkPage } from './pages/ProjectWorkPage';
+import ScrollToTop from './components/ScrollToTop';
 
 const App = () => {
   return (
     <BrowserRouter>
       <MainNavbar />
+      <ScrollToTop />
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route path="/about" component={AboutPage} />
