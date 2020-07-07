@@ -1,9 +1,9 @@
-.project-work-content {
+.project-work-page {
+  max-width: 1600px;
   margin: 0 auto;
 }
 
 .collapsable-section {
-  color: var(--main-black);
   margin-bottom: 24px;
   border-radius: 10px;
 }
@@ -13,27 +13,23 @@
   cursor: pointer;
 }
 
+.collapsable-header svg {
+  margin: auto 0;
+}
+
 .collapsable-header-title {
   margin-left: 16px;
 }
 
 .collapsable-content {
   padding: 24px 60px;
-}
-
-.collapsable-content p {
-  color: var(--main-black);
+  background-color: var(--main-grey);
 }
 
 .confirmation-checks-modal h2 {
   font-weight: bold;
   font-size: 24px;
   margin-bottom: 16px;
-}
-
-.confirmation-checks-modal p {
-  color: var(--main-black);
-  font-size: 14px;
 }
 
 .confirmation-modal-button {
@@ -46,13 +42,12 @@
 
 .confirmation-checks-modal input {
   margin: auto;
-  width: 24px;
-  height: 24px;
+  width: 32px;
+  height: 32px;
 }
 
 .confirmation-checks-modal .confirmation-checks-text {
   margin-left: 16px;
-  font-size: 14px;
   width: 100%;
 }
 
@@ -63,8 +58,6 @@
 
 .confirmation-btn {
   margin-left: auto;
-  background-color: var(--main-blue);
-  font-weight: bold;
 }
 
 .confirmation-btn:disabled {
@@ -75,33 +68,17 @@
   margin-bottom: 24px;
 }
 
-.project-work-page h3 {
-  font-size: 24px;
+.project-work-page h4 {
   margin-bottom: 4px;
 }
 
 .project-org-name {
-  font-size: 20px;
-}
-
-.project-detail-title {
-  font-weight: bold;
-}
-
-.project-detail-content {
-  font-size: 14px;
-  color: var(--main-black);
+  margin-bottom: 48px;
 }
 
 .project-detail-email {
   white-space: pre-line;
-  line-height: 18px;
-}
-
-.copy-button {
-  background-color: var(--main-blue);
-  font-weight: bold;
-  border: none;
+  line-height: 36px;
 }
 
 @media only screen and (max-width: 600px) {

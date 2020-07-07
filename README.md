@@ -5,6 +5,11 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Shared styles
+The `h1, h2, h3 and p` tags match the character styles from ther [XD designs](https://xd.adobe.com/view/cfe9fc7e-8850-42aa-a713-de8009844536-9aba/) and for the most part should be the only ones used without needing additional custom styling.
+
+All `Button`s should use either the `primary-button` or `secondary-button` classNames for the yellow and blue buttons respectively.
+
 ## Available Scripts
 
 In the project directory, you can run:

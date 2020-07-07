@@ -1,5 +1,7 @@
-.page {
-  margin-bottom: 4rem;
+.home-page {
+  max-width: 1600px;
+  margin: 0 auto 4rem;
+  text-align: center;
 }
 
 .logoRow {
@@ -7,25 +9,12 @@
 }
 
 .logo {
-  margin-top: 4.5rem;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 25%;
-  max-height: 25%;
+  margin: 86px auto 45px;
+  max-width: 390px;
 }
 
-.logotype {
-  font-family: ArchivoBold;
-  color: var(--main-yellow);
-  font-size: 3rem;
-  text-align: center;
-  margin-top: 0.75rem;
-}
-
+.logotype,
 .bio-blurb {
-  font-family: Archivo;
-  color: var(--main-blue);
-  font-size: 2rem;
   text-align: center;
 }
 
@@ -34,47 +23,39 @@
   margin-bottom: 1rem;
 }
 
+.home-persona-section {
+  padding: 0 48px;
+}
+
+.home-persona-text {
+  font-family: HelveticaNeueMed;
+  font-size: 32px;
+  margin-bottom: 18px;
+  display: block;
+}
+
+.arrow-down {
+  margin-bottom: 2rem;
+}
+
+.track-titles {
+  margin: 150px 0 55px;
+}
+
+.track-body {
+  margin-top: 55px;
+}
+
 @media only screen and (max-width: 1120px) {
   .button-row {
     margin-top: 1rem;
     margin-bottom: 1rem;
   }
-}
 
-.button-text {
-  color: var(--white);
-  font-size: 1.2rem;
-  margin: 0.5rem 6.75rem;
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
-}
-
-@media only screen and (max-width: 1120px) {
-  .button-text {
-    color: var(--white);
-    font-size: 1.2rem;
-    margin: 0.5rem 0rem;
+  .track-images {
+    max-width: 640px;
+    max-height: 170px;
   }
-}
-
-@media only screen and (max-width: 991px) {
-  .button-text {
-    color: var(--white);
-    font-size: 1.2rem;
-    margin: 2rem 5rem 1rem;
-  }
-}
-
-@media only screen and (max-width: 671px) {
-  .button-text {
-    color: var(--white);
-    font-size: 1.2rem;
-    margin: 2rem 0rem 0.5rem;
-  }
-}
-
-.arrow-down {
-  margin-bottom: 2rem;
 }
 
 @media only screen and (max-width: 671px) {
@@ -82,51 +63,13 @@
     margin-bottom: 0rem;
     visibility: hidden;
   }
-}
 
-.button {
-  background-color: var(--main-yellow);
-  padding: 20px 32px;
-}
-
-.track-titles {
-  font-family: Arial, Helvetica, sans-serif;
-  color: var(--main-yellow);
-  font-size: 1.85rem;
-  text-align: center;
-  margin-top: 5rem;
-  margin-bottom: 1.5rem;
-}
-
-@media screen and (max-width: 671px) {
   .track-titles {
     margin-top: 3rem;
   }
-}
 
-@media screen and (max-width: 1066px) {
-  .track-images {
-    max-width: 640px;
-    max-height: 170px;
-  }
-}
-
-@media screen and (max-width: 650px) {
   .track-images {
     max-width: 85%;
     max-height: 85%;
   }
-}
-
-.track-body {
-  font-family: Arial, Helvetica, sans-serif;
-  color: var(--white);
-  font-size: 1.25rem;
-  text-align: center;
-  margin-top: 1.5rem;
-}
-
-.links {
-  color: var(--main-blue);
-  text-decoration: underline;
 }

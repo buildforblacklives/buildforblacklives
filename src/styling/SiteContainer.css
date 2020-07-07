@@ -1,38 +1,5 @@
-@font-face {
-  font-family: Archivo;
-  src: url(/fonts/Archivo-Regular.ttf);
-}
-
-@font-face {
-  font-family: Cornerstone;
-  src: url(/fonts/Cornerstone.ttf);
-}
-
 .footer-text {
   color: var(--main-cream);
-}
-
-.btn-join-movement {
-  font-family: Cornerstone;
-  background-color: var(--main-yellow);
-  padding-left: 20px;
-  padding-right: 20px;
-  margin-top: 50px;
-}
-
-.centered {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.navbar-styling {
-  position: fixed;
-  top: 0;
-  right: 0;
-  text-align: center;
 }
 
 .navbar {
@@ -42,22 +9,22 @@
 .navbar-center-align {
   vertical-align: middle;
 }
+
 .navbar-logotype {
-  font-family: ArchivoBold;
   color: var(--main-yellow);
   font-size: 16pt;
   margin-left: 10px;
   margin-top: 20px;
 }
 
-.navbar-text {
-  margin: 8px;
-  color: var(--main-yellow) !important;
-  font-family: Archivo;
+.navbar .navbar-nav .navbar-text.nav-link {
+  margin: 8px 12px;
+  color: var(--main-yellow);
+  font-family: HelveticaNeueMed;
+  font-size: 32px;
 }
 
-.intro-blurb {
-  background-color: var(--main-grey);
-  min-height: 300px;
-  margin-left: 0px;
+.navbar .navbar-nav .navbar-text.nav-link:hover,
+.navbar .navbar-nav .navbar-text.nav-link:active {
+  color: var(--dark-yellow);
 }

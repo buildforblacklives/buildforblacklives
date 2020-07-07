@@ -3,7 +3,6 @@ import { Tabs, Tab } from 'react-bootstrap';
 
 import { FAQSection } from '../components/FAQSection';
 import { clientFAQ, volunteerFAQ, initiativeFAQ } from '../data/faq.json';
-import '../styling/FAQPage.css';
 
 class FAQPage extends React.Component {
   constructor(props) {

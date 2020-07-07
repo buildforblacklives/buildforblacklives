@@ -2,12 +2,12 @@
 .faq .nav-tabs {
   display: flex;
   min-height: 3em;
-  font-size: 1.2rem;
+  font-size: 32px;
   border-bottom: 5px solid var(--main-yellow);
 }
 
 .faq .nav-link {
-  border: 1px solid var(--main-yellow) !important;
+  border: 1px solid var(--main-yellow);
   color: var(--main-yellow);
   flex-grow: 30;
 }
@@ -15,30 +15,30 @@
 .faq .nav-link:hover,
 .faq .nav-link:focus,
 .faq .nav-link:active {
-  border: 1px solid var(--main-blue) !important;
-  border-bottom: 0 !important;
+  border: 1px solid var(--main-blue);
+  border-bottom: 0;
   color: var(--main-blue);
 }
 
 .faq .nav-link.active,
 .faq .nav-link.active:hover {
-  background-color: var(--main-yellow) !important;
-  color: var(--main-black) !important;
+  background-color: var(--main-yellow);
+  color: var(--main-black);
   flex-grow: 70;
-  border: 0 !important;
+  border: 0;
 }
 
 @media only screen and (max-width: 800px) {
   .faq .nav-link {
     flex-grow: 0;
     width: 100%;
-    border-bottom: 5px solid var(--main-yellow) !important;
+    border-bottom: 5px solid var(--main-yellow);
   }
 
   .faq .nav-link:hover,
   .faq .nav-link:focus,
   .faq .nav-link:active {
-    border-bottom: 1px solid var(--main-blue) !important;
+    border-bottom: 1px solid var(--main-blue);
   }
 
   .faq .nav-tabs {
@@ -55,10 +55,12 @@
   cursor: pointer;
   background-color: var(--main-cream);
 }
+
 .faq-accordion-question:hover {
   background-color: var(--light-yellow);
 }
 
 .faq-accordion-answer {
-  background-color: var(--white);
+  background-color: var(--main-cream);
+  font-size: 16px;
 }
