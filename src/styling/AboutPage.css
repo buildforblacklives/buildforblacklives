@@ -7,7 +7,7 @@
   margin-bottom: 68px;
 }
 
-hr {
+.about-page hr {
   border: 0;
   clear: both;
   display: block;
@@ -16,8 +16,8 @@ hr {
   margin: 100px 0;
 }
 
-.request-icon,
-.contact-icon {
+.about-request-icon,
+.about-contact-icon {
   width: 300px;
 }
 
@@ -26,13 +26,13 @@ hr {
   margin-bottom: 100px;
 }
 
-.socialLogo {
+.about-social-logo {
   height: 30px;
   margin-right: 20px;
   margin-top: 20px;
 }
 
-.align-center {
+.about-align-center {
   align-items: center;
   justify-content: center;
 }
@@ -42,7 +42,7 @@ hr {
 }
 
 @media only screen and (max-width: 786px) {
-  .order2 {
+  .about-order2 {
     order: 2;
   }
   .mx-auto {

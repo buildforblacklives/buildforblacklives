@@ -14,6 +14,7 @@ const MainNavbar = () => (
           className="d-inline-block align-top"
           alt="Build for Black Lives"
         />
+        <span className="navbar-logotype">Build for Black Lives</span>
       </NavbarBrand>
     </LinkContainer>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />

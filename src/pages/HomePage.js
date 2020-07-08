@@ -7,23 +7,25 @@ import projectFlow from '../assets/flow_diagrams/project_selection_flow.png';
 import requestFlow from '../assets/flow_diagrams/request_flow.png';
 import arrowDown from '../assets/arrow_down.png';
 
+import '../styling/HomePage.css';
+
 const HomePage = () => (
   <Container className="text-center home-page" fluid>
     <Row className="logoRow">
       <Image className="logo" src={logo} />
     </Row>
     <Row>
-      <Col className="logotype">
-        <h1>Build for Black Lives</h1>
+      <Col>
+        <h1 className="logotype">Build for Black Lives</h1>
       </Col>
     </Row>
     <Row>
-      <Col className="bio-blurb" xs={12}>
-        <h3>Building pro bono projects to support Black lives</h3>
+      <Col className="home-bio-blurb" xs={12}>
+        <h3 className="logotype">Building pro bono projects to support Black lives</h3>
       </Col>
     </Row>
-    <Row className="button-row">
-      <Col xs={12} lg={6} className="home-persona-section">
+    <Row className="home-button-row">
+      <Col xs={12} lg={6} className="home-persona-section-left">
         <span className="home-persona-text">
           Black business owners, activists, organizers, and community advocates, etc.
         </span>
@@ -37,7 +39,7 @@ const HomePage = () => (
           </Col>
         </Row>
       </Col>
-      <Col xs={12} lg={6} className="home-persona-section">
+      <Col xs={12} lg={6} className="home-persona-section-right">
           <span className="home-persona-text">
             Anti-racist designers, programmers, data scientists, illustrators, writers, etc.
           </span>
@@ -55,15 +57,15 @@ const HomePage = () => (
 
     <Row>
       <Col>
-        <Image className="arrow-down" src={arrowDown} />
+        <Image className="home-arrow-down" src={arrowDown} />
       </Col>
     </Row>
 
-    <h2 className="track-titles">Request a Project</h2>
+    <h2 className="home-track-titles">Request a Project</h2>
     <Row className="justify-content-center d-flex flex-wrap align-items-center">
-      <Image className="track-images" src={requestFlow} />
+      <Image className="home-track-images" src={requestFlow} />
     </Row>
-    <Row className="track-body">
+    <Row className="home-track-body">
       <Col xs={12} md={{ span: 8, offset: 2 }}>
         <p>
           Are you a black business owner, activist, protest organizer, or community advocate looking for free help
@@ -75,11 +77,11 @@ const HomePage = () => (
       </Col>
     </Row>
 
-    <h2 className="track-titles">Work on a Project</h2>
+    <h2 className="home-track-titles">Work on a Project</h2>
     <Row className="justify-content-center d-flex flex-wrap align-items-center">
-      <Image className="track-images" src={projectFlow} />
+      <Image className="home-track-images" src={projectFlow} />
     </Row>
-    <Row className="track-body">
+    <Row className="home-track-body">
       <Col xs={12} md={{ span: 8, offset: 2 }}>
         <p>
           Are you a writer, designer, engineer, data scientist, illustrator, programmer, web developer, or marketing

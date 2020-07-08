@@ -14,17 +14,21 @@
 }
 
 .logotype,
-.bio-blurb {
+.home-bio-blurb {
   text-align: center;
 }
 
-.button-row {
+.home-button-row {
   margin-top: 4rem;
   margin-bottom: 1rem;
 }
 
-.home-persona-section {
-  padding: 0 48px;
+.home-persona-section-left {
+  padding-right: 48px;
+}
+
+.home-persona-section-right {
+  padding-left: 48px;
 }
 
 .home-persona-text {
@@ -34,41 +38,41 @@
   display: block;
 }
 
-.arrow-down {
+.home-arrow-down {
   margin-bottom: 2rem;
 }
 
-.track-titles {
+.home-track-titles {
   margin: 150px 0 55px;
 }
 
-.track-body {
+.home-track-body {
   margin-top: 55px;
 }
 
 @media only screen and (max-width: 1120px) {
-  .button-row {
+  .home-button-row {
     margin-top: 1rem;
     margin-bottom: 1rem;
   }
 
-  .track-images {
+  .home-track-images {
     max-width: 640px;
     max-height: 170px;
   }
 }
 
 @media only screen and (max-width: 671px) {
-  .arrow-down {
+  .home-arrow-down {
     margin-bottom: 0rem;
     visibility: hidden;
   }
 
-  .track-titles {
+  .home-track-titles {
     margin-top: 3rem;
   }
 
-  .track-images {
+  .home-track-images {
     max-width: 85%;
     max-height: 85%;
   }

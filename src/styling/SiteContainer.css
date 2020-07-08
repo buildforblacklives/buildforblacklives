@@ -1,20 +1,16 @@
-.footer-text {
-  color: var(--main-cream);
-}
-
 .navbar {
-  background-color: var(--main-black);
+  background-color: var(--main-grey);
 }
 
-.navbar-center-align {
-  vertical-align: middle;
+.navbar-brand {
+  display: flex;
 }
 
 .navbar-logotype {
   color: var(--main-yellow);
   font-size: 16pt;
-  margin-left: 10px;
-  margin-top: 20px;
+  font-family: ArchivoBold;
+  margin: auto 0 auto 16px;
 }
 
 .navbar .navbar-nav .navbar-text.nav-link {
@@ -27,4 +23,23 @@
 .navbar .navbar-nav .navbar-text.nav-link:hover,
 .navbar .navbar-nav .navbar-text.nav-link:active {
   color: var(--dark-yellow);
+}
+
+.footer {
+  display: flex;
+  background-color: var(--main-grey);
+}
+
+.footer-text {
+  color: var(--main-cream);
+  margin: 0;
+  font-size: 24px;
+}
+
+.footer-social {
+  margin: auto 0;
+}
+
+.footer-social-icon {
+  margin: 0 8px;
 }

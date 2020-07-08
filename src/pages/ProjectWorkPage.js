@@ -7,6 +7,8 @@ import projectFlow from '../assets/flow_diagrams/project_steps_flow.png';
 import Plus from '../assets/plus';
 import Minus from '../assets/minus';
 
+import '../styling/ProjectWorkPage.css';
+
 const CollapsableSection = ({ title, id, isFirst, children }) => {
   const [open, setOpen] = useState(isFirst);
 

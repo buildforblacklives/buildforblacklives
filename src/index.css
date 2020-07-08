@@ -1,10 +1,4 @@
 @import './styling/SiteContainer.css';
-@import './styling/AboutPage.css';
-@import './styling/RequestPage.css';
-@import './styling/FAQPage.css';
-@import './styling/HomePage.css';
-@import './styling/ProjectsPage.css';
-@import './styling/ProjectWorkPage.css';
 
 :root {
   /* theme colors */
@@ -19,6 +13,16 @@
   --blue: #a7e6e8;
   --light-yellow: #fff0b3;
   --dark-yellow: #e0a800;
+}
+
+@font-face {
+  font-family: Archivo;
+  src: url('styling/fonts/Archivo-Regular.ttf');
+}
+
+@font-face {
+  font-family: ArchivoBold;
+  src: url('styling/fonts/Archivo-Bold.ttf');
 }
 
 @font-face {
@@ -57,6 +61,10 @@ h1 {
   font-family: HelveticaNeueBoldCondensed;
 }
 
+h1.logotype {
+  font-family: ArchivoBold;
+}
+
 h2 {
   font-size: 48px;
   color: var(--main-yellow);
@@ -68,6 +76,10 @@ h3 {
   color: var(--main-blue);
   font-size: 32px;
   font-family: HelveticaNeueBold;
+}
+
+h3.logotype {
+  font-family: Archivo;
 }
 
 h4 {

@@ -11,15 +11,17 @@ import igLogo from '../assets/social_logos/IG_Logo.png';
 import linkedinLogo from '../assets/social_logos/Linkedin_Logo.png';
 import twitterLogo from '../assets/social_logos/Twitter_Logo.png';
 
+import '../styling/AboutPage.css';
+
 const AboutPage = () => (
   <Container className="about-page" fluid>
-    <Row className="align-center">
+    <Row className="about-align-center">
       <Col xs={12} md={4}>
         <Image src={logo} className="mx-auto d-block about-icon" fluid />
       </Col>
       <Col>
-        <h1>Build for Black Lives</h1>
-        <h3 className="about-subheader">Building pro bono projects to support Black lives</h3>
+        <h1 className="logotype">Build for Black Lives</h1>
+        <h3 className="about-subheader logotype">Building pro bono projects to support Black lives</h3>
         <p>
           Build for Black Lives is a platform built to connect individuals who have tech/design skills with activists, organizers, and Black-owned businesses. We aim to provide pro bono work creating websites, mobile apps, data visualizations, graphics, digital marketing, and/or any other technical projects the organizations might need.
         </p>
@@ -28,8 +30,8 @@ const AboutPage = () => (
 
     <hr />
 
-    <Row className="align-center">
-      <Col className="order2">
+    <Row className="about-align-center">
+      <Col className="about-order2">
         <h2>Community Partners</h2>
         <p>These are organizations that have helped build, endorse, and promote the platform.</p>
         <ul>
@@ -61,9 +63,9 @@ const AboutPage = () => (
 
     <hr />
 
-    <Row className="align-center">
+    <Row className="about-align-center">
       <Col xs={12} md={6}>
-        <Image src={reqProjectIcon} className="mx-auto d-block request-icon" fluid />
+        <Image src={reqProjectIcon} className="mx-auto d-block about-request-icon" fluid />
       </Col>
       <Col>
         <h2>Request a Project</h2>
@@ -81,7 +83,7 @@ const AboutPage = () => (
 
     <hr />
 
-    <Row className="align-center">
+    <Row className="about-align-center">
       <Col className="order2">
         <h2>Work on a Project</h2>
         <p>
@@ -101,9 +103,9 @@ const AboutPage = () => (
 
     <hr />
 
-    <Row className="align-center">
+    <Row className="about-align-center">
       <Col xs={12} md={6}>
-        <Image src={mailIcon} className="mx-auto d-block contact-icon" fluid />
+        <Image src={mailIcon} className="mx-auto d-block about-contact-icon" fluid />
       </Col>
       <Col>
         <h2>Contact Us</h2>
@@ -123,16 +125,16 @@ const AboutPage = () => (
         <Row>
           <Col className="col-9">
             <a href="https://www.facebook.com/hackbeanpot/" target="_blank" rel="noopener noreferrer">
-              <Image src={fbLogo} className="socialLogo" />
+              <Image src={fbLogo} className="about-social-logo" />
             </a>
             <a href="https://www.instagram.com/hackbeanpot/" target="_blank" rel="noopener noreferrer">
-              <Image src={igLogo} className="socialLogo" />
+              <Image src={igLogo} className="about-social-logo" />
             </a>
             <a href="https://twitter.com/hackbeanpot" target="_blank" rel="noopener noreferrer">
-              <Image src={twitterLogo} className="socialLogo" />
+              <Image src={twitterLogo} className="about-social-logo" />
             </a>
             <a href="https://www.linkedin.com/company/hackbeanpot-inc" target="_blank" rel="noopener noreferrer">
-              <Image src={linkedinLogo} className="socialLogo" />
+              <Image src={linkedinLogo} className="about-social-logo" />
             </a>
           </Col>
         </Row>

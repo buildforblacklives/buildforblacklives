@@ -2,6 +2,8 @@ import React from 'react';
 import { Card, Col, Container, Image, Row } from 'react-bootstrap';
 import requestFlow from '../assets/flow_diagrams/request_flow.png';
 
+import '../styling/RequestPage.css';
+
 const RequestPage = () => (
   <Container className="request-page justify-content-md-center">
     <Row>

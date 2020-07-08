@@ -2,6 +2,8 @@ import React from 'react';
 import { Button, Row, Col, Card, Container } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 
+import '../styling/ProjectsPage.css';
+
 const { Body, Title, Subtitle, Text, Link } = Card;
 
 const projects = [
