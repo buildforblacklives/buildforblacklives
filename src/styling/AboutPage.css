@@ -7,15 +7,6 @@
   margin-bottom: 68px;
 }
 
-.about-page hr {
-  border: 0;
-  clear: both;
-  display: block;
-  background-color: var(--main-yellow);
-  height: 3px;
-  margin: 100px 0;
-}
-
 .about-request-icon,
 .about-contact-icon {
   width: 300px;

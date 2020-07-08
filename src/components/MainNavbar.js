@@ -1,19 +1,13 @@
 import React from 'react';
 import { Nav, Navbar, NavbarBrand, NavLink, Image } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
-import logo from '../assets/logo.png';
+import Logo from '../assets/logo.js';
 
 const MainNavbar = () => (
   <Navbar className="navbar-center-align" variant="dark" expand="lg" sticky="top">
     <LinkContainer to="/">
       <NavbarBrand Link>
-        <Image
-          src={logo}
-          href="/"
-          width="80"
-          className="d-inline-block align-top"
-          alt="Build for Black Lives"
-        />
+          <Logo className="navbar-logo" />
         <span className="navbar-logotype">Build for Black Lives</span>
       </NavbarBrand>
     </LinkContainer>

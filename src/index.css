@@ -149,6 +149,15 @@ li {
   border-color: var(--main-blue);
 }
 
+hr {
+  border: 0;
+  clear: both;
+  display: block;
+  background-color: var(--main-yellow);
+  height: 3px;
+  margin: 100px 0;
+}
+
 .flow-images {
   max-width: 85%;
   max-height: 85%;

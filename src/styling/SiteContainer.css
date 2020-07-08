@@ -6,6 +6,10 @@
   display: flex;
 }
 
+.navbar-logo {
+  width: 80px;
+}
+
 .navbar-logotype {
   color: var(--main-yellow);
   font-size: 16pt;
@@ -28,6 +32,9 @@
 .footer {
   display: flex;
   background-color: var(--main-grey);
+  bottom: 0;
+  position: absolute;
+  width: 100%;
 }
 
 .footer-text {

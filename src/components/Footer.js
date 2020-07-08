@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar, Col } from 'react-bootstrap';
+import { Col } from 'react-bootstrap';
 
 const Footer = () => (
   <div variant="dark" expand="lg" className="p-4 justify-content-center text-center footer">
@@ -16,7 +16,7 @@ const Footer = () => (
       </a>
       <a href="mailto:buildforblacklives@hackbeanpot.com"
         target="_blank" rel="noopener noreferrer">
-        <i class="fas fa-envelope fa-2x footer-social-icon footer-text"></i>
+        <i className="fas fa-envelope fa-2x footer-social-icon footer-text"></i>
       </a>
       <a href="https://join.slack.com/t/northeastern-hac3935/shared_invite/zt-fctqwcqe-7~n_GXliEYbQzUeqERHH6A"
         target="_blank" rel="noopener noreferrer">

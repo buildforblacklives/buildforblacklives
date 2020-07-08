@@ -3,7 +3,7 @@ import { Collapse } from 'react-bootstrap';
 import ConfirmationCheck from '../components/ProjectWork/ConfirmationCheck';
 import ContactSection from '../components/ProjectWork/ContactSection';
 import ProjectDetails from '../components/ProjectWork/ProjectDetails';
-import projectFlow from '../assets/flow_diagrams/project_steps_flow.png';
+import projectFlow from '../assets/flow_diagrams/project_steps_flow.js';
 import Plus from '../assets/plus';
 import Minus from '../assets/minus';
 

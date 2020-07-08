@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, Col, Container, Image, Row } from 'react-bootstrap';
-import requestFlow from '../assets/flow_diagrams/request_flow.png';
+import RequestFlow from '../assets/flow_diagrams/request_flow.js';
 
 import '../styling/RequestPage.css';
 
@@ -11,7 +11,7 @@ const RequestPage = () => (
     </Row>
     <p>project request blurb</p>
     <Row className="justify-content-center d-flex flex-wrap align-items-center">
-      <Image className="flow-images" src={requestFlow} />
+      <RequestFlow className="flow-images" />
     </Row>
     <Row className="mt-3">
       <Col>

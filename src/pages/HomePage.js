@@ -1,18 +1,18 @@
 import React from 'react';
-import { Button, Col, Container, Image, Row } from 'react-bootstrap';
+import { Button, Col, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { LinkContainer } from 'react-router-bootstrap';
-import logo from '../assets/logo.png';
-import projectFlow from '../assets/flow_diagrams/project_selection_flow.png';
-import requestFlow from '../assets/flow_diagrams/request_flow.png';
-import arrowDown from '../assets/arrow_down.png';
+import Logo from '../assets/logo.js';
+import ProjectFlow from '../assets/flow_diagrams/project_selection_flow.js';
+import RequestFlow from '../assets/flow_diagrams/request_flow.js';
+import ArrowDown from '../assets/arrow_down.js';
 
 import '../styling/HomePage.css';
 
 const HomePage = () => (
   <Container className="text-center home-page" fluid>
     <Row className="logoRow">
-      <Image className="logo" src={logo} />
+      <Logo className="logo" />
     </Row>
     <Row>
       <Col>
@@ -57,13 +57,13 @@ const HomePage = () => (
 
     <Row>
       <Col>
-        <Image className="home-arrow-down" src={arrowDown} />
+        <ArrowDown className="home-arrow-down" />
       </Col>
     </Row>
 
     <h2 className="home-track-titles">Request a Project</h2>
     <Row className="justify-content-center d-flex flex-wrap align-items-center">
-      <Image className="home-track-images" src={requestFlow} />
+      <RequestFlow className="home-track-images" />
     </Row>
     <Row className="home-track-body">
       <Col xs={12} md={{ span: 8, offset: 2 }}>
@@ -79,7 +79,7 @@ const HomePage = () => (
 
     <h2 className="home-track-titles">Work on a Project</h2>
     <Row className="justify-content-center d-flex flex-wrap align-items-center">
-      <Image className="home-track-images" src={projectFlow} />
+      <ProjectFlow className="home-track-images" />
     </Row>
     <Row className="home-track-body">
       <Col xs={12} md={{ span: 8, offset: 2 }}>

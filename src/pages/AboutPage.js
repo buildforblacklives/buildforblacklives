@@ -1,11 +1,11 @@
 import React from 'react';
 import { Button, Col, Container, Image, Row } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
-import logo from '../assets/logo.png';
-import commPartnersIcon from '../assets/community-partners.png';
-import reqProjectIcon from '../assets/form-icon.png';
-import workProjectIcon from '../assets/project-selct-icon.png';
-import mailIcon from '../assets/email-icon.png';
+import Logo from '../assets/logo.js';
+import CommPartnersIcon from '../assets/community-partners.js';
+import ReqProjectIcon from '../assets/form-icon.js';
+import WorkProjectIcon from '../assets/project-select-icon.js';
+import MailIcon from '../assets/email-icon.js';
 import fbLogo from '../assets/social_logos/Facebook_Logo.png';
 import igLogo from '../assets/social_logos/IG_Logo.png';
 import linkedinLogo from '../assets/social_logos/Linkedin_Logo.png';
@@ -17,7 +17,7 @@ const AboutPage = () => (
   <Container className="about-page" fluid>
     <Row className="about-align-center">
       <Col xs={12} md={4}>
-        <Image src={logo} className="mx-auto d-block about-icon" fluid />
+        <Logo className="mx-auto d-block about-icon" fluid />
       </Col>
       <Col>
         <h1 className="logotype">Build for Black Lives</h1>
@@ -57,7 +57,7 @@ const AboutPage = () => (
         </p>
       </Col>
       <Col xs={12} md={6}>
-        <Image src={commPartnersIcon} className="mx-auto d-block about-icon" fluid />
+        <CommPartnersIcon className="mx-auto d-block about-icon" fluid />
       </Col>
     </Row>
 
@@ -65,7 +65,7 @@ const AboutPage = () => (
 
     <Row className="about-align-center">
       <Col xs={12} md={6}>
-        <Image src={reqProjectIcon} className="mx-auto d-block about-request-icon" fluid />
+        <ReqProjectIcon className="mx-auto d-block about-request-icon" fluid />
       </Col>
       <Col>
         <h2>Request a Project</h2>
@@ -97,7 +97,7 @@ const AboutPage = () => (
         </LinkContainer>
       </Col>
       <Col xs={12} md={6}>
-        <Image src={workProjectIcon} className="mx-auto d-block about-icon" fluid />
+        <WorkProjectIcon className="mx-auto d-block about-icon" fluid />
       </Col>
     </Row>
 
@@ -105,7 +105,7 @@ const AboutPage = () => (
 
     <Row className="about-align-center">
       <Col xs={12} md={6}>
-        <Image src={mailIcon} className="mx-auto d-block about-contact-icon" fluid />
+        <MailIcon className="mx-auto d-block about-contact-icon" fluid />
       </Col>
       <Col>
         <h2>Contact Us</h2>
