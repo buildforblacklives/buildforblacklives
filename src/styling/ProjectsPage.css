@@ -103,3 +103,8 @@
 .temp-hr {
   margin: 16px 0 48px;
 }
+
+.project-temp-page + .footer {
+  bottom: 0;
+  position: absolute;
+}

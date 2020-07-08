@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from 'react-bootstrap';
 
 const ProjectsPageTemp = () => (
-  <div className="container mt-5">
+  <div className="container mt-5 project-temp-page">
     <div className="row text-center">
       <div className="col-8 offset-2">
         <h1 className="mt-5">Projects Coming Soon</h1>

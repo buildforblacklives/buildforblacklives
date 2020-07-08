@@ -32,8 +32,6 @@
 .footer {
   display: flex;
   background-color: var(--main-grey);
-  bottom: 0;
-  position: absolute;
   width: 100%;
 }
 
