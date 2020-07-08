@@ -1,21 +1,19 @@
 @font-face {
   font-family: Archivo;
-  src: url(Archivo-Regular.ttf);
+  src: url(/fonts/Archivo-Regular.ttf);
 }
 
 @font-face {
-  font-family: cornerstone;
-  src: url(Cornerstone.ttf);
+  font-family: Cornerstone;
+  src: url(/fonts/Cornerstone.ttf);
 }
 
-#navbar-text {
-  margin: 8px;
-  color: var(--main-yellow);
-  font-family: Archivo;
+.footer-text {
+  color: var(--main-cream);
 }
 
 .btn-join-movement {
-  font-family: cornerstone;
+  font-family: Cornerstone;
   background-color: var(--main-yellow);
   padding-left: 20px;
   padding-right: 20px;
@@ -39,6 +37,23 @@
 
 .navbar {
   background-color: var(--main-black);
+}
+
+.navbar-center-align {
+  vertical-align: middle;
+}
+.navbar-logotype {
+  font-family: ArchivoBold;
+  color: var(--main-yellow);
+  font-size: 16pt;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+.navbar-text {
+  margin: 8px;
+  color: var(--main-yellow) !important;
+  font-family: Archivo;
 }
 
 .intro-blurb {

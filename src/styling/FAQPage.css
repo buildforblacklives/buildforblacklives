@@ -1,14 +1,64 @@
-.faq-button {
-  cursor: pointer;
-  min-width: 100%;
-  min-height: 100%;
+/* Tabs */
+.faq .nav-tabs {
+  display: flex;
+  min-height: 3em;
+  font-size: 1.2rem;
+  border-bottom: 5px solid var(--main-yellow);
 }
 
-.faq-button-selected {
-  background-color: '#ffc107';
+.faq .nav-link {
+  border: 1px solid var(--main-yellow) !important;
+  color: var(--main-yellow);
+  flex-grow: 30;
 }
 
-.faq-accordion {
-  cursor: pointer;
+.faq .nav-link:hover,
+.faq .nav-link:focus,
+.faq .nav-link:active {
+  border: 1px solid var(--main-blue) !important;
+  border-bottom: 0 !important;
+  color: var(--main-blue);
+}
+
+.faq .nav-link.active,
+.faq .nav-link.active:hover {
+  background-color: var(--main-yellow) !important;
+  color: var(--main-black) !important;
+  flex-grow: 70;
+  border: 0 !important;
+}
+
+@media only screen and (max-width: 800px) {
+  .faq .nav-link {
+    flex-grow: 0;
+    width: 100%;
+    border-bottom: 5px solid var(--main-yellow) !important;
+  }
+
+  .faq .nav-link:hover,
+  .faq .nav-link:focus,
+  .faq .nav-link:active {
+    border-bottom: 1px solid var(--main-blue) !important;
+  }
+
+  .faq .nav-tabs {
+    border-bottom: 0;
+  }
+}
+
+/* Questions & Answers */
+.faq-accordion-card {
   color: var(--main-black);
+}
+
+.faq-accordion-question {
+  cursor: pointer;
+  background-color: var(--main-cream);
+}
+.faq-accordion-question:hover {
+  background-color: var(--light-yellow);
+}
+
+.faq-accordion-answer {
+  background-color: var(--white);
 }
