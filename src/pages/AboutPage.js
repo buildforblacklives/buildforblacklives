@@ -109,7 +109,7 @@ const AboutPage = () => (
       <Col>
         <h2>Contact Us</h2>
         <p>
-        Want to get involved, or have questions, thoughts, feedback or concerns?
+        Want to get involved, or have questions, thoughts, feedback, or concerns?
         </p>
         Please use one of the following subject line patterns in your emails:<br/>
         "Volunteer: [Question or Feedback] [Subject]"<br/>
