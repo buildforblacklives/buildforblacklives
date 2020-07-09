@@ -1,5 +1,5 @@
 .navbar {
-  background-color: var(--main-grey);
+  background-color: var(--main-black);
 }
 
 .navbar-brand {
@@ -21,7 +21,7 @@
   margin: 8px 12px;
   color: var(--main-yellow);
   font-family: HelveticaNeueMed;
-  font-size: 32px;
+  font-size: 24px;
 }
 
 .navbar .navbar-nav .navbar-text.nav-link:hover,
@@ -31,7 +31,7 @@
 
 .footer {
   display: flex;
-  background-color: var(--main-grey);
+  background-color: var(--main-black);
   width: 100%;
 }
 

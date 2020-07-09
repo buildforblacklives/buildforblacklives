@@ -84,7 +84,7 @@ const AboutPage = () => (
     <hr />
 
     <Row className="about-align-center">
-      <Col className="order2">
+      <Col className="about-order2">
         <h2>Work on a Project</h2>
         <p>
           Are you a designer, programmer, engineer, data scientist, writer, web developer, or marketing specialist

@@ -8,8 +8,10 @@
 }
 
 .about-request-icon,
-.about-contact-icon {
-  width: 300px;
+.about-contact-icon,
+.about-icon {
+  width: 100%;
+  max-width: 300px;
 }
 
 .container {
@@ -28,14 +30,15 @@
   justify-content: center;
 }
 
-.about-icon {
-  width: 390px;
-}
+@media only screen and (max-width: 768px) {
+  .about-page {
+    text-align: center;
+  }
 
-@media only screen and (max-width: 786px) {
   .about-order2 {
     order: 2;
   }
+
   .mx-auto {
     margin-bottom: 30px;
   }

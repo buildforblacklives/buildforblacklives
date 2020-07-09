@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Col, Container, Image, Row } from 'react-bootstrap';
+import { Card, Col, Container, Row } from 'react-bootstrap';
 import RequestFlow from '../assets/flow_diagrams/request_flow.js';
 
 import '../styling/RequestPage.css';
