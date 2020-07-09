@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Col, Container, Image, Row } from 'react-bootstrap';
+import { Button, Col, Container, Row } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import Logo from '../assets/logo.js';
 import CommPartnersIcon from '../assets/community-partners.js';
@@ -37,7 +37,7 @@ const AboutPage = () => (
       <Col className="about-order2">
         <h2>Community Partners</h2>
         <p>These are organizations that have helped build, endorse, and promote the platform.</p>
-        <ul>
+        <ul className="about-ul">
           <li>HackBeanpot</li>
         </ul>
         <p>
@@ -111,25 +111,30 @@ const AboutPage = () => (
         <p>
         Want to get involved, or have questions, thoughts, feedback or concerns?
         </p>
+        Please use one of the following subject line patterns in your emails:<br/>
+        "Volunteer: [Question or Feedback] [Subject]"<br/>
+        "Project Request: [Question or Feedback] [Subject]"<br/>
+        <br/>
         Email us at:&nbsp;
         {/* FIXME update */}
         <a href="mailto:buildforblacklives@hackbeanpot.com">buildforblacklives@hackbeanpot.com</a>
-        <Row>
+        <Row className="about-social-logo-row">
           <Col className="col-9">
-            <a href="mailto:buildforblacklives@hackbeanpot.com" 
-            target="_blank" rel="noopener noreferrer">
-              <i class="fas fa-envelope fa-2x socialLogo footer-text"></i>
+            <a href="mailto:buildforblacklives@hackbeanpot.com"
+              target="_blank" rel="noopener noreferrer">
+              <i className="fas fa-envelope fa-2x about-social-logo footer-text"></i>
             </a>
-            <a href="https://www.facebook.com/Build-for-Black-Lives-105258644589291" 
-            target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-facebook fa-2x socialLogo footer-text" aria-hidden="true"></i>
+            <a href="https://www.facebook.com/Build-for-Black-Lives-105258644589291"
+              target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-facebook fa-2x about-social-logo footer-text" aria-hidden="true"></i>
             </a>
-            <a href="https://www.instagram.com/buildforblacklives/" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-instagram fa-2x socialLogo footer-text" aria-hidden="true"></i>
+            <a href="https://www.instagram.com/buildforblacklives/"
+              target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-instagram fa-2x about-social-logo footer-text" aria-hidden="true"></i>
             </a>
-            <a href="https://join.slack.com/t/northeastern-hac3935/shared_invite/zt-fctqwcqe-7~n_GXliEYbQzUeqERHH6A" 
-            target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-slack fa-2x socialLogo footer-text" aria-hidden="true"></i>
+            <a href="https://join.slack.com/t/northeastern-hac3935/shared_invite/zt-fctqwcqe-7~n_GXliEYbQzUeqERHH6A"
+              target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-slack fa-2x about-social-logo footer-text" aria-hidden="true"></i>
             </a>
           </Col>
         </Row>
