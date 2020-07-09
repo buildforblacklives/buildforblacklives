@@ -1,25 +1,24 @@
 import React from 'react';
+import { Button } from 'react-bootstrap';
 
 const ProjectsPageTemp = () => (
-  <div class="container mt-5">
-    <div class="row text-center">
-      <div class="col"></div>
-      <div class="col-8">
-        <h1 class="mt-5">Projects Coming Soon</h1>
-        <h4 class="text-white mb-5">Stay tuned for our first projects!</h4>
+  <div className="container mt-5 project-temp-page">
+    <div className="row text-center">
+      <div className="col-8 offset-2">
+        <h1 className="mt-5">Projects Coming Soon</h1>
+        <p className="mb-5">Stay tuned for our first projects!</p>
       </div>
-      <div class="col"></div>
     </div>
 
-    <hr class="solid" />
+    <hr className="solid temp-hr" />
 
-    <div class="row d-flex justify-content-center text-center">
-      <div class="col-4">
-        <h6 class="mt-5 text-white"> Want to be notified? Enter your email below: </h6>
-        <input type="email" class="form-control" aria-describedby="email" placeholder="foo.bar@gmail.com" />
-        <button type="submit" class="btn btn-primary mt-3">
+    <div className="row d-flex justify-content-center text-center">
+      <div className="col-8">
+        <p> Want to be notified? Enter your email below: </p>
+        <input type="email" className="form-control mail-input" aria-describedby="email" placeholder="foo.bar@gmail.com" />
+        <Button type="submit" className="secondary-button mt-3">
           Submit
-        </button>
+        </Button>
       </div>
     </div>
   </div>

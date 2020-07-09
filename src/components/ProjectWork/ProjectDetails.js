@@ -5,14 +5,14 @@ const ProjectDetails = ({ project }) => {
 
   return (
     <div className="project-details-section">
-      <h3>{projectTitle}</h3>
+      <h4>{projectTitle}</h4>
       <p className="project-org-name">{orgName}</p>
 
-      <div className="project-detail-title">About {orgName}</div>
+      <h5 className="project-detail-title">About {orgName}</h5>
       <p className="project-detail-content">{orgAbout}</p>
-      <div className="project-detail-title">About the project</div>
+      <h5 className="project-detail-title">About the project</h5>
       <p className="project-detail-content">{projectAbout}</p>
-      <div className="project-detail-title">Project timeline</div>
+      <h5 className="project-detail-title">Project timeline</h5>
       <p className="project-detail-content">{projectTime}</p>
     </div>
   );

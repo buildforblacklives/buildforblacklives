@@ -12,7 +12,7 @@ const ConfirmationCheck = ({ hasConfirmed, setHasConfirmed }) => {
 
   return (
     <div className="confirmation-checks-modal">
-      <h2>Before you take on this project</h2>
+      <h4>Before you take on this project</h4>
       <p>
         The tech and design industries come with a history of discrimination and racism that persists today. This
         appears in products that are designed with racial bias and that exclude black communities, and in the lack of
@@ -62,7 +62,7 @@ const ConfirmationCheck = ({ hasConfirmed, setHasConfirmed }) => {
       <div className="confirmation-btn-container">
         <button
           type="button"
-          class="btn btn-light confirmation-btn"
+          class="secondary-button btn confirmation-btn"
           disabled={!allChecked || hasConfirmed}
           onClick={() => setHasConfirmed(true)}
         >
