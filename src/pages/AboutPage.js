@@ -56,6 +56,7 @@ const AboutPage = () => (
           ending racial inequality and discrimination in tech. If your 
           organization would like to work with Build for Black Lives, you are 
           welcome to&nbsp;
+          {/* FIXME update */}
           <a href="mailto:buildforblacklives@hackbeanpot.com">email us</a>
           . You can also join our&nbsp;
           <a href="https://join.slack.com/t/northeastern-hac3935/shared_invite/zt-fctqwcqe-7~n_GXliEYbQzUeqERHH6A">
@@ -125,6 +126,7 @@ const AboutPage = () => (
         Want to get involved, or have questions, thoughts, feedback or concerns?
         </p>
         Email us at:&nbsp;
+        {/* FIXME update */}
         <a href="mailto:buildforblacklives@hackbeanpot.com">buildforblacklives@hackbeanpot.com</a>
         <Row>
           <Col className="col-9">
@@ -136,8 +138,7 @@ const AboutPage = () => (
             target="_blank" rel="noopener noreferrer">
               <i className="fab fa-facebook fa-2x socialLogo footer-text" aria-hidden="true"></i>
             </a>
-            <a href="https://www.instagram.com/hackbeanpot/" target="_blank" rel="noopener noreferrer"> 
-            {/* FIXME change link once acct is made */}
+            <a href="https://www.instagram.com/buildforblacklives/" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-instagram fa-2x socialLogo footer-text" aria-hidden="true"></i>
             </a>
             <a href="https://join.slack.com/t/northeastern-hac3935/shared_invite/zt-fctqwcqe-7~n_GXliEYbQzUeqERHH6A" 

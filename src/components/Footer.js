@@ -21,8 +21,7 @@ class Footer extends React.Component {
             target="_blank" rel="noopener noreferrer">
               <i className="fab fa-facebook fa-2x socialLogo footer-text" aria-hidden="true"></i>
             </a>
-            <a href="https://www.instagram.com/hackbeanpot/" target="_blank" rel="noopener noreferrer"> {/* FIXME change link once acct is made */}
-              {/* FIXME change link once acct is made */}
+            <a href="https://www.instagram.com/buildforblacklives/" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-instagram fa-2x socialLogo footer-text" aria-hidden="true"></i>
             </a>
             <a href="https://join.slack.com/t/northeastern-hac3935/shared_invite/zt-fctqwcqe-7~n_GXliEYbQzUeqERHH6A" 
