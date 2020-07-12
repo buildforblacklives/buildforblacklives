@@ -50,6 +50,19 @@
 }
 
 @media only screen and (max-width: 1120px) {
+  .home-persona-section-left {
+    padding-right: 15px;
+  }
+
+  .home-persona-section-right {
+    padding-top: 20px;
+    padding-left: 15px;
+  }
+
+  .home-persona-text {
+    margin-bottom: 10px;
+  }
+
   .home-button-row {
     margin-top: 1rem;
     margin-bottom: 1rem;
