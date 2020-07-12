@@ -16,11 +16,14 @@ const ConfirmationCheck = ({ hasConfirmed, setHasConfirmed }) => {
       <p>
         The tech and design industries come with a history of discrimination and racism that persists today. This
         appears in products that are designed with racial bias and that exclude black communities, and in the lack of
-        diversity in the teams that create these products. To participate in the Build for Black Lives intiative, it is
-        critical to be consciously anti-racist and to create work and participate in this process in a way that actively
-        supports and empowers black people. Be willing to listen, be respectful and empathetic of your project owners’
-        needs, and trust in the voices of the people you are working with and seek to empower their message rather than
-        your own.
+        diversity in the teams that create these products. Racial inequalities in tech are perpetuated through cases
+        such as product design, tokenism hires, and the lack of Black professionals holding leadership positions in
+        large companies. To participate in the Build for Black Lives initiative, it is critical to be consciously
+        anti-racist and to create work and participate in this process in a way that actively supports and empowers
+        black people. Be willing to listen, be respectful and empathetic of your project owners’ needs, and trust in the
+        voices of the people you are working with and seek to empower their message rather than your own. For allies, it
+        is essential to question your intentions. Remove yourself from the center of the narrative and be aware of how
+        you're able to enter and exit from the conversation of Black socioeconomic and public health disparities.
       </p>
       <p>
         Please read and check off the following checkboxes to acknowledge your agreement with and commitment to the
