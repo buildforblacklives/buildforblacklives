@@ -15,18 +15,20 @@ const RequestPage = () => (
     <Row className="mt-3">
       <Col>
         <Card class="bg-light">
-        <script src="https://static.airtable.com/js/embed/embed_snippet_v1.js"></script>
-        <iframe class="airtable-embed airtable-dynamic-height"
-          title="Project Request Form"
-          src="https://airtable.com/embed/shrTG9sJPU2y4h3uI?backgroundColor=gray"
-          width="100%"
-          height="2289"
-          frameborder="0"
-          marginheight="0"
-          marginwidth="0"
-          onmousewheel="">
-          Loading…
-        </iframe>
+          <script src="https://static.airtable.com/js/embed/embed_snippet_v1.js"></script>
+          <iframe
+            class="airtable-embed airtable-dynamic-height"
+            title="Project Request Form"
+            src="https://airtable.com/embed/shrTG9sJPU2y4h3uI?backgroundColor=gray"
+            width="100%"
+            height="2289"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
+            onmousewheel=""
+          >
+            Loading…
+          </iframe>
         </Card>
       </Col>
     </Row>
