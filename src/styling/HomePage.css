@@ -93,15 +93,17 @@
   .home-persona-section-right,
   .home-persona-section-left {
     padding: 0;
-    margin: 16px;
+    margin: 16px 0;
   }
 }
 
 @media only screen and (max-width: 768px) {
-  .home-arrow-down {
-    margin-top: 0rem;
-    margin-bottom: 0rem;
-    visibility: hidden;
+  .logo {
+    max-width: 250px;
+  }
+
+  .home-arrow-row {
+    display: none;
   }
 
   .home-track-titles {

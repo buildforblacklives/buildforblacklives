@@ -1,29 +1,40 @@
 .resource-page {
-    max-width: 1400px;
-    margin: 100px auto;
+  max-width: 1400px;
+  margin: 100px auto;
 }
 
 .row-align-center {
-    align-items: center;
-    justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .heading-link {
-    font-size: 24px;
-    font-family: HelveticaNeueBold;
-    text-decoration:underline;
-    color: var(--main-blue);
+  font-size: 24px;
+  font-family: HelveticaNeueBold;
+  text-decoration:underline;
+  color: var(--main-blue);
 }
 
 a:hover {
-    color: var(--main-cream);
+  color: var(--main-cream);
 }
 
 .icon {
-    width: 100%;
-    max-width: 300px;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
 }
 
 .padding-r {
-    padding-right: 50px;
+  padding-right: 50px;
+}
+
+@media only screen and (max-width: 768px) {
+  .icon {
+    max-width: 250px;
+  }
+
+  .padding-r {
+    padding: 0 16px;
+  }
 }
