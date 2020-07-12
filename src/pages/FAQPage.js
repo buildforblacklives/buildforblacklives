@@ -15,7 +15,6 @@ class FAQPage extends React.Component {
       faqData: FAQItems.clientFAQ,
       title: 'Requesting a Project'
     };
-    console.log(FAQItems.clientFAQ);
   }
 
   handleClick = (e) => {

@@ -11,7 +11,7 @@ const FAQItems = {
           are Black-owned/led, and/or primarily serve the Black community and/or support the Black Lives Matter
           movement. If you still have some questions, please email us at{' '}
           <a href="mailto:buildforblacklives@hackbeanpot.com">buildforblacklives@hackbeanpot.com</a> with the subject
-          line: "[Project Request] Question: Subject".
+          line: "[Project Request] Question".
         </div>
       )
     },
@@ -48,8 +48,9 @@ const FAQItems = {
           to the form in the confirmation email we sent when your request was first posted on our website. If you have
           trouble locating, editing, or submitting the form, email us directly at{' '}
           <a href="mailto:buildforblacklives@hackbeanpot.com">buildforblacklives@hackbeanpot.com</a> with the subject
-          line: "[Project Request] Request Project Changes". Please include the project title and requested changes in
-          your email and use the same email you used to submit the initial request so we can confirm that it’s you!
+          line: "[Project Request] Change Project Request". In your email, please include the project title and
+          requested changes. Please use the same email you used to submit the initial request so we can confirm that
+          it’s you!
         </div>
       )
     },
@@ -61,8 +62,15 @@ const FAQItems = {
     {
       question:
         'How can I close my project request? A volunteer agreed to work on my project/I no longer have a need for a project request.',
-      answer:
-        'Please email buildforblacklives@hackbeanpot.com with the title of the request you would like to be taken down. Please use the same email that you used to submit the initial request form so we can confirm it’s you. We will archive your request within 3-5 business days at maximum, and the project post won’t be visible on our website anymore.'
+      answer: (
+        <div>
+          Please email <a href="mailto:buildforblacklives@hackbeanpot.com">buildforblacklives@hackbeanpot.com</a> with
+          the subject line: "[Project Request] Close Project Request". In your email, include the title of the request
+          you would like to be taken down. Please use the same email that you used to submit the initial request form so
+          we can confirm it’s you. We will archive your request within 3-5 business days at maximum, and the project
+          post won’t be visible on our website anymore.
+        </div>
+      )
     },
     {
       question:
@@ -72,14 +80,27 @@ const FAQItems = {
     },
     {
       question: 'I have some other questions. How can I contact you?',
-      answer: 'For direct inquiries, email us at buildforblacklives@hackbeanpot.com.'
+      answer: (
+        <div>
+          For direct inquiries, email us at{' '}
+          <a href="mailto:buildforblacklives@hackbeanpot.com">buildforblacklives@hackbeanpot.com</a> with the subject
+          line: "[Project Request] Question".
+        </div>
+      )
     }
   ],
   volunteerFAQ: [
     {
       question: 'What are the conditions that need to be met before taking on a project?',
-      answer:
-        "Build 4 Black Lives require all volunteers to agree to our anti-racism pledge, and to offer their requested services free of charge. We are an initiative that proudly supports the Black Lives Matter movement, and requires that all projects are created in an anti-racist and anti-discriminatory way. If you are an ally who wants to learn more about building anti-racist technology, check out our 'Resources' page."
+      answer: (
+        <div>
+          Build 4 Black Lives require all volunteers to agree to our anti-racism pledge, and to offer their requested
+          services free of charge. We are an initiative that proudly supports the{' '}
+          <a href="https://blacklivesmatter.com/">Black Lives Matter</a> movement, and requires that all projects are
+          created in an anti-racist and anti-discriminatory way. If you are an ally who wants to learn more about
+          building anti-racist technology, check out our 'Resources' page.
+        </div>
+      )
     },
     {
       question: 'I see a project that I would like to work on. How can I get in touch with the client?',
@@ -88,7 +109,7 @@ const FAQItems = {
     },
     {
       question:
-        'I see a project that interests me, but I have some questions on the requirements and deliverables. Where can I find more information before committing to the the project?',
+        'I see a project that interests me, but I have some questions on the requirements and deliverables. Where can I find more information before committing to the project?',
       answer:
         "Feel free to contact the client personally to ask any questions before agreeing to work on their project; click on the 'Work on this Project' button to view the client’s contact information."
     },
@@ -104,24 +125,48 @@ const FAQItems = {
     },
     {
       question: 'I have some other questions. How can I contact you?',
-      answer: 'For direct inquiries, email us at buildforblacklives@hackbeanpot.com.'
+      answer: (
+        <div>
+          For direct inquiries, email us at{' '}
+          <a href="mailto:buildforblacklives@hackbeanpot.com">buildforblacklives@hackbeanpot.com</a> with the subject
+          line: "[Volunteer] Question".
+        </div>
+      )
     }
   ],
   initiativeFAQ: [
     {
       question: 'Who is Build for Black Lives?',
-      answer:
-        'Build 4 Black Lives is an initiative led by HackBeanpot, a 501(c)(3) Boston-based Hackathon run by undergraduate students. This project was started in support of the Black Lives Matter movement and protests of June 2020. To learn more, visit our About Us page, and our website hackbeanpot.com.'
+      answer: (
+        <div>
+          Build 4 Black Lives is an initiative led by HackBeanpot, a 501(c)(3) Boston-based hackathon run by
+          undergraduate students. This project was started in support of the Black Lives Matter movement and protests of
+          June 2020. To learn more, visit our <Link to="/about">About Us</Link> page or at our hackathon website{' '}
+          <a href="https://hackbeanpot.com/">hackbeanpot.com</a>.
+        </div>
+      )
     },
     {
       question: 'How can I contact or partner with you?',
-      answer:
-        'Reach out to us directly at buildforblacklives@hackbeanpot.com. You can also visit our “About Us” page to view our contact information.'
+      answer: (
+        <div>
+          Reach out to us directly at{' '}
+          <a href="mailto:buildforblacklives@hackbeanpot.com">buildforblacklives@hackbeanpot.com</a>. You can also visit
+          our <Link to="/about">About Us</Link> page or see the footer at the bottom of the page to view our contact
+          information.
+        </div>
+      )
     },
     {
       question: 'I’d like to provide some feedback. Where can I do that?',
-      answer:
-        'We welcome all types of feedback, as we are happy and eager to improve this initiative as much as possible. Feel free to contact us directly at buildforblacklives@hackbeanpot.com.'
+      answer: (
+        <div>
+          We welcome all types of feedback, as we are happy and eager to improve this initiative as much as possible.
+          Feel free to contact us directly at{' '}
+          <a href="mailto:buildforblacklives@hackbeanpot.com">buildforblacklives@hackbeanpot.com</a> with the subject
+          line: "[Project Request/Volunteer] Feedback".
+        </div>
+      )
     }
   ]
 };
