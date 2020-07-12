@@ -2,7 +2,7 @@ import React from 'react';
 import { Tabs, Tab } from 'react-bootstrap';
 
 import { FAQSection } from '../components/FAQSection';
-import { clientFAQ, volunteerFAQ, initiativeFAQ } from '../data/faq.json';
+import { FAQItems } from '../data/faq';
 
 import '../styling/FAQPage.css';
 
@@ -12,7 +12,7 @@ class FAQPage extends React.Component {
     // set to clientFAQ initially
     this.state = {
       faqType: 'client',
-      faqData: clientFAQ,
+      faqData: FAQItems.clientFAQ,
       title: 'Requesting a Project'
     };
   }
@@ -30,16 +30,16 @@ class FAQPage extends React.Component {
 
       switch (selectedType) {
         case 'client':
-          selectedData = clientFAQ;
+          selectedData = FAQItems.clientFAQ;
           break;
         case 'volunteer':
-          selectedData = volunteerFAQ;
+          selectedData = FAQItems.volunteerFAQ;
           break;
         case 'initiative':
-          selectedData = initiativeFAQ;
+          selectedData = FAQItems.initiativeFAQ;
           break;
         default:
-          selectedData = clientFAQ;
+          selectedData = FAQItems.clientFAQ;
       }
 
       this.setState({ faqType: selectedType, faqData: selectedData, title: innerHTML });

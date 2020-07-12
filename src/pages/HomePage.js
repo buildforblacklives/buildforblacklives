@@ -40,9 +40,9 @@ const HomePage = () => (
         </Row>
       </Col>
       <Col xs={12} lg={6} className="home-persona-section-right">
-          <span className="home-persona-text">
-            Anti-racist designers, programmers, data scientists, illustrators, writers, etc.
-          </span>
+        <span className="home-persona-text">
+          Anti-racist designers, programmers, data scientists, illustrators, writers, etc.
+        </span>
         <Row>
           <Col>
             <LinkContainer to="/projects">
@@ -68,11 +68,11 @@ const HomePage = () => (
     <Row className="home-track-body">
       <Col xs={12} md={{ span: 8, offset: 2 }}>
         <p>
-          Are you a black business owner, activist, protest organizer, or community advocate looking for free help
-        building an online platform, updating a website, creating social media content, or data visualizations?{' '}
+          Are you a black business owner, activist, protest organizer, or community advocate looking for free services
+          building an online platform, updating a website, creating social media content, or data visualizations?{' '}
           <Link className="links" to="/project-request">
             Submit a project request to our community.
-        </Link>
+          </Link>
         </p>
       </Col>
     </Row>
@@ -84,8 +84,8 @@ const HomePage = () => (
     <Row className="home-track-body">
       <Col xs={12} md={{ span: 8, offset: 2 }}>
         <p>
-          Are you a writer, designer, engineer, data scientist, illustrator, programmer, web developer, or marketing
-        specialist who is looking to use your professional skills to do pro bono work to support Black lives?{' '}
+          Are you a Black Lives Matter supporter within the designer, developer, data science, or marketing space
+          interested in committing to pro bono work?{' '}
           <Link className="links" to="/projects">
             Work on our available projects.
           </Link>
@@ -93,6 +93,6 @@ const HomePage = () => (
       </Col>
     </Row>
   </Container>
-)
+);
 
 export { HomePage };

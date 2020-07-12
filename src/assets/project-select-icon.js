@@ -1,7 +1,7 @@
 import React from 'react'
 
 const ProjectSelectIcon = ({ className }) => (
-  <svg className={className} id="project-select-icon" xmlns="http://www.w3.org/2000/svg" width="404" height="auto" viewBox="0 0 404 265">
+  <svg className={className} id="project-select-icon" xmlns="http://www.w3.org/2000/svg" width="404" height="265" viewBox="0 0 404 265">
     <defs>
       <clipPath id="clipPath">
         <rect width="308" height="185" fill="none" />
