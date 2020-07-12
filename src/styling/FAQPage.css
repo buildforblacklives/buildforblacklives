@@ -1,59 +1,79 @@
+/* Layout */
+.faq-section-container {
+  padding: 0 2em;
+  margin: 3rem 0;
+}
+
+@media only screen and (max-width: 992px) {
+  .faq-section-container {
+    padding: 0 1em;
+    margin: 1.5rem 0;
+  }
+}
+
 /* Tabs */
 .faq .nav-tabs {
   display: flex;
-  min-height: 3em;
-  font-size: 32px;
-  border-bottom: 5px solid var(--main-yellow);
+  min-height: 2.5em;
+  font-size: 1.5rem;
+  border: 0 !important;
 }
 
 .faq .nav-link {
-  border: 1px solid var(--main-yellow);
-  color: var(--main-yellow);
+  padding: 0.5em 1em;
+  border: 1px solid var(--main-light-grey);
+  border-bottom: 3px solid var(--main-yellow) !important;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  color: var(--main-white);
+  background-color: var(--main-grey);
+  font-family: HelveticaNeueMed;
   flex-grow: 30;
 }
 
-.faq .nav-link:hover,
-.faq .nav-link:focus,
-.faq .nav-link:active {
-  border: 1px solid var(--main-blue);
-  border-bottom: 0;
+.faq .nav-link:hover {
+  border: 1px solid var(--main-blue) !important;
+  border-bottom: 3px solid var(--main-yellow) !important;
   color: var(--main-blue);
 }
 
 .faq .nav-link.active,
 .faq .nav-link.active:hover {
-  background-color: var(--main-yellow);
-  color: var(--main-black);
+  border: 3px solid var(--main-yellow) !important;
+  border-bottom: 0 !important;
+  color: var(--main-yellow);
+  background-color: inherit !important;
   flex-grow: 70;
-  border: 0;
 }
 
-@media only screen and (max-width: 800px) {
-  .faq .nav-link {
+@media only screen and (max-width: 992px) {
+  .faq .nav-tabs {
+    font-size: 1.3rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .faq .nav-link,
+  .faq .nav-link:hover {
     flex-grow: 0;
     width: 100%;
-    border-bottom: 5px solid var(--main-yellow);
-  }
-
-  .faq .nav-link:hover,
-  .faq .nav-link:focus,
-  .faq .nav-link:active {
-    border-bottom: 1px solid var(--main-blue);
-  }
-
-  .faq .nav-tabs {
-    border-bottom: 0;
+    border-bottom: 0 !important;
   }
 }
 
 /* Questions & Answers */
-.faq-accordion-card {
+.faq-accordion-container {
   color: var(--main-black);
+  border: 0;
+  border-radius: 10px;
 }
 
 .faq-accordion-question {
   cursor: pointer;
+  font-family: HelveticaNeueMed;
+  font-size: 20px;
   background-color: var(--main-cream);
+  padding: 1.2rem;
 }
 
 .faq-accordion-question:hover {
@@ -61,6 +81,21 @@
 }
 
 .faq-accordion-answer {
-  background-color: var(--main-cream);
-  font-size: 16px;
+  font-size: 18px;
+  background-color: var(--main-grey);
+  color: var(--white);
+  padding: 1.5rem 3rem;
+
+}
+
+@media only screen and (max-width: 992px) {
+  .faq-accordion-question {
+    font-size: 16px;
+    padding: 1rem;
+  }
+
+  .faq-accordion-answer{
+    font-size: 16px;
+    padding: 1.5rem;
+  }
 }
