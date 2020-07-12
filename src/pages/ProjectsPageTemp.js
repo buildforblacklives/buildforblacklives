@@ -9,7 +9,7 @@ const ProjectsPageTemp = () => (
         <p> We are in the process of reviewing projects and will be posting projects shortly.
             Check back in a couple weeks to see newly added projects.
         </p>
-         <a href="http://eepurl.com/g9JPtn" target="_blank" class="btn btn-lg button mt-5" aria-disabled="false"> Notify Me About Projects </a>
+         <a href="http://eepurl.com/g9JPtn" target="_blank" class="btn btn-lg primary-button mt-5" aria-disabled="false"> Notify Me About Projects </a>
 
       </div>
   </div>
