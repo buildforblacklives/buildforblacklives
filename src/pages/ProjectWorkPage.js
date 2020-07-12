@@ -3,9 +3,10 @@ import { Collapse } from 'react-bootstrap';
 import ConfirmationCheck from '../components/ProjectWork/ConfirmationCheck';
 import ContactSection from '../components/ProjectWork/ContactSection';
 import ProjectDetails from '../components/ProjectWork/ProjectDetails';
-import projectFlow from '../assets/flow_diagrams/project_steps_flow.png';
+import projectFlow from '../assets/flow_diagrams/project_steps_flow.js';
 import Plus from '../assets/plus';
 import Minus from '../assets/minus';
+
 import '../styling/ProjectWorkPage.css';
 
 const CollapsableSection = ({ title, id, isFirst, children }) => {
@@ -17,7 +18,7 @@ const CollapsableSection = ({ title, id, isFirst, children }) => {
         <h5 class="mb-0">
           <div class="collapsable-header" onClick={() => setOpen(!open)} aria-controls={id} aria-expanded={open}>
             {open ? <Minus /> : <Plus />}
-            <span className="collapsable-header-title">{title}</span>
+            <h1 className="collapsable-header-title">{title}</h1>
           </div>
         </h5>
       </div>
@@ -65,9 +66,8 @@ const ProjectWorkPage = ({ match }) => {
 
   return (
     <div className="project-work-page">
-      <div className="container mt-5">
         <div className="row">
-          <div className="col-md-8 col-sm-12 project-work-content">
+          <div className="project-work-content">
             <div className="project-work-flow">
               <h1>Ready to work on this project?</h1>
               <div className="justify-content-center d-flex flex-wrap align-items-center">
@@ -106,7 +106,6 @@ const ProjectWorkPage = ({ match }) => {
           </div>
         </div>
       </div>
-    </div>
   );
 };
 

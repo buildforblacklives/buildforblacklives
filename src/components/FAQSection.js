@@ -5,7 +5,6 @@ import AccordionContext from 'react-bootstrap/AccordionContext';
 
 import Plus from '../assets/plus';
 import Minus from '../assets/minus';
-import '../styling/FAQPage.css';
 
 class FAQSection extends React.Component {
   render() {

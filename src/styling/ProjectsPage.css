@@ -1,8 +1,9 @@
 /** Multiple card view **/
 
 .pg-container {
-  padding: 0px 30px 0px;
+  max-width: 1400px;
 }
+
 .preview-card {
   border-radius: 10px;
   margin: 20px 0px;
@@ -19,10 +20,6 @@
 
 .card-row {
   margin-top: 10px;
-}
-
-.card-text {
-  color: var(--black);
 }
 
 .center-div {
@@ -53,9 +50,7 @@
   padding: 20px;
   border-radius: 50px;
   background-color: var(--main-blue);
-  font-weight: bold;
   margin: 10px;
-  color: var(--main-black);
   border: transparent;
 }
 
@@ -65,7 +60,6 @@
 
 .page-container {
   margin: 30px;
-  color: var(--main-black);
 }
 
 .scrolling {
@@ -81,24 +75,10 @@
   margin-right: 15px;
 }
 
-.close-btn {
-  padding: 15px 20px;
-  border: transparent;
-  background-color: var(--main-blue);
-  font-weight: bold;
-  color: var(--main-black);
-}
-
-.close-btn:hover {
-  background-color: var(--main-yellow);
-  color: var(--main-black);
-}
-
 .card-btn {
   text-align: left;
-  background: var(--white);
+  background: var(--main-grey);
   border: transparent;
-  color: var(--main-black);
   cursor: pointer;
 }
 
@@ -113,4 +93,17 @@
   border: transparent;
   color: var(--main-black);
   cursor: pointer;
+}
+
+.mail-input {
+  padding: 8px 16px;
+  font-size: 32px;
+}
+
+.temp-hr {
+  margin: 16px 0 48px;
+}
+
+.project-temp-page {
+  height: calc(100vh - 330px);
 }
