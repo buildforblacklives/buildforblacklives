@@ -44,9 +44,7 @@ const FAQItems = {
         'I would like to make changes to my submission, as I want to add more information/change some details/include a specific detail I missed before/update my contact information. How can I do this?',
       answer: (
         <div>
-          You can edit the initial Project Request form that you submitted to reflect any changes; you can find the link
-          to the form in the confirmation email we sent when your request was first posted on our website. If you have
-          trouble locating, editing, or submitting the form, email us directly at{' '}
+          Email us directly at{' '}
           <a href="mailto:buildforblacklives@hackbeanpot.com">buildforblacklives@hackbeanpot.com</a> with the subject
           line: "[Project Request] Change Project Request". In your email, please include the project title and
           requested changes. Please use the same email you used to submit the initial request so we can confirm that
