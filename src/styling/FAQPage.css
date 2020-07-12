@@ -7,7 +7,7 @@
 @media only screen and (max-width: 992px) {
   .faq-section-container {
     padding: 0 1em;
-    margin: 1.5rem 0;
+    margin: 2rem 0;
   }
 }
 
@@ -48,16 +48,24 @@
 
 @media only screen and (max-width: 992px) {
   .faq .nav-tabs {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     margin-left: 1rem;
     margin-right: 1rem;
   }
 
   .faq .nav-link,
-  .faq .nav-link:hover {
-    flex-grow: 0;
-    width: 100%;
-    border-bottom: 0 !important;
+  .faq .nav-link:hover,
+  .faq .nav-link.active,
+  .faq .nav-link.active:hover {
+    flex-grow: 1;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .faq .nav-link {
+    padding: 0.5em 0.5em;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
   }
 }
 
@@ -73,7 +81,7 @@
   font-family: HelveticaNeueMed;
   font-size: 20px;
   background-color: var(--main-cream);
-  padding: 1.2rem;
+  padding: 1rem;
 }
 
 .faq-accordion-question:hover {
@@ -85,7 +93,6 @@
   background-color: var(--main-grey);
   color: var(--white);
   padding: 1.5rem 3rem;
-
 }
 
 @media only screen and (max-width: 992px) {
@@ -94,8 +101,14 @@
     padding: 1rem;
   }
 
-  .faq-accordion-answer{
+  .faq-accordion-answer {
     font-size: 16px;
     padding: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .faq-accordion-question .col {
+    padding-left: 0px;
   }
 }
