@@ -12,8 +12,7 @@ class FAQPage extends React.Component {
     // set to clientFAQ initially
     this.state = {
       faqType: 'client',
-      faqData: FAQItems.clientFAQ,
-      title: 'Requesting a Project'
+      faqData: FAQItems.clientFAQ
     };
   }
 
@@ -21,8 +20,7 @@ class FAQPage extends React.Component {
     // Prevent state change on container click
     if (e.target.tagName !== 'NAV') {
       const {
-        dataset: { rbEventKey: type },
-        innerHTML
+        dataset: { rbEventKey: type }
       } = e.target;
 
       let selectedData,
@@ -42,7 +40,7 @@ class FAQPage extends React.Component {
           selectedData = FAQItems.clientFAQ;
       }
 
-      this.setState({ faqType: selectedType, faqData: selectedData, title: innerHTML });
+      this.setState({ faqType: selectedType, faqData: selectedData });
     }
   };
 
@@ -55,9 +53,7 @@ class FAQPage extends React.Component {
           <Tab eventKey="volunteer" title="Working on a Project"></Tab>
           <Tab eventKey="initiative" title="This Initiative"></Tab>
         </Tabs>
-        <div className="pl-4 pr-4">
-          {!!this.state.faqData && <FAQSection title={this.state.title} faq={this.state.faqData} />}
-        </div>
+        {!!this.state.faqData && <FAQSection faq={this.state.faqData} />}
       </div>
     );
   }

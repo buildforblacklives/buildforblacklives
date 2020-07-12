@@ -73,6 +73,11 @@ const FAQItems = {
       )
     },
     {
+      question: 'Who should cover any expenses related to paid or optional features or services (eg. website domain, Facebook page promotions, etc.)?',
+      answer:
+        'Although volunteers are offering their services for free, any external paid features should be covered by the client. Remember that volunteers can help you research and find affordable options best suited to your needs!'
+    },
+    {
       question:
         'I’m having work-related issues with the volunteer(s) who agreed to take on my project. What should I do?',
       answer:
@@ -119,6 +124,11 @@ const FAQItems = {
         'If you would like to work in a group, find your group partner(s) before contacting a client. During the initial communication stages, one person can communicate with the client on the behalf of the group; once the group is officially working on the project, you may continue to collaborate and communicate together in the way that works best for you and the client.'
     },
     {
+      question: 'Who should cover any expenses related to paid or optional features or services (eg. website domain, Facebook page promotions, etc.)?',
+      answer:
+        'Any external paid features should be covered by the client. As a volunteer, you can help with researching and finding affordable options that best suit the client’s needs.'
+    },
+    {
       question: 'I’m having work-related issues with the client I’m working for. What should I do?',
       answer:
         'At this time, this platform is meant to connect volunteers to clients they would want to work with; we have minimal oversight on the communication and work process between volunteers and clients. We advise volunteers to communicate and resolve any issues as best as they can with their clients.'
@@ -139,9 +149,18 @@ const FAQItems = {
       question: 'Who is Build for Black Lives?',
       answer: (
         <div>
-          Build 4 Black Lives is an initiative led by HackBeanpot, a 501(c)(3) Boston-based hackathon run by
+          Build for Black Lives is an initiative led by HackBeanpot, a 501(c)(3) Boston-based hackathon run by
           undergraduate students. This project was started in support of the Black Lives Matter movement and protests of
           June 2020. To learn more, visit our <Link to="/about">About Us</Link> page or at our hackathon website{' '}
+          <a href="https://hackbeanpot.com/">hackbeanpot.com</a>.
+        </div>
+      )
+    },
+    {
+      question: 'Who is HackBeanpot?',
+      answer: (
+        <div>
+          HackBeanpot is an independently-run Boston hackathon for curious students, hackers, makers, and beginners. To learn more, visit our website{' '}
           <a href="https://hackbeanpot.com/">hackbeanpot.com</a>.
         </div>
       )
@@ -153,7 +172,7 @@ const FAQItems = {
           Reach out to us directly at{' '}
           <a href="mailto:buildforblacklives@hackbeanpot.com">buildforblacklives@hackbeanpot.com</a>. You can also visit
           our <Link to="/about">About Us</Link> page or see the footer at the bottom of the page to view our contact
-          information.
+          information. If you are an organization that wishes to partner with us and/or help spread the word on this initiative, join our  <a href="https://join.slack.com/t/northeastern-hac3935/shared_invite/zt-fctqwcqe-7~n_GXliEYbQzUeqERHH6A">Slack</a> channel.
         </div>
       )
     },
