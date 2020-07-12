@@ -115,10 +115,13 @@ const ResourcesPage = () => (
             <p>Working towards making design more responsible, anti-racist, and inclusive. This blog has posts written by a range of writers discussing "The Politics of Design"</p>
           </Col>
         </Row>
+      </Col>
+      </Row>
+      
+      <hr />
 
-        <hr />
-
-        <Row className="row-align-center">
+      <Row className="row-align-center">
+        <Row>
           <Col>
             <h4>Have additional resources you think should be featured?</h4>
             <p>Email us at:&nbsp;
@@ -126,7 +129,6 @@ const ResourcesPage = () => (
             </p>
           </Col>
         </Row>
-      </Col>
     </Row>
   </Container>
 );
