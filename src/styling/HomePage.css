@@ -10,7 +10,7 @@
 
 .logo {
   margin: 86px auto 45px;
-  max-width: 390px;
+  max-width: 410px;
 }
 
 .home-page .logotype,
@@ -38,6 +38,7 @@
 }
 
 .home-arrow-down {
+  margin-top: 4rem;
   margin-bottom: 2rem;
 }
 
@@ -50,19 +51,46 @@
 }
 
 @media only screen and (max-width: 1120px) {
+  .logo {
+    margin: 86px auto 45px;
+    max-width: 390px;
+  }
+
+  .home-persona-section-left {
+    padding-right: 15px;
+  }
+
+  .home-persona-section-right {
+    padding-top: 20px;
+    padding-left: 15px;
+  }
+
+  .home-persona-text {
+    margin-bottom: 10px;
+  }
+
   .home-button-row {
     margin-top: 1rem;
     margin-bottom: 1rem;
+  }
+
+  .home-track-titles {
+    margin: 100px 0 25px;
   }
 
   .home-track-images {
     max-width: 640px;
     max-height: 170px;
   }
+
+  .home-track-body {
+    margin-top: 35px;
+  }
 }
 
 @media only screen and (max-width: 671px) {
   .home-arrow-down {
+    margin-top: 0rem;
     margin-bottom: 0rem;
     visibility: hidden;
   }
@@ -74,5 +102,9 @@
   .home-track-images {
     max-width: 85%;
     max-height: 85%;
+  }
+
+  .home-track-body {
+    margin-top: 15px;
   }
 }
