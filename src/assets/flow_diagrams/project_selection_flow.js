@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ProjectSelectFlow = ({ className }) => (
-	<svg className={className} id="project-flow" xmlns="http://www.w3.org/2000/svg" width="845" height="auto" viewBox="0 0 845 225">
+	<svg className={className} id="project-flow" xmlns="http://www.w3.org/2000/svg" width="845" height="225" viewBox="0 0 845 225">
 		<defs>
 			<clipPath id="clipPath">
 				<rect width="93" height="81" fill="none" />

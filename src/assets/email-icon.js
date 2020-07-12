@@ -1,7 +1,7 @@
 import React from 'react'
 
 const MailIcon = ({ className }) => (
-	<svg className={className} id="email-icon" xmlns="http://www.w3.org/2000/svg" width="302.496" height="auto" viewBox="0 0 302.496 233">
+	<svg className={className} id="email-icon" xmlns="http://www.w3.org/2000/svg" width="302.496" height="233" viewBox="0 0 302.496 233">
 		<g id="Group_42" data-name="Group 42" transform="translate(0 -0.302)">
 			<rect id="Rectangle_48" data-name="Rectangle 48" width="285" height="219" rx="24" transform="translate(0 14.302)" fill="#f5cb4c" />
 			<rect id="Rectangle_21" data-name="Rectangle 21" width="281" height="216" rx="24" transform="translate(17 0.302)" fill="#f9f5e3" />

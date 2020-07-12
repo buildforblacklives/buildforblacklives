@@ -11,6 +11,7 @@
 .logo {
   margin: 86px auto 45px;
   max-width: 390px;
+  height: auto;
 }
 
 .home-page .logotype,
@@ -61,7 +62,7 @@
   }
 }
 
-@media only screen and (max-width: 671px) {
+@media only screen and (max-width: 768px) {
   .home-arrow-down {
     margin-bottom: 0rem;
     visibility: hidden;
@@ -74,5 +75,13 @@
   .home-track-images {
     max-width: 85%;
     max-height: 85%;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .home-persona-section-right,
+  .home-persona-section-left {
+    padding: 0;
+    margin: 16px;
   }
 }
