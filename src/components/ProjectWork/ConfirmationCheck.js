@@ -62,7 +62,7 @@ const ConfirmationCheck = ({ hasConfirmed, setHasConfirmed }) => {
       <div className="confirmation-btn-container">
         <button
           type="button"
-          class="secondary-button btn confirmation-btn"
+          className="secondary-button btn confirmation-btn"
           disabled={!allChecked || hasConfirmed}
           onClick={() => setHasConfirmed(true)}
         >
