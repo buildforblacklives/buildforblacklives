@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ProjectSelectFlow = ({ className }) => (
-	<svg className={className} id="project-flow" xmlns="http://www.w3.org/2000/svg" width="845" height="auto" viewBox="0 0 845 225">
+	<svg className={className} id="project-flow" xmlns="http://www.w3.org/2000/svg" width="845" height="225" viewBox="0 0 845 225">
 		<defs>
 			<clipPath id="clipPath">
 				<rect width="93" height="81" fill="none" />
@@ -96,7 +96,7 @@ const ProjectSelectFlow = ({ className }) => (
 					</g>
 				</g>
 			</g>
-			<text id="Commit_to_anti-racism" data-name="Commit to anti-racism" transform="translate(0.29 219)" fill="#f9f5e3" fontSize="26" fontFamily="HelveticaNeueBold, HelveticaNeue" fontWeight="700"><tspan x="0" y="0">Commit to anti-racism</tspan></text>
+			<text id="Commit_to_anti-racism" data-name="Commit to anti-racism" transform="translate(0.29 219)" fill="#f9f5e3" fontSize="26" fontFamily="HelveticaNeueBold, HelveticaNeue" fontWeight="700"><tspan x="0" y="0">Commit to Anti-Racism</tspan></text>
 		</g>
 		<path id="Path_20" data-name="Path 20" d="M0,0,2.794,28.431,8.126,20l7.931,17.4,6.96-3.346L13.942,16.9l9.385-.338Z" transform="matrix(0.951, -0.309, 0.309, 0.951, 386.603, 115.698)" fill="#f5cb4c" />
 		<path id="Path_21" data-name="Path 21" d="M804.492,469.815l4.586,6.492,7.927-9.532,5.091-6.121" transform="translate(-418.796 -422.612)" fill="none" stroke="#1f1f1f" strokeWidth="3" />

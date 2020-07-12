@@ -7,7 +7,8 @@
 }
 
 .navbar-logo {
-  width: 80px;
+  width: 50px;
+  height: auto;
 }
 
 .navbar-logotype {
@@ -47,4 +48,34 @@
 
 .footer-social-icon {
   margin: 0 8px;
+}
+
+@media only screen and (max-width: 1120px) {
+  .navbar-logo {
+    width: 50px;
+  }
+
+  .footer-text {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 671px) {
+  .navbar-logo {
+    width: 35px;
+  }
+
+  .navbar-logotype {
+    margin: auto 0 auto 14px;
+  }
+
+  .footer-text {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .navbar-logotype {
+    margin: auto 0 auto 14px;
+  }
 }

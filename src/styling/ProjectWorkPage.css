@@ -3,6 +3,10 @@
   margin: 0 auto;
 }
 
+.project-work-flow {
+  margin: 24px 0;
+}
+
 .collapsable-section {
   margin-bottom: 24px;
   border-radius: 10px;
