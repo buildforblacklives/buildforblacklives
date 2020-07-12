@@ -32,10 +32,25 @@ a:hover {
 @media only screen and (max-width: 768px) {
   .icon {
     max-width: 250px;
+    margin-bottom: 30px;
+  }
+
+  .resource-page {
+    max-width: 1400px;
+    margin: 30px auto;
   }
 
   .padding-r {
     padding: 0 16px;
+  }
+
+  .resource-hr {
+    border: 0;
+    clear: both;
+    display: block;
+    background-color: var(--main-yellow);
+    height: 3px;
+    margin: 50px 0;
   }
 
   .resources-order1 {
@@ -43,6 +58,6 @@ a:hover {
   }
 
   .resource-page {
-    text-align: center;
+    text-align: left;
   }
 }

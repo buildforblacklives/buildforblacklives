@@ -19,7 +19,7 @@ const ResourcesPage = () => (
       </Col>
     </Row>
 
-    <hr />
+    <hr className="resource-hr"/>
 
     <Row className="row-align-center">
       <Col xs={12} md={4}>
@@ -31,13 +31,15 @@ const ResourcesPage = () => (
         working to dismantle their own biases and white-centric coding and design practices.</p>
 
         <h4>We would like to make it clear that:</h4>
-        <p> - Participating in this initiative is <strong>NOT</strong> an opportunity for participants to do "charity work", cleanse their guilt, or impose their opinions about what the Black community needs.</p>
-        <p> - Participating in this initiative <strong>IS</strong> an opportunity to create projects that are explicitly requested by activists, organizers and Black Business owners, 
-          and to provide free services, in order to work towards justice and reparations for a community that has been systematically oppressed, exploited, and underserved for hundreds of years. </p>
+        <ul>
+          <li><p>Participating in this initiative is <strong>NOT</strong> an opportunity for participants to do "charity work", cleanse their guilt, or impose their opinions about what the Black community needs.</p></li>
+          <li><p>Participating in this initiative <strong>IS</strong> an opportunity to create projects that are explicitly requested by activists, organizers and Black Business owners, 
+          and to provide free services, in order to work towards justice and reparations for a community that has been systematically oppressed, exploited, and underserved for hundreds of years.</p></li>
+        </ul>
       </Col>
     </Row>
 
-    <hr />
+    <hr className="resource-hr"/>
     
     <Row className="row-align-center">
       <Col xs={12} md={8}>
@@ -118,9 +120,9 @@ const ResourcesPage = () => (
       </Col>
       </Row>
       
-      <hr />
+      <hr className="resource-hr"/>
 
-      <Row className="row-align-center">
+      <Row className="padding-r row-align-center">
         <Row>
           <Col>
             <h4>Have additional resources you think should be featured?</h4>
