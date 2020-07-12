@@ -30,11 +30,18 @@ a:hover {
 }
 
 @media only screen and (max-width: 768px) {
-    .resource-page {
-        text-align: center;
+    .icon {
+        max-width: 250px;
+      }
+      .padding-r {
+        padding: 0 16px;
       }
 
     .resources-order1 {
       order: 1;
     }
+
+    .resource-page {
+        text-align: center;
+      }
 }
