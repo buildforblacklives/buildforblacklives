@@ -54,7 +54,7 @@
 @media only screen and (max-width: 1120px) {
   .logo {
     margin: 86px auto 45px;
-    max-width: 390px;
+    max-width: 220px;
   }
 
   .home-persona-section-left {
@@ -89,6 +89,14 @@
   }
 }
 
+@media only screen and (max-width: 992px) {
+  .home-persona-section-right,
+  .home-persona-section-left {
+    padding: 0;
+    margin: 16px;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .home-arrow-down {
     margin-top: 0rem;
@@ -110,10 +118,9 @@
   }
 }
 
-@media only screen and (max-width: 992px) {
-  .home-persona-section-right,
-  .home-persona-section-left {
-    padding: 0;
-    margin: 16px;
+@media only screen and (max-width: 350px) {
+  .logo {
+    margin: 36px auto 45px;
+    max-width: 110px;
   }
 }
