@@ -8,6 +8,7 @@ import { ProjectsPage } from './pages/ProjectsPage';
 import { ProjectsPageTemp } from './pages/ProjectsPageTemp';
 import { RequestPage } from './pages/RequestPage';
 import { FAQPage } from './pages/FAQPage';
+import { ResourcesPage } from './pages/ResourcesPage';
 import { ProjectWorkPage } from './pages/ProjectWorkPage';
 import ScrollToTop from './components/ScrollToTop';
 
@@ -22,6 +23,7 @@ const App = () => {
         <Route exact path="/projects-temp" component={ProjectsPage} />
         <Route exact path="/projects" component={ProjectsPageTemp} />
         <Route path="/project-request" component={RequestPage} />
+        <Route path="/resources" component={ResourcesPage} />
         <Route path="/faq" component={FAQPage} />
         <Route path="/projects/:projectId" component={ProjectWorkPage} />
       </Switch>

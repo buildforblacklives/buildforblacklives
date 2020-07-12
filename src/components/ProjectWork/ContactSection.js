@@ -1,4 +1,5 @@
-import React from 'react';
+import React from 'react'
+import { Button } from 'react-bootstrap'
 
 const Template = ({ orgName, projectTitle }) => `
   Hello ${orgName},\n\n
@@ -24,18 +25,18 @@ const ContactSection = ({ project, hasConfirmed }) => {
 
   return (
     <div>
-      <h3>Contact information</h3>
+      <h4>Contact information</h4>
       {hasConfirmed ? (
         <>
           {orgEmail && <p>Email: {orgEmail}</p>}
           {orgPhone && <p> Phone number: {orgPhone}</p>}
-          <h3>Email template</h3>
+          <h4>Email template</h4>
           <div className="confirmation-btn-container">
-            <button class="btn btn-light copy-button" onClick={copyEmail}>
+            <Button className="secondary-button btn" onClick={copyEmail}>
               Copy template
-            </button>
+            </Button>
           </div>
-          <div className="project-detail-email">{emailContent}</div>
+          <p className="project-detail-email">{emailContent}</p>
         </>
       ) : (
         <p>Please agree to the anti-racism commitment in step 1 to view contact information</p>

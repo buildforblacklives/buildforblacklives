@@ -3,26 +3,27 @@ import { Collapse } from 'react-bootstrap';
 import ConfirmationCheck from '../components/ProjectWork/ConfirmationCheck';
 import ContactSection from '../components/ProjectWork/ContactSection';
 import ProjectDetails from '../components/ProjectWork/ProjectDetails';
-import projectFlow from '../assets/flow_diagrams/project_steps_flow.png';
+import ProjectFlow from '../assets/flow_diagrams/project_steps_flow.js';
 import Plus from '../assets/plus';
 import Minus from '../assets/minus';
+
 import '../styling/ProjectWorkPage.css';
 
 const CollapsableSection = ({ title, id, isFirst, children }) => {
   const [open, setOpen] = useState(isFirst);
 
   return (
-    <div class="card collapsable-section">
-      <div class="card-header">
-        <h5 class="mb-0">
-          <div class="collapsable-header" onClick={() => setOpen(!open)} aria-controls={id} aria-expanded={open}>
+    <div className="card collapsable-section">
+      <div className="card-header">
+        <h5 className="mb-0">
+          <div className="collapsable-header" onClick={() => setOpen(!open)} aria-controls={id} aria-expanded={open}>
             {open ? <Minus /> : <Plus />}
-            <span className="collapsable-header-title">{title}</span>
+            <h1 className="collapsable-header-title">{title}</h1>
           </div>
         </h5>
       </div>
       <Collapse in={open} className="collapsable-content">
-        <div id={id} class="card-body">
+        <div id={id} className="card-body">
           {children}
         </div>
       </Collapse>
@@ -65,13 +66,12 @@ const ProjectWorkPage = ({ match }) => {
 
   return (
     <div className="project-work-page">
-      <div className="container mt-5">
         <div className="row">
-          <div className="col-md-8 col-sm-12 project-work-content">
+          <div className="project-work-content">
             <div className="project-work-flow">
               <h1>Ready to work on this project?</h1>
               <div className="justify-content-center d-flex flex-wrap align-items-center">
-                <img className="flow-images" src={projectFlow} alt="Project Steps Flow" />
+                <ProjectFlow className="flow-images project-work-flow" />
               </div>
             </div>
 
@@ -106,7 +106,6 @@ const ProjectWorkPage = ({ match }) => {
           </div>
         </div>
       </div>
-    </div>
   );
 };
 
