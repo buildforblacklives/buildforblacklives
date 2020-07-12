@@ -23,6 +23,9 @@ const MainNavbar = () => (
         <LinkContainer to="/project-request">
           <NavLink className="navbar-text">Project Request</NavLink>
         </LinkContainer>
+        <LinkContainer to="/resources">
+          <NavLink className="navbar-text">Anti-Racist Resources</NavLink>
+        </LinkContainer>
         <LinkContainer to="/faq">
           <NavLink className="navbar-text">FAQ</NavLink>
         </LinkContainer>
