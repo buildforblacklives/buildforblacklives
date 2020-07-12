@@ -1,6 +1,6 @@
 .resource-page {
   max-width: 1400px;
-  margin: 100px auto;
+  margin: 3rem auto;
 }
 
 .row-align-center {
@@ -11,7 +11,7 @@
 .heading-link {
   font-size: 24px;
   font-family: HelveticaNeueBold;
-  text-decoration:underline;
+  text-decoration: underline;
   color: var(--main-blue);
 }
 
@@ -32,7 +32,7 @@ a:hover {
 @media only screen and (max-width: 768px) {
   .icon {
     max-width: 250px;
-    margin-bottom: 30px;
+    margin-bottom: 0.35rem;
   }
 
   .resource-page {
