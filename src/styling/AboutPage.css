@@ -20,7 +20,6 @@
 }
 
 .about-social-logo {
-  height: 30px;
   margin-right: 20px;
   margin-top: 20px;
 }
@@ -41,5 +40,15 @@
 
   .mx-auto {
     margin-bottom: 30px;
+  }
+
+  .about-social-logo-row {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+  }
+
+  .about-ul {
+    list-style-type: none;
   }
 }

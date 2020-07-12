@@ -1,16 +1,11 @@
 import React from 'react';
-import { Button, Col, Container, Image, Row } from 'react-bootstrap';
+import { Button, Col, Container, Row } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import Logo from '../assets/logo.js';
 import CommPartnersIcon from '../assets/community-partners.js';
 import ReqProjectIcon from '../assets/form-icon.js';
 import WorkProjectIcon from '../assets/project-select-icon.js';
 import MailIcon from '../assets/email-icon.js';
-import fbLogo from '../assets/social_logos/Facebook_Logo.png';
-import igLogo from '../assets/social_logos/IG_Logo.png';
-import linkedinLogo from '../assets/social_logos/Linkedin_Logo.png';
-import twitterLogo from '../assets/social_logos/Twitter_Logo.png';
-
 import '../styling/AboutPage.css';
 
 const AboutPage = () => (
@@ -23,7 +18,15 @@ const AboutPage = () => (
         <h1 className="logotype">Build for Black Lives</h1>
         <h3 className="about-subheader logotype">Building pro bono projects to support Black lives</h3>
         <p>
-          Build for Black Lives is a platform built to connect individuals who have tech/design skills with activists, organizers, and Black-owned businesses. We aim to provide pro bono work creating websites, mobile apps, data visualizations, graphics, digital marketing, and/or any other technical projects the organizations might need.
+          Build for Black Lives is a platform built to connect anti-racist individuals with activists, organizers, and black-owned businesses to provide pro bono work creating websites, apps, graphics, social media content, data visualizations, and/or other projects.
+          Now more than ever, it has become essential for businesses and organizations to have an online presence. Build for Black Lives aims to reduce discrimination against Black folks when searching for tech and design services.
+        </p>
+        <p>
+          This initiative was started by&nbsp;
+          <a href="https://hackbeanpot.com/">
+            HackBeanpot
+          </a>
+          , a Boston-based hackathon that aims to build a diverse, inclusive, learning-focused tech community. Racial inequality has long been an issue in the tech space. As an organization that strives to combat racial inequity, we started this platform in an effort to bring the anti-racist tech community together to take action to support Black lives and fight for racial justice
         </p>
       </Col>
     </Row>
@@ -34,22 +37,14 @@ const AboutPage = () => (
       <Col className="about-order2">
         <h2>Community Partners</h2>
         <p>These are organizations that have helped build, endorse, and promote the platform.</p>
-        <ul>
+        <ul className="about-ul">
           <li>HackBeanpot</li>
-          {/* removed placeholders. add partners as needed */}
-          {/* <li>...</li>
-          <li>...</li>
-          <li>...</li>
-          <li>...</li>
-          <li>...</li>
-          <li>...</li>
-          <li>...</li>
-          <li>...</li> */}
         </ul>
         <p>
-          Contact us if you would like to get involved. We are always looking to partner with organizations who are
-          committed to being anti-racist and want to help work toward justice and equity through tech. You can also
-          join our&nbsp;
+          We are open to partnering with organizations that are committed to ending racial inequality and discrimination in tech. If your organization would like to work with Build for Black Lives, you are welcome to&nbsp;
+          {/* FIXME update */}
+          <a href="mailto:buildforblacklives@hackbeanpot.com">email us</a>
+          . You can also join our&nbsp;
           <a href="https://join.slack.com/t/northeastern-hac3935/shared_invite/zt-fctqwcqe-7~n_GXliEYbQzUeqERHH6A">
             Slack Workspace
           </a>
@@ -70,8 +65,10 @@ const AboutPage = () => (
       <Col>
         <h2>Request a Project</h2>
         <p>
-          Are you a black business owner, activist, protest organizer, or community advocate looking for help building a
-          website or online platform, creating social media content, data visualizations, or other projects?
+          Are you a black business owner, activist, protest organizer, or 
+          community advocate looking for free services building a website or 
+          online platform, creating social media content, data visualizations, 
+          or other projects?
         </p>
         <LinkContainer to="/project-request">
           <Button className="primary-button" size="med">
@@ -87,8 +84,10 @@ const AboutPage = () => (
       <Col className="about-order2">
         <h2>Work on a Project</h2>
         <p>
-          Are you a designer, programmer, engineer, data scientist, writer, web developer, or marketing specialist
-          looking to use your skills to do pro bono work to support Black lives?
+          Are you an anti-racist writer, designer, engineer, data scientist, 
+          illustrator, programmer, web developer, or marketing specialist who is
+           looking to use your professional skills to do pro bono work to 
+           support Black lives?
         </p>
         <LinkContainer to="/projects">
           <Button className="primary-button" size="med">
@@ -110,31 +109,32 @@ const AboutPage = () => (
       <Col>
         <h2>Contact Us</h2>
         <p>
-          Feel free to reach out to us if you are interested in getting involved or have questions! You can also check
-          out our HackBeanpot social media pages for more information about what we do as an organization.
+        Want to get involved, or have questions, thoughts, feedback, or concerns?
         </p>
-        <p>
-          Email us at:&nbsp;
-          <a href="mailto:buildforblacklives@hackbeanpot.com">buildforblacklives@hackbeanpot.com</a>
-          <br />
-          Visit us at:&nbsp;
-          <a href="https://hackbeanpot.com/" target="_blank" rel="noopener noreferrer">
-            hackbeanpot.com
-          </a>
-        </p>
-        <Row>
+        Please use one of the following subject line patterns in your emails:<br/>
+        "Volunteer: [Question or Feedback] [Subject]"<br/>
+        "Project Request: [Question or Feedback] [Subject]"<br/>
+        <br/>
+        Email us at:&nbsp;
+        {/* FIXME update */}
+        <a href="mailto:buildforblacklives@hackbeanpot.com">buildforblacklives@hackbeanpot.com</a>
+        <Row className="about-social-logo-row">
           <Col className="col-9">
-            <a href="https://www.facebook.com/hackbeanpot/" target="_blank" rel="noopener noreferrer">
-              <Image src={fbLogo} className="about-social-logo" />
+            <a href="mailto:buildforblacklives@hackbeanpot.com"
+              target="_blank" rel="noopener noreferrer">
+              <i className="fas fa-envelope fa-2x about-social-logo footer-text"></i>
             </a>
-            <a href="https://www.instagram.com/hackbeanpot/" target="_blank" rel="noopener noreferrer">
-              <Image src={igLogo} className="about-social-logo" />
+            <a href="https://www.facebook.com/Build-for-Black-Lives-105258644589291"
+              target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-facebook fa-2x about-social-logo footer-text" aria-hidden="true"></i>
             </a>
-            <a href="https://twitter.com/hackbeanpot" target="_blank" rel="noopener noreferrer">
-              <Image src={twitterLogo} className="about-social-logo" />
+            <a href="https://www.instagram.com/buildforblacklives/"
+              target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-instagram fa-2x about-social-logo footer-text" aria-hidden="true"></i>
             </a>
-            <a href="https://www.linkedin.com/company/hackbeanpot-inc" target="_blank" rel="noopener noreferrer">
-              <Image src={linkedinLogo} className="about-social-logo" />
+            <a href="https://join.slack.com/t/northeastern-hac3935/shared_invite/zt-fctqwcqe-7~n_GXliEYbQzUeqERHH6A"
+              target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-slack fa-2x about-social-logo footer-text" aria-hidden="true"></i>
             </a>
           </Col>
         </Row>
