@@ -112,8 +112,8 @@ const AboutPage = () => (
         Want to get involved, or have questions, thoughts, feedback, or concerns?
         </p>
         Please use one of the following subject line patterns in your emails:<br/>
-        "Volunteer: [Question or Feedback] [Subject]"<br/>
-        "Project Request: [Question or Feedback] [Subject]"<br/>
+        "[Volunteer] Question"<br/>
+        "[Project Request] Question"<br/>
         <br/>
         Email us at:&nbsp;
         {/* FIXME update */}
