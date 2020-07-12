@@ -1,11 +1,13 @@
 /* Layout */
 .faq-section-container {
   padding: 0 2em;
+  margin: 3rem 0;
 }
 
 @media only screen and (max-width: 992px) {
   .faq-section-container {
     padding: 0 1em;
+    margin: 1.5rem 0;
   }
 }
 
@@ -33,11 +35,6 @@
   border: 1px solid var(--main-blue) !important;
   border-bottom: 3px solid var(--main-yellow) !important;
   color: var(--main-blue);
-
-  /* border: 0;
-  border-bottom: 3px solid var(--main-yellow) !important;
-  background-color: var(--main-blue);
-  color: var(--main-black); */
 }
 
 .faq .nav-link.active,
@@ -50,6 +47,12 @@
 }
 
 @media only screen and (max-width: 992px) {
+  .faq .nav-tabs {
+    font-size: 1.3rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
   .faq .nav-link,
   .faq .nav-link:hover {
     flex-grow: 0;
@@ -81,10 +84,18 @@
   font-size: 18px;
   background-color: var(--main-grey);
   color: var(--white);
+  padding: 1.5rem 3rem;
+
 }
 
 @media only screen and (max-width: 992px) {
   .faq-accordion-question {
-    font-size: 18px;
+    font-size: 16px;
+    padding: 1rem;
+  }
+
+  .faq-accordion-answer{
+    font-size: 16px;
+    padding: 1.5rem;
   }
 }

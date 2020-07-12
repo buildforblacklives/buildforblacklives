@@ -22,7 +22,7 @@ class FAQSection extends React.Component {
       );
     }
     return (
-      <section className="mt-5 mb-5 faq-section-container">
+      <section className="faq-section-container">
         {this.props.faq.map((qa, i) => {
           return (
             <Accordion key={i} className="mt-3 mb-3">
@@ -31,7 +31,7 @@ class FAQSection extends React.Component {
                   {qa.question}
                 </IconToggleAccordion>
                 <Accordion.Collapse eventKey="1">
-                  <Card.Body className="p-3 faq-accordion-answer">{qa.answer}</Card.Body>
+                  <Card.Body className="faq-accordion-answer">{qa.answer}</Card.Body>
                 </Accordion.Collapse>
               </Card>
             </Accordion>
