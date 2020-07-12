@@ -22,8 +22,19 @@ a:hover {
 .icon {
     width: 100%;
     max-width: 300px;
+    height: auto;
 }
 
 .padding-r {
     padding-right: 50px;
+}
+
+@media only screen and (max-width: 768px) {
+    .resource-page {
+        text-align: center;
+      }
+
+    .resources-order1 {
+      order: 1;
+    }
 }

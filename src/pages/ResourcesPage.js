@@ -7,7 +7,7 @@ import '../styling/ResourcesPage.css';
 const ResourcesPage = () => (
   <Container className="resource-page" fluid>
     <Row className="about-align-center">
-      <Col className="padding-r">
+      <Col className="padding-r resources-order1">
         <h2>Racism in Tech and Design</h2>
         <p> The Tech and Design industries have had a long, racist, and non-inclusive history. To this day, these fields perpetuate white supremacy and 
         fail to properly represent Black folx. Software plays a huge role in our society, but most tech is not created with Black folx in mind. In fact, 
@@ -33,7 +33,7 @@ const ResourcesPage = () => (
         <h4>We would like to make it clear that:</h4>
         <p> - Participating in this initiative is <strong>NOT</strong> an opportunity for participants to do "charity work", cleanse their guilt, or impose their opinions about what the Black community needs.</p>
         <p> - Participating in this initiative <strong>IS</strong> an opportunity to create projects that are explicitly requested by activists, organizers and Black Business owners, 
-          and to provide free services, in order to work towards justice and reparations for a community that has been systematically oppressed, exploited, and underserved for hundereds of years. </p>
+          and to provide free services, in order to work towards justice and reparations for a community that has been systematically oppressed, exploited, and underserved for hundreds of years. </p>
       </Col>
     </Row>
 
@@ -47,7 +47,7 @@ const ResourcesPage = () => (
             <a className='heading-link' href='https://thecreativeindependent.com/guides/how-to-think-differently-about-doing-good-as-a-creative-person/'>
               Avoiding the "Creative Savior Complex"
             </a>
-            <p>How to think differently about doing good. This resources is "A guide to avoiding 'creative savior complex' when working on social impact projects, written by Omayeli Arenyeka and illustrated by Neta Bomani".</p>
+            <p>How to think differently about doing good. This resource is "A guide to avoiding 'creative savior complex' when working on social impact projects, written by Omayeli Arenyeka and illustrated by Neta Bomani".</p>
           </Col>
         </Row>
 
@@ -121,7 +121,9 @@ const ResourcesPage = () => (
         <Row className="row-align-center">
           <Col>
             <h4>Have additional resources you think should be featured?</h4>
-            <p>Email us at buildforblacklives@hackbeanpot.com</p>
+            <p>Email us at:&nbsp;
+            <a href="mailto:buildforblacklives@hackbeanpot.com">buildforblacklives@hackbeanpot.com</a>
+            </p>
           </Col>
         </Row>
       </Col>
