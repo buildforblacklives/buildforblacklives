@@ -184,8 +184,7 @@ const ResourcesPage = () => (
         <Col>
           <h4>Have additional resources you think should be featured?</h4>
           <p>
-            Email us at:&nbsp;
-            <a href="mailto:buildforblacklives@hackbeanpot.com">buildforblacklives@hackbeanpot.com</a>
+            Email us at: <a href="mailto:buildforblacklives@hackbeanpot.com">buildforblacklives@hackbeanpot.com</a>
           </p>
         </Col>
       </Row>
