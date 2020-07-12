@@ -42,7 +42,6 @@ const AboutPage = () => (
         </ul>
         <p>
           We are open to partnering with organizations that are committed to ending racial inequality and discrimination in tech. If your organization would like to work with Build for Black Lives, you are welcome to&nbsp;
-          {/* FIXME update */}
           <a href="mailto:buildforblacklives@hackbeanpot.com">email us</a>
           . You can also join our&nbsp;
           <a href="https://join.slack.com/t/northeastern-hac3935/shared_invite/zt-fctqwcqe-7~n_GXliEYbQzUeqERHH6A">
@@ -112,11 +111,10 @@ const AboutPage = () => (
         Want to get involved, or have questions, thoughts, feedback, or concerns?
         </p>
         Please use one of the following subject line patterns in your emails:<br/>
-        "Volunteer: [Question or Feedback] [Subject]"<br/>
-        "Project Request: [Question or Feedback] [Subject]"<br/>
+        "[Volunteer] Question"<br/>
+        "[Project Request] Question"<br/>
         <br/>
         Email us at:&nbsp;
-        {/* FIXME update */}
         <a href="mailto:buildforblacklives@hackbeanpot.com">buildforblacklives@hackbeanpot.com</a>
         <Row className="about-social-logo-row">
           <Col className="col-9">
