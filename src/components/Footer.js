@@ -2,7 +2,8 @@ import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 
 const Footer = () => (
-  <Row variant="dark" expand="lg" className="justify-content-center text-center footer">
+  <div className="footer">
+    <div className="footer-content">
     <span className="footer-text">
       Made in solidarity by
         <a href="https://hackbeanpot.com/" target="_blank" rel="noopener noreferrer">
@@ -39,7 +40,8 @@ const Footer = () => (
         <i className="fab fa-slack fa-2x footer-social-icon footer-text" aria-hidden="true"></i>
       </a>
     </div>
-  </Row>
+    </div>
+  </div>
 );
 
 export { Footer };

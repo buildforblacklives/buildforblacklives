@@ -35,12 +35,17 @@
   background-color: var(--main-black);
   width: 100%;
   margin: 0;
-  padding: 16px 144px;
+  padding: 16px 0;
+}
+
+.footer-content {
+  margin: 0 auto;
 }
 
 .footer-icons {
   margin: auto 0 auto 16px;
   height: 24px;
+  display: inline-block;
 }
 
 .footer-text {
@@ -85,10 +90,6 @@
   .footer-text {
     font-size: 14px;
   }
-
-  .footer-icons {
-    margin: auto 0;
-  }
 }
 
 @media only screen and (max-width: 360px) {
@@ -98,5 +99,15 @@
 
   .navbar-logotype {
     font-size: 16px;
+  }
+
+  .footer-text {
+    display: block;
+  }
+
+  .footer-icons {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 8px auto 0;
   }
 }
