@@ -40,11 +40,6 @@
   src: url('styling/fonts/Helvetica\ Neu\ Bold.ttf');
 }
 
-@font-face {
-  font-family: HelveticaNeueBoldCondensed;
-  src: url('styling/fonts/HelveticaNeue\ BlackCond.ttf');
-}
-
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -55,10 +50,10 @@ body {
 }
 
 h1 {
-  font-size: 56px;
+  font-size: 48px;
   color: var(--main-yellow);
   margin: 0;
-  font-family: HelveticaNeueBoldCondensed;
+  font-family: HelveticaNeueBold;
 }
 
 h1.logotype {
@@ -69,12 +64,12 @@ h2 {
   font-size: 36px;
   color: var(--main-yellow);
   margin: 30px 0;
-  font-family: HelveticaNeueBoldCondensed;
+  font-family: HelveticaNeueBold;
 }
 
 h3 {
   color: var(--main-blue);
-  font-size: 24px;
+  font-size: 32px;
   font-family: HelveticaNeueBold;
 }
 
@@ -97,7 +92,7 @@ h5 {
 p,
 span {
   font-family: HelveticaNeueLight;
-  font-size: 24px;
+  font-size: 20px;
 }
 
 a,
@@ -169,7 +164,7 @@ hr {
   }
   
   h2 {
-    font-size: 32px;
+    font-size: 36px;
   }
 
   h3,
