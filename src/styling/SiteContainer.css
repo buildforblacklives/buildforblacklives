@@ -34,6 +34,12 @@
   display: flex;
   background-color: var(--main-black);
   width: 100%;
+  margin: 0;
+  padding: 16 72px;
+}
+
+.footer-icons {
+  margin: auto 0 auto 16px;
 }
 
 .footer-text {
@@ -71,6 +77,10 @@
 
   .footer-text {
     font-size: 14px;
+  }
+
+  .footer-icons {
+    margin: auto 0;
   }
 }
 
