@@ -12,8 +12,22 @@ class FAQPage extends React.Component {
     // set to clientFAQ initially
     this.state = {
       faqType: 'client',
-      faqData: FAQItems.clientFAQ
+      faqData: FAQItems.clientFAQ,
+      isMobile: null
     };
+  }
+
+  componentDidMount() {
+    this.updateScreenSize();
+    window.addEventListener('resize', this.updateScreenSize.bind(this));
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateScreenSize.bind(this));
+  }
+
+  updateScreenSize() {
+    this.setState({ isMobile: window.innerWidth <= 992 });
   }
 
   handleClick = (e) => {
@@ -49,9 +63,9 @@ class FAQPage extends React.Component {
       <div className="container mt-5 mb-5 faq">
         <h1 className="mb-3">FAQs</h1>
         <Tabs xs="auto" onClick={this.handleClick}>
-          <Tab eventKey="client" title="Requesting a Project"></Tab>
-          <Tab eventKey="volunteer" title="Working on a Project"></Tab>
-          <Tab eventKey="initiative" title="This Initiative"></Tab>
+          <Tab eventKey="client" title={this.state.isMobile ? 'Request' : 'Request a Project'}></Tab>
+          <Tab eventKey="volunteer" title={this.state.isMobile ? 'Work' : 'Work on a Project'}></Tab>
+          <Tab eventKey="initiative" title={this.state.isMobile ? 'About' : 'About This Initiative'}></Tab>
         </Tabs>
         {!!this.state.faqData && <FAQSection faq={this.state.faqData} />}
       </div>
