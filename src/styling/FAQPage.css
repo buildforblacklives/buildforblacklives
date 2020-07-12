@@ -61,6 +61,14 @@
   }
 }
 
+@media only screen and (max-width: 425px) {
+  .faq .nav-link {
+    padding: 0.5em 0.5em;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+}
+
 /* Questions & Answers */
 .faq-accordion-container {
   color: var(--main-black);
@@ -73,7 +81,7 @@
   font-family: HelveticaNeueMed;
   font-size: 20px;
   background-color: var(--main-cream);
-  padding: 1.2rem;
+  padding: 1rem;
 }
 
 .faq-accordion-question:hover {
@@ -96,5 +104,11 @@
   .faq-accordion-answer {
     font-size: 16px;
     padding: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .faq-accordion-question .col {
+    padding-left: 0px;
   }
 }
