@@ -15,10 +15,6 @@
   --dark-yellow: #e0a800;
 }
 
-/* #root {
-  position: fixed;
-} */
-
 @font-face {
   font-family: Archivo;
   src: url('styling/fonts/Archivo-Regular.ttf');

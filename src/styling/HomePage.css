@@ -9,8 +9,8 @@
 }
 
 .logo {
-  margin: 86px auto 45px;
-  max-width: 390px;
+  margin: 32px auto 45px;
+  max-width: 325px;
   height: auto;
 }
 
@@ -92,7 +92,7 @@
 @media only screen and (max-width: 992px) {
   .home-persona-section-right,
   .home-persona-section-left {
-    padding: 0;
+    padding: 0 16px;
     margin: 16px 0;
   }
 }
@@ -112,7 +112,7 @@
 
   .home-track-images {
     max-width: 85%;
-    max-height: 85%;
+    height: auto;
   }
 
   .home-track-body {

@@ -7,8 +7,8 @@
 }
 
 .navbar-logo {
-  max-width: 50px;
-  max-height: 50px;
+  max-width: 36px;
+  width: 36px;
 }
 
 .navbar-logotype {
@@ -19,10 +19,10 @@
 }
 
 .navbar .navbar-nav .navbar-text.nav-link {
-  margin: 8px 12px;
+  margin: 0 12px;
   color: var(--main-yellow);
   font-family: HelveticaNeueMed;
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .navbar .navbar-nav .navbar-text.nav-link:hover,
@@ -51,8 +51,8 @@
 }
 
 @media only screen and (max-width: 1120px) {
-  .navbar-logo {
-    width: 50px;
+  .navbar .navbar-nav .navbar-text.nav-link {
+    margin: 0;
   }
 
   .footer-text {
@@ -75,7 +75,11 @@
 }
 
 @media only screen and (max-width: 360px) {
+  .navbar-logo {
+    max-width: 32px;
+  }
+
   .navbar-logotype {
-    margin: auto 0 auto 14px;
+    font-size: 16px;
   }
 }
