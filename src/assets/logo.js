@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Logo = ({ className }) => (
-	<svg className={className} width="2801" height="auto" viewBox="0 0 2801 2427" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<svg className={className} width="2801" height="2427" viewBox="0 0 2801 2427" fill="none" xmlns="http://www.w3.org/2000/svg">
 		<rect y="91" width="2801" height="1951.43" rx="297" fill="#6BB4D6" />
 		<rect x="1017.96" y="1982.75" width="766.007" height="369.685" fill="#6BB4D6" />
 		<rect x="297.174" y="2250.82" width="2207.58" height="176.178" rx="88.0889" fill="#6BB4D6" />

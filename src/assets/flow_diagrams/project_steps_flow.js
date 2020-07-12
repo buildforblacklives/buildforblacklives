@@ -1,7 +1,7 @@
 import React from 'react'
 
 const ProjectSteps = ({ className }) => (
-	<svg className={className} xmlns="http://www.w3.org/2000/svg" width="907" height="auto" viewBox="0 0 907 225">
+	<svg className={className} xmlns="http://www.w3.org/2000/svg" width="907" height="225" viewBox="0 0 907 225">
 		<defs>
 			<clipPath id="clipPath">
 				<rect width="76" height="95" fill="none" />
