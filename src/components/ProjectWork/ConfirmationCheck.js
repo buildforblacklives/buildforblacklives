@@ -35,7 +35,17 @@ const ConfirmationCheck = ({ hasConfirmed, setHasConfirmed }) => {
           type="checkbox"
           checked={confirmationChecks[0]}
           disabled={hasConfirmed}
-          onChange={() => setConfirmationChecks([!confirmationChecks[0], confirmationChecks[1], confirmationChecks[2]])}
+          onChange={() =>
+            setConfirmationChecks([
+              !confirmationChecks[0],
+              confirmationChecks[1],
+              confirmationChecks[2],
+              confirmationChecks[3],
+              confirmationChecks[4],
+              confirmationChecks[5],
+              confirmationChecks[6]
+            ])
+          }
         />
         <span className="confirmation-checks-text">
           I am committed to listening to the needs of the team I am working for, and building what they ask rather than
@@ -48,9 +58,19 @@ const ConfirmationCheck = ({ hasConfirmed, setHasConfirmed }) => {
           type="checkbox"
           checked={confirmationChecks[1]}
           disabled={hasConfirmed}
-          onChange={() => setConfirmationChecks([confirmationChecks[0], !confirmationChecks[1], confirmationChecks[2]])}
+          onChange={() =>
+            setConfirmationChecks([
+              confirmationChecks[0],
+              !confirmationChecks[1],
+              confirmationChecks[2],
+              confirmationChecks[3],
+              confirmationChecks[4],
+              confirmationChecks[5],
+              confirmationChecks[6]
+            ])
+          }
         />
-        <span className="confirmation-checks-text">I am committed to</span>
+        <span className="confirmation-checks-text">I am committed to being anti-racist online and in person.</span>
       </label>
       <label>
         <input
@@ -58,9 +78,111 @@ const ConfirmationCheck = ({ hasConfirmed, setHasConfirmed }) => {
           type="checkbox"
           checked={confirmationChecks[2]}
           disabled={hasConfirmed}
-          onChange={() => setConfirmationChecks([confirmationChecks[0], confirmationChecks[1], !confirmationChecks[2]])}
+          onChange={() =>
+            setConfirmationChecks([
+              confirmationChecks[0],
+              confirmationChecks[1],
+              !confirmationChecks[2],
+              confirmationChecks[3],
+              confirmationChecks[4],
+              confirmationChecks[5],
+              confirmationChecks[6]
+            ])
+          }
         />
-        <span className="confirmation-checks-text">I am committed to</span>
+        <span className="confirmation-checks-text">
+          I will refrain from giving my client the burden of educating myself on systemic oppression.
+        </span>
+      </label>
+      <label>
+        <input
+          name="confirm1"
+          type="checkbox"
+          checked={confirmationChecks[3]}
+          disabled={hasConfirmed}
+          onChange={() =>
+            setConfirmationChecks([
+              confirmationChecks[0],
+              confirmationChecks[1],
+              confirmationChecks[2],
+              !confirmationChecks[3],
+              confirmationChecks[4],
+              confirmationChecks[5],
+              confirmationChecks[6]
+            ])
+          }
+        />
+        <span className="confirmation-checks-text">
+          I am committed to continuously learn about systemic racism, in addition to the racial inequalities within the
+          Tech and Design industry.
+        </span>
+      </label>
+      <label>
+        <input
+          name="confirm1"
+          type="checkbox"
+          checked={confirmationChecks[4]}
+          disabled={hasConfirmed}
+          onChange={() =>
+            setConfirmationChecks([
+              confirmationChecks[0],
+              confirmationChecks[1],
+              confirmationChecks[2],
+              confirmationChecks[3],
+              !confirmationChecks[4],
+              confirmationChecks[5],
+              confirmationChecks[6]
+            ])
+          }
+        />
+        <span className="confirmation-checks-text">
+          I am committed to offering my skill set(s) pro bono during the entire duration of this project.
+        </span>
+      </label>
+      <label>
+        <input
+          name="confirm1"
+          type="checkbox"
+          checked={confirmationChecks[5]}
+          disabled={hasConfirmed}
+          onChange={() =>
+            setConfirmationChecks([
+              confirmationChecks[0],
+              confirmationChecks[1],
+              confirmationChecks[2],
+              confirmationChecks[3],
+              confirmationChecks[4],
+              !confirmationChecks[5],
+              confirmationChecks[6]
+            ])
+          }
+        />
+        <span className="confirmation-checks-text">
+          I am committed to supporting the intersectionality of anti-racism efforts.
+        </span>
+      </label>
+      <label>
+        <input
+          name="confirm1"
+          type="checkbox"
+          checked={confirmationChecks[6]}
+          disabled={hasConfirmed}
+          onChange={() =>
+            setConfirmationChecks([
+              confirmationChecks[0],
+              confirmationChecks[1],
+              confirmationChecks[2],
+              confirmationChecks[3],
+              confirmationChecks[4],
+              confirmationChecks[5],
+              !confirmationChecks[6]
+            ])
+          }
+        />
+        <span className="confirmation-checks-text">
+          I am committed to ensuring that the entire duration of this project development and communication efforts
+          remain a safe space for all parties involved.
+        </span>
       </label>
       <div className="confirmation-btn-container">
         <button
