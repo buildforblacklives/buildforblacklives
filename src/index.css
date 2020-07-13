@@ -122,19 +122,17 @@ li {
 }
 
 .primary-button.btn:hover,
-.primary-button.btn:active,
 .primary-button:hover,
-.primary-button:active {
+.primary-button:not(:disabled):not(.disabled):active {
   background-color: var(--dark-yellow);
   border-color: var(--dark-yellow);
 }
 
 .secondary-button.btn,
 .secondary-button.btn:hover,
-.secondary-button.btn:active,
 .secondary-button,
 .secondary-button:hover,
-.secondary-button:active {
+.secondary-button:not(:disabled):not(.disabled):active {
   background-color: var(--main-blue);
   padding: 12px 35px;
   border-radius: 25px;
