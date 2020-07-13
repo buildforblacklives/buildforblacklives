@@ -4,10 +4,13 @@
 
 .request-page .flow-images {
   margin: 1rem 0rem;
+<<<<<<< HEAD
 }
 
 @media only screen and (max-width: 768px) {
   .request-page h1 {
     margin-left: 16px;
   }
+=======
+>>>>>>> 24df648... Cari margin fix (#46)
 }
