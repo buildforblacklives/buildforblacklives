@@ -18,15 +18,18 @@ const AboutPage = () => (
         <h1 className="logotype">Build for Black Lives</h1>
         <h3 className="about-subheader logotype">Building pro bono projects to support Black lives</h3>
         <p>
-          Build for Black Lives is a platform built to connect anti-racist individuals with activists, organizers, and black-owned businesses to provide pro bono work creating websites, apps, graphics, social media content, data visualizations, and/or other projects.
-          Now more than ever, it has become essential for businesses and organizations to have an online presence. Build for Black Lives aims to reduce discrimination against Black folks when searching for tech and design services.
+          Build for Black Lives is a platform built to connect anti-racist individuals with activists, organizers, and
+          black-owned businesses to provide pro bono work creating websites, apps, graphics, social media content, data
+          visualizations, and/or other projects. Now more than ever, it has become essential for businesses and
+          organizations to have an online presence. Build for Black Lives aims to reduce discrimination against Black
+          folks when searching for tech and design services.
         </p>
         <p>
-          This initiative was started by&nbsp;
-          <a href="https://hackbeanpot.com/">
-            HackBeanpot
-          </a>
-          , a Boston-based hackathon that aims to build a diverse, inclusive, learning-focused tech community. Racial inequality has long been an issue in the tech space. As an organization that strives to combat racial inequity, we started this platform in an effort to bring the anti-racist tech community together to take action to support Black lives and fight for racial justice
+          This initiative was started by <a href="https://hackbeanpot.com/">HackBeanpot</a>, a Boston-based hackathon
+          that aims to build a diverse, inclusive, learning-focused tech community. Racial inequality has long been an
+          issue in the tech space. As an organization that strives to combat racial inequity, we started this platform
+          in an effort to bring the anti-racist tech community together to take action to support Black lives and fight
+          for racial justice
         </p>
       </Col>
     </Row>
@@ -37,17 +40,17 @@ const AboutPage = () => (
       <Col className="about-order2">
         <h2>Community Partners</h2>
         <p>These are organizations that have helped build, endorse, and promote the platform.</p>
-        <ul className="about-ul">
-          <li>HackBeanpot</li>
-        </ul>
+        <div className="about-community-partenres-ul">
+          <h5>HackBeanpot</h5>
+        </div>
         <p>
-          We are open to partnering with organizations that are committed to ending racial inequality and discrimination in tech. If your organization would like to work with Build for Black Lives, you are welcome to&nbsp;
-          <a href="mailto:buildforblacklives@hackbeanpot.com">email us</a>
-          . You can also join our&nbsp;
+          We are open to partnering with organizations that are committed to ending racial inequality and discrimination
+          in tech. If your organization would like to work with Build for Black Lives, you are welcome to{' '}
+          <a href="mailto:buildforblacklives@hackbeanpot.com">email us</a>. You can also join our{' '}
           <a href="https://join.slack.com/t/northeastern-hac3935/shared_invite/zt-fctqwcqe-7~n_GXliEYbQzUeqERHH6A">
             Slack Workspace
-          </a>
-          &nbsp;to learn more from the organizing team.
+          </a>{' '}
+          to learn more from the organizing team.
         </p>
       </Col>
       <Col xs={12} md={6}>
@@ -64,10 +67,8 @@ const AboutPage = () => (
       <Col>
         <h2>Request a Project</h2>
         <p>
-          Are you a black business owner, activist, protest organizer, or 
-          community advocate looking for free services building a website or 
-          online platform, creating social media content, data visualizations, 
-          or other projects?
+          Are you a black business owner, activist, protest organizer, or community advocate looking for free services
+          building a website or online platform, creating social media content, data visualizations, or other projects?
         </p>
         <LinkContainer to="/project-request">
           <Button className="primary-button" size="med">
@@ -83,10 +84,9 @@ const AboutPage = () => (
       <Col className="about-order2">
         <h2>Work on a Project</h2>
         <p>
-          Are you an anti-racist writer, designer, engineer, data scientist, 
-          illustrator, programmer, web developer, or marketing specialist who is
-           looking to use your professional skills to do pro bono work to 
-           support Black lives?
+          Are you an anti-racist writer, designer, engineer, data scientist, illustrator, programmer, web developer, or
+          marketing specialist who is looking to use your professional skills to do pro bono work to support Black
+          lives?
         </p>
         <LinkContainer to="/projects">
           <Button className="primary-button" size="med">
@@ -107,31 +107,34 @@ const AboutPage = () => (
       </Col>
       <Col>
         <h2>Contact Us</h2>
-        <p>
-        Want to get involved, or have questions, thoughts, feedback, or concerns?
+        <p>Want to get involved, or have questions, thoughts, feedback, or concerns?</p>
+        <p className="about-contact-list">
+          Email us at <a href="mailto:buildforblacklives@hackbeanpot.com">buildforblacklives@hackbeanpot.com</a>.<br />
+          Please use one of the following subject line patterns in your emails if they apply:
+          <p>"[Volunteer] Question"</p>
+          <p>"[Project Request] Question"</p>
+          <p>"[Community Partner] Question"</p>
         </p>
-        Please use one of the following subject line patterns in your emails:<br/>
-        "[Volunteer] Question"<br/>
-        "[Project Request] Question"<br/>
-        <br/>
-        Email us at:&nbsp;
-        <a href="mailto:buildforblacklives@hackbeanpot.com">buildforblacklives@hackbeanpot.com</a>
         <Row className="about-social-logo-row">
           <Col className="col-9">
-            <a href="mailto:buildforblacklives@hackbeanpot.com"
-              target="_blank" rel="noopener noreferrer">
+            <a href="mailto:buildforblacklives@hackbeanpot.com" target="_blank" rel="noopener noreferrer">
               <i className="fas fa-envelope fa-2x about-social-logo footer-text"></i>
             </a>
-            <a href="https://www.facebook.com/Build-for-Black-Lives-105258644589291"
-              target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.facebook.com/Build-for-Black-Lives-105258644589291"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i className="fab fa-facebook fa-2x about-social-logo footer-text" aria-hidden="true"></i>
             </a>
-            <a href="https://www.instagram.com/buildforblacklives/"
-              target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/buildforblacklives/" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-instagram fa-2x about-social-logo footer-text" aria-hidden="true"></i>
             </a>
-            <a href="https://join.slack.com/t/northeastern-hac3935/shared_invite/zt-fctqwcqe-7~n_GXliEYbQzUeqERHH6A"
-              target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://join.slack.com/t/northeastern-hac3935/shared_invite/zt-fctqwcqe-7~n_GXliEYbQzUeqERHH6A"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i className="fab fa-slack fa-2x about-social-logo footer-text" aria-hidden="true"></i>
             </a>
           </Col>
