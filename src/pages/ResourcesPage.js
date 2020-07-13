@@ -18,7 +18,7 @@ const ResourcesPage = () => (
         </p>
       </Col>
       <Col xs={12} md={4}>
-        <TechDesign className="mx-auto d-block icon" fluid />
+        <TechDesign className="mx-auto d-block resource-icon" fluid />
       </Col>
     </Row>
 
@@ -26,7 +26,7 @@ const ResourcesPage = () => (
 
     <Row className="row-align-center">
       <Col xs={12} md={4}>
-        <Logo className="mx-auto d-block icon" fluid />
+        <Logo className="mx-auto d-block resource-icon" fluid />
       </Col>
       <Col>
         <h2>Where does Build for Black Lives fit in?</h2>
