@@ -20,7 +20,7 @@ const AboutPage = () => (
         <p>
           Build for Black Lives is a platform built to connect anti-racist individuals with activists, organizers, and
           Black-owned businesses to provide pro bono work creating websites, apps, graphics, social media content, data
-          visualizations, and other projects. Our aim is to provide pro-bono services as a means of working towards
+          visualizations, and other projects. Our aim is to provide pro bono services as a means of working towards
           justice and reparations for a community that has been systematically oppressed, exploited, and underserved by
           the tech and design industries.
         </p>

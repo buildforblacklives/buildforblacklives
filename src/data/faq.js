@@ -80,7 +80,7 @@ const FAQItems = {
       question:
         'I’m having work-related issues with the volunteer(s) who agreed to take on my project. What should I do?',
       answer:
-        'At this time, this platform is meant to connect volunteers to clients they would want to work with; we have minimal oversight on the communication and work process between volunteers and clients, but please reach out if you would like to have your project reposted for a new team to work on.'
+        'At this time, this platform is meant to connect volunteers to clients they would want to work with. We have minimal oversight on the communication and work process between volunteers and clients, but please reach out if you would like to have your project reposted for a new team to work on.'
     },
     {
       question: 'I have some other questions. How can I contact you?',
