@@ -27,7 +27,7 @@ const FAQItems = {
     {
       question: 'What are the types of services that I can request?',
       answer:
-        'This initiative is mostly focused on projects that fall within the technology and design fields.This includes website development, graphic design services, social media graphics, apps, data visualizations and more! Check out the project submission form for a breakdown of the different types of projects.If you’re still unsure about whether or not your project qualifies, feel free to submit a project request, and we will let you know if your project is ineligible.'
+        'This initiative is mostly focused on projects that fall within the technology and design fields. This includes website development, graphic design services, social media graphics, apps, data visualizations and more! Check out the project submission form for a breakdown of the different types of projects. If you’re still unsure about whether or not your project qualifies, feel free to submit a project request, and we will let you know if your project is ineligible.'
     },
     {
       question: 'How long will it take for me to find out if my request is approved?',
@@ -151,7 +151,7 @@ const FAQItems = {
         <div>
           Build for Black Lives is a platform built to connect anti-racist individuals with activists, organizers, and
           Black-owned businesses to provide pro bono work creating websites, apps, graphics, social media content, data
-          visualizations, and/or other projects. Our aim is to provide pro-bono services as a means of working towards
+          visualizations, and/or other projects. Our aim is to provide pro bono services as a means of working towards
           justice and reparations for a community that has been systematically oppressed, exploited, and underserved by
           the tech and design industries. Visit our <Link to="/about">About</Link> page to learn more.
         </div>
