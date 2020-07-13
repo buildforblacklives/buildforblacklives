@@ -13,16 +13,28 @@ class FAQPage extends React.Component {
     this.state = {
       faqType: 'client',
       faqData: FAQItems.clientFAQ,
-      title: 'Requesting a Project'
+      isMobile: null
     };
+  }
+
+  componentDidMount() {
+    this.updateScreenSize();
+    window.addEventListener('resize', this.updateScreenSize.bind(this));
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateScreenSize.bind(this));
+  }
+
+  updateScreenSize() {
+    this.setState({ isMobile: window.innerWidth <= 992 });
   }
 
   handleClick = (e) => {
     // Prevent state change on container click
     if (e.target.tagName !== 'NAV') {
       const {
-        dataset: { rbEventKey: type },
-        innerHTML
+        dataset: { rbEventKey: type }
       } = e.target;
 
       let selectedData,
@@ -42,7 +54,7 @@ class FAQPage extends React.Component {
           selectedData = FAQItems.clientFAQ;
       }
 
-      this.setState({ faqType: selectedType, faqData: selectedData, title: innerHTML });
+      this.setState({ faqType: selectedType, faqData: selectedData });
     }
   };
 
@@ -51,13 +63,11 @@ class FAQPage extends React.Component {
       <div className="container mt-5 mb-5 faq">
         <h1 className="mb-3">FAQs</h1>
         <Tabs xs="auto" onClick={this.handleClick}>
-          <Tab eventKey="client" title="Requesting a Project"></Tab>
-          <Tab eventKey="volunteer" title="Working on a Project"></Tab>
-          <Tab eventKey="initiative" title="This Initiative"></Tab>
+          <Tab eventKey="client" title={this.state.isMobile ? 'Request' : 'Request a Project'}></Tab>
+          <Tab eventKey="volunteer" title={this.state.isMobile ? 'Work' : 'Work on a Project'}></Tab>
+          <Tab eventKey="initiative" title={this.state.isMobile ? 'About' : 'About This Initiative'}></Tab>
         </Tabs>
-        <div className="pl-4 pr-4">
-          {!!this.state.faqData && <FAQSection title={this.state.title} faq={this.state.faqData} />}
-        </div>
+        {!!this.state.faqData && <FAQSection faq={this.state.faqData} />}
       </div>
     );
   }

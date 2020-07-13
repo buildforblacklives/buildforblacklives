@@ -29,33 +29,29 @@ const HomePage = () => (
         <span className="home-persona-text">
           Black business owners, activists, organizers, and community advocates, etc.
         </span>
-        <Row>
-          <Col>
-            <LinkContainer to="/project-request">
-              <Button className="primary-button" size="lg">
-                Request a Project
-              </Button>
-            </LinkContainer>
-          </Col>
-        </Row>
+        <div>
+          <LinkContainer to="/project-request">
+            <Button className="primary-button" size="lg">
+              Request a Project
+            </Button>
+          </LinkContainer>
+        </div>
       </Col>
       <Col xs={12} lg={6} className="home-persona-section-right">
         <span className="home-persona-text">
           Anti-racist designers, programmers, data scientists, illustrators, writers, etc.
         </span>
-        <Row>
-          <Col>
-            <LinkContainer to="/projects">
-              <Button className="primary-button" size="lg">
-                Work on a Project
-              </Button>
-            </LinkContainer>
-          </Col>
-        </Row>
+        <div>
+          <LinkContainer to="/projects">
+            <Button className="primary-button" size="lg">
+              Work on a Project
+            </Button>
+          </LinkContainer>
+        </div>
       </Col>
     </Row>
 
-    <Row>
+    <Row className="home-arrow-row">
       <Col>
         <ArrowDown className="home-arrow-down" />
       </Col>

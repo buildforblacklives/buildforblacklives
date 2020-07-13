@@ -40,13 +40,12 @@ const AboutPage = () => (
       <Col className="about-order2">
         <h2>Community Partners</h2>
         <p>These are organizations that have helped build, endorse, and promote the platform.</p>
-        <ul className="about-ul">
-          <li>HackBeanpot</li>
-        </ul>
+        <div className="about-community-partenres-ul">
+          <h5>HackBeanpot</h5>
+        </div>
         <p>
           We are open to partnering with organizations that are committed to ending racial inequality and discrimination
           in tech. If your organization would like to work with Build for Black Lives, you are welcome to{' '}
-          {/* FIXME update */}
           <a href="mailto:buildforblacklives@hackbeanpot.com">email us</a>. You can also join our{' '}
           <a href="https://join.slack.com/t/northeastern-hac3935/shared_invite/zt-fctqwcqe-7~n_GXliEYbQzUeqERHH6A">
             Slack Workspace
@@ -109,15 +108,23 @@ const AboutPage = () => (
       <Col>
         <h2>Contact Us</h2>
         <p>Want to get involved, or have questions, thoughts, feedback, or concerns?</p>
-        Please use one of the following subject line patterns in your emails:
-        <br />
-        "Volunteer: [Question or Feedback] [Subject]"
-        <br />
-        "Project Request: [Question or Feedback] [Subject]"
-        <br />
-        <br />
-        Email us at: {/* FIXME update */}
-        <a href="mailto:buildforblacklives@hackbeanpot.com">buildforblacklives@hackbeanpot.com</a>
+        <p>
+          Email us at <a href="mailto:buildforblacklives@hackbeanpot.com">buildforblacklives@hackbeanpot.com</a>.<br />
+          Please use one of the following subject line patterns in your emails if they apply:
+          <div className="about-subject-lines textLeft">
+            <ul>
+              <li>
+                <p>"[Volunteer] Question"</p>
+              </li>
+              <li>
+                <p>"[Project Request] Question"</p>
+              </li>
+              <li>
+                <p>"[Community Partner] Question"</p>
+              </li>
+            </ul>
+          </div>
+        </p>
         <Row className="about-social-logo-row">
           <Col className="col-9">
             <a href="mailto:buildforblacklives@hackbeanpot.com" target="_blank" rel="noopener noreferrer">
