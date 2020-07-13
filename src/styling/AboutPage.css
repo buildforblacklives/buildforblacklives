@@ -61,10 +61,6 @@
 }
 
 @media only screen and (max-width: 768px) {
-  .about-page {
-    text-align: center;
-  }
-
   .about-order2 {
     order: 2;
   }
@@ -82,10 +78,5 @@
   .about-social-logo-row {
     display: flex;
     justify-content: center;
-  }
-
-  .about-contact-list p,
-  .about-community-partenres-ul p {
-    margin-left: 0;
   }
 }
