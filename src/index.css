@@ -158,7 +158,7 @@ hr {
   max-height: 85%;
 }
 
-@media only screen and (max-width: 671px) {
+@media only screen and (max-width: 678px) {
   h1 {
     font-size: 48px;
   }

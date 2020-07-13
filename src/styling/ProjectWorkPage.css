@@ -85,7 +85,7 @@
   line-height: 36px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   .collapsable-content {
     padding: 24px;
   }

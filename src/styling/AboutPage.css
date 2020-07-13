@@ -30,6 +30,10 @@
   justify-content: center;
 }
 
+.about-contact-list p {
+  margin: 4px;
+}
+
 @media only screen and (max-width: 768px) {
   .about-page {
     text-align: center;
@@ -45,11 +49,6 @@
 
   .about-social-logo-row {
     display: flex;
-    /* align-items: center; */
     justify-content: center;
-  }
-
-  .about-ul {
-    list-style-type: none;
   }
 }

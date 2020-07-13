@@ -7,8 +7,8 @@
 }
 
 .navbar-logo {
-  max-width: 50px;
-  max-height: 50px;
+  max-width: 36px;
+  width: 36px;
 }
 
 .navbar-logotype {
@@ -19,10 +19,10 @@
 }
 
 .navbar .navbar-nav .navbar-text.nav-link {
-  margin: 8px 12px;
+  margin: 0 12px;
   color: var(--main-yellow);
   font-family: HelveticaNeueMed;
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .navbar .navbar-nav .navbar-text.nav-link:hover,
@@ -34,6 +34,18 @@
   display: flex;
   background-color: var(--main-black);
   width: 100%;
+  margin: 0;
+  padding: 16px 0;
+}
+
+.footer-content {
+  margin: 0 auto;
+}
+
+.footer-icons {
+  margin: auto 0 auto 16px;
+  height: 24px;
+  display: inline-block;
 }
 
 .footer-text {
@@ -50,9 +62,9 @@
   margin: 0 8px;
 }
 
-@media only screen and (max-width: 1120px) {
-  .navbar-logo {
-    width: 50px;
+@media only screen and (max-width: 1200px) {
+  .navbar .navbar-nav .navbar-text.nav-link {
+    margin: 0;
   }
 
   .footer-text {
@@ -60,7 +72,13 @@
   }
 }
 
-@media only screen and (max-width: 671px) {
+@media only screen and (max-width: 992px) {
+  .footer-icons {
+    height: 18px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
   .navbar-logo {
     width: 35px;
   }
@@ -70,12 +88,23 @@
   }
 
   .footer-text {
-    font-size: 14px;
+    font-size: 16px;
+    display: block;
+  }
+
+  .footer-icons {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 8px auto 0;
   }
 }
 
 @media only screen and (max-width: 360px) {
+  .navbar-logo {
+    max-width: 32px;
+  }
+
   .navbar-logotype {
-    margin: auto 0 auto 14px;
+    font-size: 16px;
   }
 }

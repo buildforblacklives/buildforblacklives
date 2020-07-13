@@ -9,8 +9,8 @@
 }
 
 .logo {
-  margin: 86px auto 45px;
-  max-width: 390px;
+  margin: 32px auto 45px;
+  max-width: 325px;
   height: auto;
 }
 
@@ -51,7 +51,7 @@
   margin-top: 55px;
 }
 
-@media only screen and (max-width: 1120px) {
+@media only screen and (max-width: 1200px) {
   .logo {
     margin: 86px auto 45px;
     max-width: 220px;
@@ -92,16 +92,18 @@
 @media only screen and (max-width: 992px) {
   .home-persona-section-right,
   .home-persona-section-left {
-    padding: 0;
-    margin: 16px;
+    padding: 0 16px;
+    margin: 16px 0;
   }
 }
 
 @media only screen and (max-width: 768px) {
-  .home-arrow-down {
-    margin-top: 0rem;
-    margin-bottom: 0rem;
-    visibility: hidden;
+  .logo {
+    max-width: 250px;
+  }
+
+  .home-arrow-row {
+    display: none;
   }
 
   .home-track-titles {
@@ -110,7 +112,7 @@
 
   .home-track-images {
     max-width: 85%;
-    max-height: 85%;
+    height: auto;
   }
 
   .home-track-body {
@@ -118,7 +120,7 @@
   }
 }
 
-@media only screen and (max-width: 350px) {
+@media only screen and (max-width: 360px) {
   .logo {
     margin: 36px auto 45px;
     max-width: 110px;
