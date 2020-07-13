@@ -1,15 +1,25 @@
 .about-page {
   max-width: 1400px;
-  margin: 100px auto;
+  margin: 3rem auto;
+}
+
+.about-page h2 {
+  margin: 1rem 0;
 }
 
 .about-subheader {
-  margin-bottom: 68px;
+  margin-bottom: 2rem;
 }
 
-.about-request-icon,
+.about-request-icon {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+}
+
 .about-contact-icon,
-.about-icon {
+.about-icon,
+.about-logo {
   width: 100%;
   max-width: 300px;
   height: auto;
@@ -30,25 +40,62 @@
   justify-content: center;
 }
 
-.about-contact-list p {
-  margin: 4px;
+/* TODO: remove this rule when we have more than one org */
+.about-community-partners-ul {
+  text-align: center;
+}
+
+/* TODO: add this line back in when we have more than one org */
+/* .about-community-partners-ul p, */
+.about-contact-list .about-list-item {
+  margin: 4px 0 4px 32px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .about-contact-icon,
+  .about-icon,
+  .about-logo {
+    max-width: 250px;
+  }
+
+  .about-logo {
+    margin-bottom: 16px;
+  }
+
+  .about-request-icon {
+    max-width: 200px;
+  }
+
+  .about-page {
+    padding: 0 32px;
+  }
 }
 
 @media only screen and (max-width: 768px) {
-  .about-page {
-    text-align: center;
-  }
-
   .about-order2 {
     order: 2;
   }
 
-  .mx-auto {
-    margin-bottom: 30px;
+  .about-contact-icon,
+  .about-icon,
+  .about-logo {
+    max-width: 150px;
+  }
+
+  .about-request-icon {
+    max-width: 100px;
   }
 
   .about-social-logo-row {
     display: flex;
     justify-content: center;
+  }
+
+  .about-button-wrapper {
+    display: flex;
+  }
+
+  .about-button-wrapper .primary-button {
+    margin: 0 auto;
   }
 }

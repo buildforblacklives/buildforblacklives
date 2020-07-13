@@ -12,7 +12,7 @@ const AboutPage = () => (
   <Container className="about-page" fluid>
     <Row className="about-align-center">
       <Col xs={12} md={4}>
-        <Logo className="mx-auto d-block about-icon" fluid />
+        <Logo className="mx-auto d-block about-logo" fluid />
       </Col>
       <Col>
         <h1 className="logotype">Build for Black Lives</h1>
@@ -39,8 +39,8 @@ const AboutPage = () => (
       <Col className="about-order2">
         <h2>Community Partners</h2>
         <p>These are organizations that have helped build, endorse, and promote the platform:</p>
-        <div className="about-community-partenres-ul">
-          <h5>HackBeanpot</h5>
+        <div className="about-community-partners-ul">
+          <p>HackBeanpot</p>
         </div>
         <p>
           We are open to partnering with organizations that are committed to fighting racial inequity. If your
@@ -69,11 +69,13 @@ const AboutPage = () => (
           Are you a Black business owner, activist, protest organizer, or community advocate looking for free services
           building a website or online platform, creating social media content, data visualizations, or other projects?
         </p>
-        <LinkContainer to="/project-request">
-          <Button className="primary-button" size="med">
-            Request a Project
-          </Button>
-        </LinkContainer>
+        <div className="about-button-wrapper">
+          <LinkContainer to="/project-request">
+            <Button className="primary-button" size="med">
+              Request a Project
+            </Button>
+          </LinkContainer>
+        </div>
       </Col>
     </Row>
 
@@ -87,11 +89,13 @@ const AboutPage = () => (
           marketing specialist who is looking to use your professional skills to do pro bono work to support Black
           lives?
         </p>
-        <LinkContainer to="/projects">
-          <Button className="primary-button" size="med">
-            Work on a Project
-          </Button>
-        </LinkContainer>
+        <div className="about-button-wrapper">
+          <LinkContainer to="/projects">
+            <Button className="primary-button" size="med">
+              Work on a Project
+            </Button>
+          </LinkContainer>
+        </div>
       </Col>
       <Col xs={12} md={6}>
         <WorkProjectIcon className="mx-auto d-block about-icon" fluid />
@@ -107,15 +111,18 @@ const AboutPage = () => (
       <Col>
         <h2>Contact Us</h2>
         <p>Want to get involved, or have questions, thoughts, feedback, or concerns?</p>
-        <p className="about-contact-list">
-          Email us at <a href="mailto:buildforblacklives@hackbeanpot.com">buildforblacklives@hackbeanpot.com</a>.<br />
-          Please use one of the following subject lines to help us filter through questions:
-          <p>"[Volunteer] Question"</p>
-          <p>"[Project Request] Question"</p>
-          <p>"[Community Partner] Question"</p>
-        </p>
+        <div className="about-contact-list">
+          <p>
+            Email us at <a href="mailto:buildforblacklives@hackbeanpot.com">buildforblacklives@hackbeanpot.com</a>.
+            <br />
+            Please use one of the following subject lines to help us filter through questions:
+          </p>
+          <p className="about-list-item">"[Volunteer] Question"</p>
+          <p className="about-list-item">"[Project Request] Question"</p>
+          <p className="about-list-item">"[Community Partner] Question"</p>
+        </div>
         <Row className="about-social-logo-row">
-          <Col className="col-9">
+          <Col className="col-12">
             <a href="mailto:buildforblacklives@hackbeanpot.com" target="_blank" rel="noopener noreferrer">
               <i className="fas fa-envelope fa-2x about-social-logo footer-text"></i>
             </a>
