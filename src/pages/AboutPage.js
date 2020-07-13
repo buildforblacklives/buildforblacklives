@@ -112,13 +112,15 @@ const AboutPage = () => (
       <Col>
         <h2>Contact Us</h2>
         <p>Want to get involved, or have questions, thoughts, feedback, or concerns?</p>
-        <p className="about-contact-list">
-          Email us at <a href="mailto:buildforblacklives@hackbeanpot.com">buildforblacklives@hackbeanpot.com</a>.<br />
-          Please use one of the following subject line patterns in your emails if they apply:
-          <p>"[Volunteer] Question"</p>
-          <p>"[Project Request] Question"</p>
-          <p>"[Community Partner] Question"</p>
-        </p>
+        <div className="about-contact-list">
+          <p>
+            Email us at <a href="mailto:buildforblacklives@hackbeanpot.com">buildforblacklives@hackbeanpot.com</a>.<br />
+            Please use one of the following subject line patterns in your emails if they apply:
+          </p>
+          <p className="about-list-item">"[Volunteer] Question"</p>
+          <p className="about-list-item">"[Project Request] Question"</p>
+          <p className="about-list-item">"[Community Partner] Question"</p>
+        </div>
         <Row className="about-social-logo-row">
           <Col className="col-12">
             <a href="mailto:buildforblacklives@hackbeanpot.com" target="_blank" rel="noopener noreferrer">
