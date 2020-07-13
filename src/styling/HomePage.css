@@ -51,7 +51,7 @@
   margin-top: 55px;
 }
 
-@media only screen and (max-width: 1120px) {
+@media only screen and (max-width: 1200px) {
   .logo {
     margin: 86px auto 45px;
     max-width: 220px;
@@ -120,7 +120,7 @@
   }
 }
 
-@media only screen and (max-width: 350px) {
+@media only screen and (max-width: 360px) {
   .logo {
     margin: 36px auto 45px;
     max-width: 110px;
