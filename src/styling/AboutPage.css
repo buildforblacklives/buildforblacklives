@@ -34,6 +34,21 @@
   margin: 4px;
 }
 
+@media only screen and (max-width: 1200px) {
+  .about-contact-icon,
+  .about-icon {
+    max-width: 250px;
+  }
+
+  .about-request-icon {
+    max-width: 200px;
+  }
+
+  .about-page {
+    padding: 0 32px;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .about-page {
     text-align: center;
@@ -43,8 +58,13 @@
     order: 2;
   }
 
-  .mx-auto {
-    margin-bottom: 30px;
+  .about-contact-icon,
+  .about-icon {
+    max-width: 150px;
+  }
+
+  .about-request-icon {
+    max-width: 100px;
   }
 
   .about-social-logo-row {
