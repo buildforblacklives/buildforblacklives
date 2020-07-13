@@ -47,7 +47,7 @@
 
 /* TODO: add this line back in when we have more than one org */
 /* .about-community-partners-ul p, */
-.about-contact-list p {
+.about-contact-list .about-list-item {
   margin: 4px 0 4px 32px;
 }
 
