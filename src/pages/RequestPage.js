@@ -5,7 +5,7 @@ import RequestFlow from '../assets/flow_diagrams/request_flow.js';
 import '../styling/RequestPage.css';
 
 const RequestPage = () => (
-  <Container className="text-center request-page justify-content-md-center">
+  <Container className="request-page justify-content-md-center">
     <Row>
       <h1>Request a Project</h1>
     </Row>
