@@ -27,7 +27,7 @@ const HomePage = () => (
     <Row className="home-button-row">
       <Col xs={12} lg={6} className="home-persona-section-left">
         <span className="home-persona-text">
-          Black business owners, activists, organizers, and community advocates, etc.
+          Black business owners, activists, organizers, and community advocates:
         </span>
         <div>
           <LinkContainer to="/project-request">
@@ -39,7 +39,7 @@ const HomePage = () => (
       </Col>
       <Col xs={12} lg={6} className="home-persona-section-right">
         <span className="home-persona-text">
-          Anti-racist designers, programmers, data scientists, illustrators, writers, etc.
+          Anti-racist designers, programmers, data scientists, illustrators, writers:
         </span>
         <div>
           <LinkContainer to="/projects">
@@ -64,10 +64,10 @@ const HomePage = () => (
     <Row className="home-track-body">
       <Col xs={12} md={{ span: 8, offset: 2 }}>
         <p>
-          Are you a black business owner, activist, protest organizer, or community advocate looking for free services
-          building an online platform, updating a website, creating social media content, or data visualizations?{' '}
+          Are you a Black business owner, activist, protest organizer, or community advocate looking for free services
+          building a website or online platform, creating social media content, data visualizations, or other projects?{' '}
           <Link className="links" to="/project-request">
-            Submit a project request to our community.
+            Submit a project request.
           </Link>
         </p>
       </Col>
@@ -80,10 +80,10 @@ const HomePage = () => (
     <Row className="home-track-body">
       <Col xs={12} md={{ span: 8, offset: 2 }}>
         <p>
-          Are you a Black Lives Matter supporter within the designer, developer, data science, or marketing space
-          interested in committing to pro bono work?{' '}
+          Are you an anti-racist designer, developer, data scientist, or marketing specialist interested in committing
+          to pro bono projects to work towards reparations and racial justice?{' '}
           <Link className="links" to="/projects">
-            Work on our available projects.
+            Work on one of our available projects.
           </Link>
         </p>
       </Col>
