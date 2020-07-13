@@ -11,7 +11,12 @@
   margin-bottom: 2rem;
 }
 
-.about-request-icon,
+.about-request-icon {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+}
+
 .about-contact-icon,
 .about-icon,
 .about-logo {
@@ -35,8 +40,14 @@
   justify-content: center;
 }
 
-.about-contact-list p,
-.about-community-partenres-ul p {
+/* TODO: remove this rule when we have more than one org */
+.about-community-partners-ul {
+  text-align: center;
+}
+
+/* TODO: add this line back in when we have more than one org */
+/* .about-community-partners-ul p, */
+.about-contact-list p {
   margin: 4px 0 4px 32px;
 }
 
@@ -78,5 +89,13 @@
   .about-social-logo-row {
     display: flex;
     justify-content: center;
+  }
+
+  .about-button-wrapper {
+    display: flex;
+  }
+
+  .about-button-wrapper .primary-button {
+    margin: 0 auto;
   }
 }
