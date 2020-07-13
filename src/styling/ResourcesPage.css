@@ -19,7 +19,7 @@ a:hover {
   color: var(--main-cream);
 }
 
-.icon {
+.resource-icon {
   width: 100%;
   max-width: 300px;
   height: auto;
@@ -30,8 +30,8 @@ a:hover {
 }
 
 @media only screen and (max-width: 768px) {
-  .icon {
-    max-width: 250px;
+  .resource-icon {
+    max-width: 150px;
     margin-bottom: 0.35rem;
   }
 
