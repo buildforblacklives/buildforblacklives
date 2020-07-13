@@ -116,7 +116,7 @@ const AboutPage = () => (
           <p>"[Community Partner] Question"</p>
         </p>
         <Row className="about-social-logo-row">
-          <Col className="col-9">
+          <Col className="col-12">
             <a href="mailto:buildforblacklives@hackbeanpot.com" target="_blank" rel="noopener noreferrer">
               <i className="fas fa-envelope fa-2x about-social-logo footer-text"></i>
             </a>
