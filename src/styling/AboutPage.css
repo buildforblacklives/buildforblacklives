@@ -1,10 +1,14 @@
 .about-page {
   max-width: 1400px;
-  margin: 5rem auto;
+  margin: 3rem auto;
+}
+
+.about-page h2 {
+  margin: 1rem 0;
 }
 
 .about-subheader {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .about-request-icon,

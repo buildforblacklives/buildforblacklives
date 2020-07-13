@@ -3,6 +3,10 @@
   margin: 3rem auto;
 }
 
+.resource-page h2 {
+  margin: 1rem 0;
+}
+
 .row-align-center {
   align-items: center;
   justify-content: center;
