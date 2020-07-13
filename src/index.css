@@ -6,7 +6,7 @@
   --main-light-grey: #878680;
   --main-grey: #1f1f1f;
   --main-black: black;
-  --main-blue: #6BB4D6;
+  --main-blue: #6bb4d6;
   --main-yellow: #f5cb5c;
   /* other colors */
   --white: white;
@@ -152,15 +152,16 @@ hr {
 }
 
 .flow-images {
-  max-width: 85%;
-  max-height: 85%;
+  max-width: 55%;
+  max-height: 55%;
+  height: auto;
 }
 
 @media only screen and (max-width: 678px) {
   h1 {
     font-size: 40px;
   }
-  
+
   h2 {
     font-size: 32px;
   }
@@ -181,5 +182,10 @@ hr {
   .primary-button,
   .secondary-button {
     font-size: 16px;
+  }
+
+  .flow-images {
+    max-width: 75%;
+    max-height: 75%;
   }
 }
