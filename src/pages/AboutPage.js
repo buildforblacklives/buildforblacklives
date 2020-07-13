@@ -19,17 +19,16 @@ const AboutPage = () => (
         <h3 className="about-subheader logotype">Building pro bono projects to support Black lives</h3>
         <p>
           Build for Black Lives is a platform built to connect anti-racist individuals with activists, organizers, and
-          black-owned businesses to provide pro bono work creating websites, apps, graphics, social media content, data
-          visualizations, and/or other projects. Now more than ever, it has become essential for businesses and
-          organizations to have an online presence. Build for Black Lives aims to reduce discrimination against Black
-          folks when searching for tech and design services.
+          Black-owned businesses to provide pro bono work creating websites, apps, graphics, social media content, data
+          visualizations, and other projects. Our aim is to provide pro-bono services as a means of working towards
+          justice and reparations for a community that has been systematically oppressed, exploited, and underserved by
+          the tech and design industries.
         </p>
         <p>
-          This initiative was started by <a href="https://hackbeanpot.com/">HackBeanpot</a>, a Boston-based hackathon
-          that aims to build a diverse, inclusive, learning-focused tech community. Racial inequality has long been an
-          issue in the tech space. As an organization that strives to combat racial inequity, we started this platform
-          in an effort to bring the anti-racist tech community together to take action to support Black lives and fight
-          for racial justice
+          Build for Black Lives was created by <a href="https://hackbeanpot.com/">HackBeanpot</a>, a 501(c)(3),
+          Boston-based hackathon that aims to build a diverse, inclusive, learning-focused tech community. Given that
+          racism has long been an issue in the tech space, we started this platform to bring the anti-racist tech
+          community together to take action to support Black lives and fight white supremacy.
         </p>
       </Col>
     </Row>
@@ -44,13 +43,13 @@ const AboutPage = () => (
           <p>HackBeanpot</p>
         </div>
         <p>
-          We are open to partnering with organizations that are committed to ending racial inequality and discrimination
-          in tech. If your organization would like to work with Build for Black Lives, you are welcome to{' '}
+          We are open to partnering with organizations that are committed to fighting racial inequity. If your
+          organization would like to work with Build for Black Lives, please{' '}
           <a href="mailto:buildforblacklives@hackbeanpot.com">email us</a>. You can also join our{' '}
           <a href="https://join.slack.com/t/northeastern-hac3935/shared_invite/zt-fctqwcqe-7~n_GXliEYbQzUeqERHH6A">
             Slack Workspace
           </a>{' '}
-          to learn more from the organizing team.
+          to learn more from the organizing team about how you can get involved in outreach for this platform.
         </p>
       </Col>
       <Col xs={12} md={6}>
@@ -67,7 +66,7 @@ const AboutPage = () => (
       <Col>
         <h2>Request a Project</h2>
         <p>
-          Are you a black business owner, activist, protest organizer, or community advocate looking for free services
+          Are you a Black business owner, activist, protest organizer, or community advocate looking for free services
           building a website or online platform, creating social media content, data visualizations, or other projects?
         </p>
         <div className="about-button-wrapper">
@@ -114,8 +113,9 @@ const AboutPage = () => (
         <p>Want to get involved, or have questions, thoughts, feedback, or concerns?</p>
         <div className="about-contact-list">
           <p>
-            Email us at <a href="mailto:buildforblacklives@hackbeanpot.com">buildforblacklives@hackbeanpot.com</a>.<br />
-            Please use one of the following subject line patterns in your emails if they apply:
+            Email us at <a href="mailto:buildforblacklives@hackbeanpot.com">buildforblacklives@hackbeanpot.com</a>.
+            <br />
+            Please use one of the following subject lines to help us filter through questions:
           </p>
           <p className="about-list-item">"[Volunteer] Question"</p>
           <p className="about-list-item">"[Project Request] Question"</p>

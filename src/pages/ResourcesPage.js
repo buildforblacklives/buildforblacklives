@@ -12,7 +12,7 @@ const ResourcesPage = () => (
         <p>
           The Tech and Design industries have had a long, racist, and non-inclusive history. To this day, these fields
           perpetuate white supremacy and fail to properly represent Black folx. Software plays a huge role in our
-          society, but most tech is not created with Black folx in mind. In fact, lots of tech, such as facial
+          society, but most tech is not created with Black folx in mind. In fact, lots of tech such as facial
           recognition software that misidentifies Black people, not only fails to represent members of the Black
           community, but in many cases has explicitly racist, dangerous, and even deadly effects.
         </p>
@@ -46,7 +46,7 @@ const ResourcesPage = () => (
           <li>
             <p>
               Participating in this initiative <strong>IS</strong> an opportunity to create projects that are explicitly
-              requested by activists, organizers and Black Business owners, and to provide free services, in order to
+              requested by activists, organizers and Black business owners, and to provide free services, in order to
               work towards justice and reparations for a community that has been systematically oppressed, exploited,
               and underserved for hundreds of years.
             </p>
@@ -184,7 +184,8 @@ const ResourcesPage = () => (
         <Col>
           <h4>Have additional resources you think should be featured?</h4>
           <p>
-            Email us at: <a href="mailto:buildforblacklives@hackbeanpot.com">buildforblacklives@hackbeanpot.com</a>
+            Email us at: <a href="mailto:buildforblacklives@hackbeanpot.com">buildforblacklives@hackbeanpot.com</a> with
+            the subject line: "Resource Suggestion".
           </p>
         </Col>
       </Row>
