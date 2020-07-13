@@ -108,22 +108,12 @@ const AboutPage = () => (
       <Col>
         <h2>Contact Us</h2>
         <p>Want to get involved, or have questions, thoughts, feedback, or concerns?</p>
-        <p>
+        <p className="about-contact-list">
           Email us at <a href="mailto:buildforblacklives@hackbeanpot.com">buildforblacklives@hackbeanpot.com</a>.<br />
           Please use one of the following subject line patterns in your emails if they apply:
-          <div className="about-subject-lines textLeft">
-            <ul>
-              <li>
-                <p>"[Volunteer] Question"</p>
-              </li>
-              <li>
-                <p>"[Project Request] Question"</p>
-              </li>
-              <li>
-                <p>"[Community Partner] Question"</p>
-              </li>
-            </ul>
-          </div>
+          <p>"[Volunteer] Question"</p>
+          <p>"[Project Request] Question"</p>
+          <p>"[Community Partner] Question"</p>
         </p>
         <Row className="about-social-logo-row">
           <Col className="col-9">
