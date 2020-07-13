@@ -80,7 +80,7 @@ const MainNavbar = () => {
                 }, 150)
               }
             >
-              FAQ
+              FAQs
             </NavLink>
           </LinkContainer>
         </Nav>
