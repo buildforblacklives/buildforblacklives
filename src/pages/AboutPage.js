@@ -12,7 +12,7 @@ const AboutPage = () => (
   <Container className="about-page" fluid>
     <Row className="about-align-center">
       <Col xs={12} md={4}>
-        <Logo className="mx-auto d-block about-icon" fluid />
+        <Logo className="mx-auto d-block about-logo" fluid />
       </Col>
       <Col>
         <h1 className="logotype">Build for Black Lives</h1>
@@ -41,7 +41,7 @@ const AboutPage = () => (
         <h2>Community Partners</h2>
         <p>These are organizations that have helped build, endorse, and promote the platform.</p>
         <div className="about-community-partenres-ul">
-          <h5>HackBeanpot</h5>
+          <p>HackBeanpot</p>
         </div>
         <p>
           We are open to partnering with organizations that are committed to ending racial inequality and discrimination

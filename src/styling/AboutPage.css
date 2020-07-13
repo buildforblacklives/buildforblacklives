@@ -1,15 +1,16 @@
 .about-page {
   max-width: 1400px;
-  margin: 100px auto;
+  margin: 5rem auto;
 }
 
 .about-subheader {
-  margin-bottom: 68px;
+  margin-bottom: 3rem;
 }
 
 .about-request-icon,
 .about-contact-icon,
-.about-icon {
+.about-icon,
+.about-logo {
   width: 100%;
   max-width: 300px;
   height: auto;
@@ -30,14 +31,20 @@
   justify-content: center;
 }
 
-.about-contact-list p {
-  margin: 4px;
+.about-contact-list p,
+.about-community-partenres-ul p {
+  margin: 4px 0 4px 32px;
 }
 
 @media only screen and (max-width: 1200px) {
   .about-contact-icon,
-  .about-icon {
+  .about-icon,
+  .about-logo {
     max-width: 250px;
+  }
+
+  .about-logo {
+    margin-bottom: 16px;
   }
 
   .about-request-icon {
@@ -59,7 +66,8 @@
   }
 
   .about-contact-icon,
-  .about-icon {
+  .about-icon,
+  .about-logo {
     max-width: 150px;
   }
 
@@ -70,5 +78,10 @@
   .about-social-logo-row {
     display: flex;
     justify-content: center;
+  }
+
+  .about-contact-list p,
+  .about-community-partenres-ul p {
+    margin-left: 0;
   }
 }
