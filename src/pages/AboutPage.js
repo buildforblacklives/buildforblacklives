@@ -20,7 +20,7 @@ const AboutPage = () => (
         <p>
           Build for Black Lives is a platform built to connect anti-racist individuals with activists, organizers, and
           Black-owned businesses to provide pro bono work creating websites, apps, graphics, social media content, data
-          visualizations, and other projects. Our aim is to provide pro-bono services as a means of working towards
+          visualizations, and other projects. Our aim is to provide pro bono services as a means of working towards
           justice and reparations for a community that has been systematically oppressed, exploited, and underserved by
           the tech and design industries.
         </p>
@@ -40,7 +40,7 @@ const AboutPage = () => (
         <h2>Community Partners</h2>
         <p>These are organizations that have helped build, endorse, and promote the platform:</p>
         <div className="about-community-partners-ul">
-          <p>HackBeanpot</p>
+          <h5>HackBeanpot</h5>
         </div>
         <p>
           We are open to partnering with organizations that are committed to fighting racial inequity. If your
@@ -111,16 +111,13 @@ const AboutPage = () => (
       <Col>
         <h2>Contact Us</h2>
         <p>Want to get involved, or have questions, thoughts, feedback, or concerns?</p>
-        <div className="about-contact-list">
-          <p>
-            Email us at <a href="mailto:buildforblacklives@hackbeanpot.com">buildforblacklives@hackbeanpot.com</a>.
-            <br />
-            Please use one of the following subject lines to help us filter through questions:
-          </p>
-          <p className="about-list-item">"[Volunteer] Question"</p>
-          <p className="about-list-item">"[Project Request] Question"</p>
-          <p className="about-list-item">"[Community Partner] Question"</p>
-        </div>
+        <p className="about-contact-list">
+          Email us at <a href="mailto:buildforblacklives@hackbeanpot.com">buildforblacklives@hackbeanpot.com</a>.<br />
+          Please use one of the following subject lines to help us filter through questions:
+          <p>"[Volunteer] Question"</p>
+          <p>"[Project Request] Question"</p>
+          <p>"[Community Partner] Question"</p>
+        </p>
         <Row className="about-social-logo-row">
           <Col className="col-12">
             <a href="mailto:buildforblacklives@hackbeanpot.com" target="_blank" rel="noopener noreferrer">
