@@ -3,7 +3,14 @@
 }
 
 .request-page .flow-images {
+  max-width: 55%;
   margin: 1rem 0rem;
+}
+
+@media only screen and (max-width: 992px) {
+  .request-page .flow-images {
+    max-width: 80%;
+  }
 }
 
 @media only screen and (max-width: 768px) {

@@ -152,9 +152,16 @@ hr {
 }
 
 .flow-images {
-  max-width: 55%;
-  max-height: 55%;
   height: auto;
+  padding: 0 1em;
+}
+
+@media only screen and (max-width: 992px) {
+  .flow-images {
+    max-width: 85%;
+    height: auto;
+    padding: 0 1.5em;
+  }
 }
 
 @media only screen and (max-width: 678px) {
@@ -182,10 +189,5 @@ hr {
   .primary-button,
   .secondary-button {
     font-size: 16px;
-  }
-
-  .flow-images {
-    max-width: 75%;
-    max-height: 75%;
   }
 }
