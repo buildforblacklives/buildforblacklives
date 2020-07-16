@@ -1,101 +1,174 @@
 /** Multiple card view **/
 
-.pg-container {
+.projects-page {
   max-width: 1400px;
+  margin: 3rem auto;
+}
+
+.projects-page .flow-images {
+  margin: 1rem 0;
 }
 
 .preview-card {
-  border-radius: 10px;
-  margin: 20px 0px;
-  padding: 5px;
+  border-radius: 16px;
+  margin: 16px 0px;
+  box-shadow: 8px 8px 0px 2px rgba(249,245,227,1);
+  padding: 4px;
+  cursor: pointer;
+  background-color: var(--main-grey);
 }
 
-.urgent-tag {
-  border-radius: 50px;
+.preview-card:hover {
   background-color: var(--main-yellow);
-  font-weight: bold;
   color: var(--main-black);
-  border: transparent;
 }
 
-.card-row {
-  margin-top: 10px;
+.preview-card:hover h5 {
+  color: var(--main-black);
 }
 
-.center-div {
-  margin: 0 auto;
+.preview-subtitle {
+  margin-bottom: 16px;
+  font-size: 20px;
 }
 
-.overview {
-  margin: 0 auto;
-  width: 90vw;
+.project-card-urgent {
+  border-radius: 8px;
+  border: 2px solid var(--main-blue);
+  font-family: HelveticaNeueBold;
+  color: var(--main-blue);
+  padding: 4px 8px;
+  margin: 4px 0 16px;
+  font-size: 14px;
+  display: inline-block;
 }
 
-.broad {
-  border-radius: 10px;
-  margin: 15px 0px;
-  padding: 10px;
+.project-tag-space {
+  height: 46px;
+  display: inline-block;
+}
+
+.project-more-link {
+  color: var(--main-blue);
+}
+
+.project-card-description {
+  line-height: 1.3rem;
+  height: calc(1.3rem * 5);
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /** Selected card view **/
 
-.description-card {
-  border-radius: 10px;
-  padding: 30px;
-  border: transparent;
-  color: var(--main-black);
+.projects-back {
+  color: var(--main-yellow);
+  cursor: pointer;
+  font-size: 20px;
+  margin: 0 0 32px;
+  display: inline-block;
 }
 
-.project-btn {
-  padding: 20px;
-  border-radius: 50px;
-  background-color: var(--main-blue);
-  margin: 10px;
-  border: transparent;
+.projects-back:hover {
+  text-decoration: underline;
 }
 
-.project-btn:hover {
-  background-color: var(--main-yellow);
-}
-
-.page-container {
-  margin: 30px;
-}
-
-.scrolling {
-  height: 90vh;
-  overflow-y: scroll;
-  overflow: visible;
-}
-
-.project-col {
+.project-description-card {
+  border-radius: 16px;
+  padding: 24px;
   background-color: var(--main-grey);
-  border-radius: 10px;
-  padding: 20px;
-  margin-right: 15px;
 }
 
-.card-btn {
-  text-align: left;
-  background: var(--main-grey);
-  border: transparent;
+.project-description-close:before,
+.project-description-close:after {
+  content:'';
+  position: absolute;
+  width: 24px;
+  height: 4px;
+  background-color :var(--main-cream);
+  border-radius: 2px;
+  top: 0;
   cursor: pointer;
 }
 
-.card-btn:hover {
-  background-color: var(--light-yellow);
-  color: var(--main-black);
+.project-description-close:before {
+  -webkit-transform:rotate(45deg);
+  -moz-transform:rotate(45deg);
+  transform:rotate(45deg);
+  left: -2px;
 }
 
-.selected-btn {
+.project-description-close:after {
+  -webkit-transform:rotate(-45deg);
+  -moz-transform:rotate(-45deg);
+  transform:rotate(-45deg);
+  right: 2px;
+}
+
+.project-description-close {
+  position: relative;
+  height: 24px;
+  width: 24px;
+}
+
+.project-description-subtitle {
+  font-size: 24px;
+}
+
+.project-list-panel {
+  height: 800px;
+  overflow-y: scroll;
+  overflow: auto;
+  border-radius: 16px;
+  padding: 24px;
+  background-color: var(--main-cream);
+}
+
+.project-list-panel::-webkit-scrollbar {
+  display: none;
+}
+
+.project-list-panel {
+  -ms-overflow-style: none;
+}
+
+.select-view-preview-card {
+  box-shadow: none;
+}
+
+.is-select-preview-card,
+.is-select-preview-card:hover {
   background-color: var(--main-blue);
-  text-align: left;
-  border: transparent;
-  color: var(--main-black);
-  cursor: pointer;
+  color: var(--main-cream);
 }
 
-.mail-input {
-  padding: 8px 16px;
-  font-size: 32px;
+.is-select-preview-card .project-card-urgent {
+  border: 2px solid var(--main-black);
+  color: var(--main-black);
+}
+
+@media only screen and (max-width: 1200px) {
+  .projects-page {
+    padding: 0 32px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .projects-page {
+    padding: 0 16px;
+    margin-top: 16px;
+  }
+
+  .project-description-card {
+    padding: 8px;
+  }
+
+  .project-description-close:before,
+  .project-description-close:after {
+    width: 16px;
+  }
+
+  .project-description-close:before {
+    left: 6px;
+  }
 }
