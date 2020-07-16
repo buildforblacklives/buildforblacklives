@@ -95,7 +95,7 @@ const ProjectsPage = () => {
   // TODO: get projects from airtable
   useEffect(() => {
     setProjects(sampleProjects)
-  })
+  }, [])
 
   const findSelected = () => (
     projects.find((project) => project.id === selected)
