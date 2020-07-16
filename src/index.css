@@ -111,14 +111,27 @@ li {
 }
 
 .primary-button.btn,
-.primary-button {
-  background-color: var(--main-yellow);
+.primary-button,
+.secondary-button.btn,
+.secondary-button {
   padding: 12px 35px;
-  border-radius: 25px;
+  border-radius: 30px;
   color: var(--main-black);
   font-size: 24px;
   font-family: HelveticaNeueMed;
+  min-width: 200px;
+}
+
+.primary-button.btn,
+.primary-button {
+  background-color: var(--main-yellow);
   border-color: var(--main-yellow);
+}
+
+.secondary-button.btn,
+.secondary-button {
+  background-color: var(--main-blue);
+  border-color: var(--main-blue);
 }
 
 .primary-button.btn:hover,
@@ -128,18 +141,19 @@ li {
   border-color: var(--dark-yellow);
 }
 
-.secondary-button.btn,
 .secondary-button.btn:hover,
-.secondary-button,
 .secondary-button:hover,
 .secondary-button:not(:disabled):not(.disabled):active {
-  background-color: var(--main-blue);
-  padding: 12px 35px;
-  border-radius: 25px;
-  color: var(--main-black);
-  font-size: 24px;
-  font-family: HelveticaNeueMed;
-  border-color: var(--main-blue);
+  background-color: var(--blue);
+  border-color: var(--blue);
+}
+
+.primary-button:disabled .primary-button.btn:disabled,
+.secondary-button:disabled,
+.secondary-button.btn:disabled {
+  background-color: var(--main-light-grey);
+  border-color: var(--main-light-grey);
+  cursor: not-allowed;
 }
 
 hr {
@@ -154,6 +168,10 @@ hr {
 .flow-images {
   height: auto;
   padding: 0 1em;
+}
+
+.indent-text {
+  text-indent: 2rem;
 }
 
 @media only screen and (max-width: 992px) {
@@ -200,19 +218,17 @@ hr {
 /* Accordion */
 .accordion-section-container {
   padding: 0 2em;
-  margin: 3rem 0;
 }
 
 @media only screen and (max-width: 992px) {
   .accordion-section-container {
     padding: 0 1em;
-    margin: 2rem 0;
   }
 }
 
 .accordion-container {
   color: var(--main-black);
-  border: 0;
+  overflow: hidden;
   border-radius: 10px;
 }
 
@@ -228,6 +244,11 @@ hr {
   background-color: var(--light-yellow);
 }
 
+.accordion-header-large {
+  font-size: 24px;
+  padding: 1.2rem;
+}
+
 .accordion-body {
   font-size: 18px;
   background-color: var(--main-grey);
@@ -235,10 +256,18 @@ hr {
   padding: 1.5rem 3rem;
 }
 
+.accordion-body-large {
+  padding: 2.5rem 4rem;
+}
+
 @media only screen and (max-width: 992px) {
   .accordion-header {
     font-size: 16px;
     padding: 1rem;
+  }
+
+  .accordion-header-large {
+    font-size: 20px;
   }
 
   .accordion-body {

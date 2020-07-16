@@ -1,7 +1,7 @@
 import React from 'react';
-import { Tabs, Tab } from 'react-bootstrap';
+import { Container, Tabs, Tab } from 'react-bootstrap';
 
-import { CustomAccordion } from '../components/CustomAccordion';
+import CustomAccordion from '../components/CustomAccordion';
 import { FAQItems } from '../data/faq';
 
 import '../index.css';
@@ -61,7 +61,7 @@ class FAQPage extends React.Component {
 
   render() {
     return (
-      <div id="faq-page" className="container justify-content-md-center">
+      <Container id="faq-page" className="justify-content-md-center">
         <h1 className="mb-3">FAQs</h1>
         <Tabs xs="auto" onClick={this.handleClick}>
           <Tab eventKey="client" title={this.state.isMobile ? 'Request' : 'Request a Project'}></Tab>
@@ -75,7 +75,7 @@ class FAQPage extends React.Component {
             })}
           </section>
         )}
-      </div>
+      </Container>
     );
   }
 }
