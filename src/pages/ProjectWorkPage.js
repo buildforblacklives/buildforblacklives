@@ -1,35 +1,33 @@
 import React, { useState } from 'react';
-import { Collapse } from 'react-bootstrap';
+import { CustomAccordion } from '../components/CustomAccordion';
 import ConfirmationCheck from '../components/ProjectWork/ConfirmationCheck';
 import ContactSection from '../components/ProjectWork/ContactSection';
 import ProjectDetails from '../components/ProjectWork/ProjectDetails';
 import ProjectFlow from '../assets/flow_diagrams/project_steps_flow.js';
-import Plus from '../assets/plus';
-import Minus from '../assets/minus';
 
 import '../styling/ProjectWorkPage.css';
 
-const CollapsableSection = ({ title, id, isFirst, children }) => {
-  const [open, setOpen] = useState(isFirst);
+// const CollapsableSection = ({ title, id, isFirst, children }) => {
+//   const [open, setOpen] = useState(isFirst);
 
-  return (
-    <div className="card collapsable-section">
-      <div className="card-header">
-        <h5 className="mb-0">
-          <div className="collapsable-header" onClick={() => setOpen(!open)} aria-controls={id} aria-expanded={open}>
-            {open ? <Minus /> : <Plus />}
-            <h1 className="collapsable-header-title">{title}</h1>
-          </div>
-        </h5>
-      </div>
-      <Collapse in={open} className="collapsable-content">
-        <div id={id} className="card-body">
-          {children}
-        </div>
-      </Collapse>
-    </div>
-  );
-};
+//   return (
+//     <div className="card collapsable-section">
+//       <div className="card-header">
+//         <h5 className="mb-0">
+//           <div className="collapsable-header" onClick={() => setOpen(!open)} aria-controls={id} aria-expanded={open}>
+//             {open ? <Minus /> : <Plus />}
+//             <h1 className="collapsable-header-title">{title}</h1>
+//           </div>
+//         </h5>
+//       </div>
+//       <Collapse in={open} className="collapsable-content">
+//         <div id={id} className="card-body">
+//           {children}
+//         </div>
+//       </Collapse>
+//     </div>
+//   );
+// };
 
 /*
 Assumes project object shape is:
@@ -65,47 +63,37 @@ const ProjectWorkPage = ({ match }) => {
   const project = example;
 
   return (
-    <div className="project-work-page">
-        <div className="row">
-          <div className="project-work-content">
-            <div className="project-work-flow">
-              <h1>Ready to work on this project?</h1>
-              <div className="justify-content-center d-flex flex-wrap align-items-center">
-                <ProjectFlow className="flow-images project-work-flow" />
-              </div>
-            </div>
-
-            <CollapsableSection
-              title="1. Commit to Anti-Racism"
-              id="antiracism"
-              isFirst={true}
-              children={<ConfirmationCheck hasConfirmed={hasConfirmed} setHasConfirmed={setHasConfirmed} />}
-            />
-            <CollapsableSection
-              title="2. Review Project Details"
-              id="details"
-              children={<ProjectDetails project={project} />}
-            />
-            <CollapsableSection
-              title="3. Contact Client Organization"
-              id="contact"
-              children={<ContactSection project={project} hasConfirmed={hasConfirmed} />}
-            />
-            <CollapsableSection
-              title="What's next?"
-              id="next"
-              children={
-                <p>
-                  Once you have contacted the project client, please wait some time for a response from them and to
-                  determine whether you are a good match for each other and to coordinate project details. Please keep
-                  in mind that HackBeanpot will not be facilitating the project relationship, and it will be your
-                  responsibility to decide on communications with the client.
-                </p>
-              }
-            />
-          </div>
+    <div id="project-work-page" className="container justify-content-md-center">
+        <h1>Ready to work on this project?</h1>
+        <div className="justify-content-center d-flex flex-wrap align-items-center">
+          <ProjectFlow className="flow-images project-work-flow" />
         </div>
-      </div>
+      <section className="accordion-section-container">
+        <CustomAccordion
+          id="antiracism"
+          header="1. Commit to Anti-Racism"
+          body={<ConfirmationCheck hasConfirmed={hasConfirmed} setHasConfirmed={setHasConfirmed} />}
+        />
+        <CustomAccordion header="2. Review Project Details" id="details" body={<ProjectDetails project={project} />} />
+        <CustomAccordion
+          id="contact"
+          header="3. Contact Client Organization"
+          body={<ContactSection project={project} hasConfirmed={hasConfirmed} />}
+        />
+        <CustomAccordion
+          id="next"
+          header="What's next?"
+          body={
+            <p>
+              Once you have contacted the project client, please wait some time for a response from them and to
+              determine whether you are a good match for each other and to coordinate project details. Please keep in
+              mind that HackBeanpot will not be facilitating the project relationship, and it will be your
+              responsibility to decide on communications with the client.
+            </p>
+          }
+        />
+      </section>
+    </div>
   );
 };
 

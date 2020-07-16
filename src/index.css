@@ -196,3 +196,53 @@ hr {
     max-width: 300px;
   }
 }
+
+/* Accordion */
+.accordion-section-container {
+  padding: 0 2em;
+  margin: 3rem 0;
+}
+
+@media only screen and (max-width: 992px) {
+  .accordion-section-container {
+    padding: 0 1em;
+    margin: 2rem 0;
+  }
+}
+
+.accordion-container {
+  color: var(--main-black);
+  border: 0;
+  border-radius: 10px;
+}
+
+.accordion-header {
+  cursor: pointer;
+  font-family: HelveticaNeueMed;
+  font-size: 20px;
+  background-color: var(--main-cream);
+  padding: 1rem;
+}
+
+.accordion-header:hover {
+  background-color: var(--light-yellow);
+}
+
+.accordion-body {
+  font-size: 18px;
+  background-color: var(--main-grey);
+  color: var(--white);
+  padding: 1.5rem 3rem;
+}
+
+@media only screen and (max-width: 992px) {
+  .accordion-header {
+    font-size: 16px;
+    padding: 1rem;
+  }
+
+  .accordion-body {
+    font-size: 16px;
+    padding: 1.5rem;
+  }
+}

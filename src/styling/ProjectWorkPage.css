@@ -1,33 +1,5 @@
-.project-work-page {
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
-.project-work-flow {
-  margin: 24px 0;
-}
-
-.collapsable-section {
-  margin-bottom: 24px;
-  border-radius: 10px;
-}
-
-.collapsable-header {
-  display: flex;
-  cursor: pointer;
-}
-
-.collapsable-header svg {
-  margin: auto 0;
-}
-
-.collapsable-header-title {
-  margin-left: 16px;
-}
-
-.collapsable-content {
-  padding: 24px 60px;
-  background-color: var(--main-grey);
+#project-work-page .flow-images {
+  margin: 1rem 0rem;
 }
 
 .confirmation-checks-modal h2 {

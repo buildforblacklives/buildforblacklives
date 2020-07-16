@@ -5,9 +5,9 @@ import AccordionContext from 'react-bootstrap/AccordionContext';
 
 import Plus from '../assets/plus';
 import Minus from '../assets/minus';
-import '../styling/FAQPage.css';
+import '../index.css';
 
-class FAQSection extends React.Component {
+class CustomAccordion extends React.Component {
   render() {
     function IconToggleAccordion({ children, eventKey, callback }) {
       const currentEventKey = useContext(AccordionContext);
@@ -15,31 +15,25 @@ class FAQSection extends React.Component {
       const isCurrentEventKey = currentEventKey === eventKey;
 
       return (
-          <Row className="faq-accordion-question " onClick={toggleIconOnClick}>
-            <Col xs="auto"> {isCurrentEventKey ? <Minus small/> : <Plus small/>} </Col>
+          <Row className="accordion-header" onClick={toggleIconOnClick}>
+            <Col xs="auto"> {isCurrentEventKey ? <Minus/> : <Plus/>} </Col>
             <Col>{children}</Col>
           </Row>
       );
     }
     return (
-      <section className="faq-section-container">
-        {this.props.faq.map((qa, i) => {
-          return (
-            <Accordion key={i} className="mt-3 mb-3">
-              <Card className="faq-accordion-container">
+            <Accordion className="mt-3 mb-3">
+              <Card className="accordion-container">
                 <IconToggleAccordion as={Card.Header} eventKey="1">
-                  {qa.question}
+                  {this.props.header}
                 </IconToggleAccordion>
                 <Accordion.Collapse eventKey="1">
-                  <Card.Body className="faq-accordion-answer">{qa.answer}</Card.Body>
+                  <Card.Body className="accordion-body">{this.props.body}</Card.Body>
                 </Accordion.Collapse>
               </Card>
             </Accordion>
-          );
-        })}
-      </section>
     );
   }
 }
 
-export { FAQSection };
+export { CustomAccordion };
