@@ -78,7 +78,7 @@ const SelectedCard = ({ project, setSelected }) => {
         <h5 className="pt-3"> Project Timeline </h5>
         <p className="card-text">{projectTime}</p>
 
-        <div className="text-center">
+        <div className="text-center project-work-button">
           <LinkContainer to={`/projects/${id}`}>
             <Button className="primary-button"> Work on this project! </Button>
           </LinkContainer>
@@ -133,7 +133,7 @@ const ProjectsPage = () => {
                 />)}
             </Col>
 
-            <Col lg={{ span: 7, offset: 1 }} md={12} className="">
+            <Col lg={8} md={12} className="">
               <SelectedCard project={findSelected()} setSelected={setSelected} />
             </Col>
           </Row>

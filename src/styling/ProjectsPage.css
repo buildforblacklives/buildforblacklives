@@ -3,10 +3,12 @@
 .projects-page {
   max-width: 1400px;
   margin: 3rem auto;
+  padding: 0 48px;
 }
 
 .projects-page .flow-images {
-  margin: 1rem 0;
+  margin: 1rem auto;
+  display: block;
 }
 
 .preview-card {
@@ -63,6 +65,7 @@
 
 .projects-back {
   color: var(--main-yellow);
+  font-family: ArchivoBold;
   cursor: pointer;
   font-size: 20px;
   margin: 0 0 32px;
@@ -77,6 +80,7 @@
   border-radius: 16px;
   padding: 24px;
   background-color: var(--main-grey);
+  margin-left: 32px;
 }
 
 .project-description-close:before,
@@ -85,7 +89,7 @@
   position: absolute;
   width: 24px;
   height: 4px;
-  background-color :var(--main-cream);
+  background-color: var(--main-cream);
   border-radius: 2px;
   top: 0;
   cursor: pointer;
@@ -113,6 +117,10 @@
 
 .project-description-subtitle {
   font-size: 24px;
+}
+
+.project-work-button {
+  margin-top: 32px;
 }
 
 .project-list-panel {
@@ -147,9 +155,13 @@
   color: var(--main-black);
 }
 
-@media only screen and (max-width: 1200px) {
-  .projects-page {
-    padding: 0 32px;
+@media only screen and (max-width: 992px) {
+  .project-description-card {
+    margin-left: 0;
+  }
+
+  .project-description-close {
+    display: none;
   }
 }
 
@@ -163,12 +175,7 @@
     padding: 8px;
   }
 
-  .project-description-close:before,
-  .project-description-close:after {
-    width: 16px;
-  }
-
-  .project-description-close:before {
-    left: 6px;
+  .project-description-card p {
+    margin-bottom: 0;
   }
 }
