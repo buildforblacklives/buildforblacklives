@@ -54,6 +54,15 @@
   color: var(--main-blue);
 }
 
+.preview-card:not(.is-select-preview-card):hover .project-more-link {
+  color: var(--dark-blue);
+}
+
+.preview-card:not(.is-select-preview-card):hover .project-card-urgent {
+  border: 2px solid var(--dark-blue);
+  color: var(--dark-blue);
+}
+
 .project-card-description {
   line-height: 1.3rem;
   height: calc(1.3rem * 5);
@@ -147,6 +156,10 @@
 .is-select-preview-card,
 .is-select-preview-card:hover {
   background-color: var(--main-blue);
+  color: var(--main-cream);
+}
+
+.is-select-preview-card:hover h5 {
   color: var(--main-cream);
 }
 
