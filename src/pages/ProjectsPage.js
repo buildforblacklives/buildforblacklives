@@ -15,11 +15,10 @@ const example = (num) => ({
   orgAbout:
     'this is what our org does. Which likely has a lot of words, resulting in multiple lines on the screen. We love beans in our org. bean bean bean bean bean bean bean bean bean bean bean bean bean bean bean bean bean bean',
   orgEmail: 'team@hbp.com',
-  orgPhone: null,
   projectTitle: 'Sample Website Project ' + num,
   projectAbout:
     'This is what the project is about. Which is about beans. bean bean bean bean bean bean bean bean bean bean bean bean bean bean bean bean bean bean',
-  projectTime: 'Estimated 2 weeks'
+  projectDeadline: 'Estimated 2 weeks'
 })
 
 const sampleProjects = [example(1), example(2), example(3), example(4), example(5), example(6), example(7)];
@@ -58,7 +57,7 @@ const ProjectCard = ({ project, isSelectedView, setSelected, selected }) => {
 }
 
 const SelectedCard = ({ project, setSelected }) => {
-  const { id, orgName, orgAbout, projectTitle, projectAbout, projectTime, isUrgent } = project;
+  const { id, orgName, orgAbout, projectTitle, projectAbout, projectDeadline, isUrgent } = project;
 
   return (
     <Card className="project-description-card">
@@ -75,8 +74,11 @@ const SelectedCard = ({ project, setSelected }) => {
         <h5 className="pt-3"> About the Project </h5>
         <p>{projectAbout}</p>
 
-        <h5 className="pt-3"> Project Timeline </h5>
-        <p className="card-text">{projectTime}</p>
+        {projectDeadline && (
+          <>
+            <h5 className="pt-3"> Project Timeline </h5>
+            <p className="card-text">{projectDeadline}</p>
+          </>)}
 
         <div className="text-center project-work-button">
           <LinkContainer to={`/projects/${id}`}>
