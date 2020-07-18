@@ -118,7 +118,7 @@
   height: 4px;
   background-color: var(--main-cream);
   border-radius: 2px;
-  top: 0;
+  top: -16px;
   cursor: pointer;
 }
 
@@ -126,14 +126,14 @@
   -webkit-transform:rotate(45deg);
   -moz-transform:rotate(45deg);
   transform:rotate(45deg);
-  left: -2px;
+  left: 16px;
 }
 
 .project-description-close:after {
   -webkit-transform:rotate(-45deg);
   -moz-transform:rotate(-45deg);
   transform:rotate(-45deg);
-  right: 2px;
+  right: -16px;
 }
 
 .project-description-close {
