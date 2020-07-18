@@ -123,7 +123,7 @@ const ProjectsPage = () => {
             {'< Back to Open Projects'}
           </div>
           <Row>
-            <Col lg={4} className="project-list-panel d-none d-lg-block">
+            <Col lg={4} className="project-list-panel">
               {projects.map((project) =>
                 <ProjectCard
                   project={project}

@@ -65,9 +65,22 @@
 
 .project-card-description {
   line-height: 1.3rem;
-  height: calc(1.3rem * 5);
+  height: calc(1.3rem * 4);
+  max-height: calc(1.3rem * 4);
   overflow: hidden;
-  text-overflow: ellipsis;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.project-card-description:after {
+  content: "";
+  text-align: right;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1.3rem;
+  background: linear-gradient(rgba(0, 0, 0, 0), var(--main-grey) 60%);
 }
 
 /** Selected card view **/
@@ -90,6 +103,7 @@
   padding: 24px;
   background-color: var(--main-grey);
   margin-left: 32px;
+  margin-right: -15px;
 }
 
 .project-description-close:before,
@@ -135,7 +149,6 @@
 .project-list-panel {
   height: 800px;
   overflow-y: scroll;
-  overflow: auto;
   border-radius: 16px;
   padding: 24px;
   background-color: var(--main-cream);
@@ -184,11 +197,19 @@
     margin-top: 16px;
   }
 
+  .preview-card {
+    margin-right: 8px;
+  }
+
   .project-description-card {
     padding: 8px;
   }
 
   .project-description-card p {
     margin-bottom: 0;
+  }
+
+  .project-card-description {
+    height: calc(1.3rem * 3);
   }
 }
