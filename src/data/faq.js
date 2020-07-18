@@ -126,7 +126,7 @@ const FAQItems = {
       question:
         'Who should cover any expenses related to paid or optional features or services (eg. website domain, Facebook page promotions, etc.)?',
       answer:
-        'Any external paid features (e.g. hosting/maintaining a website) should be covered by the client. As a volunteer, you can help with researching and finding affordable options that best suit the client’s needs.'
+        'Unless you explicitly offer to, any external paid features (e.g. hosting/maintaining a website) should be covered by the client. As a volunteer, you can help with researching and finding affordable options that best suit the client’s needs. Remember to inform your client of any expenses that are required to complete their project in advance.'
     },
     {
       question: 'I’m having work-related issues with the client I’m working for. What should I do?',

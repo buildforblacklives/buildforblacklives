@@ -59,7 +59,7 @@ const HomePage = () => (
 
     <h2 className="home-track-titles">Request a Project</h2>
     <Row className="justify-content-center d-flex flex-wrap align-items-center">
-      <RequestFlow className="home-track-images" />
+      <RequestFlow className="flow-images" />
     </Row>
     <Row className="home-track-body">
       <Col xs={12} md={{ span: 8, offset: 2 }}>
@@ -75,7 +75,7 @@ const HomePage = () => (
 
     <h2 className="home-track-titles">Work on a Project</h2>
     <Row className="justify-content-center d-flex flex-wrap align-items-center">
-      <ProjectFlow className="home-track-images" />
+      <ProjectFlow className="flow-images" />
     </Row>
     <Row className="home-track-body">
       <Col xs={12} md={{ span: 8, offset: 2 }}>
