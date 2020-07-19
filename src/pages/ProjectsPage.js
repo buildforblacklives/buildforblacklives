@@ -1,27 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import { useSelector } from 'react-redux';
 import { Button, Row, Col, Card, Container } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import ProjectSelectFlow from '../assets/flow_diagrams/project_selection_flow';
+import { ProjectsPageTemp } from './ProjectsPageTemp';
 
 import '../styling/ProjectsPage.css';
 
 const { Body, Subtitle } = Card;
-
-// example projects, delete this later
-const example = (num) => ({
-  id: num,
-  isUrgent: num %2 === 0,
-  orgName: 'HackBeanpot ' + num,
-  orgAbout:
-    'this is what our org does. Which likely has a lot of words, resulting in multiple lines on the screen. We love beans in our org. bean bean bean bean bean bean bean bean bean bean bean bean bean bean bean bean bean bean',
-  orgEmail: 'team@hbp.com',
-  projectTitle: 'Sample Website Project ' + num,
-  projectAbout:
-    'This is what the project is about. Which is about beans. bean bean bean bean bean bean bean bean bean bean bean bean bean bean bean bean bean bean',
-  projectDeadline: 'Estimated 2 weeks'
-})
-
-const sampleProjects = [example(1), example(2), example(3), example(4), example(5), example(6), example(7)];
 
 const ProjectCard = ({ project, isSelectedView, setSelected, selected }) => {
   const { id, projectTitle, orgName, isUrgent, projectAbout } = project;
@@ -92,16 +78,21 @@ const SelectedCard = ({ project, setSelected }) => {
 
 
 const ProjectsPage = () => {
+  const airtableProjects = useSelector(state => state) || []
   const [selected, setSelected] = useState(-1);
-  const [projects, setProjects] = useState([]);
-  // TODO: get projects from airtable
+  const [projects, setProjects] = useState(airtableProjects);
+
   useEffect(() => {
-    setProjects(sampleProjects)
-  }, [])
+    setProjects(airtableProjects)
+  }, [airtableProjects])
 
   const findSelected = () => (
     projects.find((project) => project.id === selected)
   )
+
+  if (projects.length === 0) {
+    return <ProjectsPageTemp />
+  }
 
   return (
     <Container className="projects-page">
