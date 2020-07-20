@@ -18,6 +18,8 @@
   padding: 4px;
   cursor: pointer;
   background-color: var(--main-grey);
+  height: 300px;
+  position: relative;
 }
 
 .preview-card:hover {
@@ -52,6 +54,9 @@
 
 .project-more-link {
   color: var(--main-blue);
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
 }
 
 .preview-card:not(.is-select-preview-card):hover .project-more-link {
@@ -65,7 +70,6 @@
 
 .project-card-description {
   line-height: 1.3rem;
-  height: calc(1.3rem * 4);
   max-height: calc(1.3rem * 4);
   overflow: hidden;
   position: relative;
@@ -223,7 +227,7 @@
   }
 
   .project-card-description {
-    height: calc(1.3rem * 3);
+    max-height: calc(1.3rem * 3);
   }
 
   .project-tag-space {

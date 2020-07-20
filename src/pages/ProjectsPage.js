@@ -34,7 +34,7 @@ const ProjectCard = ({ project, isSelectedView, setSelected, selected }) => {
           <span className="project-card-urgent">Urgent</span> :
           <span className="project-tag-space" />}
         <p className="project-card-description">{projectAbout}</p>
-        <div className="project-more-link float-right">
+        <div className="project-more-link">
           More details...
         </div>
       </Body>
