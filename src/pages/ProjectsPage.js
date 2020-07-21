@@ -28,12 +28,14 @@ const ProjectCard = ({ project, isSelectedView, setSelected, selected }) => {
       className={getClass()}
       onClick={() => setSelected(id)}>
       <Body>
-        <h5> {projectTitle} </h5>
-        <Subtitle className="mb-2 preview-subtitle">{orgName}</Subtitle>
-        {isUrgent ?
-          <span className="project-card-urgent">Urgent</span> :
-          <span className="project-tag-space" />}
-        <p className="project-card-description">{projectAbout}</p>
+        <div className="preview-card-contents">
+          <h5> {projectTitle} </h5>
+          <Subtitle className="mb-2 preview-subtitle">{orgName}</Subtitle>
+          {isUrgent ?
+            <span className="project-card-urgent">Urgent</span> :
+            <span className="project-tag-space" />}
+          <p className="project-card-description">{projectAbout}</p>
+        </div>
         <div className="project-more-link">
           More details...
         </div>
@@ -54,17 +56,18 @@ const SelectedCard = ({ project, setSelected }) => {
         <Subtitle className="mb-2 project-description-subtitle">{orgName}</Subtitle>
         {isUrgent && <div className="project-card-urgent">Urgent </div>}
 
+        {projectDeadline && (
+          <>
+            <h5 className="pt-3"> Project Timeline </h5>
+            <p className="card-text">{projectDeadline}</p>
+          </>)
+        }
+
         <h5 className="pt-3"> About {orgName} </h5>
         <p>{orgAbout}</p>
 
         <h5 className="pt-3"> About the Project </h5>
         <p>{projectAbout}</p>
-
-        {projectDeadline && (
-          <>
-            <h5 className="pt-3"> Project Timeline </h5>
-            <p className="card-text">{projectDeadline}</p>
-          </>)}
 
         <div className="text-center project-work-button">
           <LinkContainer to={`/projects/${id}`}>

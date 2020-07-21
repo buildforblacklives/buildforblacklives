@@ -15,7 +15,7 @@ All `Button`s should use either the `primary-button` or `secondary-button` class
 When adding CSS rules, make sure that you are adding rules to the specific corresponding file of the component you are editing (ie AboutPage.css for the About page). To ensure that there are no accidental side effects from style rules, please localize your classnames with the prefix for the component you are editing (ie all custom classes in the about page should have the `about-` prefix). This rule does not apply to any universal styling classes that are used, like `primary-button`.
 
 ## Running locally -- airtable API
-In order to run this locally, you will need an Airtable API key which you can obtain from your Airtable account page. Create a file at the root (ie next to `/src`) called `.env`. The contents of this file should just be the line `REACT_APP_AIRTABLE_KEY=<your api key>`. **DO NOT** commit this file to github!! If you need help with this, message @felicia
+In order to run this locally, you will need an Airtable API key which you can obtain from your Airtable account page. Create a file at the root directory (with the gitignore and stuff, NOT in the /src folder!) called `.env`. The contents of this file should just be the line `REACT_APP_AIRTABLE_KEY=<your api key>`. Don't put quotation marks or anything around the key value. **DO NOT** commit this file to github!! If you need help with this, message @felicia
 
 ## Available Scripts
 
