@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import Airtable from 'airtable';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { MainNavbar } from './components/MainNavbar';
 import { Footer } from './components/Footer';
@@ -11,8 +13,30 @@ import { FAQPage } from './pages/FAQPage';
 import { ResourcesPage } from './pages/ResourcesPage';
 import { ProjectWorkPage } from './pages/ProjectWorkPage';
 import ScrollToTop from './components/ScrollToTop';
+import { setProjects } from './state/projects';
 
 const App = () => {
+  const dispatch = useDispatch()
+  useEffect(() => {
+    const base = new Airtable({ apiKey: process.env.REACT_APP_AIRTABLE_KEY }).base('appBzqG0sB4hqtE0I');
+    let airtableRecords = []
+
+    const fetchProjects = async () => {
+      base('Design projects').select({
+        view: "Approved Projects"
+      }).eachPage(async (records, fetchNextPage) => {
+        airtableRecords = records;
+        await dispatch(setProjects(airtableRecords))
+
+        fetchNextPage();
+      }, (err) => {
+        if (err) { console.error(err); return; }
+      })
+    }
+
+    fetchProjects()
+  }, [dispatch])
+
   return (
     <BrowserRouter>
       <MainNavbar />

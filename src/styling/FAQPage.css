@@ -46,6 +46,10 @@
   flex-grow: 70;
 }
 
+.faq .nav-link:focus {
+  outline: none;
+}
+
 @media only screen and (max-width: 992px) {
   .faq .nav-tabs {
     font-size: 1.2rem;

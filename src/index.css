@@ -10,7 +10,7 @@
   --main-yellow: #f5cb5c;
   /* other colors */
   --white: white;
-  --blue: #a7e6e8;
+  --dark-blue: #6098bf;
   --light-yellow: #fff0b3;
   --dark-yellow: #e0a800;
 }
@@ -152,12 +152,18 @@ hr {
 }
 
 .flow-images {
-  max-width: 55%;
-  max-height: 55%;
   height: auto;
+  padding: 0 1em;
 }
 
-@media only screen and (max-width: 678px) {
+@media only screen and (max-width: 992px) {
+  .flow-images {
+    max-width: 90%;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 768px) {
   h1 {
     font-size: 40px;
   }
@@ -183,9 +189,10 @@ hr {
   .secondary-button {
     font-size: 16px;
   }
+}
 
+@media only screen and (max-width: 425px) {
   .flow-images {
-    max-width: 75%;
-    max-height: 75%;
+    max-width: 300px;
   }
 }

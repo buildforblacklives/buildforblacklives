@@ -40,7 +40,7 @@ Assumes project object shape is:
   orgPhone: str,
   projectTitle: str,
   projectAbout: str,
-  projectTime: str, (??)
+  projectDeadline: str, (??)
 }
 */
 
@@ -54,7 +54,7 @@ const example = {
   projectTitle: 'Sample Website Project',
   projectAbout:
     'This is what the project is about. Which is about beans. bean bean bean bean bean bean bean bean bean bean bean bean bean bean bean bean bean bean',
-  projectTime: 'Estimated 2 weeks'
+  projectDeadline: 'Estimated 2 weeks'
 };
 
 const ProjectWorkPage = ({ match }) => {
