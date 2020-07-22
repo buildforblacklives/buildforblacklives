@@ -18,6 +18,8 @@
   padding: 4px;
   cursor: pointer;
   background-color: var(--main-grey);
+  height: 300px;
+  position: relative;
 }
 
 .preview-card:hover {
@@ -27,6 +29,12 @@
 
 .preview-card:hover h5 {
   color: var(--main-black);
+}
+
+.preview-card-contents {
+  max-height: 224px;
+  overflow: hidden;
+  position: relative;
 }
 
 .preview-subtitle {
@@ -52,6 +60,9 @@
 
 .project-more-link {
   color: var(--main-blue);
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
 }
 
 .preview-card:not(.is-select-preview-card):hover .project-more-link {
@@ -65,25 +76,21 @@
 
 .project-card-description {
   line-height: 1.3rem;
-  height: calc(1.3rem * 4);
-  max-height: calc(1.3rem * 4);
-  overflow: hidden;
-  position: relative;
-  margin-bottom: 8px;
+  margin-bottom: 24px;
 }
 
-.project-card-description:after {
+.preview-card-contents:after {
   content: "";
   text-align: right;
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 1.3rem;
+  height: 2rem;
   background: linear-gradient(rgba(31, 31, 31, 0), rgba(31, 31, 31, 1) 60%);
 }
 
-.preview-card:hover .project-card-description:after {
+.preview-card:hover .preview-card-contents:after {
   background: linear-gradient(rgba(245, 203, 92, 0), rgba(245, 203, 92, 1) 60%);
 }
 
@@ -176,8 +183,8 @@
   color: var(--main-cream);
 }
 
-.is-select-preview-card .project-card-description:after,
-.is-select-preview-card:hover .project-card-description:after {
+.is-select-preview-card .preview-card-contents:after,
+.is-select-preview-card:hover .preview-card-contents:after {
   background: linear-gradient(rgba(107, 180, 214, 0),rgba(107, 180, 214, 1) 60%);
 }
 
@@ -212,10 +219,16 @@
 
   .preview-card {
     margin-right: 8px;
+    height: auto;
+  }
+
+  .preview-card-contents {
+    max-height: unset;
   }
 
   .project-description-card {
     padding: 8px;
+    margin: 0 16px;
   }
 
   .project-description-card p {
@@ -223,7 +236,7 @@
   }
 
   .project-card-description {
-    height: calc(1.3rem * 3);
+    max-height: calc(1.3rem * 3);
   }
 
   .project-tag-space {
