@@ -1,25 +1,13 @@
-/* Layout */
-.faq-section-container {
-  padding: 0 2em;
-  margin: 3rem 0;
-}
-
-@media only screen and (max-width: 992px) {
-  .faq-section-container {
-    padding: 0 1em;
-    margin: 2rem 0;
-  }
-}
-
 /* Tabs */
-.faq .nav-tabs {
+#faq-page .nav-tabs {
   display: flex;
   min-height: 2.5em;
   font-size: 1.5rem;
   border: 0 !important;
+  margin-bottom: 2em;
 }
 
-.faq .nav-link {
+#faq-page .nav-link {
   padding: 0.5em 1em;
   border: 1px solid var(--main-light-grey);
   border-bottom: 3px solid var(--main-yellow) !important;
@@ -31,14 +19,14 @@
   flex-grow: 30;
 }
 
-.faq .nav-link:hover {
+#faq-page .nav-link:hover {
   border: 1px solid var(--main-blue) !important;
   border-bottom: 3px solid var(--main-yellow) !important;
   color: var(--main-blue);
 }
 
-.faq .nav-link.active,
-.faq .nav-link.active:hover {
+#faq-page .nav-link.active,
+#faq-page .nav-link.active:hover {
   border: 3px solid var(--main-yellow) !important;
   border-bottom: 0 !important;
   color: var(--main-yellow);
@@ -51,68 +39,24 @@
 }
 
 @media only screen and (max-width: 992px) {
-  .faq .nav-tabs {
+  #faq-page .nav-tabs {
     font-size: 1.2rem;
     margin-left: 1rem;
     margin-right: 1rem;
   }
 
-  .faq .nav-link,
-  .faq .nav-link:hover,
-  .faq .nav-link.active,
-  .faq .nav-link.active:hover {
+  #faq-page .nav-link,
+  #faq-page .nav-link:hover,
+  #faq-page .nav-link.active,
+  #faq-page .nav-link.active:hover {
     flex-grow: 1;
   }
 }
 
 @media only screen and (max-width: 425px) {
-  .faq .nav-link {
+  #faq-page .nav-link {
     padding: 0.5em 0.5em;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-  }
-}
-
-/* Questions & Answers */
-.faq-accordion-container {
-  color: var(--main-black);
-  border: 0;
-  border-radius: 10px;
-}
-
-.faq-accordion-question {
-  cursor: pointer;
-  font-family: HelveticaNeueMed;
-  font-size: 20px;
-  background-color: var(--main-cream);
-  padding: 1rem;
-}
-
-.faq-accordion-question:hover {
-  background-color: var(--light-yellow);
-}
-
-.faq-accordion-answer {
-  font-size: 18px;
-  background-color: var(--main-grey);
-  color: var(--white);
-  padding: 1.5rem 3rem;
-}
-
-@media only screen and (max-width: 992px) {
-  .faq-accordion-question {
-    font-size: 16px;
-    padding: 1rem;
-  }
-
-  .faq-accordion-answer {
-    font-size: 16px;
-    padding: 1.5rem;
-  }
-}
-
-@media only screen and (max-width: 425px) {
-  .faq-accordion-question .col {
-    padding-left: 0px;
   }
 }
