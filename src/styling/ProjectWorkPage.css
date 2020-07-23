@@ -2,22 +2,12 @@
   margin: 3rem auto;
 }
 
-#project-work-page .flow-images {
-  margin: 1rem 0rem;
-}
-
-@media only screen and (max-width: 768px) {
-  #project-work-page h1 {
-    margin-left: 16px;
-  }
-}
-
 .accordion-section-container h1,
 .accordion-section-container h2,
 .accordion-section-container h3,
 .accordion-section-container h4,
 .accordion-section-container h5 {
-  color: var(--main-white);
+  color: var(--main-cream);
   margin-bottom: 1rem;
 }
 
@@ -64,12 +54,7 @@
 }
 
 .title-container {
-  margin-bottom: 3rem;
-}
-
-.title-container p {
-  font-size: 24px;
-  margin-bottom: 0;
+  margin-bottom: 2rem;
 }
 
 .info-container {
@@ -82,7 +67,7 @@
   font-size: 1rem;
   margin: 2em 0;
   padding: 2em;
-  background-color: var(--light-yellow);
+  background-color: var(--main-cream);
   color: var(--main-grey);
 }
 
@@ -109,11 +94,6 @@
   padding: 0.8rem;
 }
 
-.project-detail-email .primary-button.clicked {
-  background-color: var(--dark-yellow);
-  border-color: var(--dark-yellow);
-}
-
 @media only screen and (max-width: 992px) {
   .project-detail-email .buttons-container {
     justify-content: space-between;
@@ -124,13 +104,22 @@
   }
 }
 
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 768px) {
+  #project-work-page {
+    padding: 0 16px;
+  }
+
   .project-detail-email .buttons-container {
     flex-direction: column;
   }
+
   .project-detail-email .buttons-container .btn {
     max-width: 100%;
     margin-bottom: 0.5rem;
+  }
+
+  .info-container {
+    margin-bottom: 1rem;
   }
 }
 

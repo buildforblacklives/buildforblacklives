@@ -22,19 +22,16 @@ const ContactSection = ({ project, hasConfirmed }) => {
   const [copyButtonText, setCopyButtonText] = useState(defaultCopyButtonText);
 
   const copyEmail = () => {
-    // Copy text
     var textArea = document.createElement('textarea');
     textArea.value = emailContent;
     document.body.appendChild(textArea);
     textArea.select();
     document.execCommand('copy');
     document.body.removeChild(textArea);
-    //Change button text
     setCopyButtonText('Copied!');
-    //Change button text to default text after delay
     setTimeout(() => {
       setCopyButtonText(defaultCopyButtonText);
-    }, 5000); //5 seconds
+    }, 1500)
   };
 
   const openMailClient = () => {
@@ -56,13 +53,13 @@ const ContactSection = ({ project, hasConfirmed }) => {
       <Card className="project-detail-email">
         <div className="buttons-container">
           <Button
-            className={`primary-button btn ${copyButtonText !== defaultCopyButtonText ? 'clicked' : ''}`}
+            className="secondary-button"
             onClick={copyEmail}
           >
             <i className="far fa-copy" aria-hidden="true"></i>
             {copyButtonText}
           </Button>
-          <Button className="primary-button btn" onClick={openMailClient}>
+          <Button className="secondary-button" onClick={openMailClient}>
             <i className="fas fa-envelope-open-text" aria-hidden="true"></i>
             Open in Mail Client
           </Button>

@@ -1,12 +1,16 @@
 import React from 'react';
 import { Button, Col, Container, Row } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
+
 import Logo from '../assets/logo.js';
 import CommPartnersIcon from '../assets/community-partners.js';
 import ReqProjectIcon from '../assets/form-icon.js';
 import WorkProjectIcon from '../assets/project-select-icon.js';
 import MailIcon from '../assets/email-icon.js';
+
 import '../styling/AboutPage.css';
+
+const communityPartners = ['HackBeanpot']
 
 const AboutPage = () => (
   <Container className="about-page" fluid>
@@ -40,7 +44,7 @@ const AboutPage = () => (
         <h2>Community Partners</h2>
         <p>These are organizations that have helped build, endorse, and promote the platform:</p>
         <div className="about-community-partners-ul">
-          <h5>HackBeanpot</h5>
+          {communityPartners.map(partner => <p key={partner}>{partner}</p>)}
         </div>
         <p>
           We are open to partnering with organizations that are committed to fighting racial inequity. If your

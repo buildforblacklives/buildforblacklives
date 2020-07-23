@@ -1,6 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from 'react-bootstrap';
 
+const checkStatements = [
+  'I confirm my understanding that participating in this initiative is NOT an opportunity to do “charity work” or cleanse my own guilt.',
+  'I am committed to listening to the needs of the team I am working for, and building what they ask for rather than assuming I know what is best.',
+  'I am committed to being anti-racist online and in person.',
+  'I will refrain from giving my client the burden of educating me on systemic racism and oppression and I am committed to actively educate myself on these topics instead.',
+  'I am committed to offering my skills pro bono and completely free of charge for the entire duration of this project.',
+  'I am committed to supporting the intersectionality of anti-racism efforts and will not discriminate against any clients for ANY part of their identity.',
+  'I am committed to ensuring that the entire duration of this project development and communication efforts remain a safe space for all parties involved.'
+]
+
 const ConfirmationCheck = ({ hasConfirmed, setHasConfirmed }) => {
   const [confirmationChecks, setConfirmationChecks] = useState([
     false,
@@ -22,6 +32,8 @@ const ConfirmationCheck = ({ hasConfirmed, setHasConfirmed }) => {
     setConfirmationChecks(confirmationChecks.map((check, index) => (index === id ? !check : check)));
   };
 
+
+  setHasConfirmed(true)
   return (
     <div className="confirmation-checks-modal">
       <h3>Before you take on this project</h3>
@@ -42,99 +54,17 @@ const ConfirmationCheck = ({ hasConfirmed, setHasConfirmed }) => {
       </p>
       <p>Please read and agree to the following guidelines in order to commit to this project:</p>
       <div className="checklist">
-        <label>
-          <input
-            type="checkbox"
-            checked={confirmationChecks[0]}
-            disabled={hasConfirmed}
-            onChange={() => updateCheckbox(0)}
-          />
-          <span>
-            I confirm my understanding that participating in this initiative is NOT an opportunity to do “charity work”
-            or cleanse my own guilt.
-          </span>
-        </label>
-        <label>
-          <input
-            type="checkbox"
-            checked={confirmationChecks[1]}
-            disabled={hasConfirmed}
-            onChange={() => updateCheckbox(1)}
-          />
-          <span>
-            I am committed to listening to the needs of the team I am working for, and building what they ask for rather
-            than assuming I know what is best.
-          </span>
-        </label>
-        <label>
-          <input
-            type="checkbox"
-            checked={confirmationChecks[2]}
-            disabled={hasConfirmed}
-            onChange={() => updateCheckbox(2)}
-          />
-          <span>I am committed to being anti-racist online and in person.</span>
-        </label>
-        <label>
-          <input
-            type="checkbox"
-            checked={confirmationChecks[3]}
-            disabled={hasConfirmed}
-            onChange={() => updateCheckbox(3)}
-          />
-          <span>
-            I will refrain from giving my client the burden of educating me on systemic racism and oppression and am
-            actively doing this work to educate myself.
-          </span>
-        </label>
-        <label>
-          <input
-            type="checkbox"
-            checked={confirmationChecks[4]}
-            disabled={hasConfirmed}
-            onChange={() => updateCheckbox(4)}
-          />
-          <span>
-            I am committed to continuously learn about systemic racism, including the racial inequalities within the
-            tech and design industries.
-          </span>
-        </label>
-        <label>
-          <input
-            type="checkbox"
-            checked={confirmationChecks[5]}
-            disabled={hasConfirmed}
-            onChange={() => updateCheckbox(5)}
-          />
-          <span>
-            I am committed to offering my skills pro bono and completely free of charge for the entire duration of this
-            project.
-          </span>
-        </label>
-        <label>
-          <input
-            type="checkbox"
-            checked={confirmationChecks[6]}
-            disabled={hasConfirmed}
-            onChange={() => updateCheckbox(6)}
-          />
-          <span>
-            I am committed to supporting the intersectionality of anti-racism efforts and will not discriminate against
-            any clients for ANY part of their identity.
-          </span>
-        </label>
-        <label>
-          <input
-            type="checkbox"
-            checked={confirmationChecks[7]}
-            disabled={hasConfirmed}
-            onChange={() => updateCheckbox(7)}
-          />
-          <span>
-            I am committed to supporting the intersectionality of anti-racism efforts and will not discriminate against
-            any clients for ANY part of their identity.
-          </span>
-        </label>
+        {checkStatements.map((statement, idx) => (
+          <label key={idx}>
+            <input
+              type="checkbox"
+              checked={confirmationChecks[idx]}
+              disabled={hasConfirmed}
+              onChange={() => updateCheckbox(idx)}
+            />
+            <span>{statement}</span>
+          </label>
+        ))}
       </div>
       <div className="bottom-button-container">
         <Button

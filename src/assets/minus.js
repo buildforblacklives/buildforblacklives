@@ -8,7 +8,7 @@ const Minus = ({ className }) => (
       d="M0,0H45.724"
       transform="translate(0 5)"
       fill="none"
-      stroke="#6098BF"
+      stroke="#6bb4d6"
       strokeWidth="10"
     />
   </svg>

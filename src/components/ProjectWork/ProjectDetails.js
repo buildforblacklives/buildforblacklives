@@ -1,6 +1,6 @@
 import React from 'react';
 
-const tagColors = ['#f5cb5c', '#6bb4d6', '#F9F5E3', '#fff0b3']
+const tagColors = ['#f5cb5c', '#6bb4d6', '#fff0b3', '#F9F5E3']
 
 const ProjectDetails = ({ project }) => {
   const { orgName, orgAbout, projectTitle, projectAbout, projectDeadline, tags } = project

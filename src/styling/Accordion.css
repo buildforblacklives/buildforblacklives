@@ -1,7 +1,3 @@
-.accordion-section-container {
-  padding: 0 2em;
-}
-
 .accordion-container {
   color: var(--main-black);
   overflow: hidden;
@@ -17,14 +13,19 @@
   padding: 1rem;
 }
 
+.accordion-header .accordion-header-icon {
+  height: 100%;
+}
+
 .accordion-header-large .accordion-header-icon {
   width: 32px;
   height: 32px
 }
 
-.accordion-section-container h5.accordion-header-title {
+.accordion-section-container .accordion-header-title {
   margin-bottom: 0;
   margin-left: 16px;
+  color: var(--main-black);
 }
 
 .accordion-header:hover {
@@ -49,21 +50,39 @@
 }
 
 @media only screen and (max-width: 992px) {
-  .accordion-section-container {
-    padding: 0 1em;
-  }
-
   .accordion-header {
     font-size: 16px;
     padding: 1rem;
   }
 
+  .accordion-body {
+    font-size: 16px;
+    padding: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
   .accordion-header-large {
     height: 20px;
   }
 
-  .accordion-body {
+  .accordion-header-large .accordion-header-title {
+    line-height: 20px;
+  }
+  
+  .accordion-header .accordion-header-icon {
+    width: 16px;
+  }
+
+  .accordion-header-large .accordion-header-icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: unset;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .accordion-header-large .accordion-header-title {
     font-size: 16px;
-    padding: 1.5rem;
   }
 }

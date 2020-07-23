@@ -224,11 +224,12 @@
 
   .preview-card-contents {
     max-height: unset;
+    margin-bottom: 12px;
   }
 
   .project-description-card {
-    padding: 8px;
-    margin: 0 16px;
+    padding: 0;
+    margin: 0;
   }
 
   .project-description-card p {
