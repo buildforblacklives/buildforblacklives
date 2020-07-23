@@ -19,7 +19,6 @@ const ConfirmationCheck = ({ hasConfirmed, setHasConfirmed }) => {
     false,
     false,
     false,
-    false,
     false
   ]);
   const [allChecked, setAllChecked] = useState(false);
@@ -32,8 +31,6 @@ const ConfirmationCheck = ({ hasConfirmed, setHasConfirmed }) => {
     setConfirmationChecks(confirmationChecks.map((check, index) => (index === id ? !check : check)));
   };
 
-
-  setHasConfirmed(true)
   return (
     <div className="confirmation-checks-modal">
       <h3>Before you take on this project</h3>

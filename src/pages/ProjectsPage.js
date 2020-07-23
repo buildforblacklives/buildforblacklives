@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import Airtable from 'airtable'
 import { Button, Row, Col, Card, Container } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import ProjectSelectFlow from '../assets/flow_diagrams/project_selection_flow';
 import { ProjectsPageTemp } from './ProjectsPageTemp';
+import { translateAirtableRecord } from '../state/utils'
+import { createProjects } from '../state/projects';
 
 import '../styling/ProjectsPage.css';
 
@@ -81,14 +84,44 @@ const SelectedCard = ({ project, setSelected }) => {
 
 
 const ProjectsPage = () => {
-  const projects = useSelector(state => state) || []
+  const dispatch = useDispatch()
+  const savedProjects = useSelector(state => state)
   const [selected, setSelected] = useState(-1);
+  const [projects, setProjects] = useState(savedProjects)
+  const [hasLoaded, setHasLoaded] = useState(false)
 
   const findSelected = () => (
     projects.find((project) => project.id === selected)
   )
 
-  if (projects.length === 0) {
+  useEffect(() => {
+    const fetchProjects = async () => {
+      const base = new Airtable({ apiKey: process.env.REACT_APP_AIRTABLE_KEY }).base('appBzqG0sB4hqtE0I');
+      let airtableRecords = []
+      
+      base('Design projects').select({
+        view: "Approved Projects"
+      }).eachPage(async (records, fetchNextPage) => {
+        airtableRecords = records.map(record => translateAirtableRecord(record))
+        await dispatch(createProjects(airtableRecords))
+        setProjects(airtableRecords)
+        setHasLoaded(true)
+        
+        fetchNextPage();
+      }, (err) => {
+        if (err) { console.error(err); return; }
+      })
+    }
+
+    if (savedProjects.length === 0) {
+      fetchProjects()
+    } else {
+      setHasLoaded(true)
+    }
+  }, [dispatch, savedProjects, hasLoaded])
+
+
+  if (hasLoaded && projects.length === 0) {
     return <ProjectsPageTemp />
   }
 

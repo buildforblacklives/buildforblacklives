@@ -1,5 +1,6 @@
-import React, { useState, useEffect, useLayoutEffect } from 'react';
-import { useSelector, shallowEqual } from 'react-redux'
+import React, { useState, useEffect } from 'react';
+import { useSelector } from 'react-redux'
+import Airtable from 'airtable'
 import { Link } from 'react-router-dom';
 import { Container, Button } from 'react-bootstrap';
 
@@ -8,37 +9,65 @@ import ConfirmationCheck from '../components/ProjectWork/ConfirmationCheck';
 import ContactSection from '../components/ProjectWork/ContactSection';
 import ProjectDetails from '../components/ProjectWork/ProjectDetails';
 import ProjectFlow from '../assets/flow_diagrams/project_steps_flow.js';
+import { translateAirtableRecord } from '../state/utils'
 
 import '../styling/ProjectWorkPage.css';
 
 const ProjectWorkPage = ({ match }) => {
   const { projectId } = match.params;
+  const savedProject = useSelector(state => state.find(project => project.id === projectId))
   const [hasConfirmed, setHasConfirmed] = useState(false);
-  const [project, setProject] = useState(undefined)
-  const projects = useSelector(state => state)
+  const [project, setProject] = useState(savedProject)
+  const [hasLoaded, setHasLoaded] = useState(false)
 
-  useLayoutEffect(() => {
-    console.log("akjfkjnekf", projects)
-    setProject(projects.find(project => project.id === projectId) || {})
-  }, [projects])
+  useEffect(() => {
+    const fetchProject = async () => {
+      const base = new Airtable({ apiKey: process.env.REACT_APP_AIRTABLE_KEY }).base('appBzqG0sB4hqtE0I');
+      
+      base('Design projects').find(projectId,
+        (err, record) => {
+          if (err) {
+            console.error(err);
+            setHasLoaded(true)
+            return;
+          }
+          if (record.get('Status') === "Reviewed -Approved"){
+            setProject(translateAirtableRecord(record))
+          }
+          setHasLoaded(true)
+        });
+      }
 
-  console.log("yy", project)
+    if (!savedProject) {
+      fetchProject()
+    } else {
+      setHasLoaded(true)
+    }
+  }, [savedProject, hasLoaded, projectId])
 
-  if (!project) {
-    return <></>
-  } else if (Object.keys(project).length === 0) {
+  
+  if (!hasLoaded) {
+    return null
+  } else if (!project || Object.keys(project).length === 0) {
     return (
-      <div className="justify-content-center mt-5">
-        <h1>Oops! Looks like this project doesn't exist</h1>
+      <div className="row d-flex justify-content-center text-center">
+        <div className="col-md-8 mt-5">
+          <h1>Oops! Looks like this project doesn't exist or has already been claimed</h1>
+          <Button
+            href="/projects"
+            className="primary-button mt-5"
+            size="lg"
+            target="_blank"
+            aria-disabled="false"
+            rel="noopener noreferrer"
+          >
+            See Open Projects
+        </Button>
+        </div>
       </div>
     )
   }
 
-  // return !project ? (
-  //   <div className="justify-content-center mt-5">
-  //       <h1>Oops! Looks like this project doesn't exist</h1>
-  //     </div>
-  // ) :
   return (
     <Container id="project-work-page" className="justify-content-md-center">
       <h1>Ready to work on this project?</h1>

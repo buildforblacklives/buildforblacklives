@@ -41,13 +41,7 @@
   justify-content: center;
 }
 
-/* TODO: remove this rule when we have more than one org */
-.about-community-partners-ul {
-  text-align: center;
-}
-
-/* TODO: add this line back in when we have more than one org */
-/* .about-community-partners-ul p, */
+.about-community-partners-ul p,
 .about-contact-list .about-list-item {
   margin: 4px 0 4px 32px;
 }

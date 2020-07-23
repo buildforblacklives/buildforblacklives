@@ -10,7 +10,7 @@ import MailIcon from '../assets/email-icon.js';
 
 import '../styling/AboutPage.css';
 
-const communityPartners = ['HackBeanpot']
+const communityPartners = ['HackBeanpot', 'Unofficial Committee']
 
 const AboutPage = () => (
   <Container className="about-page" fluid>
@@ -42,18 +42,16 @@ const AboutPage = () => (
     <Row className="about-align-center">
       <Col className="about-order2">
         <h2>Community Partners</h2>
-        <p>These are organizations that have helped build, endorse, and promote the platform:</p>
+        <p>The mission of a Community Partner is to expand the reach of Build for Black Lives within your organization, to your followers, and to your local communities</p>
         <div className="about-community-partners-ul">
           {communityPartners.map(partner => <p key={partner}>{partner}</p>)}
         </div>
         <p>
-          We are open to partnering with organizations that are committed to fighting racial inequity. If your
-          organization would like to work with Build for Black Lives, please{' '}
-          <a href="mailto:buildforblacklives@hackbeanpot.com">email us</a>. You can also join our{' '}
+        You can be a Community Partner by having your organization share on your social media, help promote our platform, and email local businesses. We are open to partnering with organizations that are committed to fighting racial inequity. If your organization would like to work with us, please{' '}
+          <a href="mailto:buildforblacklives@hackbeanpot.com">email us</a> and join our{' '}
           <a href="https://join.slack.com/t/northeastern-hac3935/shared_invite/zt-fctqwcqe-7~n_GXliEYbQzUeqERHH6A">
             Slack Workspace
-          </a>{' '}
-          to learn more from the organizing team about how you can get involved in outreach for this platform.
+          </a>{' '}to learn more.
         </p>
       </Col>
       <Col xs={12} md={6}>
