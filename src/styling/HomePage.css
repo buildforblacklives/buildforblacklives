@@ -75,12 +75,7 @@
   }
 
   .home-track-titles {
-    margin: 100px 0 25px;
-  }
-
-  .home-track-images {
-    max-width: 640px;
-    max-height: 170px;
+    margin: 100px 0 20px;
   }
 
   .home-track-body {
@@ -107,11 +102,6 @@
 
   .home-track-titles {
     margin-top: 3rem;
-  }
-
-  .home-track-images {
-    max-width: 85%;
-    height: auto;
   }
 
   .home-track-body {
