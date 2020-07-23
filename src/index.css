@@ -111,14 +111,26 @@ li {
 }
 
 .primary-button.btn,
-.primary-button {
-  background-color: var(--main-yellow);
+.primary-button,
+.secondary-button.btn,
+.secondary-button {
   padding: 12px 35px;
-  border-radius: 25px;
+  border-radius: 30px;
   color: var(--main-black);
   font-size: 24px;
   font-family: HelveticaNeueMed;
+}
+
+.primary-button.btn,
+.primary-button {
+  background-color: var(--main-yellow);
   border-color: var(--main-yellow);
+}
+
+.secondary-button.btn,
+.secondary-button {
+  background-color: var(--main-blue);
+  border-color: var(--main-blue);
 }
 
 .primary-button.btn:hover,
@@ -128,18 +140,19 @@ li {
   border-color: var(--dark-yellow);
 }
 
-.secondary-button.btn,
 .secondary-button.btn:hover,
-.secondary-button,
 .secondary-button:hover,
 .secondary-button:not(:disabled):not(.disabled):active {
-  background-color: var(--main-blue);
-  padding: 12px 35px;
-  border-radius: 25px;
-  color: var(--main-black);
-  font-size: 24px;
-  font-family: HelveticaNeueMed;
-  border-color: var(--main-blue);
+  background-color: var(--dark-blue);
+  border-color: var(--dark-blue);
+}
+
+.primary-button:disabled .primary-button.btn:disabled,
+.secondary-button:disabled,
+.secondary-button.btn:disabled {
+  background-color: var(--main-light-grey);
+  border-color: var(--main-light-grey);
+  cursor: not-allowed;
 }
 
 hr {
@@ -154,6 +167,10 @@ hr {
 .flow-images {
   height: auto;
   padding: 0 1em;
+}
+
+.indent-text {
+  text-indent: 2rem;
 }
 
 @media only screen and (max-width: 992px) {

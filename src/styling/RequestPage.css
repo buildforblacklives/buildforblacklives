@@ -1,13 +1,17 @@
-.request-page {
+#request-page {
   margin: 3rem auto;
 }
 
-.request-page .flow-images {
-  margin: 2em 0;
+#request-page .flow-images {
+  margin: 1rem 0rem;
+}
+
+#request-page h1 {
+  margin-bottom: 1rem;
 }
 
 @media only screen and (max-width: 768px) {
-  .request-page h1 {
+  #request-page h1 {
     margin-left: 16px;
   }
 }
