@@ -1,111 +1,128 @@
-import React, { useState } from 'react';
-import { Collapse } from 'react-bootstrap';
+import React, { useState, useEffect } from 'react';
+import { useSelector } from 'react-redux';
+import Airtable from 'airtable';
+import { Link } from 'react-router-dom';
+import { Container, Button } from 'react-bootstrap';
+
+import CustomAccordion from '../components/CustomAccordion';
 import ConfirmationCheck from '../components/ProjectWork/ConfirmationCheck';
 import ContactSection from '../components/ProjectWork/ContactSection';
 import ProjectDetails from '../components/ProjectWork/ProjectDetails';
 import ProjectFlow from '../assets/flow_diagrams/project_steps_flow.js';
-import Plus from '../assets/plus';
-import Minus from '../assets/minus';
+import { translateAirtableRecord } from '../state/utils';
 
 import '../styling/ProjectWorkPage.css';
 
-const CollapsableSection = ({ title, id, isFirst, children }) => {
-  const [open, setOpen] = useState(isFirst);
-
-  return (
-    <div className="card collapsable-section">
-      <div className="card-header">
-        <h5 className="mb-0">
-          <div className="collapsable-header" onClick={() => setOpen(!open)} aria-controls={id} aria-expanded={open}>
-            {open ? <Minus /> : <Plus />}
-            <h1 className="collapsable-header-title">{title}</h1>
-          </div>
-        </h5>
-      </div>
-      <Collapse in={open} className="collapsable-content">
-        <div id={id} className="card-body">
-          {children}
-        </div>
-      </Collapse>
-    </div>
-  );
-};
-
-/*
-Assumes project object shape is:
-{
-  orgName: str,
-  orgAbout: str,
-  orgEmail: str,
-  orgPhone: str,
-  projectTitle: str,
-  projectAbout: str,
-  projectDeadline: str, (??)
-}
-*/
-
-// example project, delete this later
-const example = {
-  orgName: 'HackBeanpot',
-  orgAbout:
-    'this is what our org does. Which likely has a lot of words, resulting in multiple lines on the screen. We love beans in our org. bean bean bean bean bean bean bean bean bean bean bean bean bean bean bean bean bean bean',
-  orgEmail: 'team@hbp.com',
-  orgPhone: null,
-  projectTitle: 'Sample Website Project',
-  projectAbout:
-    'This is what the project is about. Which is about beans. bean bean bean bean bean bean bean bean bean bean bean bean bean bean bean bean bean bean',
-  projectDeadline: 'Estimated 2 weeks'
-};
-
 const ProjectWorkPage = ({ match }) => {
-  // const { projectId } = match.params;
+  const { projectId } = match.params;
+  const savedProject = useSelector((state) => state.find((project) => project.id === projectId));
   const [hasConfirmed, setHasConfirmed] = useState(false);
+  const [project, setProject] = useState(savedProject);
+  const [hasLoaded, setHasLoaded] = useState(false);
 
-  // TODO add useeffect to fetch project details based on project id
-  const project = example;
+  useEffect(() => {
+    const fetchProject = async () => {
+      const base = new Airtable({ apiKey: process.env.REACT_APP_AIRTABLE_KEY }).base('appBzqG0sB4hqtE0I');
+
+      base('Design projects').find(projectId, (err, record) => {
+        if (err) {
+          console.error(err);
+          setHasLoaded(true);
+          return;
+        }
+        if (record.get('Status') === 'Reviewed -Approved') {
+          setProject(translateAirtableRecord(record));
+        }
+        setHasLoaded(true);
+      });
+    };
+
+    if (!savedProject) {
+      fetchProject();
+    } else {
+      setHasLoaded(true);
+    }
+  }, [savedProject, hasLoaded, projectId]);
+
+  if (!hasLoaded) {
+    return null;
+  } else if (!project || Object.keys(project).length === 0) {
+    return (
+      <div className="row d-flex justify-content-center text-center">
+        <div className="col-md-8 mt-5">
+          <h1>Oops! Looks like this project doesn't exist or has already been claimed</h1>
+          <Button
+            href="/projects"
+            className="primary-button mt-5"
+            size="lg"
+            target="_blank"
+            aria-disabled="false"
+            rel="noopener noreferrer"
+          >
+            See Open Projects
+          </Button>
+        </div>
+      </div>
+    );
+  }
 
   return (
-    <div className="project-work-page">
-        <div className="row">
-          <div className="project-work-content">
-            <div className="project-work-flow">
-              <h1>Ready to work on this project?</h1>
-              <div className="justify-content-center d-flex flex-wrap align-items-center">
-                <ProjectFlow className="flow-images project-work-flow" />
+    <Container id="project-work-page" className="justify-content-md-center">
+      <h1>Ready to work on this project?</h1>
+      <div className="justify-content-center d-flex flex-wrap align-items-center">
+        <ProjectFlow className="flow-images project-work-flow" />
+      </div>
+      <section className="accordion-section-container">
+        <CustomAccordion
+          large
+          id="antiracism"
+          header="1. Commit to Anti-Racism"
+          body={<ConfirmationCheck hasConfirmed={hasConfirmed} setHasConfirmed={setHasConfirmed} />}
+        />
+        <CustomAccordion
+          large
+          header="2. Review Project Details"
+          id="details"
+          body={<ProjectDetails project={project} />}
+        />
+        <CustomAccordion
+          large
+          id="contact"
+          header="3. Contact Client"
+          body={<ContactSection project={project} hasConfirmed={hasConfirmed} />}
+        />
+        <CustomAccordion
+          large
+          id="next"
+          header="What's next?"
+          body={
+            <div>
+              <p>
+                Once you have contacted each other and determined that your team is the right fit for the project, you
+                can start coordinating the project timeline, review periods, and general project details. Please keep in
+                mind that Build for Black Lives will not be facilitating the project relationship, and it will be your
+                responsibility to decide on communications with the client.
+              </p>
+              <p>
+                You can also bookmark this page if you want to revisit the project details later or share the link to
+                others who you would like to work on the project with, but keep in mind that it will no longer be
+                available if you or another volunteer officially agree to work on it. The client will let us know when
+                to hide their project request from our website.
+              </p>
+              <p>
+                In the meantine, feel free to browse through our Anti-Racist resources to learn more about building
+                anti-racist technology.
+              </p>
+              <div className="bottom-button-container">
+                <Link to="/resources">
+                  <Button className="primary-button">Take me to Anti-Racist Resources</Button>
+                </Link>
               </div>
             </div>
-
-            <CollapsableSection
-              title="1. Commit to Anti-Racism"
-              id="antiracism"
-              isFirst={true}
-              children={<ConfirmationCheck hasConfirmed={hasConfirmed} setHasConfirmed={setHasConfirmed} />}
-            />
-            <CollapsableSection
-              title="2. Review Project Details"
-              id="details"
-              children={<ProjectDetails project={project} />}
-            />
-            <CollapsableSection
-              title="3. Contact Client Organization"
-              id="contact"
-              children={<ContactSection project={project} hasConfirmed={hasConfirmed} />}
-            />
-            <CollapsableSection
-              title="What's next?"
-              id="next"
-              children={
-                <p>
-                  Once you have contacted the project client, please wait some time for a response from them and to
-                  determine whether you are a good match for each other and to coordinate project details. Please keep
-                  in mind that HackBeanpot will not be facilitating the project relationship, and it will be your
-                  responsibility to decide on communications with the client.
-                </p>
-              }
-            />
-          </div>
-        </div>
-      </div>
+          }
+        />
+      </section>
+    </Container>
   );
 };
 
