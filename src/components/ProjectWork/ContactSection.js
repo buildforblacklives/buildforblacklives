@@ -5,11 +5,11 @@ const Template = ({ orgName, projectTitle }, textType) => {
   let newline = textType === 'uri' ? '%0d%0a' : '\n';
 
   return `
-Hello ${orgName},${newline}${newline}
-My name is [your name] and I am a [developer/designer/etc.]. I am reaching out to you because I found your "${projectTitle}" project listing on the Build for Black Lives website. [I/My teammates and I (CC’ed)] would love to offer our [design/programming/ etc.] skills to help work on your project pro-bono.${newline}${newline}
-[Please remember to include information such as who you or your team is, your background and experience, and any questions you may have about the project, logistical or otherwise.]${newline}${newline}
-Please feel free to look at examples of my work at [portfolio link]. You can contact me at [your email] or [your phone number]. Thank you very much and I hope to work with you soon!${newline}${newline}
-Best,${newline}${newline}
+Hello ${orgName},${newline}
+My name is [your name] and I am a [developer/designer/etc.]. I am reaching out to you because I found your "${projectTitle}" project listing on the Build for Black Lives website. [I/My teammates and I (CC’ed)] would love to offer our [design/programming/ etc.] skills to help work on your project pro-bono.${newline}
+[Please remember to include information such as who you or your team is, your background and experience, and any questions you may have about the project, logistical or otherwise.]${newline}
+Please feel free to look at examples of my work at [portfolio link]. You can contact me at [your email] or [your phone number]. Thank you very much and I hope to work with you soon!${newline}
+Best,${newline}
 [Your name]
 `;
 };
@@ -31,7 +31,7 @@ const ContactSection = ({ project, hasConfirmed }) => {
     setCopyButtonText('Copied!');
     setTimeout(() => {
       setCopyButtonText(defaultCopyButtonText);
-    }, 1500)
+    }, 1500);
   };
 
   const openMailClient = () => {
@@ -52,10 +52,7 @@ const ContactSection = ({ project, hasConfirmed }) => {
       </div>
       <Card className="project-detail-email">
         <div className="buttons-container">
-          <Button
-            className="secondary-button"
-            onClick={copyEmail}
-          >
+          <Button className="secondary-button" onClick={copyEmail}>
             <i className="far fa-copy" aria-hidden="true"></i>
             {copyButtonText}
           </Button>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { useSelector } from 'react-redux'
-import Airtable from 'airtable'
+import { useSelector } from 'react-redux';
+import Airtable from 'airtable';
 import { Link } from 'react-router-dom';
 import { Container, Button } from 'react-bootstrap';
 
@@ -9,45 +9,43 @@ import ConfirmationCheck from '../components/ProjectWork/ConfirmationCheck';
 import ContactSection from '../components/ProjectWork/ContactSection';
 import ProjectDetails from '../components/ProjectWork/ProjectDetails';
 import ProjectFlow from '../assets/flow_diagrams/project_steps_flow.js';
-import { translateAirtableRecord } from '../state/utils'
+import { translateAirtableRecord } from '../state/utils';
 
 import '../styling/ProjectWorkPage.css';
 
 const ProjectWorkPage = ({ match }) => {
   const { projectId } = match.params;
-  const savedProject = useSelector(state => state.find(project => project.id === projectId))
+  const savedProject = useSelector((state) => state.find((project) => project.id === projectId));
   const [hasConfirmed, setHasConfirmed] = useState(false);
-  const [project, setProject] = useState(savedProject)
-  const [hasLoaded, setHasLoaded] = useState(false)
+  const [project, setProject] = useState(savedProject);
+  const [hasLoaded, setHasLoaded] = useState(false);
 
   useEffect(() => {
     const fetchProject = async () => {
       const base = new Airtable({ apiKey: process.env.REACT_APP_AIRTABLE_KEY }).base('appBzqG0sB4hqtE0I');
-      
-      base('Design projects').find(projectId,
-        (err, record) => {
-          if (err) {
-            console.error(err);
-            setHasLoaded(true)
-            return;
-          }
-          if (record.get('Status') === "Reviewed -Approved"){
-            setProject(translateAirtableRecord(record))
-          }
-          setHasLoaded(true)
-        });
-      }
+
+      base('Design projects').find(projectId, (err, record) => {
+        if (err) {
+          console.error(err);
+          setHasLoaded(true);
+          return;
+        }
+        if (record.get('Status') === 'Reviewed -Approved') {
+          setProject(translateAirtableRecord(record));
+        }
+        setHasLoaded(true);
+      });
+    };
 
     if (!savedProject) {
-      fetchProject()
+      fetchProject();
     } else {
-      setHasLoaded(true)
+      setHasLoaded(true);
     }
-  }, [savedProject, hasLoaded, projectId])
+  }, [savedProject, hasLoaded, projectId]);
 
-  
   if (!hasLoaded) {
-    return null
+    return null;
   } else if (!project || Object.keys(project).length === 0) {
     return (
       <div className="row d-flex justify-content-center text-center">
@@ -62,10 +60,10 @@ const ProjectWorkPage = ({ match }) => {
             rel="noopener noreferrer"
           >
             See Open Projects
-        </Button>
+          </Button>
         </div>
       </div>
-    )
+    );
   }
 
   return (
@@ -106,11 +104,18 @@ const ProjectWorkPage = ({ match }) => {
                 responsibility to decide on communications with the client.
               </p>
               <p>
-                You can also bookmark this page if you want to revisit the project details later, but keep in mind that it will no longer be available if you or another volunteer officially agree to work on it. The client will let us know when to hide their project request from our website. Feel free to share the link to this project with your friends and colleagues if you would like to work together on this project!
+                You can also bookmark this page if you want to revisit the project details later or share the link to
+                others who you would like to work on the project with, but keep in mind that it will no longer be
+                available if you or another volunteer officially agree to work on it. The client will let us know when
+                to hide their project request from our website.
+              </p>
+              <p>
+                In the meantine, feel free to browse through our Anti-Racist resources to learn more about building
+                anti-racist technology.
               </p>
               <div className="bottom-button-container">
                 <Link to="/resources">
-                  <Button className="primary-button">Anti-Racist Resources</Button>
+                  <Button className="primary-button">Take me to Anti-Racist Resources</Button>
                 </Link>
               </div>
             </div>
