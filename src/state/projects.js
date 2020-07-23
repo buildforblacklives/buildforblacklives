@@ -9,9 +9,11 @@ export const setProjects = projects => ({
 })
 
 // REDUCERS
-const handleSetProjects = (state, action) => (
+const handleSetProjects = (state, action) => {
+  console.log(action.projects, 'AKJNJKNA')
+  return (
   state.concat(translateAirtableProjects(action.projects))
-)
+)}
 
 const translateAirtableProjects = (airtableProjects) => (
   airtableProjects.map((record) => ({
@@ -23,7 +25,7 @@ const translateAirtableProjects = (airtableProjects) => (
     projectTitle: record.get('Project Title'),
     projectAbout: record.get('Project desc'),
     projectDeadline: record.get('Due date'),
-    tags: record.get('Project Type')
+    tags: record.get('Project Type') || []
   }))
 )
 

@@ -144,8 +144,8 @@ li {
 .secondary-button.btn:hover,
 .secondary-button:hover,
 .secondary-button:not(:disabled):not(.disabled):active {
-  background-color: var(--blue);
-  border-color: var(--blue);
+  background-color: var(--dark-blue);
+  border-color: var(--dark-blue);
 }
 
 .primary-button:disabled .primary-button.btn:disabled,
@@ -212,66 +212,5 @@ hr {
 @media only screen and (max-width: 425px) {
   .flow-images {
     max-width: 300px;
-  }
-}
-
-/* Accordion */
-.accordion-section-container {
-  padding: 0 2em;
-}
-
-@media only screen and (max-width: 992px) {
-  .accordion-section-container {
-    padding: 0 1em;
-  }
-}
-
-.accordion-container {
-  color: var(--main-black);
-  overflow: hidden;
-  border-radius: 10px;
-}
-
-.accordion-header {
-  cursor: pointer;
-  font-family: HelveticaNeueMed;
-  font-size: 20px;
-  background-color: var(--main-cream);
-  padding: 1rem;
-}
-
-.accordion-header:hover {
-  background-color: var(--light-yellow);
-}
-
-.accordion-header-large {
-  font-size: 24px;
-  padding: 1.2rem;
-}
-
-.accordion-body {
-  font-size: 18px;
-  background-color: var(--main-grey);
-  color: var(--white);
-  padding: 1.5rem 3rem;
-}
-
-.accordion-body-large {
-  padding: 2.5rem 4rem;
-}
-
-@media only screen and (max-width: 992px) {
-  .accordion-header {
-    font-size: 16px;
-    padding: 1rem;
-  }
-
-  .accordion-header-large {
-    font-size: 20px;
-  }
-
-  .accordion-body {
-    font-size: 16px;
-    padding: 1.5rem;
   }
 }

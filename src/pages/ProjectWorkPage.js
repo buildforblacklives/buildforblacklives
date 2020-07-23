@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom';
 import { Container, Button } from 'react-bootstrap';
 
@@ -10,36 +11,27 @@ import ProjectFlow from '../assets/flow_diagrams/project_steps_flow.js';
 
 import '../styling/ProjectWorkPage.css';
 
-/*
-Assumes project object shape is:
-{
-  orgName: str,
-  orgAbout: str,
-  orgEmail: str,
-  projectTitle: str,
-  projectAbout: str,
-  projectDeadline: str, (??)
-}
-*/
-
-// example project, delete this later
-const example = {
-  orgName: 'HackBeanpot',
-  orgAbout:
-    'this is what our org does. Which likely has a lot of words, resulting in multiple lines on the screen. We love beans in our org. bean bean bean bean bean bean bean bean bean bean bean bean bean bean bean bean bean bean',
-  orgEmail: 'team@hbp.com',
-  projectTitle: 'Sample Website Project',
-  projectAbout:
-    'This is what the project is about. Which is about beans. bean bean bean bean bean bean bean bean bean bean bean bean bean bean bean bean bean bean',
-  projectDeadline: 'Estimated 2 weeks'
-};
-
 const ProjectWorkPage = ({ match }) => {
-  // const { projectId } = match.params;
+  const { projectId } = match.params;
   const [hasConfirmed, setHasConfirmed] = useState(false);
+  const [project, setProject] = useState(undefined)
+  const fetchedProject = useSelector(state => state.find(project => project.id === projectId)) || {}
 
-  // TODO add useeffect to fetch project details based on project id
-  const project = example;
+  useEffect(() => {
+    setProject(fetchedProject)
+  }, [fetchedProject])
+
+  console.log("yy", fetchedProject, project)
+
+  if (!project) {
+    return <></>
+  } else if (Object.keys(project).length === 0) {
+    return (
+      <div className="justify-content-center mt-5">
+        <h1>Oops! Looks like this project doesn't exist</h1>
+      </div>
+    )
+  }
 
   return (
     <Container id="project-work-page" className="justify-content-md-center">

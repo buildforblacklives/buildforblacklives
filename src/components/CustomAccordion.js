@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
-import { Accordion, Card, Row, Col } from 'react-bootstrap';
+import { Accordion, Card } from 'react-bootstrap';
 import { useAccordionToggle } from 'react-bootstrap/AccordionToggle';
 import AccordionContext from 'react-bootstrap/AccordionContext';
 
 import Plus from '../assets/plus';
 import Minus from '../assets/minus';
-import '../index.css';
+import '../styling/Accordion.css';
 
 class CustomAccordion extends React.Component {
   render() {
@@ -13,14 +13,17 @@ class CustomAccordion extends React.Component {
       const currentEventKey = useContext(AccordionContext);
       const toggleIconOnClick = useAccordionToggle(eventKey, () => callback && callback(eventKey));
       const isCurrentEventKey = currentEventKey === eventKey;
-      const minusIcon = largeHeader ? <Minus large /> : <Minus />;
-      const plusIcon = largeHeader ? <Plus large /> : <Plus />;
 
       return (
-        <Row className={`accordion-header ${largeHeader ? 'accordion-header-large' : ''}`} onClick={toggleIconOnClick}>
-          <Col xs="auto"> {isCurrentEventKey ? minusIcon : plusIcon} </Col>
-          <Col>{children}</Col>
-        </Row>
+        <div className={`accordion-header ${largeHeader ? 'accordion-header-large' : ''}`} onClick={toggleIconOnClick}>
+          <span xs="auto">
+            {isCurrentEventKey ? <Minus className="accordion-header-icon" /> : <Plus className="accordion-header-icon" />}
+          </span>
+          { largeHeader ?
+            <h5 className="accordion-header-title">{children}</h5> :
+            <span className="accordion-header-title">{children}</span>
+          }
+        </div>
       );
     }
     return (

@@ -7,7 +7,6 @@ import { Footer } from './components/Footer';
 import { HomePage } from './pages/HomePage';
 import { AboutPage } from './pages/AboutPage';
 import { ProjectsPage } from './pages/ProjectsPage';
-import { ProjectsPageTemp } from './pages/ProjectsPageTemp';
 import { RequestPage } from './pages/RequestPage';
 import { FAQPage } from './pages/FAQPage';
 import { ResourcesPage } from './pages/ResourcesPage';
@@ -17,9 +16,12 @@ import { setProjects } from './state/projects';
 
 const App = () => {
   const dispatch = useDispatch()
+  console.log("ahllo")
+
   useEffect(() => {
     const base = new Airtable({ apiKey: process.env.REACT_APP_AIRTABLE_KEY }).base('appBzqG0sB4hqtE0I');
     let airtableRecords = []
+    console.log("wtf")
 
     const fetchProjects = async () => {
       base('Design projects').select({
@@ -44,8 +46,7 @@ const App = () => {
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route path="/about" component={AboutPage} />
-        <Route exact path="/projects-temp" component={ProjectsPage} />
-        <Route exact path="/projects" component={ProjectsPageTemp} />
+        <Route exact path="/projects" component={ProjectsPage} />
         <Route path="/project-request" component={RequestPage} />
         <Route path="/resources" component={ResourcesPage} />
         <Route path="/faq" component={FAQPage} />

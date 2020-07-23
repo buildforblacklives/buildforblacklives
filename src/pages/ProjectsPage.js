@@ -81,13 +81,8 @@ const SelectedCard = ({ project, setSelected }) => {
 
 
 const ProjectsPage = () => {
-  const airtableProjects = useSelector(state => state) || []
+  const projects = useSelector(state => state) || []
   const [selected, setSelected] = useState(-1);
-  const [projects, setProjects] = useState(airtableProjects);
-
-  useEffect(() => {
-    setProjects(airtableProjects)
-  }, [airtableProjects])
 
   const findSelected = () => (
     projects.find((project) => project.id === selected)
@@ -109,6 +104,21 @@ const ProjectsPage = () => {
                 <ProjectCard project={project} isSelectedView={false} setSelected={setSelected} />
               </Col>
             ))}
+          </Row>
+          <Row className="justify-content-center mt-5">
+            <h4>Looking for more projects?</h4>
+          </Row>
+          <Row className="justify-content-center">
+            <Button
+              href="http://eepurl.com/g9JPtn"
+              className="primary-button"
+              size="lg"
+              target="_blank"
+              aria-disabled="false"
+              rel="noopener noreferrer"
+            >
+              Join our newsletter
+            </Button>
           </Row>
         </>
       )

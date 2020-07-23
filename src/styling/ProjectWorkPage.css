@@ -86,6 +86,10 @@
   color: var(--main-grey);
 }
 
+.project-detail-type {
+  margin-right: 8px;
+}
+
 @media only screen and (max-width: 992px) {
   .project-detail-email {
     padding: 1.1rem;
