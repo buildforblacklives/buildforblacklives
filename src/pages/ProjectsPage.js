@@ -5,6 +5,7 @@ import { Button, Row, Col, Card, Container } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import ProjectSelectFlow from '../assets/flow_diagrams/project_selection_flow';
 import { ProjectsPageTemp } from './ProjectsPageTemp';
+import ProjectTags from '../components/ProjectTags'
 import { translateAirtableRecord } from '../state/utils'
 import { createProjects } from '../state/projects';
 
@@ -13,7 +14,7 @@ import '../styling/ProjectsPage.css';
 const { Body, Subtitle } = Card;
 
 const ProjectCard = ({ project, isSelectedView, setSelected, selected }) => {
-  const { id, projectTitle, orgName, isUrgent, projectAbout } = project;
+  const { id, projectTitle, orgName, isUrgent, projectAbout, tags } = project;
   const getClass = () => {
     let className = 'preview-card';
     if (isSelectedView) {
@@ -34,10 +35,9 @@ const ProjectCard = ({ project, isSelectedView, setSelected, selected }) => {
         <div className="preview-card-contents">
           <h5> {projectTitle} </h5>
           <Subtitle className="mb-2 preview-subtitle">{orgName}</Subtitle>
-          {isUrgent ?
-            <span className="project-card-urgent">Urgent</span> :
-            <span className="project-tag-space" />}
-          <p className="project-card-description">{projectAbout}</p>
+          <div className="project-card-tags">
+            <ProjectTags isUrgent={isUrgent} tags={tags} />
+          </div>
         </div>
         <div className="project-more-link">
           More details...

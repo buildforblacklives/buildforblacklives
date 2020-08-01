@@ -1,5 +1,17 @@
-export const translateAirtableRecord = (record) => (
-  {
+const mapTags = {
+  "Mobile app" : "Mobile App",
+  "Website (marketing site, interactive platform, informational site)" : "Website/Web App",
+  "Brand development (logo, marketing guidelines)" : "Branding",
+  "Design work (flyers, graphics, posters)" : "Design",
+  "Social media content (campaigns, email templates, protest announcements)" : "Social Media",
+  "Data (analysis, research, visualizations, storage)" : "Data"
+}
+
+export const translateAirtableRecord = (record) => {
+  const recordTags = record.get('Project Type') || []
+  console.log(recordTags)
+
+  return {
     id: record.id,
     isUrgent: record.get('urgent?'),
     orgAbout: record.get('Org Description'),
@@ -8,6 +20,6 @@ export const translateAirtableRecord = (record) => (
     projectTitle: record.get('Project Title'),
     projectAbout: record.get('Project desc'),
     projectDeadline: record.get('Due date'),
-    tags: record.get('Project Type') || []
+    tags: recordTags.map(tag => mapTags[tag])
   }
-)
+}
