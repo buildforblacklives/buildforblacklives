@@ -14,7 +14,7 @@ import '../styling/ProjectsPage.css';
 const { Body, Subtitle } = Card;
 
 const ProjectCard = ({ project, isSelectedView, setSelected, selected }) => {
-  const { id, projectTitle, orgName, isUrgent, projectAbout, tags } = project;
+  const { id, projectTitle, orgName, isUrgent, tags } = project;
   const getClass = () => {
     let className = 'preview-card';
     if (isSelectedView) {
@@ -57,7 +57,7 @@ const SelectedCard = ({ project, setSelected }) => {
 
         <h4> {projectTitle}</h4>
         <Subtitle className="mb-2 project-description-subtitle">{orgName}</Subtitle>
-        {isUrgent && <div className="project-card-urgent">Urgent </div>}
+        {isUrgent && <div className="project-tag project-tag-urgent">Urgent </div>}
 
         {projectDeadline && (
           <>
@@ -71,6 +71,8 @@ const SelectedCard = ({ project, setSelected }) => {
 
         <h5 className="pt-3"> About the Project </h5>
         <p>{projectAbout}</p>
+
+        <p className="project-description-note">You are welcome to join this project even if you only have the skills for a portion of the requirements. Project work may be split between multiple volunteers, and project owners will close projects when they feel that there are enough volunteers committed.</p>
 
         <div className="text-center project-work-button">
           <LinkContainer to={`/projects/${id}`}>

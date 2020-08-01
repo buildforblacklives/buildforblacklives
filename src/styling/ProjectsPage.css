@@ -142,6 +142,11 @@
   font-size: 24px;
 }
 
+.project-description-note {
+  margin: 24px 0;
+  font-style: italic;
+}
+
 .project-work-button {
   margin-top: 32px;
 }
