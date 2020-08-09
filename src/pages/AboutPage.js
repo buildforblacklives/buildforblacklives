@@ -18,12 +18,9 @@ const communityPartners = ['HackBeanpot', 'Unofficial Committee']
 const AboutPage = () => (
   <Container className="about-page" fluid>
     <Row className="about-align-center">
-      <Col xs={12} md={4}>
-        <Logo className="mx-auto d-block about-logo" fluid />
-      </Col>
-      <Col>
-        <h1 className="logotype">Build for Black Lives</h1>
-        <h3 className="about-subheader logotype">Building pro bono projects to support Black lives</h3>
+      <Col xs={12} md={8}>
+        <h1 className="logotype text-center">Build for Black Lives</h1>
+        <h3 className="about-subheader logotype text-center">Building pro bono projects to support Black lives</h3>
         <p>
           Build for Black Lives is a platform built to connect anti-racist individuals with activists, organizers, and
           Black-owned businesses to provide pro bono work creating websites, apps, graphics, social media content, data
@@ -210,21 +207,18 @@ const AboutPage = () => (
             </p>
           </Col>
         </Row>
-      </Col>
-    </Row>
 
-    <hr className="resource-hr" />
-
-    <Row className="padding-r row-align-center">
-      <Row>
-        <Col>
+        <Row className="row-align-center mt-5">
+          <Col>
           <h4>Have additional resources you think should be featured?</h4>
           <p>
             Email us at: <a href="mailto:buildforblacklives@hackbeanpot.com">buildforblacklives@hackbeanpot.com</a> with
             the subject line: "Resource Suggestion".
           </p>
-        </Col>
-      </Row>
+          </Col>
+        </Row>
+
+      </Col>
     </Row>
 
     <hr />
