@@ -14,7 +14,7 @@
 .preview-card {
   border-radius: 16px;
   margin: 16px 0px;
-  box-shadow: 8px 8px 0px 2px rgba(249,245,227,1);
+  box-shadow: 8px 8px 0px 2px rgba(249, 245, 227, 1);
   padding: 4px;
   cursor: pointer;
   background-color: var(--main-grey);
@@ -80,7 +80,7 @@
 }
 
 .preview-card-contents:after {
-  content: "";
+  content: '';
   text-align: right;
   position: absolute;
   bottom: 0;
@@ -119,7 +119,7 @@
 
 .project-description-close:before,
 .project-description-close:after {
-  content:'';
+  content: '';
   position: absolute;
   width: 24px;
   height: 4px;
@@ -130,16 +130,16 @@
 }
 
 .project-description-close:before {
-  -webkit-transform:rotate(45deg);
-  -moz-transform:rotate(45deg);
-  transform:rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  transform: rotate(45deg);
   left: 16px;
 }
 
 .project-description-close:after {
-  -webkit-transform:rotate(-45deg);
-  -moz-transform:rotate(-45deg);
-  transform:rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  transform: rotate(-45deg);
   right: -16px;
 }
 
@@ -185,7 +185,7 @@
 
 .is-select-preview-card .preview-card-contents:after,
 .is-select-preview-card:hover .preview-card-contents:after {
-  background: linear-gradient(rgba(107, 180, 214, 0),rgba(107, 180, 214, 1) 60%);
+  background: linear-gradient(rgba(107, 180, 214, 0), rgba(107, 180, 214, 1) 60%);
 }
 
 .is-select-preview-card:hover h5 {
