@@ -59,7 +59,7 @@ const MainNavbar = () => {
               Project Request
             </NavLink>
           </LinkContainer>
-          <LinkContainer to="/resources">
+          <LinkContainer to="/community-partners">
             <NavLink
               className="navbar-text"
               onClick={() =>
@@ -68,7 +68,7 @@ const MainNavbar = () => {
                 }, 150)
               }
             >
-              Anti-Racist Resources
+              Community Partners
             </NavLink>
           </LinkContainer>
           <LinkContainer to="/faq">

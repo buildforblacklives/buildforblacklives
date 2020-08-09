@@ -14,10 +14,11 @@ const communityPartners = ['HackBeanpot', 'Unofficial Committee']
 
 const CommPartnersPage = () => (
   <Container className="about-page" fluid>
-
+    <Row>
+    <h1>Community Partners</h1>
+    </Row>
     <Row className="about-align-center">
       <Col className="about-order2">
-        <h2>Community Partners</h2>
         <p>The mission of a Community Partner is to expand the reach of Build for Black Lives within your organization, to your followers, and to your local communities</p>
         <div className="about-community-partners-ul">
           {communityPartners.map(partner => <p key={partner}>{partner}</p>)}
