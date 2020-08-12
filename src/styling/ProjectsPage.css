@@ -7,7 +7,7 @@
 }
 
 .projects-page .flow-images {
-  margin: 1rem auto;
+  margin: 3em auto;
   display: block;
 }
 
@@ -195,6 +195,12 @@
 .is-select-preview-card .project-card-urgent {
   border: 2px solid var(--main-black);
   color: var(--main-black);
+}
+
+.projects-newsletter-banner {
+  background: var(--main-grey);
+  padding: 4rem 0;
+  height: 100%;
 }
 
 @media only screen and (max-width: 992px) {

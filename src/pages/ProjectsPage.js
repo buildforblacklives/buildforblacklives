@@ -3,11 +3,12 @@ import { useSelector, useDispatch } from 'react-redux';
 import Airtable from 'airtable';
 import { Button, Row, Col, Card, Container } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
-import ProjectSelectFlow from '../assets/flow_diagrams/project_selection_flow';
+import NewsletterForm from '../components/NewsletterForm';
 import { ProjectsPageTemp } from './ProjectsPageTemp';
+import ProjectSelectFlow from '../assets/flow_diagrams/project_selection_flow';
+import LoadingSpinner from '../assets/loading-spinner';
 import { translateAirtableRecord } from '../state/utils';
 import { createProjects } from '../state/projects';
-import NewsletterForm from '../components/NewsletterForm';
 
 import '../styling/ProjectsPage.css';
 
@@ -130,18 +131,23 @@ const ProjectsPage = () => {
         <>
           <h1>Open Projects</h1>
           <ProjectSelectFlow className="flow-images" />
-          <Row className="d-flex justify-content-left">
-            {projects.map((project) => (
-              <Col key={project.id} lg={4} md={6} sm={12}>
-                <ProjectCard project={project} isSelectedView={false} setSelected={setSelected} />
-              </Col>
-            ))}
+          <Row className={`d-flex mt-5 mb-5 ${hasLoaded ? 'justify-content-left' : 'justify-content-center'}`}>
+            {!hasLoaded ? (
+              <LoadingSpinner />
+            ) : (
+              projects.map((project) => (
+                <Col key={project.id} lg={4} md={6} sm={12}>
+                  <ProjectCard project={project} isSelectedView={false} setSelected={setSelected} />
+                </Col>
+              ))
+            )}
           </Row>
-          <Row className="flex-column align-items-center mr-1 ml-1 mt-5">
-            <h4 className="text-center">Looking for more projects?</h4>
-            <h5 className="text-center mb-4">Join our newsletter to stay updated on new projects</h5>
+
+          <div className="full-width projects-newsletter-banner flex-column align-items-center">
+            <h3 className="text-center mb-3">Looking for more?</h3>
+            <h5 className="text-center mb-5">Join our newsletter to stay updated on new projects</h5>
             <NewsletterForm />
-          </Row>
+          </div>
         </>
       ) : (
         <>
@@ -150,8 +156,14 @@ const ProjectsPage = () => {
           </div>
           <Row>
             <Col lg={4} className="project-list-panel">
-              {projects.map((project) => (
-                <ProjectCard project={project} isSelectedView={true} setSelected={setSelected} selected={selected} />
+              {projects.map((project, index) => (
+                <ProjectCard
+                  key={index}
+                  project={project}
+                  isSelectedView={true}
+                  setSelected={setSelected}
+                  selected={selected}
+                />
               ))}
             </Col>
 

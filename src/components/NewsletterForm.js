@@ -35,17 +35,23 @@ const NewsletterForm = () => {
     if (success) {
       return 'Thank you for subscribing!';
     }
+
+    return '';
   };
 
   return (
     <div className="newsletter-form">
       <form onSubmit={handleFormSubmit}>
-        <input type="email" value={email} name="email" placeholder="Email" onChange={handleEmailChange} />
-        <Button type="submit" className="primary-button" aria-disabled="false" size="sm">
-          Subscribe
-        </Button>
+        <div className="form-container">
+          <input type="email" value={email} name="email" placeholder="Email" onChange={handleEmailChange} />
+          <Button type="submit" className="primary-button" aria-disabled="false" size="sm">
+            Subscribe
+          </Button>
+        </div>
+        <div id="message" className={error ? 'error' : ''}>
+          {displayMessage()}
+        </div>
       </form>
-      <div id="message">{displayMessage()}</div>
     </div>
   );
 };

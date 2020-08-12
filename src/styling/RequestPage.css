@@ -3,11 +3,22 @@
 }
 
 #request-page .flow-images {
-  margin: 1rem 0rem;
+  margin: 3em auto;
 }
 
 #request-page h1 {
   margin-bottom: 1rem;
+}
+
+.request-form-show {
+  opacity: 1;
+  height: 100%;
+  width: 100%;
+}
+
+.request-form-hide {
+  opacity: 0;
+  height: 0;
 }
 
 @media only screen and (max-width: 768px) {

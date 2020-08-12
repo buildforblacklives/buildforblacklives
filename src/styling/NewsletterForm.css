@@ -1,7 +1,15 @@
-.newsletter-form form {
+.newsletter-form {
   display: flex;
-  align-items: center;
   justify-content: center;
+}
+
+.newsletter-form form {
+  flex-direction: column;
+}
+
+.newsletter-form .form-container {
+  display: flex;
+  align-items: flex-start;
 }
 
 .newsletter-form input {
@@ -19,17 +27,22 @@
 
 .newsletter-form #message {
   margin-top: 0.3rem;
+  min-height: 2rem;
+}
+
+.newsletter-form .error {
+    color: var(--error-red)
 }
 
 @media only screen and (max-width: 550px) {
-  .newsletter-form form {
-    flex-direction: column;
-  }
-
   .newsletter-form input {
-    width: 15em;
+    width: 100%;
     font-size: 1rem;
     margin-right: 0;
+  }
+
+  .newsletter-form .form-container {
+    flex-direction: column;
   }
 
   .newsletter-form button {

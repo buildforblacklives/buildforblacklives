@@ -5,6 +5,7 @@ import { LinkContainer } from 'react-router-bootstrap';
 import Logo from '../assets/logo.js';
 import ProjectFlow from '../assets/flow_diagrams/project_selection_flow.js';
 import RequestFlow from '../assets/flow_diagrams/request_flow.js';
+import CommunityPartnersImage from '../assets/community-partners.js';
 import ArrowDown from '../assets/arrow_down.js';
 
 import '../styling/HomePage.css';
@@ -86,6 +87,25 @@ const HomePage = () => (
             Work on one of our available projects.
           </Link>
         </p>
+      </Col>
+    </Row>
+
+    <h2 className="home-track-titles">Partner With Us</h2>
+    <Row className="justify-content-center d-flex flex-wrap align-items-center">
+      <CommunityPartnersImage className="mx-auto d-block about-icon" fluid />
+    </Row>
+    <Row className="home-track-body">
+      <Col xs={12} md={{ span: 8, offset: 2 }}>
+        <p>
+          Interested in partnering with us? Our community partner responsibilities range from helping us spread the
+          word, offering their services to organizations, to finding other unique ways to get involved. We are open to
+          partnering with organizations that are committed to fighting racial inequity.
+        </p>
+        <LinkContainer to="/community-partners" className="mt-3">
+          <Button className="primary-button" size="lg">
+            Learn More
+          </Button>
+        </LinkContainer>
       </Col>
     </Row>
   </Container>
