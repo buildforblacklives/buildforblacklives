@@ -48,7 +48,7 @@ const ProjectCard = ({ project, isSelectedView, setSelected, selected }) => {
 }
 
 const SelectedCard = ({ project, setSelected }) => {
-  const { id, orgName, orgAbout, projectTitle, projectAbout, projectDeadline, isUrgent } = project;
+  const { id, orgName, orgAbout, projectTitle, projectAbout, projectDeadline, isUrgent, tags } = project;
 
   return (
     <Card className="project-description-card">
@@ -57,7 +57,7 @@ const SelectedCard = ({ project, setSelected }) => {
 
         <h4> {projectTitle}</h4>
         <Subtitle className="mb-2 project-description-subtitle">{orgName}</Subtitle>
-        {isUrgent && <div className="project-tag project-tag-urgent">Urgent </div>}
+        <ProjectTags isUrgent={isUrgent} tags={tags} />
 
         {projectDeadline && (
           <>

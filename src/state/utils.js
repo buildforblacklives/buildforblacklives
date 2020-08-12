@@ -9,7 +9,6 @@ const mapTags = {
 
 export const translateAirtableRecord = (record) => {
   const recordTags = record.get('Project Type') || []
-  console.log(recordTags)
 
   return {
     id: record.id,

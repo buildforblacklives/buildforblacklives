@@ -18,8 +18,11 @@
   padding: 4px;
   cursor: pointer;
   background-color: var(--main-grey);
-  height: 300px;
   position: relative;
+}
+
+.preview-card.preview-card:not(.select-view-preview-card) {
+  height: 300px;
 }
 
 .preview-card:hover {
@@ -34,7 +37,6 @@
 .preview-card-contents {
   max-height: 224px;
   overflow: hidden;
-  position: relative;
 }
 
 .preview-subtitle {
@@ -44,8 +46,8 @@
 
 .is-select-preview-card .project-tag,
 .preview-card:hover .project-tag {
-  color: var(--main-black) !important;
-  border: 2px solid var(--main-black) !important;
+  color: var(--main-black);
+  border: 2px solid var(--main-black);
 }
 
 .project-tag {
@@ -55,11 +57,17 @@
   font-size: 14px;
   font-family: HelveticaNeueBold;
   display: inline-block;
+  border: 2px solid var(--light-yellow);
+  color: var(--light-yellow);
 }
 
 .project-tag-urgent {
   border: 2px solid var(--main-blue);
   color: var(--main-blue);
+}
+
+.project-card-tags {
+  margin-top: 16px;
 }
 
 .project-more-link {
@@ -83,6 +91,7 @@
   margin-bottom: 24px;
 
 }
+
 /** Selected card view **/
 
 .projects-back {
@@ -169,6 +178,10 @@
 
 .select-view-preview-card {
   box-shadow: none;
+}
+
+.select-view-preview-card .preview-card-contents {
+  padding-bottom: 32px;
 }
 
 .is-select-preview-card,
