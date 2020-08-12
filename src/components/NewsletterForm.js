@@ -48,7 +48,7 @@ const NewsletterForm = () => {
             Subscribe
           </Button>
         </div>
-        <div id="message" className={error ? 'error' : ''}>
+        <div className={`newsletter-msg ${error ? 'newsletter-msg-error' : ''}`}>
           {displayMessage()}
         </div>
       </form>

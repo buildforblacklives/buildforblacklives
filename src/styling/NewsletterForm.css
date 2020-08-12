@@ -25,13 +25,13 @@
   display: flex;
 }
 
-.newsletter-form #message {
+.newsletter-msg {
   margin-top: 0.3rem;
   min-height: 2rem;
 }
 
-.newsletter-form .error {
-    color: var(--error-red)
+.newsletter-msg-error {
+  color: var(--error-red);
 }
 
 @media only screen and (max-width: 550px) {
@@ -51,7 +51,7 @@
     justify-content: center;
   }
 
-  .newsletter-form #message {
+  .newsletter-msg {
     margin-top: 0.5rem;
   }
 }
