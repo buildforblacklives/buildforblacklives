@@ -19,6 +19,12 @@ export const translateAirtableRecord = (record) => {
     projectTitle: record.get('Project Title'),
     projectAbout: record.get('Project desc'),
     projectDeadline: record.get('Due date'),
-    tags: recordTags.map(tag => mapTags[tag])
+    tags: recordTags.map(tag => mapTags[tag]),
+    orgSocial: record.get('Org website/social media account')
   }
+}
+
+export const formatUrlsInString = (str) => {
+  const urlRegex = /(\S+)(.com|.org|.edu)\/?((\w|\d|\/)+)?/gi
+  return str.replace(urlRegex, (url) => `<a href="${url}" target="__blank">${url}</a>`)
 }

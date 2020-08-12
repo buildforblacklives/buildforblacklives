@@ -5,7 +5,7 @@ const ProjectTags = ({ tags, isUrgent }) => (
     {isUrgent && <span className="project-tag project-tag-urgent">Urgent</span>}
     <div>
       {tags.map(tag => (
-        <span className="project-tag">{tag}</span>
+        <span key={tag} className="project-tag">{tag}</span>
       ))}
     </div>
   </>

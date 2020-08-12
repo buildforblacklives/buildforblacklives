@@ -6,7 +6,7 @@ import { LinkContainer } from 'react-router-bootstrap';
 import ProjectSelectFlow from '../assets/flow_diagrams/project_selection_flow';
 import { ProjectsPageTemp } from './ProjectsPageTemp';
 import ProjectTags from '../components/ProjectTags'
-import { translateAirtableRecord } from '../state/utils'
+import { translateAirtableRecord, formatUrlsInString } from '../state/utils'
 import { createProjects } from '../state/projects';
 
 import '../styling/ProjectsPage.css';
@@ -48,7 +48,7 @@ const ProjectCard = ({ project, isSelectedView, setSelected, selected }) => {
 }
 
 const SelectedCard = ({ project, setSelected }) => {
-  const { id, orgName, orgAbout, projectTitle, projectAbout, projectDeadline, isUrgent, tags } = project;
+  const { id, orgName, orgAbout, projectTitle, projectAbout, projectDeadline, isUrgent, tags, orgSocial } = project;
 
   return (
     <Card className="project-description-card">
@@ -66,7 +66,9 @@ const SelectedCard = ({ project, setSelected }) => {
           </>)
         }
 
+
         <h5 className="pt-3"> About {orgName} </h5>
+        {orgSocial && <p dangerouslySetInnerHTML={{ __html: formatUrlsInString(orgSocial) }} />}
         <p>{orgAbout}</p>
 
         <h5 className="pt-3"> About the Project </h5>

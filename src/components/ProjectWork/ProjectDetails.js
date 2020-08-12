@@ -1,8 +1,9 @@
 import React from 'react'
 import ProjectTags from '../ProjectTags'
+import { formatUrlsInString } from '../../state/utils'
 
 const ProjectDetails = ({ project }) => {
-  const { orgName, orgAbout, projectTitle, projectAbout, projectDeadline, tags } = project
+  const { orgName, orgAbout, projectTitle, projectAbout, projectDeadline, tags, orgSocial } = project
 
   return (
     <div className="project-details-section">
@@ -20,6 +21,7 @@ const ProjectDetails = ({ project }) => {
       </div>
       <div className="info-container">
         <h5>About {orgName}</h5>
+        {orgSocial && <p dangerouslySetInnerHTML={{ __html: formatUrlsInString(orgSocial) }} />}
         <p>{orgAbout}</p>
       </div>
       <div className="info-container  mb-0">
