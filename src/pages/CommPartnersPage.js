@@ -5,7 +5,6 @@ import CommPartnersIcon from '../assets/community-partners.js';
 import MailIcon from '../assets/email-icon.js';
 import TechDesign from '../assets/tech-design.js';
 
-import '../styling/AboutPage.css';
 import '../styling/CommPartnersPage.css';
 
 const outreachPartners = [
@@ -26,9 +25,9 @@ const CommPartnersPage = () => (
     <Row>
       <h1>Community Partners</h1>
     </Row>
-    <Row className="about-align-center">
+    <Row className="comm-align-center">
       <Col xs={12} md={6}>
-        <CommPartnersIcon className="mx-auto d-block about-icon" fluid />
+        <CommPartnersIcon className="mx-auto d-block comm-icon" fluid />
       </Col>
       <Col>
         <p>
@@ -42,17 +41,17 @@ const CommPartnersPage = () => (
 
     <hr />
 
-    <Row className="about-align-center">
-      <Col className="about-order2">
+    <Row className="comm-align-center">
+      <Col className="comm-order2">
         <h2>Outreach</h2>
         <p>Do you have an audience that would be a good fit for our platform, as either clients or volunteers?</p>
         <p>
-          We would love your help in spreading the word about the existence of our platform! Share on your social media,
+          We would love your help in spreading the word comm the existence of our platform! Share on your social media,
           help promote our platform, and email local businesses. We'll provide you the media assets and email templates
           to get started.
         </p>
         <p className="mt-2">Our current Outreach Partners include:</p>
-        <div className="about-community-partners-ul">
+        <div className="comm-partners-ul">
           {outreachPartners.map((partner) => (
             <p key={partner.name}>
               <a href={partner.url}>{partner.name}</a>
@@ -61,15 +60,15 @@ const CommPartnersPage = () => (
         </div>
       </Col>
       <Col xs={12} md={6}>
-        <MailIcon className="mx-auto d-block about-icon" fluid />
+        <MailIcon className="mx-auto d-block comm-icon" fluid />
       </Col>
     </Row>
 
     <hr />
 
-    <Row className="about-align-center">
+    <Row className="comm-align-center">
       <Col xs={12} md={6}>
-        <TechDesign className="mx-auto d-block about-request-icon" fluid />
+        <TechDesign className="mx-auto d-block comm-request-icon" fluid />
       </Col>
       <Col>
         <h2>Service</h2>
@@ -82,9 +81,9 @@ const CommPartnersPage = () => (
           for you to join our cause!
         </p>
         <p className="mt-2">Our current Service Partners include:</p>
-        <div className="about-community-partners-ul">
+        <div className="comm-community-partners-ul">
           {servicePartners.map((partner) => (
-            <p key={partner.name} >
+            <p key={partner.name}>
               <a href={partner.url}>{partner.name}</a>
             </p>
           ))}
@@ -94,8 +93,8 @@ const CommPartnersPage = () => (
 
     <hr />
 
-    <Row className="about-align-center">
-      <Col className="about-order2">
+    <Row className="comm-align-center">
+      <Col className="comm-order2">
         <h2>Become a Community Partner</h2>
         <p>
           You can become a Community Partner by helping us with outreach or providing your services to help with
