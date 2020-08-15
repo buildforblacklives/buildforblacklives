@@ -197,6 +197,10 @@
   color: var(--main-black);
 }
 
+.spinner {
+  margin-top: 3rem
+}
+
 @media only screen and (max-width: 992px) {
   .project-description-card {
     margin-left: 0;
