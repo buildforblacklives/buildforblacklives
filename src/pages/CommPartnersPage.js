@@ -1,26 +1,32 @@
 import React from 'react';
-import { Button, Col, Container, Row } from 'react-bootstrap';
-import { LinkContainer } from 'react-router-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 
 import CommPartnersIcon from '../assets/community-partners.js';
-import WorkProjectIcon from '../assets/project-select-icon.js';
 import MailIcon from '../assets/email-icon.js';
 import TechDesign from '../assets/tech-design.js';
 
 import '../styling/AboutPage.css';
+import '../styling/CommPartnersPage.css';
 
-const outreachPartners = ['HackBeanpot', 'Sandbox'];
+const outreachPartners = [
+  { name: 'HackBeanpot', url: 'https://hackbeanpot.com/' },
+  { name: 'Sandbox', url: 'https://www.sandboxnu.com/' },
+  { name: 'Khoury College of Computer Sciences', url: 'https://www.khoury.northeastern.edu/' },
+  { name: 'Unofficial Committee', url: 'https://www.unofficialcommittee.com/' },
+  { name: 'Common Impact', url: 'https://commonimpact.org/' }
+];
+
 const servicePartners = [
   { name: 'Unofficial Committee', url: 'https://www.unofficialcommittee.com/' },
   { name: 'Support Community', url: 'https://supportcommunity.com/' }
 ];
 
 const CommPartnersPage = () => (
-  <Container className="about-page" fluid>
+  <Container className="comm-partners-page" fluid>
     <Row>
       <h1>Community Partners</h1>
     </Row>
-    <Row className="about-align-center mt-2">
+    <Row className="about-align-center">
       <Col xs={12} md={6}>
         <CommPartnersIcon className="mx-auto d-block about-icon" fluid />
       </Col>
@@ -45,19 +51,12 @@ const CommPartnersPage = () => (
           help promote our platform, and email local businesses. We'll provide you the media assets and email templates
           to get started.
         </p>
-        <div className="about-button-wrapper">
-          <Button
-            href="https://join.slack.com/t/northeastern-hac3935/shared_invite/zt-fctqwcqe-7~n_GXliEYbQzUeqERHH6A"
-            className="primary-button"
-            size="med"
-          >
-            Join our Slack
-          </Button>
-        </div>
         <p className="mt-2">Our current Outreach Partners include:</p>
         <div className="about-community-partners-ul">
           {outreachPartners.map((partner) => (
-            <p key={partner}>{partner}</p>
+            <p key={partner.name}>
+              <a href={partner.url}>{partner.name}</a>
+            </p>
           ))}
         </div>
       </Col>
@@ -85,7 +84,7 @@ const CommPartnersPage = () => (
         <p className="mt-2">Our current Service Partners include:</p>
         <div className="about-community-partners-ul">
           {servicePartners.map((partner) => (
-            <p>
+            <p key={partner.name} >
               <a href={partner.url}>{partner.name}</a>
             </p>
           ))}
