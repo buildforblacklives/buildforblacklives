@@ -219,14 +219,13 @@
     margin-top: 16px;
   }
 
-  .preview-card {
+  .preview-card.preview-card:not(.select-view-preview-card) {
     margin-right: 8px;
     height: auto;
   }
 
   .preview-card-contents {
-    max-height: unset;
-    margin-bottom: 12px;
+    margin-bottom: 24px;
   }
 
   .project-description-card {
