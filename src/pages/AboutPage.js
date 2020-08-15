@@ -9,11 +9,10 @@ import WorkProjectIcon from '../assets/project-select-icon.js';
 import MailIcon from '../assets/email-icon.js';
 
 import TechDesign from '../assets/tech-design.js';
-import '../styling/ResourcesPage.css';
 
 import '../styling/AboutPage.css';
 
-const communityPartners = ['HackBeanpot', 'Unofficial Committee']
+const communityPartners = ['HackBeanpot', 'Unofficial Committee'];
 
 const AboutPage = () => (
   <Container className="about-page" fluid>
@@ -39,8 +38,8 @@ const AboutPage = () => (
 
     <hr />
 
-    <Row className="row-align-center">
-      <Col className="padding-r resources-order1">
+    <Row className="about-align-center">
+      <Col className="padding-r about-order1">
         <h2>Racism in Tech and Design</h2>
         <p>
           The Tech and Design industries have had a long, racist, and non-inclusive history. To this day, these fields
@@ -51,15 +50,15 @@ const AboutPage = () => (
         </p>
       </Col>
       <Col xs={12} md={4}>
-        <TechDesign className="mx-auto d-block resource-icon" fluid />
+        <TechDesign className="mx-auto d-block about-icon" fluid />
       </Col>
     </Row>
 
-    <hr className="resource-hr" />
+    <hr className="about-hr" />
 
     <Row className="row-align-center">
       <Col xs={12} md={4}>
-        <Logo className="mx-auto d-block resource-icon" fluid />
+        <Logo className="mx-auto d-block about-icon" fluid />
       </Col>
       <Col>
         <h2>Where does Build for Black Lives fit in?</h2>
@@ -88,7 +87,7 @@ const AboutPage = () => (
       </Col>
     </Row>
 
-    <hr className="resource-hr" />
+    <hr className="about-hr" />
 
     <Row className="row-align-center">
       <Col xs={12} md={8}>
@@ -210,14 +209,13 @@ const AboutPage = () => (
 
         <Row className="row-align-center mt-5">
           <Col>
-          <h4>Have additional resources you think should be featured?</h4>
-          <p>
-            Email us at: <a href="mailto:buildforblacklives@hackbeanpot.com">buildforblacklives@hackbeanpot.com</a> with
-            the subject line: "Resource Suggestion".
-          </p>
+            <h4>Have additional resources you think should be featured?</h4>
+            <p>
+              Email us at: <a href="mailto:buildforblacklives@hackbeanpot.com">buildforblacklives@hackbeanpot.com</a>{' '}
+              with the subject line: "Resource Suggestion".
+            </p>
           </Col>
         </Row>
-
       </Col>
     </Row>
 

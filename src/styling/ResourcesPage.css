@@ -8,26 +8,9 @@
   margin: 1rem 0;
 }
 
-.row-align-center {
-  align-items: center;
-  justify-content: center;
-}
-
-.heading-link {
-  font-size: 24px;
-  font-family: HelveticaNeueBold;
-  text-decoration: underline;
-  color: var(--main-blue);
-}
 
 a:hover {
   color: var(--main-cream);
-}
-
-.resource-icon {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
 }
 
 .padding-r {
@@ -45,18 +28,9 @@ a:hover {
     margin: 30px auto;
   }
 
-  .padding-r {
-    padding: 0 16px;
-  }
 
-  .resource-hr {
-    border: 0;
-    clear: both;
-    display: block;
-    background-color: var(--main-yellow);
-    height: 3px;
-    margin: 50px 0;
-  }
+
+
 
   .resources-order1 {
     order: 1;
