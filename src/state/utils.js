@@ -25,6 +25,8 @@ export const translateAirtableRecord = (record) => {
 }
 
 export const formatUrlsInString = (str) => {
-  const urlRegex = /(\S+)(.com|.org|.edu)\/?((\w|\d|\/)+)?/gi
-  return str.replace(urlRegex, (url) => `<a href="${url}" target="__blank">${url}</a>`)
+  const urlRegex = /(\S+)(.com|.org|.edu|.net)\/?((\w|\d|\/)+)?/gi
+  return str.replace(urlRegex, (url) =>
+    `<a href="${url.startsWith('http') ? '' : 'https://'}${url}" target="__blank">${url}</a>`
+  )
 }
