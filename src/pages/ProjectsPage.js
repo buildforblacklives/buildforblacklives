@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Airtable from 'airtable'
-import { Button, Row, Col, Card, Container } from 'react-bootstrap';
+import { Button, Row, Col, Card, Container, Spinner } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import ProjectSelectFlow from '../assets/flow_diagrams/project_selection_flow';
 import { ProjectsPageTemp } from './ProjectsPageTemp';
@@ -131,13 +131,19 @@ const ProjectsPage = () => {
         <>
           <h1>Open Projects</h1>
           <ProjectSelectFlow className="flow-images" />
-          <Row className="d-flex justify-content-left">
-            {projects.map((project) => (
-              <Col key={project.id} lg={4} md={6} sm={12}>                
-                <ProjectCard project={project} isSelectedView={false} setSelected={setSelected} />
-              </Col>
-            ))}
-          </Row>
+          {hasLoaded ? (
+            <Row className="d-flex justify-content-left">
+              {projects.map((project) => (
+                <Col key={project.id} lg={4} md={6} sm={12}>
+                  <ProjectCard project={project} isSelectedView={false} setSelected={setSelected} />
+                </Col>
+              ))}
+            </Row>
+          ) : (
+            <Row className="justify-content-center spinner">
+              <Spinner animation="border" variant="warning" />
+            </Row>
+          )}
           <Row className="justify-content-center mt-5">
             <h4>Looking for more projects?</h4>
           </Row>
