@@ -112,6 +112,6 @@
 @media only screen and (max-width: 360px) {
   .logo {
     margin: 36px auto 45px;
-    max-width: 110px;
+    max-width: 200px;
   }
 }
