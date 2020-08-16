@@ -59,18 +59,6 @@ const MainNavbar = () => {
               Project Request
             </NavLink>
           </LinkContainer>
-          <LinkContainer to="/resources">
-            <NavLink
-              className="navbar-text"
-              onClick={() =>
-                setTimeout(() => {
-                  setExpanded(false);
-                }, 150)
-              }
-            >
-              Anti-Racist Resources
-            </NavLink>
-          </LinkContainer>
           <LinkContainer to="/faq">
             <NavLink
               className="navbar-text"

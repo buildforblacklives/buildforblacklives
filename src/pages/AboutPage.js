@@ -207,7 +207,7 @@ const AboutPage = () => (
           </Col>
         </Row>
 
-        <Row className="row-align-center mt-5">
+        <Row className="row-align-center mt-3">
           <Col>
             <h4>Have additional resources you think should be featured?</h4>
             <p>
@@ -222,15 +222,19 @@ const AboutPage = () => (
     <hr />
 
     <Row className="about-align-center">
-      <Col xs={12} md={6}>
+      <Col xs={12} md={4}>
         <MailIcon className="mx-auto d-block about-contact-icon" fluid />
       </Col>
       <Col>
         <h2>Contact Us</h2>
-        <p>Want to get involved, or have questions, thoughts, feedback, or concerns?</p>
+        <p>Want to get involved, or have questions, thoughts, feedback, or concerns?
+           Email us at <a href="mailto:buildforblacklives@hackbeanpot.com">buildforblacklives@hackbeanpot.com</a>.
+        </p>
+        <p>
+        Please use one of the following subject lines to help us filter through questions:
+        </p>
         <p className="about-contact-list">
-          Email us at <a href="mailto:buildforblacklives@hackbeanpot.com">buildforblacklives@hackbeanpot.com</a>.<br />
-          Please use one of the following subject lines to help us filter through questions:
+
           <p>"[Volunteer] Question"</p>
           <p>"[Project Request] Question"</p>
           <p>"[Community Partner] Question"</p>

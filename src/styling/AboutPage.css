@@ -33,6 +33,17 @@
   margin: 4px 0 4px 32px;
 }
 
+.heading-link {
+  font-size: 24px;
+  font-family: HelveticaNeueBold;
+  text-decoration: underline;
+  color: var(--main-blue);
+}
+
+.heading-link:hover {
+  color: var(--main-cream);
+}
+
 @media only screen and (max-width: 1200px) {
   .about-contact-icon,
   .about-icon {
@@ -80,12 +91,5 @@
     background-color: var(--main-yellow);
     height: 3px;
     margin: 50px 0;
-  }
-
-  .heading-link {
-    font-size: 24px;
-    font-family: HelveticaNeueBold;
-    text-decoration: underline;
-    color: var(--main-blue);
   }
 }
