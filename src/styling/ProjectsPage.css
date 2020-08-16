@@ -225,6 +225,7 @@
   }
 
   .preview-card-contents {
+    max-height: none;
     margin-bottom: 24px;
   }
 
