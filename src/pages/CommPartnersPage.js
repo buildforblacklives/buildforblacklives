@@ -48,8 +48,8 @@ const CommPartnersPage = () => (
         <h2>Outreach</h2>
         <p>Do you have an audience that would be a good fit for our platform, as either clients or volunteers?</p>
         <p>
-          We would love your help in spreading the word about our platform! Share on your social media, help promote our
-          platform, and email local businesses. We'll provide you the media assets and email templates to get started.
+          We would love your help in spreading the word about our platform! <b>Share</b> on your social media, <b>promote</b> our
+          platform, and <b>email</b> local businesses. We'll provide you the media assets and email templates to get started.
         </p>
         <p className="mt-2">Our current Outreach Partners include:</p>
         <div className="comm-partners-ul">
@@ -74,7 +74,7 @@ const CommPartnersPage = () => (
       <Col>
         <h2>Service</h2>
         <p>
-          Is your organization able to provide a resource that would be invaluable to building out any of the project
+          Is your organization able to <b>provide a resource</b> that would be invaluable to building out any of the project
           requests on our platform?
         </p>
         <p>
