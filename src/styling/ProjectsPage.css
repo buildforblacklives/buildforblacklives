@@ -9,12 +9,13 @@
 .projects-page .flow-images {
   margin: 1rem auto;
   display: block;
+  padding-right: 1rem;
 }
 
 .preview-card {
   border-radius: 16px;
   margin: 16px 0px;
-  box-shadow: 8px 8px 0px 2px rgba(249,245,227,1);
+  box-shadow: 8px 8px 0px 2px rgba(249, 245, 227, 1);
   padding: 4px;
   cursor: pointer;
   background-color: var(--main-grey);
@@ -89,7 +90,6 @@
 .project-card-description {
   line-height: 1.3rem;
   margin-bottom: 24px;
-
 }
 
 /** Selected card view **/
@@ -117,7 +117,7 @@
 
 .project-description-close:before,
 .project-description-close:after {
-  content:'';
+  content: '';
   position: absolute;
   width: 24px;
   height: 4px;
@@ -128,16 +128,16 @@
 }
 
 .project-description-close:before {
-  -webkit-transform:rotate(45deg);
-  -moz-transform:rotate(45deg);
-  transform:rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  transform: rotate(45deg);
   left: 16px;
 }
 
 .project-description-close:after {
-  -webkit-transform:rotate(-45deg);
-  -moz-transform:rotate(-45deg);
-  transform:rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  transform: rotate(-45deg);
   right: -16px;
 }
 
