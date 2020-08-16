@@ -145,7 +145,7 @@ const ProjectsPage = () => {
 
           <div className="full-width projects-newsletter-banner flex-column align-items-center">
             <h3 className="text-center mb-3">Looking for more?</h3>
-            <h5 className="text-center mb-5">Join our newsletter to stay updated on new projects</h5>
+            <h5 className="text-center mb-4">Join our newsletter to stay updated on new projects</h5>
             <NewsletterForm />
           </div>
         </>
