@@ -1,7 +1,7 @@
 import React from 'react'
 
 const RequestFlow = ({ className }) => (
-  <svg className={className} id="request-flow" xmlns="http://www.w3.org/2000/svg" width="849" height="225" viewBox="0 0 849 227">
+  <svg className={className} id="request-flow" xmlns="http://www.w3.org/2000/svg" width="851" height="225" viewBox="0 0 851 225">
     <g id="Group_46" data-name="Group 46" transform="translate(301.875)">
       <text id="_2" data-name="2" transform="translate(0.125 33)" fill="#f5cb4c" fontSize="34" fontFamily="HelveticaNeueMed, HelveticaNeue" fontWeight="500"><tspan x="0" y="0">2</tspan></text>
       <g id="Group_43" data-name="Group 43" transform="translate(50.8 27.304)">
