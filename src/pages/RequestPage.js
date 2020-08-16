@@ -8,10 +8,6 @@ import '../styling/RequestPage.css';
 const RequestPage = () => {
   const [hasLoaded, setHasLoaded] = useState(false);
 
-  const hideLoadingSpinner = () => {
-    setHasLoaded(true);
-  };
-
   return (
     <Container id="request-page" className="justify-content-md-center">
       <Row>
@@ -23,10 +19,10 @@ const RequestPage = () => {
       <Row className="mt-3">
         <Col>
           <script src="https://static.airtable.com/js/embed/embed_snippet_v1.js"></script>
-          {!hasLoaded && <LoadingSpinner/>}
+          {!hasLoaded && <LoadingSpinner />}
           <Card className={`bg-light ${hasLoaded ? 'request-form-show' : 'request-form-hide'}`}>
             <iframe
-              onLoad={hideLoadingSpinner}
+              onLoad={() => setHasLoaded(true)}
               className="airtable-embed airtable-dynamic-height"
               title="Project Request Form"
               src="https://airtable.com/embed/shrTG9sJPU2y4h3uI?backgroundColor=gray"
