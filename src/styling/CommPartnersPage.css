@@ -25,6 +25,10 @@
   max-width: 400px;
 }
 
+.comm-partners-page h2 {
+  margin-bottom: 1rem 0;
+}
+
 .comm-partners-ul p {
   margin: 4px 0 4px 32px;
 }
