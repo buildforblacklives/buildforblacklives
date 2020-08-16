@@ -1,24 +1,28 @@
 .comm-partners-page {
   max-width: 1400px;
-  margin: 3rem auto;
+  margin: 2rem auto;
   padding: 0 32px;
 }
 
-.comm-request-icon {
-  width: 100%;
-  max-width: 250px;
-  height: auto;
-}
-
-.comm-icon {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-}
 
 .comm-align-center {
   align-items: center;
   justify-content: center;
+}
+
+.comm-icon {
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+  margin: 1rem 0;
+}
+
+.comm-mail-icon {
+  max-width: 300px;
+}
+
+.comm-tech-design-icon {
+  max-width: 400px;
 }
 
 .comm-partners-ul p {
@@ -27,20 +31,52 @@
 
 @media only screen and (max-width: 1200px) {
   .comm-icon {
-    max-width: 250px;
+    max-width: 290px;
   }
 
-  .comm-request-icon {
+  .comm-mail-icon {
     max-width: 200px;
+  }
+
+  .comm-tech-design-icon {
+    max-width: 270px;
   }
 }
 
 @media only screen and (max-width: 768px) {
+  .comm-partners-page {
+    margin-top: 16px;
+  }
+  
   .comm-order2 {
     order: 2;
   }
 
   .comm-icon {
+    max-width: 240px;
+  }
+
+  .comm-mail-icon {
+    max-width: 130px;
+  }
+
+  .comm-tech-design-icon {
+    max-width: 200px;
+  }
+
+}
+
+@media only screen and (max-width: 468px) {
+  .comm-icon {
+    max-width: 200px;
+  }
+
+  .comm-mail-icon {
+    max-width: 100px;
+  }
+
+  .comm-tech-design-icon {
     max-width: 150px;
   }
 }
+

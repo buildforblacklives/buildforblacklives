@@ -17,7 +17,10 @@ const outreachPartners = [
 const servicePartners = [
   { name: 'Unofficial Committee', url: 'https://www.unofficialcommittee.com/' },
   { name: 'Support Community, Inc', url: 'https://supportcommunity.com/' },
-  { name: 'Community Design Studio, Lesley Art + Design', url: 'http://lesley.smartcatalogiq.com/en/2020-2021/Undergraduate-Academic-Catalog/Undergraduate-Programs-and-Courses/College-of-Art-and-Design-Courses/IDESN-Design/3000/IDESN-3370' },
+  {
+    name: 'Community Design Studio, Lesley Art + Design',
+    url: 'https://lesley.edu/academics/college-of-art-design/community-engagement'
+  }
 ];
 
 const CommPartnersPage = () => (
@@ -26,14 +29,14 @@ const CommPartnersPage = () => (
       <h1>Community Partners</h1>
     </Row>
     <Row className="comm-align-center">
-      <Col xs={12} md={6}>
+      <Col xs={12}>
         <CommPartnersIcon className="mx-auto d-block comm-icon" fluid />
       </Col>
-      <Col>
+      <Col lg={6} md={12} >
         <p>
           The success of Build for Black Lives as a platform would not be possible without our Community Partners, who
-          have helped us expand the reach of Build for Black Lives by sharing with their respective audiences or offering
-          their skills to help build out projects on our platform.
+          have helped us expand the reach of Build for Black Lives by sharing with their respective audiences or
+          offering their skills to help build out projects on our platform.
         </p>
       </Col>
     </Row>
@@ -45,9 +48,8 @@ const CommPartnersPage = () => (
         <h2>Outreach</h2>
         <p>Do you have an audience that would be a good fit for our platform, as either clients or volunteers?</p>
         <p>
-          We would love your help in spreading the word about our platform! Share on your social media,
-          help promote our platform, and email local businesses. We'll provide you the media assets and email templates
-          to get started.
+          We would love your help in spreading the word about our platform! Share on your social media, help promote our
+          platform, and email local businesses. We'll provide you the media assets and email templates to get started.
         </p>
         <p className="mt-2">Our current Outreach Partners include:</p>
         <div className="comm-partners-ul">
@@ -59,7 +61,7 @@ const CommPartnersPage = () => (
         </div>
       </Col>
       <Col xs={12} md={6}>
-        <MailIcon className="mx-auto d-block comm-icon" fluid />
+        <MailIcon className="mx-auto d-block comm-icon comm-mail-icon" fluid />
       </Col>
     </Row>
 
@@ -67,20 +69,20 @@ const CommPartnersPage = () => (
 
     <Row className="comm-align-center">
       <Col xs={12} md={6}>
-        <TechDesign className="mx-auto d-block comm-request-icon" fluid />
+        <TechDesign className="mx-auto d-block comm-icon comm-tech-design-icon" fluid />
       </Col>
       <Col>
         <h2>Service</h2>
         <p>
-          Is your organization able to provide a resource that would be invaluable to building out any of the project requests
-          on our platform?
+          Is your organization able to provide a resource that would be invaluable to building out any of the project
+          requests on our platform?
         </p>
         <p>
           We've really appreciated the community reaching out to us in wanting to support our platform and would love
           for you to join our cause!
         </p>
         <p className="mt-2">Our current Service Partners include:</p>
-        <div className="comm-community-partners-ul">
+        <div className="comm-partners-ul">
           {servicePartners.map((partner) => (
             <p key={partner.name}>
               <a href={partner.url}>{partner.name}</a>
