@@ -92,7 +92,7 @@ const HomePage = () => (
 
     <h2 className="home-track-titles">Partner With Us</h2>
     <Row className="justify-content-center d-flex flex-wrap align-items-center">
-      <CommunityPartnersImage className="mx-auto d-block about-icon" fluid />
+      <CommunityPartnersImage className="mx-auto d-block home-comm-partners-icon" fluid />
     </Row>
     <Row className="home-track-body">
       <Col xs={12} md={{ span: 8, offset: 2 }}>
