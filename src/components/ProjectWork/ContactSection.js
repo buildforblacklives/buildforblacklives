@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Button, Card } from 'react-bootstrap';
 
 const Template = ({ orgName, projectTitle }, textType) => {
-  let newline = textType === 'uri' ? '%0d%0a' : '\n';
+  let newline = textType === 'uri' ? '%0d%0a%0d%0a' : '\n';
 
   return `
 Hello ${orgName},${newline}

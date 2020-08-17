@@ -3,8 +3,9 @@ import { useSelector, useDispatch } from 'react-redux';
 import Airtable from 'airtable';
 import { Button, Row, Col, Card, Container, Spinner } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
-import ProjectSelectFlow from '../assets/flow_diagrams/project_selection_flow';
+import NewsletterForm from '../components/NewsletterForm';
 import { ProjectsPageTemp } from './ProjectsPageTemp';
+import ProjectSelectFlow from '../assets/flow_diagrams/project_selection_flow';
 import ProjectTags from '../components/ProjectTags'
 import { translateAirtableRecord, formatUrlsInString } from '../state/utils'
 import { createProjects } from '../state/projects';
@@ -144,24 +145,14 @@ const ProjectsPage = () => {
               ))}
             </Row>
           ) : (
-            <Row className="justify-content-center project-loading-spinner">
-              <Spinner animation="border" variant="warning" />
+            <Row className="justify-content-center spinner-row">
+              <Spinner className="spinner" animation="border" variant="warning" />
             </Row>
           )}
-          <Row className="justify-content-center mt-5">
-            <h4>Looking for more projects?</h4>
-          </Row>
-          <Row className="justify-content-center">
-            <Button
-              href="http://eepurl.com/g9JPtn"
-              className="primary-button"
-              size="lg"
-              target="_blank"
-              aria-disabled="false"
-              rel="noopener noreferrer"
-            >
-              Join our newsletter
-            </Button>
+          <Row className="full-width projects-newsletter-banner flex-column align-items-center">
+            <h3 className="text-center mb-3">Looking for more?</h3>
+            <h5 className="text-center mb-4">Join our newsletter to stay updated on new projects</h5>
+            <NewsletterForm />
           </Row>
         </>
       ) : (
@@ -171,8 +162,14 @@ const ProjectsPage = () => {
           </div>
           <Row>
             <Col lg={4} className="project-list-panel">
-              {projects.map((project) => (
-                <ProjectCard project={project} isSelectedView={true} setSelected={setSelected} selected={selected} />
+              {projects.map((project, index) => (
+                <ProjectCard
+                  key={index}
+                  project={project}
+                  isSelectedView={true}
+                  setSelected={setSelected}
+                  selected={selected}
+                />
               ))}
             </Col>
 
