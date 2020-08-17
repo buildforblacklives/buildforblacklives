@@ -59,6 +59,18 @@ const MainNavbar = () => {
               Project Request
             </NavLink>
           </LinkContainer>
+          <LinkContainer to="/community-partners">
+            <NavLink
+              className="navbar-text"
+              onClick={() =>
+                setTimeout(() => {
+                  setExpanded(false);
+                }, 150)
+              }
+            >
+              Community Partners
+            </NavLink>
+          </LinkContainer>
           <LinkContainer to="/faq">
             <NavLink
               className="navbar-text"
