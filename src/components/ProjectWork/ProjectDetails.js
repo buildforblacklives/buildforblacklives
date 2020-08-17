@@ -1,9 +1,9 @@
-import React from 'react';
-
-const tagColors = ['#f5cb5c', '#6bb4d6', '#fff0b3', '#F9F5E3']
+import React from 'react'
+import ProjectTags from '../ProjectTags'
+import { formatUrlsInString } from '../../state/utils'
 
 const ProjectDetails = ({ project }) => {
-  const { orgName, orgAbout, projectTitle, projectAbout, projectDeadline, tags } = project
+  const { orgName, orgAbout, projectTitle, projectAbout, projectDeadline, tags, orgSocial } = project
 
   return (
     <div className="project-details-section">
@@ -13,9 +13,7 @@ const ProjectDetails = ({ project }) => {
       </div>
       <div className="info-container">
         <h5>Project Type</h5>
-        {tags.map((tag, index) =>
-          <span className="project-detail-type" key={tag} style={{color: tagColors[index % 4]}}>{tag}</span>
-        )}
+        <ProjectTags tags={tags} />
       </div>
       <div className="info-container">
         <h5>Project Deadline</h5>
@@ -23,6 +21,7 @@ const ProjectDetails = ({ project }) => {
       </div>
       <div className="info-container">
         <h5>About {orgName}</h5>
+        {orgSocial && <p dangerouslySetInnerHTML={{ __html: formatUrlsInString(orgSocial) }} />}
         <p>{orgAbout}</p>
       </div>
       <div className="info-container  mb-0">

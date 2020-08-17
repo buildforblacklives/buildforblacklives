@@ -5,30 +5,26 @@
 }
 
 .about-page h2 {
-  margin: 1rem 0;
+  margin-bottom: 1rem;
 }
 
 .about-subheader {
   margin-bottom: 2rem;
 }
 
-.about-request-icon {
-  width: 100%;
-  max-width: 250px;
-  height: auto;
-}
-
-.about-contact-icon,
-.about-icon,
-.about-logo {
+.about-icon {
   width: 100%;
   max-width: 300px;
   height: auto;
+  margin: 1rem 0;
 }
 
-.container {
-  margin-top: 100px;
-  margin-bottom: 100px;
+.about-mail-icon {
+  max-width: 300px;
+}
+
+.about-tech-design-icon {
+  max-width: 390px;
 }
 
 .about-page .about-social-logo {
@@ -41,24 +37,42 @@
   justify-content: center;
 }
 
-.about-community-partners-ul p,
-.about-contact-list .about-list-item {
+.about-contact-list {
   margin: 4px 0 4px 32px;
 }
 
+.heading-link {
+  font-size: 24px;
+  font-family: HelveticaNeueBold;
+  text-decoration: underline;
+  color: var(--main-blue);
+}
+
+.heading-link:hover {
+  color: var(--main-cream);
+}
+
+.row-align-center {
+  align-items: center;
+  justify-content: center;
+}
+
 @media only screen and (max-width: 1200px) {
-  .about-contact-icon,
-  .about-icon,
-  .about-logo {
+  /* .about-contact-icon,
+  .about-icon {
+    max-width: 250px;
+  } */
+
+  .about-icon {
     max-width: 250px;
   }
 
-  .about-logo {
-    margin-bottom: 16px;
+  .about-tech-design-icon {
+    max-width: 300px;
   }
 
-  .about-request-icon {
-    max-width: 200px;
+  .about-mail-icon {
+    max-width: 220px;
   }
 
   .about-page {
@@ -68,33 +82,56 @@
 
 @media only screen and (max-width: 768px) {
   .about-page {
-    padding: 0 24px;
+    padding: 0 16px;
+    margin-top: 16px;
   }
 
-  .about-order2 {
-    order: 2;
-  }
-
-  .about-contact-icon,
-  .about-icon,
-  .about-logo {
-    max-width: 150px;
-  }
-
-  .about-request-icon {
-    max-width: 100px;
-  }
 
   .about-social-logo-row {
     display: flex;
     justify-content: center;
   }
 
-  .about-button-wrapper {
-    display: flex;
+  .about-icon {
+    max-width: 190px;
   }
 
-  .about-button-wrapper .primary-button {
-    margin: 0 auto;
+  .about-tech-design-icon {
+    max-width: 250px;
+  }
+
+  .about-mail-icon {
+    max-width: 170px;
+  }
+
+  .about-order1 {
+    order: 1;
+  }
+
+  .padding-r {
+    padding: 0 16px;
+  }
+
+  .about-hr {
+    border: 0;
+    clear: both;
+    display: block;
+    background-color: var(--main-yellow);
+    height: 3px;
+    margin: 50px 0;
+  }
+}
+
+@media only screen and (max-width: 468px) {
+  .about-icon {
+    max-width: 120px;
+  }
+
+  .about-mail-icon {
+    max-width: 120px;
+  }
+
+  .about-tech-design-icon {
+    max-width: 150px;
   }
 }
