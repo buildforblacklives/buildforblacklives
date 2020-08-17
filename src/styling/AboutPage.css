@@ -44,6 +44,11 @@
   color: var(--main-cream);
 }
 
+.row-align-center {
+  align-items: center;
+  justify-content: center;
+}
+
 @media only screen and (max-width: 1200px) {
   .about-contact-icon,
   .about-icon {

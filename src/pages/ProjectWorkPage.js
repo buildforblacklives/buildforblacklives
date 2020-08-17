@@ -114,7 +114,7 @@ const ProjectWorkPage = ({ match }) => {
                 anti-racist technology.
               </p>
               <div className="bottom-button-container">
-                <Link to="/resources">
+                <Link to="/about">
                   <Button className="primary-button">Take me to Anti-Racist Resources</Button>
                 </Link>
               </div>
