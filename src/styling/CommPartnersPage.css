@@ -1,0 +1,84 @@
+.comm-partners-page {
+  max-width: 1400px;
+  margin: 2rem auto;
+  padding: 0 32px;
+}
+
+.comm-partners-page h2 {
+  margin-bottom: 1rem 0;
+}
+
+.comm-align-center {
+  align-items: center;
+  justify-content: center;
+}
+
+.comm-icon {
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+  margin: 1rem 0;
+}
+
+.comm-mail-icon {
+  max-width: 300px;
+}
+
+.comm-tech-design-icon {
+  max-width: 400px;
+}
+
+.comm-partners-ul p {
+  margin: 4px 0 4px 32px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .comm-icon {
+    max-width: 290px;
+  }
+
+  .comm-mail-icon {
+    max-width: 200px;
+  }
+
+  .comm-tech-design-icon {
+    max-width: 270px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .comm-partners-page {
+    margin-top: 16px;
+  }
+  
+  .comm-order2 {
+    order: 2;
+  }
+
+  .comm-icon {
+    max-width: 240px;
+  }
+
+  .comm-mail-icon {
+    max-width: 170px;
+  }
+
+  .comm-tech-design-icon {
+    max-width: 250px;
+  }
+}
+
+@media only screen and (max-width: 468px) {
+  .comm-icon {
+    max-width: 180px;
+  }
+
+  .comm-mail-icon {
+    max-width: 120px;
+  }
+
+  .comm-tech-design-icon {
+    max-width: 150px;
+  }
+}
+

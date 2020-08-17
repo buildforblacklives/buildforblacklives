@@ -1,3 +1,9 @@
+#faq-page {
+  max-width: 1400px;
+  margin: 2rem auto;
+  padding: 0 32px;
+}
+
 /* Tabs */
 #faq-page .nav-tabs {
   display: flex;
@@ -50,6 +56,13 @@
   #faq-page .nav-link.active,
   #faq-page .nav-link.active:hover {
     flex-grow: 1;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #faq-page {
+    padding: 0 16px;
+    margin-top: 16px;
   }
 }
 
