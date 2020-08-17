@@ -145,8 +145,8 @@ const ProjectsPage = () => {
               ))}
             </Row>
           ) : (
-            <Row className="justify-content-center spinner">
-              <Spinner animation="border" variant="warning" />
+            <Row className="justify-content-center spinner-row">
+              <Spinner className="spinner" animation="border" variant="warning" />
             </Row>
           )}
           <Row className="full-width projects-newsletter-banner flex-column align-items-center">

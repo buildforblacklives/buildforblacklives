@@ -183,6 +183,15 @@ hr {
   }
 }
 
+.spinner-row {
+  margin-top: 3rem
+}
+
+.spinner {
+  width: 100px;
+  height: 100px;
+}
+
 @media only screen and (max-width: 768px) {
   hr {
     margin: 2rem 0;

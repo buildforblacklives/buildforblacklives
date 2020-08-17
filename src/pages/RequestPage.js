@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Col, Container, Row, Card } from 'react-bootstrap';
+import { Col, Container, Row, Card, Spinner } from 'react-bootstrap';
 
 import RequestFlow from '../assets/flow_diagrams/request_flow.js';
 import LoadingSpinner from '../assets/loading-spinner';
@@ -19,7 +19,11 @@ const RequestPage = () => {
       <Row className="mt-3">
         <Col>
           <script src="https://static.airtable.com/js/embed/embed_snippet_v1.js"></script>
-          {!hasLoaded && <LoadingSpinner />}
+          {!hasLoaded && (
+            <Row className="justify-content-center spinner-row">
+              <Spinner className="spinner"  animation="border" variant="warning" />
+            </Row>
+          )}
           <Card className={`bg-light ${hasLoaded ? 'request-form-show' : 'request-form-hide'}`}>
             <iframe
               onLoad={() => setHasLoaded(true)}
