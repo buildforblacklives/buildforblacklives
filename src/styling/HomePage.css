@@ -123,6 +123,12 @@
   }
 }
 
+@media only screen and (max-width: 468px) {
+  .home-comm-partners-icon {
+    max-width: 120px;
+  }
+}
+
 @media only screen and (max-width: 360px) {
   .logo {
     margin: 36px auto 45px;

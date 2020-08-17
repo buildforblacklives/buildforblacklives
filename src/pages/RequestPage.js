@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { Col, Container, Row, Card, Spinner } from 'react-bootstrap';
-
 import RequestFlow from '../assets/flow_diagrams/request_flow.js';
-import LoadingSpinner from '../assets/loading-spinner';
 import '../styling/RequestPage.css';
 
 const RequestPage = () => {
