@@ -60,7 +60,7 @@ const CommPartnersPage = () => (
           ))}
         </div>
       </Col>
-      <Col xs={12} md={6}>
+      <Col xs={12} md={4}>
         <MailIcon className="mx-auto d-block comm-icon comm-mail-icon" fluid />
       </Col>
     </Row>
@@ -68,7 +68,7 @@ const CommPartnersPage = () => (
     <hr />
 
     <Row className="comm-align-center">
-      <Col xs={12} md={6}>
+      <Col xs={12} md={4}>
         <TechDesign className="mx-auto d-block comm-icon comm-tech-design-icon" fluid />
       </Col>
       <Col>

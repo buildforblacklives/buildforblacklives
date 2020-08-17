@@ -12,11 +12,19 @@
   margin-bottom: 2rem;
 }
 
-.about-contact-icon,
 .about-icon {
   width: 100%;
   max-width: 300px;
   height: auto;
+  margin: 1rem 0;
+}
+
+.about-mail-icon {
+  max-width: 300px;
+}
+
+.about-tech-design-icon {
+  max-width: 390px;
 }
 
 .about-page .about-social-logo {
@@ -50,9 +58,21 @@
 }
 
 @media only screen and (max-width: 1200px) {
-  .about-contact-icon,
+  /* .about-contact-icon,
   .about-icon {
     max-width: 250px;
+  } */
+
+  .about-icon {
+    max-width: 250px;
+  }
+
+  .about-tech-design-icon {
+    max-width: 300px;
+  }
+
+  .about-mail-icon {
+    max-width: 220px;
   }
 
   .about-page {
@@ -66,10 +86,6 @@
     margin-top: 16px;
   }
 
-  .about-contact-icon,
-  .about-icon {
-    max-width: 150px;
-  }
 
   .about-social-logo-row {
     display: flex;
@@ -77,9 +93,15 @@
   }
 
   .about-icon {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
+    max-width: 190px;
+  }
+
+  .about-tech-design-icon {
+    max-width: 250px;
+  }
+
+  .about-mail-icon {
+    max-width: 170px;
   }
 
   .about-order1 {
@@ -97,5 +119,19 @@
     background-color: var(--main-yellow);
     height: 3px;
     margin: 50px 0;
+  }
+}
+
+@media only screen and (max-width: 468px) {
+  .about-icon {
+    max-width: 120px;
+  }
+
+  .about-mail-icon {
+    max-width: 120px;
+  }
+
+  .about-tech-design-icon {
+    max-width: 150px;
   }
 }

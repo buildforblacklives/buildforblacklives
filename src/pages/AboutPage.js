@@ -46,11 +46,11 @@ const AboutPage = () => (
         </p>
       </Col>
       <Col xs={12} md={4}>
-        <TechDesign className="mx-auto d-block about-icon" fluid />
+        <TechDesign className="mx-auto d-block about-icon about-tech-design-icon" fluid />
       </Col>
     </Row>
 
-    <hr className="about-hr" />
+    <hr />
 
     <Row className="row-align-center">
       <Col xs={12} md={4}>
@@ -83,7 +83,7 @@ const AboutPage = () => (
       </Col>
     </Row>
 
-    <hr className="about-hr" />
+    <hr />
 
     <Row className="row-align-center">
       <Col xs={12} md={8}>
@@ -118,7 +118,7 @@ const AboutPage = () => (
 
     <Row className="about-align-center">
       <Col xs={12} md={4}>
-        <MailIcon className="mx-auto d-block about-contact-icon" fluid />
+        <MailIcon className="mx-auto d-block about-icon about-mail-icon" fluid />
       </Col>
       <Col>
         <h2>Contact Us</h2>
