@@ -22,7 +22,12 @@
 }
 
 @media only screen and (max-width: 768px) {
+  #request-page {
+    padding: 0 16px;
+    margin-top: 16px;
+  }
+
   #request-page h1 {
-    margin-left: 16px;
+    margin-left: 10px;
   }
 }
