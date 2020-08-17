@@ -83,11 +83,11 @@ const AboutPage = () => (
       </Col>
     </Row>
 
-    <hr className="about-hr" />
+    <hr className="about-hr" id="resources" />
 
     <Row className="row-align-center">
       <Col xs={12} md={8}>
-        <h2>Anti-Racist Resources</h2>
+        <h2 className="text-center">Anti-Racist Resources</h2>
         { ResourceItems.map((resource, i) =>
             <Row className="row-align-center" key={i}>
               <Col>

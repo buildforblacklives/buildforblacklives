@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import Airtable from 'airtable';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
 import { Container, Button } from 'react-bootstrap';
 
 import CustomAccordion from '../components/CustomAccordion';
@@ -114,7 +115,7 @@ const ProjectWorkPage = ({ match }) => {
                 anti-racist technology.
               </p>
               <div className="bottom-button-container">
-                <Link to="/about">
+                <Link smooth to="/about#resources">
                   <Button className="primary-button">Take me to Anti-Racist Resources</Button>
                 </Link>
               </div>
