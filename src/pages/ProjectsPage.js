@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import Airtable from 'airtable'
+import Airtable from 'airtable';
 import { Button, Row, Col, Card, Container, Spinner } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import NewsletterForm from '../components/NewsletterForm';
