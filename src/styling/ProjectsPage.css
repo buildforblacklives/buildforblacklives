@@ -151,6 +151,11 @@
   font-size: 24px;
 }
 
+
+.project-loading-spinner {
+  margin-top: 3rem
+}
+
 .project-description-note {
   margin: 24px 0;
   font-style: italic;
@@ -199,9 +204,6 @@
   color: var(--main-black);
 }
 
-.spinner {
-  margin-top: 3rem
-}
 
 @media only screen and (max-width: 992px) {
   .project-description-card {
