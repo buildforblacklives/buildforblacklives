@@ -11,13 +11,13 @@ const ProjectSelectFlow = ({ className }) => (
     viewBox="0 0 843 225"
   >
     <defs>
-      <clipPath id="clip-path">
+      <clipPath id="clipPath">
         <rect width="93" height="81" fill="none" />
       </clipPath>
-      <clipPath id="clip-path-2">
+      <clipPath id="clipPath-2">
         <rect width="93" height="83" fill="none" />
       </clipPath>
-      <clipPath id="clip-path-3">
+      <clipPath id="clipPath-3">
         <rect width="76" height="95" fill="none" />
       </clipPath>
     </defs>
@@ -26,9 +26,9 @@ const ProjectSelectFlow = ({ className }) => (
       data-name="1"
       transform="translate(0 33)"
       fill="#f5cb4c"
-      font-size="34"
-      font-family="HelveticaNeue-Medium, Helvetica Neue"
-      font-weight="500"
+      fontSize="34"
+      fontFamily="HelveticaNeueMed, Helvetica Neue"
+      fontWeight="500"
     >
       <tspan x="0" y="0">
         1
@@ -39,9 +39,9 @@ const ProjectSelectFlow = ({ className }) => (
       data-name="Select a Project"
       transform="translate(13 219)"
       fill="#f9f5e3"
-      font-size="26"
-      font-family="HelveticaNeue-Bold, Helvetica Neue"
-      font-weight="700"
+      fontSize="26"
+      fontFamily="HelveticaNeueBold, Helvetica Neue"
+      fontWeight="700"
     >
       <tspan x="0" y="0">
         Select a Project
@@ -68,7 +68,7 @@ const ProjectSelectFlow = ({ className }) => (
           fill="#1f1f1f"
         />
       </g>
-      <g id="Repeat_Grid_3" data-name="Repeat Grid 3" transform="translate(34.092 21.438)" clip-path="url(#clip-path)">
+      <g id="Repeat_Grid_3" data-name="Repeat Grid 3" transform="translate(34.092 21.438)" clipPath="url(#clipPath)">
         <g transform="translate(-1650 -919)">
           <rect
             id="Rectangle_50"
@@ -118,7 +118,7 @@ const ProjectSelectFlow = ({ className }) => (
         id="Repeat_Grid_4"
         data-name="Repeat Grid 4"
         transform="translate(29.092 19.438)"
-        clip-path="url(#clip-path-2)"
+        clipPath="url(#clipPath-2)"
       >
         <g transform="translate(-1650 -919)">
           <rect
@@ -178,9 +178,9 @@ const ProjectSelectFlow = ({ className }) => (
       data-name="3"
       transform="translate(644 33)"
       fill="#f5cb4c"
-      font-size="34"
-      font-family="HelveticaNeue-Medium, Helvetica Neue"
-      font-weight="500"
+      fontSize="34"
+      fontFamily="HelveticaNeueMed, Helvetica Neue"
+      fontWeight="500"
     >
       <tspan x="0" y="0">
         3
@@ -212,7 +212,7 @@ const ProjectSelectFlow = ({ className }) => (
         transform="translate(-1047.227 -476.72)"
         fill="none"
         stroke="#6bb4d6"
-        stroke-width="8"
+        strokeWidth="8"
       />
       <path
         id="Path_19"
@@ -221,7 +221,7 @@ const ProjectSelectFlow = ({ className }) => (
         transform="translate(-1050.352 -484.572)"
         fill="none"
         stroke="#1f1f1f"
-        stroke-width="8"
+        strokeWidth="8"
       />
     </g>
     <text
@@ -229,9 +229,9 @@ const ProjectSelectFlow = ({ className }) => (
       data-name="Contact Client"
       transform="translate(664 219)"
       fill="#f9f5e3"
-      font-size="26"
-      font-family="HelveticaNeue-Bold, Helvetica Neue"
-      font-weight="700"
+      fontSize="26"
+      fontFamily="HelveticaNeueBold, Helvetica Neue"
+      fontWeight="700"
     >
       <tspan x="0" y="0">
         Contact Client
@@ -242,9 +242,9 @@ const ProjectSelectFlow = ({ className }) => (
       data-name="2"
       transform="translate(330 33)"
       fill="#f5cb4c"
-      font-size="34"
-      font-family="HelveticaNeue-Medium, Helvetica Neue"
-      font-weight="500"
+      fontSize="34"
+      fontFamily="HelveticaNeueMed, Helvetica Neue"
+      fontWeight="500"
     >
       <tspan x="0" y="0">
         2
@@ -255,9 +255,9 @@ const ProjectSelectFlow = ({ className }) => (
       data-name="Commit to Anti-Racism"
       transform="translate(291 219)"
       fill="#f9f5e3"
-      font-size="26"
-      font-family="HelveticaNeue-Bold, Helvetica Neue"
-      font-weight="700"
+      fontSize="26"
+      fontFamily="HelveticaNeueBold, Helvetica Neue"
+      fontWeight="700"
     >
       <tspan x="0" y="0">
         Commit to Anti-Racism
@@ -287,7 +287,7 @@ const ProjectSelectFlow = ({ className }) => (
           id="Repeat_Grid_5"
           data-name="Repeat Grid 5"
           transform="translate(24.549 16.016)"
-          clip-path="url(#clip-path-3)"
+          clipPath="url(#clipPath-3)"
         >
           <g transform="translate(-286 -732)">
             <g
@@ -296,7 +296,7 @@ const ProjectSelectFlow = ({ className }) => (
               transform="translate(314 739)"
               fill="#1f1f1f"
               stroke="#000"
-              stroke-width="1"
+              strokeWidth="1"
             >
               <rect width="60" height="8" stroke="none" />
               <rect x="0.5" y="0.5" width="59" height="7" fill="none" />
@@ -327,7 +327,7 @@ const ProjectSelectFlow = ({ className }) => (
               transform="translate(314 739)"
               fill="#1f1f1f"
               stroke="#000"
-              stroke-width="1"
+              strokeWidth="1"
             >
               <rect width="60" height="8" stroke="none" />
               <rect x="0.5" y="0.5" width="59" height="7" fill="none" />
@@ -358,7 +358,7 @@ const ProjectSelectFlow = ({ className }) => (
               transform="translate(314 739)"
               fill="#1f1f1f"
               stroke="#000"
-              stroke-width="1"
+              strokeWidth="1"
             >
               <rect width="60" height="8" stroke="none" />
               <rect x="0.5" y="0.5" width="59" height="7" fill="none" />
@@ -398,7 +398,7 @@ const ProjectSelectFlow = ({ className }) => (
         transform="translate(-2163.796 3751.388)"
         fill="none"
         stroke="#1f1f1f"
-        stroke-width="3"
+        strokeWidth="3"
       />
       <path
         id="Path_31"
@@ -407,7 +407,7 @@ const ProjectSelectFlow = ({ className }) => (
         transform="translate(-2163.796 3784.763)"
         fill="none"
         stroke="#1f1f1f"
-        stroke-width="3"
+        strokeWidth="3"
       />
     </g>
     <g id="Group_128" data-name="Group 128" transform="translate(225.588 72.924)">
@@ -419,7 +419,7 @@ const ProjectSelectFlow = ({ className }) => (
           transform="matrix(-1, 0.017, -0.017, -1, 50.932, 41.427)"
           fill="none"
           stroke="#f9f5e3"
-          stroke-width="8"
+          strokeWidth="8"
         />
       </g>
     </g>
@@ -432,7 +432,7 @@ const ProjectSelectFlow = ({ className }) => (
           transform="matrix(-1, 0.017, -0.017, -1, 50.932, 41.427)"
           fill="none"
           stroke="#f9f5e3"
-          stroke-width="8"
+          strokeWidth="8"
         />
       </g>
     </g>

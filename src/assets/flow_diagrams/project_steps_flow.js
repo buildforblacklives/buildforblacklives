@@ -10,7 +10,7 @@ const ProjectSteps = ({ className }) => (
     viewBox="0 0 887 225"
   >
     <defs>
-      <clipPath id="clip-path">
+      <clipPath id="clipPath">
         <rect width="76" height="95" fill="none" />
       </clipPath>
     </defs>
@@ -20,9 +20,9 @@ const ProjectSteps = ({ className }) => (
         data-name="2"
         transform="translate(-1401 4496)"
         fill="#f5cb4c"
-        font-size="34"
-        font-family="HelveticaNeue-Medium, Helvetica Neue"
-        font-weight="500"
+        fontSize="34"
+        fontFamily="HelveticaNeueMed, Helvetica Neue"
+        fontWeight="500"
       >
         <tspan x="0" y="0">
           2
@@ -33,9 +33,9 @@ const ProjectSteps = ({ className }) => (
         data-name="Review Project Details"
         transform="translate(-1435 4680)"
         fill="#f9f5e3"
-        font-size="26"
-        font-family="HelveticaNeue-Bold, Helvetica Neue"
-        font-weight="700"
+        fontSize="26"
+        fontFamily="HelveticaNeueBold, Helvetica Neue"
+        fontWeight="700"
       >
         <tspan x="0" y="0">
           Review Project Details
@@ -46,9 +46,9 @@ const ProjectSteps = ({ className }) => (
         data-name="3"
         transform="translate(-1087 4494)"
         fill="#f5cb4c"
-        font-size="34"
-        font-family="HelveticaNeue-Medium, Helvetica Neue"
-        font-weight="500"
+        fontSize="34"
+        fontFamily="HelveticaNeueMed, Helvetica Neue"
+        fontWeight="500"
       >
         <tspan x="0" y="0">
           3
@@ -80,7 +80,7 @@ const ProjectSteps = ({ className }) => (
           transform="translate(-1047.227 -476.72)"
           fill="none"
           stroke="#6bb4d6"
-          stroke-width="8"
+          strokeWidth="8"
         />
         <path
           id="Path_19"
@@ -89,7 +89,7 @@ const ProjectSteps = ({ className }) => (
           transform="translate(-1050.352 -484.572)"
           fill="none"
           stroke="#1f1f1f"
-          stroke-width="8"
+          strokeWidth="8"
         />
       </g>
       <text
@@ -97,9 +97,9 @@ const ProjectSteps = ({ className }) => (
         data-name="Contact Client"
         transform="translate(-1067 4680)"
         fill="#f9f5e3"
-        font-size="26"
-        font-family="HelveticaNeue-Bold, Helvetica Neue"
-        font-weight="700"
+        fontSize="26"
+        fontFamily="HelveticaNeueBold, Helvetica Neue"
+        fontWeight="700"
       >
         <tspan x="0" y="0">
           Contact Client
@@ -110,9 +110,9 @@ const ProjectSteps = ({ className }) => (
         data-name="1"
         transform="translate(-1731 4494)"
         fill="#f5cb4c"
-        font-size="34"
-        font-family="HelveticaNeue-Medium, Helvetica Neue"
-        font-weight="500"
+        fontSize="34"
+        fontFamily="HelveticaNeueMed, Helvetica Neue"
+        fontWeight="500"
       >
         <tspan x="0" y="0">
           1
@@ -123,9 +123,9 @@ const ProjectSteps = ({ className }) => (
         data-name="Commit to Anti-Racism"
         transform="translate(-1775 4680)"
         fill="#f9f5e3"
-        font-size="26"
-        font-family="HelveticaNeue-Bold, Helvetica Neue"
-        font-weight="700"
+        fontSize="26"
+        fontFamily="HelveticaNeueBold, Helvetica Neue"
+        fontWeight="700"
       >
         <tspan x="0" y="0">
           Commit to Anti-Racism
@@ -155,7 +155,7 @@ const ProjectSteps = ({ className }) => (
             id="Repeat_Grid_5"
             data-name="Repeat Grid 5"
             transform="translate(24.549 16.016)"
-            clip-path="url(#clip-path)"
+            clipPath="url(#clipPath)"
           >
             <g transform="translate(-286 -732)">
               <g
@@ -164,7 +164,7 @@ const ProjectSteps = ({ className }) => (
                 transform="translate(314 739)"
                 fill="#1f1f1f"
                 stroke="#000"
-                stroke-width="1"
+                strokeWidth="1"
               >
                 <rect width="60" height="8" stroke="none" />
                 <rect x="0.5" y="0.5" width="59" height="7" fill="none" />
@@ -195,7 +195,7 @@ const ProjectSteps = ({ className }) => (
                 transform="translate(314 739)"
                 fill="#1f1f1f"
                 stroke="#000"
-                stroke-width="1"
+                strokeWidth="1"
               >
                 <rect width="60" height="8" stroke="none" />
                 <rect x="0.5" y="0.5" width="59" height="7" fill="none" />
@@ -226,7 +226,7 @@ const ProjectSteps = ({ className }) => (
                 transform="translate(314 739)"
                 fill="#1f1f1f"
                 stroke="#000"
-                stroke-width="1"
+                strokeWidth="1"
               >
                 <rect width="60" height="8" stroke="none" />
                 <rect x="0.5" y="0.5" width="59" height="7" fill="none" />
@@ -266,7 +266,7 @@ const ProjectSteps = ({ className }) => (
           transform="translate(-697.796 -422.612)"
           fill="none"
           stroke="#1f1f1f"
-          stroke-width="3"
+          strokeWidth="3"
         />
         <path
           id="Path_22"
@@ -275,7 +275,7 @@ const ProjectSteps = ({ className }) => (
           transform="translate(-697.796 -389.237)"
           fill="none"
           stroke="#1f1f1f"
-          stroke-width="3"
+          strokeWidth="3"
         />
       </g>
       <g id="Group_121" data-name="Group 121" transform="translate(-1505.412 4533.924)">
@@ -287,7 +287,7 @@ const ProjectSteps = ({ className }) => (
             transform="matrix(-1, 0.017, -0.017, -1, 50.932, 41.427)"
             fill="none"
             stroke="#f9f5e3"
-            stroke-width="8"
+            strokeWidth="8"
           />
         </g>
       </g>
@@ -300,7 +300,7 @@ const ProjectSteps = ({ className }) => (
             transform="matrix(-1, 0.017, -0.017, -1, 50.932, 41.427)"
             fill="none"
             stroke="#f9f5e3"
-            stroke-width="8"
+            strokeWidth="8"
           />
         </g>
       </g>
@@ -329,7 +329,7 @@ const ProjectSteps = ({ className }) => (
           transform="translate(18.75 29.563)"
           fill="#1f1f1f"
           stroke="#000"
-          stroke-width="1"
+          strokeWidth="1"
         >
           <rect width="90" height="23" stroke="none" />
           <rect x="0.5" y="0.5" width="89" height="22" fill="none" />
@@ -340,7 +340,7 @@ const ProjectSteps = ({ className }) => (
           transform="translate(18.75 67.563)"
           fill="#1f1f1f"
           stroke="#000"
-          stroke-width="1"
+          strokeWidth="1"
         >
           <rect width="90" height="10" stroke="none" />
           <rect x="0.5" y="0.5" width="89" height="9" fill="none" />
@@ -351,7 +351,7 @@ const ProjectSteps = ({ className }) => (
           transform="translate(18.75 85.563)"
           fill="#1f1f1f"
           stroke="#000"
-          stroke-width="1"
+          strokeWidth="1"
         >
           <rect width="90" height="31" stroke="none" />
           <rect x="0.5" y="0.5" width="89" height="30" fill="none" />
@@ -362,7 +362,7 @@ const ProjectSteps = ({ className }) => (
           transform="translate(18.75 16.563)"
           fill="#6bb4d6"
           stroke="#6bb4d6"
-          stroke-width="1"
+          strokeWidth="1"
         >
           <rect width="42" height="7" stroke="none" />
           <rect x="0.5" y="0.5" width="41" height="6" fill="none" />
@@ -373,7 +373,7 @@ const ProjectSteps = ({ className }) => (
           transform="translate(18.75 54.563)"
           fill="#1f1f1f"
           stroke="#000"
-          stroke-width="1"
+          strokeWidth="1"
         >
           <rect width="42" height="7" stroke="none" />
           <rect x="0.5" y="0.5" width="41" height="6" fill="none" />

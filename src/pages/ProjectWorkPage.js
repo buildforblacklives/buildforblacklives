@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import Airtable from 'airtable';
-//import { Link } from 'react-router-dom';
 import { HashLink as Link } from 'react-router-hash-link';
 import { Container, Button } from 'react-bootstrap';
 

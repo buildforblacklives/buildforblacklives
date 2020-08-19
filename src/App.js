@@ -9,6 +9,7 @@ import { RequestPage } from './pages/RequestPage';
 import { CommPartnersPage } from './pages/CommPartnersPage';
 import { FAQPage } from './pages/FAQPage';
 import { ProjectWorkPage } from './pages/ProjectWorkPage';
+import ProjectSelectPage from './pages/ProjectSelectPage';
 import ScrollToTop from './components/ScrollToTop';
 
 const App = () => {
@@ -23,7 +24,8 @@ const App = () => {
         <Route path="/project-request" component={RequestPage} />
         <Route path="/community-partners" component={CommPartnersPage} />
         <Route path="/faq" component={FAQPage} />
-        <Route path="/projects/:projectId" component={ProjectWorkPage} />
+        <Route exact path="/projects/:projectId" component={ProjectSelectPage} />
+        <Route path="/projects/:projectId/work" component={ProjectWorkPage} />
       </Switch>
       <Footer />
     </BrowserRouter>
