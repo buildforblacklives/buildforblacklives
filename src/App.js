@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { MainNavbar } from './components/MainNavbar';
 import { Footer } from './components/Footer';
 import { HomePage } from './pages/HomePage';
+import { ClosedProjects } from './pages/ClosedProjects';
 import { AboutPage } from './pages/AboutPage';
 import { ProjectsPage } from './pages/ProjectsPage';
 import { RequestPage } from './pages/RequestPage';
@@ -21,6 +22,7 @@ const App = () => {
         <Route path="/about" component={AboutPage} />
         <Route exact path="/projects" component={ProjectsPage} />
         <Route path="/project-request" component={RequestPage} />
+        <Route path="/closed-projects" component={ClosedProjects} />
         <Route path="/community-partners" component={CommPartnersPage} />
         <Route path="/faq" component={FAQPage} />
         <Route path="/projects/:projectId" component={ProjectWorkPage} />

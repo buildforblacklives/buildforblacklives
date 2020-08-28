@@ -136,6 +136,14 @@ const ProjectsPage = () => {
         <>
           <h1>Open Projects</h1>
           <ProjectSelectFlow className="flow-images" />
+          <Row>
+            <Col className="text-center">
+              <LinkContainer to={`/closed-projects`}>
+                <Button className="primary-button"> See our matched projects! </Button>
+              </LinkContainer>
+            </Col>
+          </Row>
+
           {hasLoaded ? (
             <Row className="d-flex justify-content-left">
               {projects.map((project) => (
