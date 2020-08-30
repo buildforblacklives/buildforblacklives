@@ -15,15 +15,23 @@ class CustomAccordion extends React.Component {
       const isCurrentEventKey = currentEventKey === eventKey;
 
       return (
-        <div className={`accordion-header ${largeHeader ? 'accordion-header-large' : ''}`} onClick={toggleIconOnClick}>
+        <button
+          className={`accordion-header ${largeHeader ? 'accordion-header-large' : ''}`}
+          onClick={toggleIconOnClick}
+        >
           <span xs="auto">
-            {isCurrentEventKey ? <Minus className="accordion-header-icon" /> : <Plus className="accordion-header-icon" />}
+            {isCurrentEventKey ? (
+              <Minus className="accordion-header-icon" />
+            ) : (
+              <Plus className="accordion-header-icon" />
+            )}
           </span>
-          { largeHeader ?
-            <h5 className="accordion-header-title">{children}</h5> :
+          {largeHeader ? (
+            <h5 className="accordion-header-title">{children}</h5>
+          ) : (
             <span className="accordion-header-title">{children}</span>
-          }
-        </div>
+          )}
+        </button>
       );
     }
     return (
