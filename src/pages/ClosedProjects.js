@@ -5,9 +5,9 @@ import { ClosedProjectEntry } from '../components/ClosedProjectEntry';
 
 import '../styling/ClosedProjects.css';
 
-import plantainOne from '../assets/a1.png';
-import plantainTwo from '../assets/a2.png';
-import plantainThree from '../assets/a3.png';
+import plantainOne from '../assets/images/a1.png';
+import plantainTwo from '../assets/images/a2.png';
+import plantainThree from '../assets/images/a3.png';
 
 
 const ClosedProjects = () => {
