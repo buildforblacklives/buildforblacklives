@@ -201,6 +201,29 @@
   margin-top: 2rem;
 }
 
+.projects-filter-bar {
+  display: flex;
+  width: 100%;
+  position: relative;
+  margin: 1rem 0;
+  justify-content: space-between;
+}
+
+.project-filter-tag {
+  cursor: pointer;
+  margin: 0 8px;
+}
+
+.project-filter-tag-selected {
+  color: var(--main-yellow);
+  border-color: var(--main-yellow);
+}
+
+.project-filter-clear {
+  cursor: pointer;
+  margin-top: 8px;
+}
+
 @media only screen and (max-width: 992px) {
   .project-description-card {
     margin-left: 0;

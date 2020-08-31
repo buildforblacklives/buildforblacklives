@@ -9,12 +9,22 @@ const mapTags = {
   "Data (analysis, research, visualizations, storage)" : "Data"
 }
 
+export const allTags = [
+  "Urgent",
+  "Mobile App",
+  "Website/Web App",
+  "Branding",
+  "Design",
+  "Social Media",
+  "Data"
+]
+
 export const translateAirtableRecord = (record) => {
   const recordTags = record.get('Project Type') || []
 
   return {
     id: record.id,
-    isUrgent: record.get('urgent?'),
+    isUrgent: record.get('urgent?') || false,
     orgAbout: record.get('Org Description'),
     orgEmail: record.get('Email'),
     orgName: record.get('Organization Name'),
@@ -44,6 +54,7 @@ export const fetchOpenProjects = (doOnSuccess) => {
     .eachPage(
       async (records, fetchNextPage) => {
         airtableRecords = records.map((record) => translateAirtableRecord(record));
+        airtableRecords = airtableRecords.sort((projA, projB) => projA.isUrgent && !projB.isUrgent ? -1 : 0)
         doOnSuccess(airtableRecords)
         fetchNextPage();
       },
