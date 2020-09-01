@@ -13,12 +13,12 @@ import '../styling/ProjectsPage.css';
 const FilterBar = ({updateFilters, clearFilters, filters}) => (
   <div className="projects-filter-bar">
     <div>
-      <span>Filter by type: </span>
+      <span>Filter: </span>
       {allTags.map(tag => (
         <span key={tag} className={`project-filter-tag ${filters[tag] ? 'project-filter-tag-selected' : ''} project-tag`} onClick={() => updateFilters(tag)}>{tag}</span>
       ))}
     </div>
-    <div className="project-filter-clear float-right" onClick={clearFilters}>Clear all</div>
+    <span className="project-filter-clear" onClick={clearFilters}>Clear all</span>
   </div>
 )
 

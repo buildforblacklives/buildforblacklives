@@ -203,25 +203,25 @@
 
 .projects-filter-bar {
   display: flex;
-  width: 100%;
   position: relative;
-  margin: 1rem 0;
+  margin: 0 0 1rem 0;
   justify-content: space-between;
 }
 
 .project-filter-tag {
   cursor: pointer;
-  margin: 0 8px;
+  margin: 4px 8px;
 }
 
 .project-filter-tag-selected {
-  color: var(--main-yellow);
-  border-color: var(--main-yellow);
+  color: var(--main-black);
+  background-color: var(--light-yellow);
 }
 
 .project-filter-clear {
   cursor: pointer;
-  margin-top: 8px;
+  margin: 8px 0 0 16px;
+  white-space: nowrap;
 }
 
 @media only screen and (max-width: 992px) {
@@ -235,6 +235,15 @@
 
   .project-list-panel {
     display: none;
+  }
+
+  .projects-filter-bar {
+    justify-content: unset;
+    display: block;
+  }
+
+  .project-filter-clear {
+    margin-left: 0;
   }
 }
 
