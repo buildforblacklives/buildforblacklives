@@ -1,6 +1,6 @@
 import React from 'react';
 
-const DefaultPage = () => (
+const NotFoundPage = () => (
   <div className="container project-temp-page">
     <div className="row d-flex justify-content-center text-center">
       <div className="col-md-8">
@@ -10,4 +10,4 @@ const DefaultPage = () => (
   </div>
 );
 
-export default DefaultPage
+export default NotFoundPage
