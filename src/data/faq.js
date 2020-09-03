@@ -176,11 +176,7 @@ const FAQItems = {
           <a href="mailto:buildforblacklives@hackbeanpot.com">buildforblacklives@hackbeanpot.com</a>. You can also visit
           our <Link to="/about">About</Link> page or see the footer at the bottom of the page to view our contact
           information. If you are an organization that wishes to partner with us and help spread the word on this
-          initiative, join our{' '}
-          <a href="https://join.slack.com/t/northeastern-hac3935/shared_invite/zt-fctqwcqe-7~n_GXliEYbQzUeqERHH6A">
-            Slack
-          </a>{' '}
-          workspace.
+          initiative, email us or DM us on social media for a <b>link to our Slack workspace</b>.
         </div>
       )
     },
