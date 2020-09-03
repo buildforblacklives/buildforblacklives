@@ -31,6 +31,7 @@
   margin-bottom: 0;
   margin-left: 16px;
   color: var(--main-black);
+  text-align: left;
 }
 
 .accordion-header:hover {
