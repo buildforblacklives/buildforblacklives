@@ -3,6 +3,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 
 import Logo from '../assets/logo.js';
 import MailIcon from '../assets/email-icon.js';
+import NewsIcon from '../assets/news-icon.js';
 
 import TechDesign from '../assets/tech-design.js';
 
@@ -117,6 +118,37 @@ const AboutPage = () => (
     <hr />
 
     <Row className="about-align-center">
+      <Col className="about-order1">
+        <h2>Build for Black Lives in the News</h2>
+        <p> Check out these latest news articles featuring Build for Black Lives to learn
+            more about the motivation and vision behind this platform.
+        </p>
+        <p className="about-list">
+          <p>
+
+            <a href="https://news.northeastern.edu/2020/08/10/can-technology-reduce-racial-inequity-build-for-black-lives-a-student-built-platform-could-help/">
+              Can Technology Reduce Racial Inequality?
+            </a>
+            &nbsp;-
+             <span className="font-italic"> News@Northeastern</span>
+          </p>
+          <p>
+            <a href="https://undergraduatenews.khoury.northeastern.edu/2020/07/31/build-for-black-lives/">
+              Undergraduate News: Build for Black Lives
+            </a>
+            &nbsp;-
+            <span className="font-italic"> Khoury College</span>
+          </p>
+        </p>
+      </Col>
+      <Col xs={12} md={4}>
+        <NewsIcon className="mx-auto d-block about-icon about-news-icon" fluid />
+      </Col>
+    </Row>
+
+   <hr />
+
+    <Row className="row-align-center">
       <Col xs={12} md={4}>
         <MailIcon className="mx-auto d-block about-icon about-mail-icon" fluid />
       </Col>
@@ -128,7 +160,7 @@ const AboutPage = () => (
         <p>
         Please use one of the following subject lines to help us filter through questions:
         </p>
-        <p className="about-contact-list">
+        <p className="about-list">
 
           <p>"[Volunteer] Question"</p>
           <p>"[Project Request] Question"</p>
