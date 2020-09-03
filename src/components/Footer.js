@@ -1,5 +1,4 @@
 import React from 'react';
-import {Col} from "react-bootstrap";
 
 const Footer = () => (
   <div className="footer">
