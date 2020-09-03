@@ -1,4 +1,5 @@
 import React from 'react';
+import {Col} from "react-bootstrap";
 
 const Footer = () => (
   <div className="footer">
@@ -24,12 +25,11 @@ const Footer = () => (
         <a href="https://www.instagram.com/buildforblacklives/" target="_blank" rel="noopener noreferrer">
           <i className="fab fa-instagram fa-2x footer-social-icon footer-text" aria-hidden="true"></i>
         </a>
-        <a
-          href="https://join.slack.com/t/northeastern-hac3935/shared_invite/zt-fctqwcqe-7~n_GXliEYbQzUeqERHH6A"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <i className="fab fa-slack fa-2x footer-social-icon footer-text" aria-hidden="true"></i>
+        <a href="https://twitter.com/bld4blacklives" target="_blank" rel="noopener noreferrer">
+          <i className="fab fa-twitter fa-2x footer-social-icon footer-text" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/build-for-black-lives/" target="_blank" rel="noopener noreferrer">
+          <i className="fab fa-linkedin fa-2x footer-social-icon footer-text" aria-hidden="true"></i>
         </a>
       </div>
     </div>
