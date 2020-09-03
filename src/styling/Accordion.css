@@ -5,12 +5,17 @@
 }
 
 .accordion-header {
-  cursor: pointer;
   display: flex;
+  width: 100%;
   font-family: ArchivoBold;
   font-size: 20px;
   background-color: var(--main-cream);
+  border: none;
   padding: 1rem;
+}
+
+.accordion-header:focus {
+  outline-offset: -2px;
 }
 
 .accordion-header .accordion-header-icon {
@@ -19,7 +24,7 @@
 
 .accordion-header-large .accordion-header-icon {
   width: 32px;
-  height: 32px
+  height: 32px;
 }
 
 .accordion-section-container .accordion-header-title {
@@ -69,7 +74,7 @@
   .accordion-header-large .accordion-header-title {
     line-height: 20px;
   }
-  
+
   .accordion-header .accordion-header-icon {
     width: 16px;
   }

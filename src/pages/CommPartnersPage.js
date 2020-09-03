@@ -105,11 +105,7 @@ const CommPartnersPage = () => (
         <p>
           If your organization would like to work with us, please email us at{' '}
           <a href="mailto:buildforblacklives@hackbeanpot.com">buildforblacklives@hackbeanpot.com</a> with the subject
-          line "[Community Partner]" or join our{' '}
-          <a href="https://join.slack.com/t/northeastern-hac3935/shared_invite/zt-fctqwcqe-7~n_GXliEYbQzUeqERHH6A">
-            Slack Workspace
-          </a>{' '}
-          to learn more.
+          line "[Community Partner]" or DM us on social media for a <b>link to our Slack workspace</b>.
         </p>
       </Col>
     </Row>
