@@ -14,7 +14,7 @@ import ProjectSelectPage from './pages/ProjectSelectPage';
 import NotFoundPage from './pages/NotFoundPage';
 import ScrollToTop from './components/ScrollToTop';
 
-ReactGA.initialize('UA-144556525-1');
+ReactGA.initialize('UA-177347140-1');
 
 const App = () => {
   return (
