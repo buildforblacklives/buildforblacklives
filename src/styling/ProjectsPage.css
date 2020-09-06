@@ -6,12 +6,6 @@
   padding: 0 48px;
 }
 
-.projects-page .flow-images {
-  margin: 3em auto;
-  display: block;
-  padding-right: 1rem;
-}
-
 .preview-card {
   border-radius: 16px;
   margin: 16px 0px;
@@ -152,7 +146,7 @@
 }
 
 .project-loading-spinner {
-  margin-top: 3rem
+  margin-top: 3rem;
 }
 
 .project-description-note {
