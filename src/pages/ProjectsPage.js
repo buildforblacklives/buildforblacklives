@@ -6,8 +6,8 @@ import { LinkContainer } from 'react-router-bootstrap';
 import NewsletterForm from '../components/NewsletterForm';
 import { ProjectsPageTemp } from './ProjectsPageTemp';
 import ProjectSelectFlow from '../assets/flow_diagrams/project_selection_flow';
-import ProjectTags from '../components/ProjectTags'
-import { translateAirtableRecord, formatUrlsInString } from '../state/utils'
+import ProjectTags from '../components/ProjectTags';
+import { translateAirtableRecord, formatUrlsInString } from '../state/utils';
 import { createProjects } from '../state/projects';
 
 import '../styling/ProjectsPage.css';
@@ -63,7 +63,6 @@ const SelectedCard = ({ project, setSelected }) => {
           </>
         )}
 
-
         <h5 className="pt-3"> About {orgName} </h5>
         {orgSocial && <p dangerouslySetInnerHTML={{ __html: formatUrlsInString(orgSocial) }} />}
         <p>{orgAbout}</p>
@@ -71,7 +70,11 @@ const SelectedCard = ({ project, setSelected }) => {
         <h5 className="pt-3"> About the Project </h5>
         <p>{projectAbout}</p>
 
-        <p className="project-description-note">You are welcome to join this project even if you only have the skills for a portion of the requirements. Project work may be split between multiple volunteers, and project owners will close projects when they feel that there are enough volunteers committed.</p>
+        <p className="project-description-note">
+          You are welcome to join this project even if you only have the skills for a portion of the requirements.
+          Project work may be split between multiple volunteers, and project owners will close projects when they feel
+          that there are enough volunteers committed.
+        </p>
 
         <div className="text-center project-work-button">
           <LinkContainer to={`/projects/${id}`}>
@@ -136,12 +139,10 @@ const ProjectsPage = () => {
         <>
           <h1>Open Projects</h1>
           <ProjectSelectFlow className="flow-images" />
-          <Row>
-            <Col className="text-center">
-              <LinkContainer to={`/closed-projects`}>
-                <Button className="primary-button"> See our matched projects! </Button>
-              </LinkContainer>
-            </Col>
+          <Row className="justify-content-center">
+            <LinkContainer to={`/matched-projects`}>
+              <Button className="primary-button projects-matched-button">See our matched projects!</Button>
+            </LinkContainer>
           </Row>
 
           {hasLoaded ? (
@@ -166,7 +167,7 @@ const ProjectsPage = () => {
       ) : (
         <>
           <div className="projects-back" onClick={() => setSelected(-1)}>
-            {'< Back to Open Projects'}
+            {'< Back to Projects'}
           </div>
           <Row>
             <Col lg={4} className="project-list-panel">

@@ -12,6 +12,10 @@
   padding-right: 1rem;
 }
 
+.projects-matched-button {
+  margin: 1em;
+}
+
 .preview-card {
   border-radius: 16px;
   margin: 16px 0px;
@@ -151,9 +155,8 @@
   font-size: 24px;
 }
 
-
 .project-loading-spinner {
-  margin-top: 3rem
+  margin-top: 3rem;
 }
 
 .project-description-note {

@@ -51,7 +51,7 @@ const ProjectWorkPage = ({ match }) => {
     return (
       <div className="row d-flex justify-content-center text-center">
         <div className="col-md-8 mt-5">
-          <h1>Oops! Looks like this project doesn't exist or has already been claimed</h1>
+          <h1>Oops! Looks like this project doesn't exist or has already been matched</h1>
           <Button
             href="/projects"
             className="primary-button mt-5"

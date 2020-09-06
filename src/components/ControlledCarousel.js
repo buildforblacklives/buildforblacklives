@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import Carousel from 'react-bootstrap/Carousel';
+import Image from 'react-bootstrap/Image';
 
 const ControlledCarousel = (props) => {
   const [index, setIndex] = useState(0);
@@ -12,10 +13,15 @@ const ControlledCarousel = (props) => {
 
   return (
     <Carousel activeIndex={index} onSelect={handleSelect} interval={null}>
-      {images.map((image) => {
+      {images.map((image, key) => {
+        const {
+          thumbnails: {
+            full: { url }
+          }
+        } = image;
         return (
           <Carousel.Item>
-            {image}
+            <Image alt={`Image ${key}`} src={url} fluid />
           </Carousel.Item>
         );
       })}
