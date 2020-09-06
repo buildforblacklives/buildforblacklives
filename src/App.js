@@ -10,6 +10,7 @@ import { CommPartnersPage } from './pages/CommPartnersPage';
 import { FAQPage } from './pages/FAQPage';
 import { ProjectWorkPage } from './pages/ProjectWorkPage';
 import ProjectSelectPage from './pages/ProjectSelectPage';
+import NotFoundPage from './pages/NotFoundPage'
 import ScrollToTop from './components/ScrollToTop';
 
 const App = () => {
@@ -26,6 +27,7 @@ const App = () => {
         <Route path="/faq" component={FAQPage} />
         <Route exact path="/projects/:projectId" component={ProjectSelectPage} />
         <Route path="/projects/:projectId/work" component={ProjectWorkPage} />
+        <Route component={NotFoundPage} />
       </Switch>
       <Footer />
     </BrowserRouter>
