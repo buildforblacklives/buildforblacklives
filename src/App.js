@@ -40,8 +40,9 @@ const Routes = () => {
   }, [history]);
 
   const trackPageView = () => {
-    ReactGA.set({ page: window.location.pathname });
-    ReactGA.pageview(window.location.pathname);
+    const pageUrl = window.location.pathname + window.location.search;
+    ReactGA.set({ page: pageUrl });
+    ReactGA.pageview(pageUrl);
   };
 
   return (
