@@ -85,7 +85,7 @@ const ProjectsPage = () => {
               shouldShowProject(project.isUrgent, project.tags) &&
               (
                 <Col key={project.id} lg={4} md={6} sm={12}>
-                  <ProjectCard project={project} isSelectedView={false} />
+                  <ProjectCard project={project} isSelectedView={false} tagSelectedStatus={filters} />
                 </Col>
               )
             ))}
