@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Container } from 'react-bootstrap';
 import Airtable from 'airtable';
 import { translateAirtableRecord } from '../state/utils';
-import { createProjects } from '../state/projects';
+import { createMatchedProjects } from '../state/projects';
 
 import { MatchedProjectEntry } from '../components/MatchedProjectEntry';
 
@@ -11,7 +11,7 @@ import '../styling/MatchedProjects.css';
 
 const MatchedProjects = () => {
   const dispatch = useDispatch();
-  const savedProjects = useSelector((state) => state);
+  const savedProjects = useSelector((state) => state.matchedProjects);
   const [projects, setProjects] = useState(savedProjects);
   const [hasLoaded, setHasLoaded] = useState(false);
 
@@ -27,7 +27,7 @@ const MatchedProjects = () => {
         .eachPage(
           async (records, fetchNextPage) => {
             airtableRecords = records.map((record) => translateAirtableRecord(record));
-            await dispatch(createProjects(airtableRecords));
+            await dispatch(createMatchedProjects(airtableRecords));
             setProjects(airtableRecords);
             setHasLoaded(true);
 

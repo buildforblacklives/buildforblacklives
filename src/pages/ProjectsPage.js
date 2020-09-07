@@ -88,7 +88,7 @@ const SelectedCard = ({ project, setSelected }) => {
 
 const ProjectsPage = () => {
   const dispatch = useDispatch();
-  const savedProjects = useSelector((state) => state);
+  const savedProjects = useSelector((state) => state.openProjects);
   const [selected, setSelected] = useState(-1);
   const [projects, setProjects] = useState(savedProjects);
   const [hasLoaded, setHasLoaded] = useState(false);

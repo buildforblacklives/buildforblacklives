@@ -16,7 +16,7 @@ import '../styling/ProjectWorkPage.css';
 
 const ProjectWorkPage = ({ match }) => {
   const { projectId } = match.params;
-  const savedProject = useSelector((state) => state.find((project) => project.id === projectId));
+  const savedProject = useSelector((state) => state.openProjects.find((project) => project.id === projectId));
   const [hasConfirmed, setHasConfirmed] = useState(false);
   const [project, setProject] = useState(savedProject);
   const [hasLoaded, setHasLoaded] = useState(false);
