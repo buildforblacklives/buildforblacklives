@@ -223,7 +223,7 @@
 .projects-filter-bar {
   display: flex;
   position: relative;
-  margin: 0 0 1rem 0;
+  margin: 1rem 0;
   justify-content: space-between;
 }
 
