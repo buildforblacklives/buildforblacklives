@@ -3,9 +3,9 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Row, Col, Container, Spinner } from 'react-bootstrap';
 import NewsletterForm from '../components/NewsletterForm';
 import { ProjectsPageTemp } from './ProjectsPageTemp';
-import ProjectCard from '../components/ProjectCard'
+import ProjectCard from '../components/ProjectCard';
 import ProjectSelectFlow from '../assets/flow_diagrams/project_selection_flow';
-import { fetchOpenProjects } from '../state/utils'
+import { fetchOpenProjects } from '../state/utils';
 import { createProjects } from '../state/projects';
 
 import '../styling/ProjectsPage.css';
@@ -21,23 +21,25 @@ const ProjectsPage = () => {
       await dispatch(createProjects(airtableRecords));
       setProjects(airtableRecords);
       setHasLoaded(true);
-    }
+    };
 
     if (savedProjects.length === 0 && !hasLoaded) {
-      fetchOpenProjects(doOnSuccess)
+      fetchOpenProjects(doOnSuccess);
     } else {
       setHasLoaded(true);
     }
   }, [dispatch, savedProjects, hasLoaded]);
 
   if (hasLoaded && projects.length === 0) {
-    return <ProjectsPageTemp />
+    return <ProjectsPageTemp />;
   }
 
   return (
     <Container className="projects-page">
       <h1>Open Projects</h1>
-      <ProjectSelectFlow className="flow-images" />
+      <Row className="justify-content-center d-flex flex-wrap align-items-center">
+        <ProjectSelectFlow className="flow-images" />
+      </Row>
       {hasLoaded ? (
         <Row className="d-flex justify-content-left">
           {projects.map((project) => (
