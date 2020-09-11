@@ -25,10 +25,11 @@ const AboutPage = () => (
           the tech and design industries.
         </p>
         <p>
-          Build for Black Lives was created by <a href="https://hackbeanpot.com/">HackBeanpot</a>, a 501(c)(3),
-          Boston-based hackathon that aims to build a diverse, inclusive, learning-focused tech community. Given that
-          racism has long been an issue in the tech space, we started this platform to bring the anti-racist tech
-          community together to take action to support Black lives and fight white supremacy.
+          Build for Black Lives was created by
+          <a href="https://hackbeanpot.com/" target="_blank" rel="noopener noreferrer"> HackBeanpot</a>,
+          a 501(c)(3), Boston-based hackathon that aims to build a diverse, inclusive, learning-focused tech community.
+          Given that racism has long been an issue in the tech space, we started this platform to bring the anti-racist
+          tech community together to take action to support Black lives and fight white supremacy.
         </p>
       </Col>
     </Row>
@@ -95,6 +96,8 @@ const AboutPage = () => (
                 <a
                   className="heading-link"
                   href={resource.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   {resource.title}
                 </a>
@@ -126,17 +129,21 @@ const AboutPage = () => (
         <p className="about-list">
           <p>
 
-            <a href="https://news.northeastern.edu/2020/08/10/can-technology-reduce-racial-inequity-build-for-black-lives-a-student-built-platform-could-help/">
+            <a href="https://news.northeastern.edu/2020/08/10/can-technology-reduce-racial-inequity-build-for-black-lives-a-student-built-platform-could-help/"
+               target="_blank"
+               rel="noopener noreferrer">
               Can Technology Reduce Racial Inequality?
             </a>
-            &nbsp;-
+            { " —" }
              <span className="font-italic"> News@Northeastern</span>
           </p>
           <p>
-            <a href="https://undergraduatenews.khoury.northeastern.edu/2020/07/31/build-for-black-lives/">
+            <a href="https://undergraduatenews.khoury.northeastern.edu/2020/07/31/build-for-black-lives/"
+               target="_blank"
+               rel="noopener noreferrer">
               Undergraduate News: Build for Black Lives
             </a>
-            &nbsp;-
+            { " —" }
             <span className="font-italic"> Khoury College</span>
           </p>
         </p>
