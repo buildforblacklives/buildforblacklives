@@ -11,7 +11,8 @@ const outreachPartners = [
   { name: 'HackBeanpot', url: 'https://hackbeanpot.com/' },
   { name: 'Khoury College of Computer Sciences', url: 'https://www.khoury.northeastern.edu/' },
   { name: 'Unofficial Committee', url: 'https://www.unofficialcommittee.com/' },
-  { name: 'Common Impact', url: 'https://commonimpact.org/' }
+  { name: 'Common Impact', url: 'https://commonimpact.org/' },
+  { name: 'Northeastern BBOSS', url: 'https://www.linkedin.com/company/northeastern-bboss' }
 ];
 
 const servicePartners = [
@@ -20,7 +21,8 @@ const servicePartners = [
   {
     name: 'Community Design Studio, Lesley Art + Design',
     url: 'https://lesley.edu/academics/college-of-art-design/community-engagement'
-  }
+  },
+  { name: 'Northeastern BBOSS', url: 'https://www.linkedin.com/company/northeastern-bboss' }
 ];
 
 const CommPartnersPage = () => (
@@ -55,7 +57,7 @@ const CommPartnersPage = () => (
         <div className="comm-partners-ul">
           {outreachPartners.map((partner) => (
             <p key={partner.name}>
-              <a href={partner.url}>{partner.name}</a>
+              <a href={partner.url} target="_blank" rel="noopener noreferrer">{partner.name}</a>
             </p>
           ))}
         </div>
@@ -85,7 +87,7 @@ const CommPartnersPage = () => (
         <div className="comm-partners-ul">
           {servicePartners.map((partner) => (
             <p key={partner.name}>
-              <a href={partner.url}>{partner.name}</a>
+              <a href={partner.url} target="_blank" rel="noopener noreferrer">{partner.name}</a>
             </p>
           ))}
         </div>
