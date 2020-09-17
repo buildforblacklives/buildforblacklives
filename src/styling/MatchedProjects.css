@@ -5,3 +5,12 @@
 .matched-projects-row {
   margin: 2rem 0;
 }
+
+.matched-projects-back {
+  color: var(--main-yellow) !important;
+  font-family: ArchivoBold;
+  cursor: pointer;
+  font-size: 20px;
+  margin: 0 0 32px;
+  display: inline-block;
+}

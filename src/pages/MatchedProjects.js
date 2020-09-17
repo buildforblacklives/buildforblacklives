@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { Container } from 'react-bootstrap';
+import { Container, NavLink } from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
 import Airtable from 'airtable';
 import { translateAirtableRecord } from '../state/utils';
 import { createMatchedProjects } from '../state/projects';
@@ -51,11 +52,16 @@ const MatchedProjects = () => {
 
   return (
     <Container className="projects-page">
+      <LinkContainer className="projects-matched-button projects-matched-order-2" to={`/projects`}>
+        <NavLink className="matched-projects-back">{`< Back to projects`}</NavLink>
+      </LinkContainer>
       <h1 className="matched-projects-header">Matched Projects</h1>
       {projects.map((data) => {
         console.log(data);
-        const { screenshots, orgName, projectUpdates } = data;
-        return <MatchedProjectEntry images={screenshots} companyName={orgName} description={projectUpdates} />;
+        const { screenshots, orgName, projectUpdates, link } = data;
+        return (
+          <MatchedProjectEntry images={screenshots} companyName={orgName} description={projectUpdates} link={link} />
+        );
       })}
     </Container>
   );
