@@ -137,12 +137,14 @@ const ProjectsPage = () => {
     <Container className="projects-page">
       {selected === -1 ? (
         <>
-          <h1>Open Projects</h1>
-          <ProjectSelectFlow className="flow-images" />
-          <Row className="justify-content-center">
-            <LinkContainer to={`/matched-projects`}>
+          <Row>
+            <h1>Open Projects</h1>
+
+            <LinkContainer className="projects-matched-button projects-matched-order-2" to={`/matched-projects`}>
               <Button className="primary-button projects-matched-button">See our matched projects!</Button>
             </LinkContainer>
+
+            <ProjectSelectFlow className="flow-images projects-matched-order-1 " />
           </Row>
 
           {hasLoaded ? (

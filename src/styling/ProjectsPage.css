@@ -13,7 +13,7 @@
 }
 
 .projects-matched-button {
-  margin: 1em;
+  margin-left: auto;
 }
 
 .preview-card {
@@ -212,6 +212,18 @@
 }
 
 @media only screen and (max-width: 992px) {
+  .projects-matched-order-1 {
+    order: 1;
+  }
+
+  .projects-matched-order-2 {
+    order: 2;
+  }
+
+  .projects-matched-button {
+    margin: 0 auto;
+  }
+
   .project-description-card {
     margin-left: 0;
   }
@@ -226,6 +238,7 @@
 }
 
 @media only screen and (max-width: 768px) {
+
   .projects-page {
     padding: 0 16px;
     margin-top: 16px;
