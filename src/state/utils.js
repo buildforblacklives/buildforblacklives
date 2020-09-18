@@ -22,7 +22,8 @@ export const translateAirtableRecord = (record) => {
     projectUpdates: record.get('Project Updates'),
     tags: recordTags.map((tag) => mapTags[tag]),
     orgSocial: record.get('Org website/social media account'),
-    screenshots: record.get('Screenshots') || []
+    screenshots: record.get('Screenshots') || [],
+    redirectLink: record.get('Project Update Links')
   };
 };
 

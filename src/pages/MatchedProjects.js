@@ -58,9 +58,9 @@ const MatchedProjects = () => {
       <h1 className="matched-projects-header">Matched Projects</h1>
       {projects.map((data) => {
         console.log(data);
-        const { screenshots, orgName, projectUpdates, link } = data;
+        const { screenshots, orgName, projectUpdates, redirectLink } = data;
         return (
-          <MatchedProjectEntry images={screenshots} companyName={orgName} description={projectUpdates} link={link} />
+          <MatchedProjectEntry images={screenshots} companyName={orgName} description={projectUpdates} link={redirectLink} />
         );
       })}
     </Container>

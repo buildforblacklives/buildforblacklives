@@ -7,10 +7,14 @@
 }
 
 .matched-projects-back {
-  color: var(--main-yellow) !important;
   font-family: ArchivoBold;
   cursor: pointer;
   font-size: 20px;
   margin: 0 0 32px;
   display: inline-block;
+}
+
+.matched-projects-learn-more {
+  display: flex;
+  justify-content: flex-end;
 }
