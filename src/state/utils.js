@@ -1,3 +1,5 @@
+import Airtable from 'airtable'
+
 const mapTags = {
   'Mobile app': 'Mobile App',
   'Website (marketing site, interactive platform, informational site)': 'Website/Web App',
@@ -28,9 +30,31 @@ export const translateAirtableRecord = (record) => {
 };
 
 export const formatUrlsInString = (str) => {
-  const urlRegex = /(\S+)(.com|.org|.edu|.net)\/?((\w|\d|\/)+)?/gi;
-  return str.replace(
-    urlRegex,
-    (url) => `<a href="${url.startsWith('http') ? '' : 'https://'}${url}" target="__blank">${url}</a>`
-  );
+  const urlRegex = /(\S+)(.com|.org|.edu|.net)\/?((\w|\d|\/)+)?/gi
+  return str.replace(urlRegex, (url) =>
+    `<a href="${url.startsWith('http') ? '' : 'https://'}${url}" target="__blank">${url}</a>`
+  )
+}
+
+export const fetchOpenProjects = (doOnSuccess) => {
+  const base = new Airtable({ apiKey: process.env.REACT_APP_AIRTABLE_KEY }).base('appBzqG0sB4hqtE0I');
+  let airtableRecords = [];
+
+  base('Design projects')
+    .select({
+      view: 'Approved Projects'
+    })
+    .eachPage(
+      async (records, fetchNextPage) => {
+        airtableRecords = records.map((record) => translateAirtableRecord(record));
+        doOnSuccess(airtableRecords)
+        fetchNextPage();
+      },
+      (err) => {
+        if (err) {
+          console.error(err);
+          return;
+        }
+      }
+    );
 };
