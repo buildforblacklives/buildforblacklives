@@ -146,6 +146,15 @@ const AboutPage = () => (
             { " —" }
             <span className="font-italic"> Khoury College</span>
           </p>
+          <p>
+            <a href="https://huntnewsnu.com/63112/city-pulse/build-for-black-lives-uses-tech-skills-for-social-change/"
+               target="_blank"
+               rel="noopener noreferrer">
+              Build for Black Lives uses tech skills for social change
+            </a>
+            { " —" }
+            <span className="font-italic"> The Huntington News</span>
+          </p>
         </p>
       </Col>
       <Col xs={12} md={4}>
