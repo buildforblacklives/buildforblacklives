@@ -31,7 +31,15 @@
 
 .preview-card-contents {
   max-height: 224px;
-  overflow: hidden;
+  overflow-y: auto;
+}
+
+.preview-card-contents::-webkit-scrollbar {
+  display: none;
+}
+
+.preview-card-contents {
+  -ms-overflow-style: none;
 }
 
 .preview-subtitle {
@@ -56,9 +64,19 @@
   color: var(--light-yellow);
 }
 
+.project-tag.project-tag-selected {
+  color: var(--main-black);
+  background-color: var(--light-yellow);
+}
+
 .project-tag-urgent {
   border: 2px solid var(--main-blue);
   color: var(--main-blue);
+}
+
+.project-tag-urgent.project-tag-urgent-selected {
+  color: var(--main-black);
+  background-color: var(--main-blue);
 }
 
 .project-card-tags {
@@ -180,6 +198,7 @@
 
 .select-view-preview-card .preview-card-contents {
   padding-bottom: 32px;
+  max-height: none;
 }
 
 .is-select-preview-card,
@@ -201,6 +220,29 @@
   margin-top: 2rem;
 }
 
+.projects-filter-bar {
+  display: flex;
+  position: relative;
+  margin: 1rem 0;
+  justify-content: space-between;
+}
+
+.project-filter-tag {
+  cursor: pointer;
+  margin: 4px 8px;
+}
+
+.project-filter-tag-selected {
+  color: var(--main-black);
+  background-color: var(--light-yellow);
+}
+
+.project-filter-clear {
+  cursor: pointer;
+  margin: 8px 0 0 16px;
+  white-space: nowrap;
+}
+
 @media only screen and (max-width: 992px) {
   .project-description-card {
     margin-left: 0;
@@ -212,6 +254,15 @@
 
   .project-list-panel {
     display: none;
+  }
+
+  .projects-filter-bar {
+    justify-content: unset;
+    display: block;
+  }
+
+  .project-filter-clear {
+    margin-left: 0;
   }
 }
 
@@ -238,9 +289,5 @@
 
   .project-description-card p {
     margin-bottom: 0;
-  }
-
-  .project-card-description {
-    max-height: calc(1.3rem * 3);
   }
 }
