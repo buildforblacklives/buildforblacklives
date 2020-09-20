@@ -57,6 +57,11 @@
   height: auto;
 }
 
+.home-page .flow-images {
+  max-width: 70%;
+  height: auto;
+}
+
 @media only screen and (max-width: 1200px) {
   .logo {
     max-width: 220px;
@@ -87,7 +92,7 @@
   .home-track-body {
     margin-top: 35px;
   }
-  
+
   .home-comm-partners-icon {
     max-width: 250px;
   }
@@ -126,6 +131,10 @@
 @media only screen and (max-width: 468px) {
   .home-comm-partners-icon {
     max-width: 120px;
+  }
+
+  .home-page .flow-images {
+    max-width: 300px;
   }
 }
 
