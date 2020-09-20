@@ -6,16 +6,37 @@ import NewsletterForm from '../components/NewsletterForm';
 import { ProjectsPageTemp } from './ProjectsPageTemp';
 import ProjectCard from '../components/ProjectCard';
 import ProjectSelectFlow from '../assets/flow_diagrams/project_selection_flow';
-import { fetchOpenProjects } from '../state/utils';
+import { fetchOpenProjects, allTags } from '../state/utils'
 import { createProjects } from '../state/projects';
 
 import '../styling/ProjectsPage.css';
 
+const FilterBar = ({updateFilters, clearFilters, filters}) => (
+  <div className="projects-filter-bar">
+    <div>
+      <span>Filter: </span>
+      {allTags.map(tag => (
+        <span key={tag} className={`project-filter-tag ${filters[tag] ? 'project-filter-tag-selected' : ''} project-tag`} onClick={() => updateFilters(tag)}>{tag}</span>
+      ))}
+    </div>
+    <span className="project-filter-clear" onClick={clearFilters}>Clear all</span>
+  </div>
+)
+
 const ProjectsPage = () => {
   const dispatch = useDispatch();
+
+  const getDefaultFilters = () => {
+    const defaultFilters = {}
+    allTags.forEach((tag) => defaultFilters[tag] = false)
+    return defaultFilters
+  }
+
   const savedProjects = useSelector((state) => state.openProjects);
   const [projects, setProjects] = useState(savedProjects);
   const [hasLoaded, setHasLoaded] = useState(false);
+  const defaultFilters = getDefaultFilters()
+  const [filters, setFilters] = useState(defaultFilters);
 
   useEffect(() => {
     const doOnSuccess = async (airtableRecords) => {
@@ -29,7 +50,24 @@ const ProjectsPage = () => {
     } else {
       setHasLoaded(true);
     }
-  }, [dispatch, savedProjects, hasLoaded]);
+  }, [dispatch, savedProjects, hasLoaded])
+
+  const updateFilters = (tag) => {
+    setFilters({ ...filters, [tag]: !filters[tag]})
+  }
+
+  const clearFilters = () => {
+    setFilters(defaultFilters)
+  }
+
+  const shouldShowProject = (isUrgent, projectTags) => {
+    if (Object.values(filters).every((val) => !val)) {
+      return true
+    } else if (isUrgent && filters["Urgent"]) {
+      return true
+    }
+    return projectTags.some((tag) => filters[tag])
+  }
 
   if (hasLoaded && projects.length === 0) {
     return <ProjectsPageTemp />;
@@ -45,13 +83,19 @@ const ProjectsPage = () => {
         <ProjectSelectFlow className="flow-images projects-matched-order-1" />
       </Row>
       {hasLoaded ? (
-        <Row className="d-flex justify-content-left">
-          {projects.map((project) => (
-            <Col key={project.id} lg={4} md={6} sm={12}>
-              <ProjectCard project={project} isSelectedView={false} />
-            </Col>
-          ))}
-        </Row>
+        <>
+          <FilterBar updateFilters={updateFilters} clearFilters={clearFilters} filters={filters} />
+          <Row className="d-flex justify-content-left">
+            {projects.map((project) => (
+              shouldShowProject(project.isUrgent, project.tags) &&
+              (
+                <Col key={project.id} lg={4} md={6} sm={12}>
+                  <ProjectCard project={project} isSelectedView={false} tagSelectedStatus={filters} />
+                </Col>
+              )
+            ))}
+          </Row>
+        </>
       ) : (
         <Row className="justify-content-center spinner-row">
           <Spinner className="spinner" animation="border" variant="warning" />
