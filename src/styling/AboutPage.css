@@ -23,6 +23,10 @@
   max-width: 300px;
 }
 
+.about-news-icon {
+  max-width: 270px;
+}
+
 .about-tech-design-icon {
   max-width: 390px;
 }
@@ -37,7 +41,7 @@
   justify-content: center;
 }
 
-.about-contact-list {
+.about-list {
   margin: 4px 0 4px 32px;
 }
 
@@ -104,6 +108,10 @@
     max-width: 170px;
   }
 
+  .about-news-icon {
+    max-width: 170px;
+  }
+
   .about-order1 {
     order: 1;
   }
@@ -128,6 +136,10 @@
   }
 
   .about-mail-icon {
+    max-width: 120px;
+  }
+
+  .about-news-icon {
     max-width: 120px;
   }
 

@@ -3,6 +3,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 
 import Logo from '../assets/logo.js';
 import MailIcon from '../assets/email-icon.js';
+import NewsIcon from '../assets/news-icon.js';
 
 import TechDesign from '../assets/tech-design.js';
 
@@ -24,10 +25,11 @@ const AboutPage = () => (
           the tech and design industries.
         </p>
         <p>
-          Build for Black Lives was created by <a href="https://hackbeanpot.com/">HackBeanpot</a>, a 501(c)(3),
-          Boston-based hackathon that aims to build a diverse, inclusive, learning-focused tech community. Given that
-          racism has long been an issue in the tech space, we started this platform to bring the anti-racist tech
-          community together to take action to support Black lives and fight white supremacy.
+          Build for Black Lives was created by
+          <a href="https://hackbeanpot.com/" target="_blank" rel="noopener noreferrer"> HackBeanpot</a>,
+          a 501(c)(3), Boston-based hackathon that aims to build a diverse, inclusive, learning-focused tech community.
+          Given that racism has long been an issue in the tech space, we started this platform to bring the anti-racist
+          tech community together to take action to support Black lives and fight white supremacy.
         </p>
       </Col>
     </Row>
@@ -94,6 +96,8 @@ const AboutPage = () => (
                 <a
                   className="heading-link"
                   href={resource.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   {resource.title}
                 </a>
@@ -117,6 +121,50 @@ const AboutPage = () => (
     <hr />
 
     <Row className="about-align-center">
+      <Col className="about-order1">
+        <h2>Build for Black Lives in the News</h2>
+        <p> Check out these latest news articles featuring Build for Black Lives to learn
+            more about the motivation and vision behind this platform.
+        </p>
+        <p className="about-list">
+          <p>
+
+            <a href="https://news.northeastern.edu/2020/08/10/can-technology-reduce-racial-inequity-build-for-black-lives-a-student-built-platform-could-help/"
+               target="_blank"
+               rel="noopener noreferrer">
+              Can Technology Reduce Racial Inequality?
+            </a>
+            { " —" }
+             <span className="font-italic"> News@Northeastern</span>
+          </p>
+          <p>
+            <a href="https://undergraduatenews.khoury.northeastern.edu/2020/07/31/build-for-black-lives/"
+               target="_blank"
+               rel="noopener noreferrer">
+              Undergraduate News: Build for Black Lives
+            </a>
+            { " —" }
+            <span className="font-italic"> Khoury College</span>
+          </p>
+          <p>
+            <a href="https://huntnewsnu.com/63112/city-pulse/build-for-black-lives-uses-tech-skills-for-social-change/"
+               target="_blank"
+               rel="noopener noreferrer">
+              Build for Black Lives uses tech skills for social change
+            </a>
+            { " —" }
+            <span className="font-italic"> The Huntington News</span>
+          </p>
+        </p>
+      </Col>
+      <Col xs={12} md={4}>
+        <NewsIcon className="mx-auto d-block about-icon about-news-icon" fluid />
+      </Col>
+    </Row>
+
+   <hr />
+
+    <Row className="row-align-center">
       <Col xs={12} md={4}>
         <MailIcon className="mx-auto d-block about-icon about-mail-icon" fluid />
       </Col>
@@ -128,7 +176,7 @@ const AboutPage = () => (
         <p>
         Please use one of the following subject lines to help us filter through questions:
         </p>
-        <p className="about-contact-list">
+        <p className="about-list">
 
           <p>"[Volunteer] Question"</p>
           <p>"[Project Request] Question"</p>

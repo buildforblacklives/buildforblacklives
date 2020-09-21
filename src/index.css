@@ -176,15 +176,13 @@ hr {
   left: 50%;
 }
 
-@media only screen and (max-width: 992px) {
-  .flow-images {
-    max-width: 90%;
-    height: auto;
-  }
+.flow-images {
+  max-width: 60%;
+  height: auto;
 }
 
 .spinner-row {
-  margin-top: 3rem
+  margin-top: 3rem;
 }
 
 .spinner {
@@ -196,7 +194,7 @@ hr {
   hr {
     margin: 2rem 0;
   }
-  
+
   h1 {
     font-size: 40px;
   }
