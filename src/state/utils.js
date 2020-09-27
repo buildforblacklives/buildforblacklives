@@ -3,20 +3,20 @@ import Airtable from 'airtable'
 const mapTags = {
   "Mobile app" : "Mobile App",
   "Website (marketing site, interactive platform, informational site)" : "Website/Web App",
-  "Brand development (logo, marketing guidelines)" : "Branding",
-  "Design work (flyers, graphics, posters)" : "Design",
-  "Social media content (campaigns, email templates, protest announcements)" : "Social Media",
-  "Data (analysis, research, visualizations, storage)" : "Data"
+  "Design work (flyers, graphics, posters, logo)" : "Design",
+  "Social media content (campaigns, email templates, marketing)" : "Social Media",
+  "Data (analysis, research, visualizations, storage)" : "Data",
+  "Video marketing (ads, tutorials, testimonial, editing, sfx)": "Video Marketing"
 }
 
 export const allTags = [
   "Urgent",
   "Mobile App",
   "Website/Web App",
-  "Branding",
   "Design",
   "Social Media",
-  "Data"
+  "Data",
+  "Video Marketing"
 ]
 
 export const translateAirtableRecord = (record) => {
