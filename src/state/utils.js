@@ -6,7 +6,7 @@ const mapTags = {
   "Design work (flyers, graphics, posters, logo)" : "Design",
   "Social media content (campaigns, email templates, marketing)" : "Social Media",
   "Data (analysis, research, visualizations, storage)" : "Data",
-  "Video marketing (ads, tutorials, testimonial, editing, sfx)": "Video Marketing"
+  "Video marketing (ads, tutorials, testimonial, editing, sfx)": "Video"
 }
 
 export const allTags = [
@@ -16,7 +16,7 @@ export const allTags = [
   "Design",
   "Social Media",
   "Data",
-  "Video Marketing"
+  "Video"
 ]
 
 export const translateAirtableRecord = (record) => {
