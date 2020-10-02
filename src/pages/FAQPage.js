@@ -35,6 +35,7 @@ const FAQPage = () => {
         default:
           selectedData = FAQItems.clientFAQ;
       }
+      
       setFaqData(selectedData);
     }
   };
@@ -47,13 +48,15 @@ const FAQPage = () => {
         <Tab eventKey="volunteer" title={isMobile ? 'Work' : 'Work on a Project'}></Tab>
         <Tab eventKey="initiative" title={isMobile ? 'About' : 'About This Initiative'}></Tab>
       </Tabs>
-      {!!faqData && (
-        <section className="accordion-section-container">
-          {faqData.map((qa, i) => {
-            return <CustomAccordion key={i} header={qa.question} body={qa.answer} />;
-          })}
-        </section>
-      )}
+      {!!faqData &&
+        faqData.map(({ title, questions }, i) => (
+          <section key={i} className="accordion-section-container">
+            {title && <h3>{title}</h3>}
+            {questions.map(({ question, answer }, i) => (
+              <CustomAccordion key={i} header={question} body={answer} />
+            ))}
+          </section>
+        ))}
     </Container>
   );
 };
