@@ -73,3 +73,18 @@
     border-top-right-radius: 15px;
   }
 }
+
+/* Collapsable */
+.collapsable-heading {
+  background: none;
+  border: none;
+  display: flex;
+  width: 100%;
+  padding: 1rem;
+}
+
+.collapsable-heading h4 {
+  margin-left: 1rem;
+  margin-bottom: 0;
+  text-align: left;
+}

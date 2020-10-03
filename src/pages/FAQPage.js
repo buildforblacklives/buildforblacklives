@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Container, Tabs, Tab } from 'react-bootstrap';
 
 import CustomAccordion from '../components/CustomAccordion';
+import Collapsable from '../components/Collapsable';
 import useIsMobile from '../hooks/useIsMobile';
 import { FAQItems } from '../data/faq';
 
@@ -35,7 +36,7 @@ const FAQPage = () => {
         default:
           selectedData = FAQItems.clientFAQ;
       }
-      
+
       setFaqData(selectedData);
     }
   };
@@ -49,13 +50,14 @@ const FAQPage = () => {
         <Tab eventKey="initiative" title={isMobile ? 'About' : 'About This Initiative'}></Tab>
       </Tabs>
       {!!faqData &&
-        faqData.map(({ title, questions }, i) => (
-          <section key={i} className="accordion-section-container">
-            {title && <h3>{title}</h3>}
-            {questions.map(({ question, answer }, i) => (
-              <CustomAccordion key={i} header={question} body={answer} />
-            ))}
-          </section>
+        faqData.map(({ category, questions }, i) => (
+          <Collapsable key={i} heading={category}>
+            <section className="accordion-section-container">
+              {questions.map(({ question, answer }, i) => (
+                <CustomAccordion key={i} header={question} body={answer} />
+              ))}
+            </section>
+          </Collapsable>
         ))}
     </Container>
   );
