@@ -45,10 +45,15 @@
 }
 
 .accordion-body {
-  font-size: 18px;
   background-color: var(--main-grey);
   color: var(--white);
   padding: 1.5rem 3rem;
+}
+
+.accordion-body,
+.accordion-body span,
+.accordion-body div {
+  font-size: 18px;
 }
 
 .accordion-body-large {
@@ -62,8 +67,13 @@
   }
 
   .accordion-body {
-    font-size: 16px;
     padding: 1.5rem;
+  }
+
+  .accordion-body,
+  .accordion-body span,
+  .accordion-body div {
+    font-size: 16px;
   }
 }
 
