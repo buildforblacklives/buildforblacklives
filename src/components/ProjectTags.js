@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ProjectTags = ({ tags, isUrgent, selectedStatus={} }) => (
+const ProjectTags = ({ tags, isUrgent, needsPM, selectedStatus={} }) => (
   <>
     {isUrgent &&
       <span
@@ -13,6 +13,12 @@ const ProjectTags = ({ tags, isUrgent, selectedStatus={} }) => (
       {tags.map(tag => (
         <span key={tag} className={`project-tag ${selectedStatus[tag] ? 'project-tag-selected' : ''}`}>{tag}</span>
       ))}
+      {needsPM &&
+       <span
+        className={`project-tag ${selectedStatus['PM'] ? 'project-tag-selected' : ''}`}>
+          PM
+        </span>
+      }
     </div>
   </>
 )

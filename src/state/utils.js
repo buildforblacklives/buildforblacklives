@@ -16,7 +16,8 @@ export const allTags = [
   "Design",
   "Social Media",
   "Data",
-  "Video"
+  "Video",
+  "PM"
 ]
 
 export const translateAirtableRecord = (record) => {
@@ -25,6 +26,7 @@ export const translateAirtableRecord = (record) => {
   return {
     id: record.id,
     isUrgent: record.get('urgent?') || false,
+    needsPM: record.get('project manager?') || false,
     orgAbout: record.get('Org Description'),
     orgEmail: record.get('Email'),
     orgName: record.get('Organization Name'),
