@@ -15,8 +15,8 @@ const ProjectTags = ({ tags, isUrgent, needsPM, selectedStatus={} }) => (
       ))}
       {needsPM &&
        <span
-        className={`project-tag ${selectedStatus['Project Manager'] ? 'project-tag-selected' : ''}`}>
-          Project Manager
+        className={`project-tag ${selectedStatus['PM'] ? 'project-tag-selected' : ''}`}>
+          PM
         </span>
       }
     </div>

@@ -63,7 +63,7 @@ const ProjectsPage = () => {
       return true
     } else if (isUrgent && filters["Urgent"]) {
       return true
-    } else if (needsPM && filters["Project Manager"]) {
+    } else if (needsPM && filters["PM"]) {
       return true
     }
     return projectTags.some((tag) => filters[tag])

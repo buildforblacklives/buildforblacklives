@@ -17,7 +17,7 @@ export const allTags = [
   "Social Media",
   "Data",
   "Video",
-  "Project Manager"
+  "PM"
 ]
 
 export const translateAirtableRecord = (record) => {
