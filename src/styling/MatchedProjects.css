@@ -1,5 +1,9 @@
 .matched-projects-header {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+}
+
+.matched-projects-body {
+  margin-bottom: 3.5rem;
 }
 
 .matched-projects-row {

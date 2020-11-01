@@ -18,7 +18,6 @@
 
 .projects-matched-button {
   margin-left: auto;
-  width: 50%
 }
 
 .preview-card {
@@ -300,7 +299,7 @@
 
   .projects-matched-button {
     margin-left: auto;
-    width: 80%
+    width: 45%
   }
 
   .projects-page {
@@ -325,5 +324,13 @@
 
   .project-description-card p {
     margin-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+
+  .projects-matched-button {
+    margin-left: auto;
+    width: 75%
   }
 }

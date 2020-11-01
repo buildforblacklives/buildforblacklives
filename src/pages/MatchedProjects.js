@@ -56,11 +56,21 @@ const MatchedProjects = () => {
         <NavLink className="matched-projects-back">{`< Back to projects`}</NavLink>
       </LinkContainer>
       <h1 className="matched-projects-header">Matched Projects</h1>
+      <p className="matched-projects-body">
+        This page features some of our matched projects. They have been successfully paired with volunteers through our
+        site and have either wrapped up or are currently in progress. Check them out below to see the amazing work our
+        volunteers have done!
+      </p>
       {projects.map((data) => {
         console.log(data);
         const { screenshots, orgName, projectUpdates, redirectLink } = data;
         return (
-          <MatchedProjectEntry images={screenshots} companyName={orgName} description={projectUpdates} link={redirectLink} />
+          <MatchedProjectEntry
+            images={screenshots}
+            companyName={orgName}
+            description={projectUpdates}
+            link={redirectLink}
+          />
         );
       })}
     </Container>

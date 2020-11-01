@@ -17,6 +17,7 @@ const ControlledCarousel = (props) => {
       onSelect={handleSelect}
       prevIcon={<span aria-hidden="true" className="carousel-control-prev-icon" />}
       nextIcon={<span aria-hidden="true" className="carousel-control-next-icon" />}
+      interval={null}
     >
       {images.map((image, key) => {
         const {
