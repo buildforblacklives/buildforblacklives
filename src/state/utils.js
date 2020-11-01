@@ -1,22 +1,23 @@
 import Airtable from 'airtable'
 
 const mapTags = {
-  'Mobile app': 'Mobile App',
-  'Website (marketing site, interactive platform, informational site)': 'Website/Web App',
-  'Brand development (logo, marketing guidelines)': 'Branding',
-  'Design work (flyers, graphics, posters)': 'Design',
-  'Social media content (campaigns, email templates, protest announcements)': 'Social Media',
-  'Data (analysis, research, visualizations, storage)': 'Data'
-};
+  "Mobile app" : "Mobile App",
+  "Website (marketing site, interactive platform, informational site)" : "Website/Web App",
+  "Design work (flyers, graphics, posters, logo)" : "Design",
+  "Social media content (campaigns, email templates, marketing)" : "Social Media",
+  "Data (analysis, research, visualizations, storage)" : "Data",
+  "Video marketing (ads, tutorials, testimonial, editing, sfx)": "Video"
+}
 
 export const allTags = [
   "Urgent",
   "Mobile App",
   "Website/Web App",
-  "Branding",
   "Design",
   "Social Media",
-  "Data"
+  "Data",
+  "Video",
+  "PM"
 ]
 
 export const translateAirtableRecord = (record) => {
@@ -25,6 +26,7 @@ export const translateAirtableRecord = (record) => {
   return {
     id: record.id,
     isUrgent: record.get('urgent?') || false,
+    needsPM: record.get('project manager?') || false,
     orgAbout: record.get('Org Description'),
     orgEmail: record.get('Email'),
     orgName: record.get('Organization Name'),
