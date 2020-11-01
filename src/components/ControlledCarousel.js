@@ -26,7 +26,7 @@ const ControlledCarousel = (props) => {
           }
         } = image;
         return (
-          <Carousel.Item>
+          <Carousel.Item style={{textAlign: 'center'}}>
             <Image alt={`Image ${key}`} src={url} fluid />
           </Carousel.Item>
         );
