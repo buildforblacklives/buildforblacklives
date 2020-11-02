@@ -34,7 +34,8 @@ export const translateAirtableRecord = (record) => {
     projectAbout: record.get('Project desc'),
     projectDeadline: record.get('Due date'),
     tags: recordTags.map(tag => mapTags[tag]),
-    orgSocial: record.get('Org website/social media account')
+    orgSocial: record.get('Org website/social media account'),
+    pmEmail: record.get('PM Email')
   }
 }
 
