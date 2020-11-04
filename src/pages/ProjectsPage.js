@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { Row, Col, Container, Spinner } from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
+import { Button, Row, Col, Container, Spinner } from 'react-bootstrap';
 import NewsletterForm from '../components/NewsletterForm';
 import { ProjectsPageTemp } from './ProjectsPageTemp';
 import ProjectCard from '../components/ProjectCard';
@@ -24,13 +25,14 @@ const FilterBar = ({updateFilters, clearFilters, filters}) => (
 
 const ProjectsPage = () => {
   const dispatch = useDispatch();
+
   const getDefaultFilters = () => {
     const defaultFilters = {}
     allTags.forEach((tag) => defaultFilters[tag] = false)
     return defaultFilters
   }
 
-  const savedProjects = useSelector((state) => state);
+  const savedProjects = useSelector((state) => state.openProjects);
   const [projects, setProjects] = useState(savedProjects);
   const [hasLoaded, setHasLoaded] = useState(false);
   const defaultFilters = getDefaultFilters()
@@ -75,9 +77,12 @@ const ProjectsPage = () => {
 
   return (
     <Container className="projects-page">
-      <h1>Open Projects</h1>
-      <Row className="justify-content-center d-flex flex-wrap align-items-center">
-        <ProjectSelectFlow className="flow-images" />
+      <Row>
+        <h1 className="projects-header">Open Projects</h1>
+        <LinkContainer className="projects-matched-button projects-matched-order-2" to={`/matched-projects`}>
+          <Button className="primary-button projects-matched-button">See our matched projects!</Button>
+        </LinkContainer>
+        <ProjectSelectFlow className="flow-images projects-matched-order-1" />
       </Row>
       {hasLoaded ? (
         <>
