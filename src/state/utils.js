@@ -21,7 +21,7 @@ export const allTags = [
 ]
 
 export const translateAirtableRecord = (record) => {
-  const recordTags = record.get('Project Type') || []
+  const recordTags = record.get('Project Type') || [];
 
   return {
     id: record.id,
@@ -33,11 +33,13 @@ export const translateAirtableRecord = (record) => {
     projectTitle: record.get('Project Title'),
     projectAbout: record.get('Project desc'),
     projectDeadline: record.get('Due date'),
-    tags: recordTags.map(tag => mapTags[tag]),
+    projectUpdates: record.get('Project Updates'),
+    tags: recordTags.map((tag) => mapTags[tag]),
     orgSocial: record.get('Org website/social media account'),
-    pmEmail: record.get('PM Email')
-  }
-}
+    screenshots: record.get('Screenshots') || [],
+    redirectLink: record.get('Project Update Links')
+  };
+};
 
 export const formatUrlsInString = (str) => {
   const urlRegex = /(\S+)(.com|.org|.edu|.net)\/?((\w|\d|\/)+)?/gi
