@@ -56,7 +56,7 @@ const SelectedCard = ({ project }) => {
 const ProjectSelectPage = ({ match }) => {
   const { projectId } = match.params;
   const dispatch = useDispatch();
-  const savedProjects = useSelector((state) => state);
+  const savedProjects = useSelector((state) => state.openProjects);
   const [selectedProject, setSelectedProject] = useState(savedProjects.find((project) => project.id === projectId));
   const [projects, setProjects] = useState(savedProjects);
   const [hasLoaded, setHasLoaded] = useState(false);
