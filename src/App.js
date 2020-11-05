@@ -4,6 +4,7 @@ import ReactGA from 'react-ga';
 import { MainNavbar } from './components/MainNavbar';
 import { Footer } from './components/Footer';
 import { HomePage } from './pages/HomePage';
+import { MatchedProjects } from './pages/MatchedProjects';
 import { AboutPage } from './pages/AboutPage';
 import { ProjectsPage } from './pages/ProjectsPage';
 import { RequestPage } from './pages/RequestPage';
@@ -51,6 +52,7 @@ const Routes = () => {
       <Route path="/about" component={AboutPage} />
       <Route exact path="/projects" component={ProjectsPage} />
       <Route path="/project-request" component={RequestPage} />
+      <Route path="/matched-projects" component={MatchedProjects} />
       <Route path="/community-partners" component={CommPartnersPage} />
       <Route path="/faq" component={FAQPage} />
       <Route exact path="/projects/:projectId" component={ProjectSelectPage} />
