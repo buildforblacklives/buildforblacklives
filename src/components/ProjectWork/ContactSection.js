@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Button, Card } from 'react-bootstrap';
 
-const Template = ({ orgName, projectTitle }, textType) => {
-  let newline = textType === 'uri' ? '%0d%0a' : '\n';
+const Template = ({ orgName, projectTitle, pmEmail }, textType) => {
+  let newline = textType === 'uri' ? '%0d%0a%0d%0a' : '\n';
 
   return `
 Hello ${orgName},${newline}
@@ -15,7 +15,7 @@ Best,${newline}
 };
 
 const ContactSection = ({ project, hasConfirmed }) => {
-  const { orgEmail, projectTitle } = project;
+  const { orgEmail, projectTitle, pmEmail } = project;
   const emailContent = Template(project);
 
   const defaultCopyButtonText = 'Copy Email Template';
@@ -37,7 +37,9 @@ const ContactSection = ({ project, hasConfirmed }) => {
   const openMailClient = () => {
     const subjectLine = `Interest In Project: ${projectTitle}`;
     const body = Template(project, 'uri');
-    window.location.href = `mailto:${orgEmail}?subject=${subjectLine}&body=${body}`;
+    window.location.href = pmEmail
+        ? `mailto:${orgEmail}?cc=${pmEmail}&subject=${subjectLine}&body=${body}`
+        : `mailto:${orgEmail}?subject=${subjectLine}&body=${body}`;
   };
 
   const ContactEmailTemplate = () => (
@@ -45,7 +47,7 @@ const ContactSection = ({ project, hasConfirmed }) => {
       <div className="info-container">
         <h4>Email Template</h4>
         <p>
-          This is a sample email template that you may use to contact the client. If you wish to use it, please modify
+          This is a sample email template that you may use to contact the client and, if applicable, the project manager. If you wish to use it, please modify
           the information within the brackets in order to tailor it to the project and client. If you are in a team, be
           sure to include them in the email as well.
         </p>
@@ -71,7 +73,8 @@ const ContactSection = ({ project, hasConfirmed }) => {
       <div className={hasConfirmed ? 'title-container' : ''}>
         <h3>Contact Information</h3>
         {hasConfirmed ? (
-          <>{orgEmail && <p>Email: {orgEmail}</p>}</>
+          <>{orgEmail && <p>Organization Email: {orgEmail}</p>}
+          {pmEmail && <p> Project Manager Email: {pmEmail}</p>}</>
         ) : (
           <p className="mb-0">Please agree to the anti-racism commitment in step 1 to view contact information</p>
         )}

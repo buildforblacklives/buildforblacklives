@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import Airtable from 'airtable';
-import { Link } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
 import { Container, Button } from 'react-bootstrap';
 
 import CustomAccordion from '../components/CustomAccordion';
@@ -15,7 +15,7 @@ import '../styling/ProjectWorkPage.css';
 
 const ProjectWorkPage = ({ match }) => {
   const { projectId } = match.params;
-  const savedProject = useSelector((state) => state.find((project) => project.id === projectId));
+  const savedProject = useSelector((state) => state.openProjects.find((project) => project.id === projectId));
   const [hasConfirmed, setHasConfirmed] = useState(false);
   const [project, setProject] = useState(savedProject);
   const [hasLoaded, setHasLoaded] = useState(false);
@@ -50,7 +50,7 @@ const ProjectWorkPage = ({ match }) => {
     return (
       <div className="row d-flex justify-content-center text-center">
         <div className="col-md-8 mt-5">
-          <h1>Oops! Looks like this project doesn't exist or has already been claimed</h1>
+          <h1>Oops! Looks like this project doesn't exist or has already been matched</h1>
           <Button
             href="/projects"
             className="primary-button mt-5"
@@ -114,7 +114,7 @@ const ProjectWorkPage = ({ match }) => {
                 anti-racist technology.
               </p>
               <div className="bottom-button-container">
-                <Link to="/resources">
+                <Link smooth to="/about#resources">
                   <Button className="primary-button">Take me to Anti-Racist Resources</Button>
                 </Link>
               </div>

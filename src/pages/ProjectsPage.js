@@ -1,185 +1,115 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import Airtable from 'airtable'
-import { Button, Row, Col, Card, Container } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
-import ProjectSelectFlow from '../assets/flow_diagrams/project_selection_flow';
+import { Button, Row, Col, Container, Spinner } from 'react-bootstrap';
+import NewsletterForm from '../components/NewsletterForm';
 import { ProjectsPageTemp } from './ProjectsPageTemp';
-import { translateAirtableRecord } from '../state/utils'
+import ProjectCard from '../components/ProjectCard';
+import ProjectSelectFlow from '../assets/flow_diagrams/project_selection_flow';
+import { fetchOpenProjects, allTags } from '../state/utils'
 import { createProjects } from '../state/projects';
 
 import '../styling/ProjectsPage.css';
 
-const { Body, Subtitle } = Card;
-
-const ProjectCard = ({ project, isSelectedView, setSelected, selected }) => {
-  const { id, projectTitle, orgName, isUrgent, projectAbout } = project;
-  const getClass = () => {
-    let className = 'preview-card';
-    if (isSelectedView) {
-      className += ' select-view-preview-card'
-
-      if (selected === id) {
-        className += ' is-select-preview-card'
-      }
-    }
-    return className
-  }
-
-  return (
-    <Card
-      className={getClass()}
-      onClick={() => setSelected(id)}>
-      <Body>
-        <div className="preview-card-contents">
-          <h5> {projectTitle} </h5>
-          <Subtitle className="mb-2 preview-subtitle">{orgName}</Subtitle>
-          {isUrgent ?
-            <span className="project-card-urgent">Urgent</span> :
-            <span className="project-tag-space" />}
-          <p className="project-card-description">{projectAbout}</p>
-        </div>
-        <div className="project-more-link">
-          More details...
-        </div>
-      </Body>
-    </Card>
-  )
-}
-
-const SelectedCard = ({ project, setSelected }) => {
-  const { id, orgName, orgAbout, projectTitle, projectAbout, projectDeadline, isUrgent } = project;
-
-  return (
-    <Card className="project-description-card">
-      <Body>
-        <div className="project-description-close float-right" onClick={() => setSelected(-1)} />
-
-        <h4> {projectTitle}</h4>
-        <Subtitle className="mb-2 project-description-subtitle">{orgName}</Subtitle>
-        {isUrgent && <div className="project-card-urgent">Urgent </div>}
-
-        {projectDeadline && (
-          <>
-            <h5 className="pt-3"> Project Timeline </h5>
-            <p className="card-text">{projectDeadline}</p>
-          </>)
-        }
-
-        <h5 className="pt-3"> About {orgName} </h5>
-        <p>{orgAbout}</p>
-
-        <h5 className="pt-3"> About the Project </h5>
-        <p>{projectAbout}</p>
-
-        <div className="text-center project-work-button">
-          <LinkContainer to={`/projects/${id}`}>
-            <Button className="primary-button"> Work on this project! </Button>
-          </LinkContainer>
-        </div>
-      </Body>
-    </Card>
-  )
-}
-
+const FilterBar = ({updateFilters, clearFilters, filters}) => (
+  <div className="projects-filter-bar">
+    <div>
+      <span>Filter: </span>
+      {allTags.map(tag => (
+        <span key={tag} className={`project-filter-tag ${filters[tag] ? 'project-filter-tag-selected' : ''} project-tag`} onClick={() => updateFilters(tag)}>{tag}</span>
+      ))}
+    </div>
+    <span className="project-filter-clear" onClick={clearFilters}>Clear all</span>
+  </div>
+)
 
 const ProjectsPage = () => {
-  const dispatch = useDispatch()
-  const savedProjects = useSelector(state => state)
-  const [selected, setSelected] = useState(-1);
-  const [projects, setProjects] = useState(savedProjects)
-  const [hasLoaded, setHasLoaded] = useState(false)
+  const dispatch = useDispatch();
 
-  const findSelected = () => (
-    projects.find((project) => project.id === selected)
-  )
+  const getDefaultFilters = () => {
+    const defaultFilters = {}
+    allTags.forEach((tag) => defaultFilters[tag] = false)
+    return defaultFilters
+  }
+
+  const savedProjects = useSelector((state) => state.openProjects);
+  const [projects, setProjects] = useState(savedProjects);
+  const [hasLoaded, setHasLoaded] = useState(false);
+  const defaultFilters = getDefaultFilters()
+  const [filters, setFilters] = useState(defaultFilters);
 
   useEffect(() => {
-    const fetchProjects = async () => {
-      const base = new Airtable({ apiKey: process.env.REACT_APP_AIRTABLE_KEY }).base('appBzqG0sB4hqtE0I');
-      let airtableRecords = []
-      
-      base('Design projects').select({
-        view: "Approved Projects"
-      }).eachPage(async (records, fetchNextPage) => {
-        airtableRecords = records.map(record => translateAirtableRecord(record))
-        await dispatch(createProjects(airtableRecords))
-        setProjects(airtableRecords)
-        setHasLoaded(true)
-        
-        fetchNextPage();
-      }, (err) => {
-        if (err) { console.error(err); return; }
-      })
-    }
+    const doOnSuccess = async (airtableRecords) => {
+      await dispatch(createProjects(airtableRecords));
+      setProjects(airtableRecords);
+      setHasLoaded(true);
+    };
 
-    if (savedProjects.length === 0) {
-      fetchProjects()
+    if (savedProjects.length === 0 && !hasLoaded) {
+      fetchOpenProjects(doOnSuccess);
     } else {
-      setHasLoaded(true)
+      setHasLoaded(true);
     }
   }, [dispatch, savedProjects, hasLoaded])
 
+  const updateFilters = (tag) => {
+    setFilters({ ...filters, [tag]: !filters[tag]})
+  }
+
+  const clearFilters = () => {
+    setFilters(defaultFilters)
+  }
+
+  const shouldShowProject = (isUrgent, needsPM, projectTags) => {
+    if (Object.values(filters).every((val) => !val)) {
+      return true
+    } else if (isUrgent && filters["Urgent"]) {
+      return true
+    } else if (needsPM && filters["PM"]) {
+      return true
+    }
+    return projectTags.some((tag) => filters[tag])
+  }
 
   if (hasLoaded && projects.length === 0) {
-    return <ProjectsPageTemp />
+    return <ProjectsPageTemp />;
   }
 
   return (
     <Container className="projects-page">
-      {selected === -1 ? (
+      <Row>
+        <h1 className="projects-header">Open Projects</h1>
+        <LinkContainer className="projects-matched-button projects-matched-order-2" to={`/matched-projects`}>
+          <Button className="primary-button projects-matched-button">See our matched projects!</Button>
+        </LinkContainer>
+        <ProjectSelectFlow className="flow-images projects-matched-order-1" />
+      </Row>
+      {hasLoaded ? (
         <>
-          <h1>Open Projects</h1>
-          <ProjectSelectFlow className="flow-images" />
+          <FilterBar updateFilters={updateFilters} clearFilters={clearFilters} filters={filters} />
           <Row className="d-flex justify-content-left">
             {projects.map((project) => (
-              <Col key={project.id} lg={4} md={6} sm={12}>                
-                <ProjectCard project={project} isSelectedView={false} setSelected={setSelected} />
-              </Col>
+              shouldShowProject(project.isUrgent, project.needsPM, project.tags) &&
+              (
+                <Col key={project.id} lg={4} md={6} sm={12}>
+                  <ProjectCard project={project} isSelectedView={false} tagSelectedStatus={filters} />
+                </Col>
+              )
             ))}
           </Row>
-          <Row className="justify-content-center mt-5">
-            <h4>Looking for more projects?</h4>
-          </Row>
-          <Row className="justify-content-center">
-            <Button
-              href="http://eepurl.com/g9JPtn"
-              className="primary-button"
-              size="lg"
-              target="_blank"
-              aria-disabled="false"
-              rel="noopener noreferrer"
-            >
-              Join our newsletter
-            </Button>
-          </Row>
         </>
-      )
-      :
-      (
-        <>
-          <div className="projects-back" onClick={() => setSelected(-1)}>
-            {'< Back to Open Projects'}
-          </div>
-          <Row>
-            <Col lg={4} className="project-list-panel">
-              {projects.map((project) =>
-                <ProjectCard
-                  project={project}
-                  isSelectedView={true}
-                  setSelected={setSelected}
-                  selected={selected}
-                />)}
-            </Col>
-
-            <Col lg={8} md={12} className="">
-              <SelectedCard project={findSelected()} setSelected={setSelected} />
-            </Col>
-          </Row>
-        </>
+      ) : (
+        <Row className="justify-content-center spinner-row">
+          <Spinner className="spinner" animation="border" variant="warning" />
+        </Row>
       )}
+      <Row className="full-width projects-newsletter-banner flex-column align-items-center">
+        <h3 className="text-center mb-3">Looking for more?</h3>
+        <h5 className="text-center mb-4">Join our newsletter to stay updated on new projects</h5>
+        <NewsletterForm />
+      </Row>
     </Container>
   );
-}
+};
 
 export { ProjectsPage };

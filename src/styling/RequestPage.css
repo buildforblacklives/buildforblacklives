@@ -2,16 +2,24 @@
   margin: 3rem auto;
 }
 
-#request-page .flow-images {
-  margin: 1rem 0rem;
+.request-form-show {
+  opacity: 1;
+  height: 100%;
+  width: 100%;
 }
 
-#request-page h1 {
-  margin-bottom: 1rem;
+.request-form-hide {
+  opacity: 0;
+  height: 0;
 }
 
 @media only screen and (max-width: 768px) {
+  #request-page {
+    padding: 0 16px;
+    margin-top: 16px;
+  }
+
   #request-page h1 {
-    margin-left: 16px;
+    margin-left: 10px;
   }
 }

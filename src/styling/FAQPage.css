@@ -1,3 +1,9 @@
+#faq-page {
+  max-width: 1400px;
+  margin: 2rem auto;
+  padding: 0 32px;
+}
+
 /* Tabs */
 #faq-page .nav-tabs {
   display: flex;
@@ -53,10 +59,32 @@
   }
 }
 
+@media only screen and (max-width: 768px) {
+  #faq-page {
+    padding: 0 16px;
+    margin-top: 16px;
+  }
+}
+
 @media only screen and (max-width: 425px) {
   #faq-page .nav-link {
     padding: 0.5em 0.5em;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
   }
+}
+
+/* Collapsable */
+.collapsable-heading {
+  background: none;
+  border: none;
+  display: flex;
+  width: 100%;
+  padding: 1rem;
+}
+
+.collapsable-heading h4 {
+  margin-left: 1rem;
+  margin-bottom: 0;
+  text-align: left;
 }

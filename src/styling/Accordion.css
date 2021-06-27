@@ -5,12 +5,17 @@
 }
 
 .accordion-header {
-  cursor: pointer;
   display: flex;
+  width: 100%;
   font-family: ArchivoBold;
   font-size: 20px;
   background-color: var(--main-cream);
+  border: none;
   padding: 1rem;
+}
+
+.accordion-header:focus {
+  outline-offset: -2px;
 }
 
 .accordion-header .accordion-header-icon {
@@ -19,13 +24,14 @@
 
 .accordion-header-large .accordion-header-icon {
   width: 32px;
-  height: 32px
+  height: 32px;
 }
 
 .accordion-section-container .accordion-header-title {
   margin-bottom: 0;
   margin-left: 16px;
   color: var(--main-black);
+  text-align: left;
 }
 
 .accordion-header:hover {
@@ -39,10 +45,15 @@
 }
 
 .accordion-body {
-  font-size: 18px;
   background-color: var(--main-grey);
   color: var(--white);
   padding: 1.5rem 3rem;
+}
+
+.accordion-body,
+.accordion-body span,
+.accordion-body div {
+  font-size: 18px;
 }
 
 .accordion-body-large {
@@ -56,8 +67,13 @@
   }
 
   .accordion-body {
-    font-size: 16px;
     padding: 1.5rem;
+  }
+
+  .accordion-body,
+  .accordion-body span,
+  .accordion-body div {
+    font-size: 16px;
   }
 }
 
@@ -69,7 +85,7 @@
   .accordion-header-large .accordion-header-title {
     line-height: 20px;
   }
-  
+
   .accordion-header .accordion-header-icon {
     width: 16px;
   }

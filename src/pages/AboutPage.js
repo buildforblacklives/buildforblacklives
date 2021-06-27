@@ -1,26 +1,22 @@
 import React from 'react';
-import { Button, Col, Container, Row } from 'react-bootstrap';
-import { LinkContainer } from 'react-router-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 
 import Logo from '../assets/logo.js';
-import CommPartnersIcon from '../assets/community-partners.js';
-import ReqProjectIcon from '../assets/form-icon.js';
-import WorkProjectIcon from '../assets/project-select-icon.js';
 import MailIcon from '../assets/email-icon.js';
+import NewsIcon from '../assets/news-icon.js';
+
+import TechDesign from '../assets/tech-design.js';
 
 import '../styling/AboutPage.css';
 
-const communityPartners = ['HackBeanpot', 'Unofficial Committee']
+import { ResourceItems } from '../data/resources';
 
 const AboutPage = () => (
   <Container className="about-page" fluid>
     <Row className="about-align-center">
-      <Col xs={12} md={4}>
-        <Logo className="mx-auto d-block about-logo" fluid />
-      </Col>
-      <Col>
-        <h1 className="logotype">Build for Black Lives</h1>
-        <h3 className="about-subheader logotype">Building pro bono projects to support Black lives</h3>
+      <Col xs={12} md={8}>
+        <h1 className="logotype text-center">Build for Black Lives</h1>
+        <h3 className="about-subheader logotype text-center">Building pro bono projects to support Black lives</h3>
         <p>
           Build for Black Lives is a platform built to connect anti-racist individuals with activists, organizers, and
           Black-owned businesses to provide pro bono work creating websites, apps, graphics, social media content, data
@@ -29,10 +25,11 @@ const AboutPage = () => (
           the tech and design industries.
         </p>
         <p>
-          Build for Black Lives was created by <a href="https://hackbeanpot.com/">HackBeanpot</a>, a 501(c)(3),
-          Boston-based hackathon that aims to build a diverse, inclusive, learning-focused tech community. Given that
-          racism has long been an issue in the tech space, we started this platform to bring the anti-racist tech
-          community together to take action to support Black lives and fight white supremacy.
+          Build for Black Lives was created by
+          <a href="https://hackbeanpot.com/" target="_blank" rel="noopener noreferrer"> HackBeanpot</a>,
+          a 501(c)(3), Boston-based hackathon that aims to build a diverse, inclusive, learning-focused tech community.
+          Given that racism has long been an issue in the tech space, we started this platform to bring the anti-racist
+          tech community together to take action to support Black lives and fight white supremacy.
         </p>
       </Col>
     </Row>
@@ -40,82 +37,147 @@ const AboutPage = () => (
     <hr />
 
     <Row className="about-align-center">
-      <Col className="about-order2">
-        <h2>Community Partners</h2>
-        <p>The mission of a Community Partner is to expand the reach of Build for Black Lives within your organization, to your followers, and to your local communities</p>
-        <div className="about-community-partners-ul">
-          {communityPartners.map(partner => <p key={partner}>{partner}</p>)}
-        </div>
+      <Col className="padding-r about-order1">
+        <h2>Racism in Tech and Design</h2>
         <p>
-        You can be a Community Partner by having your organization share on your social media, help promote our platform, and email local businesses. We are open to partnering with organizations that are committed to fighting racial inequity. If your organization would like to work with us, please{' '}
-          <a href="mailto:buildforblacklives@hackbeanpot.com">email us</a> and join our{' '}
-          <a href="https://join.slack.com/t/northeastern-hac3935/shared_invite/zt-fctqwcqe-7~n_GXliEYbQzUeqERHH6A">
-            Slack Workspace
-          </a>{' '}to learn more.
+          The Tech and Design industries have had a long, racist, and non-inclusive history. To this day, these fields
+          perpetuate white supremacy and fail to properly represent Black folx. Software plays a huge role in our
+          society, but most tech is not created with Black folx in mind. In fact, lots of tech such as facial
+          recognition software that misidentifies Black people, not only fails to represent members of the Black
+          community, but in many cases has explicitly racist, dangerous, and even deadly effects.
         </p>
       </Col>
-      <Col xs={12} md={6}>
-        <CommPartnersIcon className="mx-auto d-block about-icon" fluid />
+      <Col xs={12} md={4}>
+        <TechDesign className="mx-auto d-block about-icon about-tech-design-icon" fluid />
       </Col>
     </Row>
 
     <hr />
 
-    <Row className="about-align-center">
-      <Col xs={12} md={6}>
-        <ReqProjectIcon className="mx-auto d-block about-request-icon" fluid />
+    <Row className="row-align-center">
+      <Col xs={12} md={4}>
+        <Logo className="mx-auto d-block about-icon" fluid />
       </Col>
       <Col>
-        <h2>Request a Project</h2>
+        <h2>Where does Build for Black Lives fit in?</h2>
         <p>
-          Are you a Black business owner, activist, protest organizer, or community advocate looking for free services
-          building a website or online platform, creating social media content, data visualizations, or other projects?
+          This platform <strong>requires all project participants to be anti-racist</strong>, and be actively working to
+          dismantle their own biases and white-centric coding and design practices.
         </p>
-        <div className="about-button-wrapper">
-          <LinkContainer to="/project-request">
-            <Button className="primary-button" size="med">
-              Request a Project
-            </Button>
-          </LinkContainer>
-        </div>
+
+        <h4>We would like to make it clear that:</h4>
+        <ul>
+          <li>
+            <p>
+              Participating in this initiative is <strong>NOT</strong> an opportunity for participants to do "charity
+              work", cleanse their guilt, or impose their opinions about what the Black community needs.
+            </p>
+          </li>
+          <li>
+            <p>
+              Participating in this initiative <strong>IS</strong> an opportunity to create projects that are explicitly
+              requested by activists, organizers and Black business owners, and to provide free services, in order to
+              work towards justice and reparations for a community that has been systematically oppressed, exploited,
+              and underserved for hundreds of years.
+            </p>
+          </li>
+        </ul>
+      </Col>
+    </Row>
+
+    <hr id="resources" />
+
+    <Row className="row-align-center">
+      <Col xs={12} md={8}>
+        <h2 className="text-center">Anti-Racist Resources</h2>
+        { ResourceItems.map((resource, i) =>
+            <Row className="row-align-center" key={i}>
+              <Col>
+                <a
+                  className="heading-link"
+                  href={resource.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {resource.title}
+                </a>
+                {resource.description}
+              </Col>
+            </Row>
+         )}
+
+        <Row className="row-align-center mt-3">
+          <Col>
+            <h4>Have additional resources you think should be featured?</h4>
+            <p>
+              Email us at: <a href="mailto:buildforblacklives@hackbeanpot.com">buildforblacklives@hackbeanpot.com</a>{' '}
+              with the subject line: "Resource Suggestion".
+            </p>
+          </Col>
+        </Row>
       </Col>
     </Row>
 
     <hr />
 
     <Row className="about-align-center">
-      <Col className="about-order2">
-        <h2>Work on a Project</h2>
-        <p>
-          Are you an anti-racist writer, designer, engineer, data scientist, illustrator, programmer, web developer, or
-          marketing specialist who is looking to use your professional skills to do pro bono work to support Black
-          lives?
+      <Col className="about-order1">
+        <h2>Build for Black Lives in the News</h2>
+        <p> Check out these latest news articles featuring Build for Black Lives to learn
+            more about the motivation and vision behind this platform.
         </p>
-        <div className="about-button-wrapper">
-          <LinkContainer to="/projects">
-            <Button className="primary-button" size="med">
-              Work on a Project
-            </Button>
-          </LinkContainer>
-        </div>
+        <p className="about-list">
+          <p>
+
+            <a href="https://news.northeastern.edu/2020/08/10/can-technology-reduce-racial-inequity-build-for-black-lives-a-student-built-platform-could-help/"
+               target="_blank"
+               rel="noopener noreferrer">
+              Can Technology Reduce Racial Inequality?
+            </a>
+            { " —" }
+             <span className="font-italic"> News@Northeastern</span>
+          </p>
+          <p>
+            <a href="https://undergraduatenews.khoury.northeastern.edu/2020/07/31/build-for-black-lives/"
+               target="_blank"
+               rel="noopener noreferrer">
+              Undergraduate News: Build for Black Lives
+            </a>
+            { " —" }
+            <span className="font-italic"> Khoury College</span>
+          </p>
+          <p>
+            <a href="https://huntnewsnu.com/63112/city-pulse/build-for-black-lives-uses-tech-skills-for-social-change/"
+               target="_blank"
+               rel="noopener noreferrer">
+              Build for Black Lives uses tech skills for social change
+            </a>
+            { " —" }
+            <span className="font-italic"> The Huntington News</span>
+          </p>
+        </p>
       </Col>
-      <Col xs={12} md={6}>
-        <WorkProjectIcon className="mx-auto d-block about-icon" fluid />
+      <Col xs={12} md={4}>
+        <NewsIcon className="mx-auto d-block about-icon about-news-icon" fluid />
       </Col>
     </Row>
 
-    <hr />
+   <hr />
 
-    <Row className="about-align-center">
-      <Col xs={12} md={6}>
-        <MailIcon className="mx-auto d-block about-contact-icon" fluid />
+    <Row className="row-align-center">
+      <Col xs={12} md={4}>
+        <MailIcon className="mx-auto d-block about-icon about-mail-icon" fluid />
       </Col>
       <Col>
         <h2>Contact Us</h2>
-        <p>Want to get involved, or have questions, thoughts, feedback, or concerns?</p>
-        <p className="about-contact-list">
-          Email us at <a href="mailto:buildforblacklives@hackbeanpot.com">buildforblacklives@hackbeanpot.com</a>.<br />
-          Please use one of the following subject lines to help us filter through questions:
+        <p>Want to get involved, or have questions, thoughts, feedback, or concerns?
+           Email us at <a href="mailto:buildforblacklives@hackbeanpot.com">buildforblacklives@hackbeanpot.com</a>.
+        </p>
+        <p>
+        Please use one of the following subject lines to help us filter through questions:
+        </p>
+        <p className="about-list">
+
           <p>"[Volunteer] Question"</p>
           <p>"[Project Request] Question"</p>
           <p>"[Community Partner] Question"</p>
@@ -135,12 +197,11 @@ const AboutPage = () => (
             <a href="https://www.instagram.com/buildforblacklives/" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-instagram fa-2x about-social-logo footer-text" aria-hidden="true"></i>
             </a>
-            <a
-              href="https://join.slack.com/t/northeastern-hac3935/shared_invite/zt-fctqwcqe-7~n_GXliEYbQzUeqERHH6A"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="fab fa-slack fa-2x about-social-logo footer-text" aria-hidden="true"></i>
+            <a href="https://twitter.com/bld4blacklives" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-twitter fa-2x about-social-logo footer-text" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/build-for-black-lives/" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-linkedin fa-2x about-social-logo footer-text" aria-hidden="true"></i>
             </a>
           </Col>
         </Row>

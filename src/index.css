@@ -13,6 +13,7 @@
   --dark-blue: #6098bf;
   --light-yellow: #fff0b3;
   --dark-yellow: #e0a800;
+  --error-red: #ff5252;
 }
 
 @font-face {
@@ -164,23 +165,36 @@ hr {
   margin: 3rem 0;
 }
 
-.flow-images {
-  height: auto;
-  padding: 0 1em;
-}
-
 .indent-text {
   text-indent: 2rem;
 }
+.full-width {
+  width: 100vw;
+  position: relative;
+  margin-left: -50vw;
+  height: 100%;
+  left: 50%;
+}
 
-@media only screen and (max-width: 992px) {
-  .flow-images {
-    max-width: 90%;
-    height: auto;
-  }
+.flow-images {
+  max-width: 60%;
+  height: auto;
+}
+
+.spinner-row {
+  margin-top: 3rem;
+}
+
+.spinner {
+  width: 100px;
+  height: 100px;
 }
 
 @media only screen and (max-width: 768px) {
+  hr {
+    margin: 2rem 0;
+  }
+
   h1 {
     font-size: 40px;
   }
@@ -212,4 +226,19 @@ hr {
   .flow-images {
     max-width: 300px;
   }
+}
+
+.fade-in-transition-enter {
+  opacity: 0;
+}
+.fade-in-transition-active {
+  opacity: 1;
+  transition: opacity 200ms;
+}
+.fade-in-transition-exit {
+  opacity: 1;
+}
+.fade-in-transition-active {
+  opacity: 0;
+  transition: opacity 200ms;
 }
