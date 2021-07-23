@@ -31,7 +31,7 @@ const Footer = () => (
           <i className="fab fa-linkedin fa-2x footer-social-icon footer-text" aria-hidden="true"></i>
         </a>
         <a href="https://join.slack.com/t/buildforblacklives/shared_invite/zt-t4s9pp2q-r8mJ2nJDPU52sfyvsWHlAQ" target="_blank" rel="noopener noreferrer">
-          <i className="fab fa-linkedin fa-2x footer-social-icon footer-text" aria-hidden="true"></i>
+          <i className="fab fa-slack fa-2x footer-social-icon footer-text" aria-hidden="true"></i>
         </a>
       </div>
     </div>
