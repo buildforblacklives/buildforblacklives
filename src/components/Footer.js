@@ -30,6 +30,9 @@ const Footer = () => (
         <a href="https://www.linkedin.com/company/build-for-black-lives/" target="_blank" rel="noopener noreferrer">
           <i className="fab fa-linkedin fa-2x footer-social-icon footer-text" aria-hidden="true"></i>
         </a>
+        <a href="https://join.slack.com/t/buildforblacklives/shared_invite/zt-t4s9pp2q-r8mJ2nJDPU52sfyvsWHlAQ" target="_blank" rel="noopener noreferrer">
+          <i className="fab fa-linkedin fa-2x footer-social-icon footer-text" aria-hidden="true"></i>
+        </a>
       </div>
     </div>
   </div>
