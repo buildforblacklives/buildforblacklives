@@ -46,12 +46,10 @@ const CommPartnersPage = () => (
     <Row className="comm-align-center">
       <Col className="comm-order2">
         <h2>Outreach</h2>
-        <p>Do you have an audience that would be a good fit for our platform, as either clients or volunteers?</p>
-        <p>
-          We would love your help in spreading the word about our platform! <b>Share</b> on your social media, <b>promote</b> our
-          platform, and <b>email</b> local businesses. We'll provide you the media assets and email templates to get started.
+        <p>Our Outreach partners have helped us spread the word about our platform by <b>sharing</b> on their social media pages, <b>promoting</b> our
+          platform, and <b>emailing</b> local businesses.
         </p>
-        <p className="mt-2">Our current Outreach Partners include:</p>
+        <p className="mt-2">Current Outreach Partners include:</p>
         <div className="comm-partners-ul">
           {outreachPartners.map((partner) => (
             <p key={partner.name}>
@@ -74,14 +72,10 @@ const CommPartnersPage = () => (
       <Col>
         <h2>Service</h2>
         <p>
-          Is your organization able to <b>provide a resource</b> that would be invaluable to building out any of the project
-          requests on our platform?
+          Our Service partners have <b>provided a resource</b> that is invaluable to building out the projects requested through our platform.
+          We have really appreciated the community reaching out to us in wanting to support the cause!
         </p>
-        <p>
-          We've really appreciated the community reaching out to us in wanting to support our platform and would love
-          for you to join our cause!
-        </p>
-        <p className="mt-2">Our current Service Partners include:</p>
+        <p className="mt-2">Current Service Partners include:</p>
         <div className="comm-partners-ul">
           {servicePartners.map((partner) => (
             <p key={partner.name}>
@@ -89,24 +83,6 @@ const CommPartnersPage = () => (
             </p>
           ))}
         </div>
-      </Col>
-    </Row>
-
-    <hr />
-
-    <Row className="comm-align-center">
-      <Col className="comm-order2">
-        <h2>Become a Community Partner</h2>
-        <p>
-          You can become a Community Partner by helping us with outreach or providing your services to help with
-          projects. If you feel like there is another way that you can help us with our cause, we'd love to hear it! We
-          are always open to partnering with organizations that are committed to fighting racial inequity.
-        </p>
-        <p>
-          If your organization would like to work with us, please email us at{' '}
-          <a href="mailto:buildforblacklives@hackbeanpot.com">buildforblacklives@hackbeanpot.com</a> with the subject
-          line "[Community Partner]" or DM us on social media for a <b>link to our Slack workspace</b>.
-        </p>
       </Col>
     </Row>
   </Container>
