@@ -13,7 +13,7 @@ const FAQItems = {
               Organizations, institutions, businesses (including shops or restaurants), and activist groups that are
               Black-owned/led, or primarily serve the Black community can submit project requests. If you have questions
               about whether your organization is eligible, please email us at{' '}
-              <a href="mailto:buildforblacklives@hackbeanpot.com">buildforblacklives@hackbeanpot.com</a> with the
+              <a href="mailto:contact@buildforblacklives.com">contact@buildforblacklives.com</a> with the
               subject line: "[Project Request] Question".
             </span>
           )
@@ -48,7 +48,7 @@ const FAQItems = {
           answer: (
             <span>
               To make updates to your project request, email us directly at{' '}
-              <a href="mailto:buildforblacklives@hackbeanpot.com">buildforblacklives@hackbeanpot.com</a> with the
+              <a href="mailto:contact@buildforblacklives.com">contact@buildforblacklives.com</a> with the
               subject line: "[Project Request] Change Project Request". In your email, please include the project title
               and requested changes. Please use the same email you used to submit the initial request so we can confirm
               that it’s you!
@@ -60,7 +60,7 @@ const FAQItems = {
           answer: (
             <span>
               For direct inquiries, email us at{' '}
-              <a href="mailto:buildforblacklives@hackbeanpot.com">buildforblacklives@hackbeanpot.com</a> with the
+              <a href="mailto:contact@buildforblacklives.com">contact@buildforblacklives.com</a> with the
               subject line: "[Project Request] Question".
             </span>
           )
@@ -80,7 +80,7 @@ const FAQItems = {
             'A volunteer is already working on my project, or I no longer have a need for the project I requested. How can I have my project removed from the site?',
           answer: (
             <span>
-              Please email <a href="mailto:buildforblacklives@hackbeanpot.com">buildforblacklives@hackbeanpot.com</a>{' '}
+              Please email <a href="mailto:contact@buildforblacklives.com">contact@buildforblacklives.com</a>{' '}
               with the subject line: "[Project Request] Close Project Request". In your email, include the title of the
               request you would like to be taken down. Please use the same email that you used to submit the initial
               request form so we can confirm it’s you. We will archive your request within 3-5 business days at maximum,
@@ -125,7 +125,7 @@ const FAQItems = {
           answer: (
             <span>
               Once you have found a PM that you would like to work with, the PM should email{' '}
-              <a href="mailto:buildforblacklives@hackbeanpot.com">buildforblacklives@hackbeanpot.com</a> and CC you,
+              <a href="mailto:contact@buildforblacklives.com">contact@buildforblacklives.com</a> and CC you,
               stating that they have been assigned as your project’s PM. We will include their contact information on
               the project’s card on <a href="/">our website</a>. Prospective volunteers will then be able to CC the PM
               when they initially reach out.
@@ -145,7 +145,7 @@ const FAQItems = {
               <div>
                 Check out the{' '}
                 <a
-                  href="https://docs.google.com/document/d/1Lj6bRtkKgZNtEnnvfatSJHxqYKwt8wA6t3lki5gyWok/edit"
+                  href="https://docs.google.com/document/d/1Lj6bRtkKgZNtEnnvfatSJHxqYKwt8wA6t3lki5gyWok/edit?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -208,7 +208,7 @@ const FAQItems = {
           answer: (
             <span>
               For direct inquiries, email us at{' '}
-              <a href="mailto:buildforblacklives@hackbeanpot.com">buildforblacklives@hackbeanpot.com</a> with the
+              <a href="mailto:contact@buildforblacklives.com">contact@buildforblacklives.com</a> with the
               subject line: "[Volunteer] Question".
             </span>
           )
@@ -236,7 +236,7 @@ const FAQItems = {
               follow the prompts to contact the project owner. If the project owner has agreed to having you join, we
               ask that you{' '}
               <strong>
-                email <a href="mailto:buildforblacklives@hackbeanpot.com">buildforblacklives@hackbeanpot.com</a> and CC
+                email <a href="mailto:contact@buildforblacklives.com">contact@buildforblacklives.com</a> and CC
                 the project owner
               </strong>
               , stating that you have been assigned as the project’s PM. We will then include your contact information
@@ -252,8 +252,8 @@ const FAQItems = {
               way, volunteers can CC you in their initial communications with the businesses/organizations. If you
               personally know a developer, designer, or digital marketer who would be interested in working on the
               project, we ask that they follow the same protocol as on <a href="/">our website</a> so that they can
-              commit to our anti-racist guidelines. You can also use our Slack workspace to recruit volunteers and build
-              project teams (email us for the link!).
+              commit to our anti-racist guidelines. You can also use our <a href="https://www.facebook.com/groups/buildforblacklives/">Facebook Group</a> to recruit volunteers and build
+              project teams.
             </span>
           )
         },
@@ -267,7 +267,7 @@ const FAQItems = {
           answer: (
             <span>
               For direct inquiries, email us at{' '}
-              <a href="mailto:buildforblacklives@hackbeanpot.com">buildforblacklives@hackbeanpot.com</a> with the
+              <a href="mailto:contact@buildforblacklives.com">contact@buildforblacklives.com</a> with the
               subject line: "[Volunteer] Question".
             </span>
           )
@@ -313,7 +313,7 @@ const FAQItems = {
           answer: (
             <span>
               Reach out to us directly at{' '}
-              <a href="mailto:buildforblacklives@hackbeanpot.com">buildforblacklives@hackbeanpot.com</a>. You can also
+              <a href="mailto:contact@buildforblacklives.com">contact@buildforblacklives.com</a>. You can also
               visit our <Link to="/about">About</Link> page or see the footer at the bottom of the page to view our
               contact information. If you are an organization that wishes to partner with us and help spread the word on
               this initiative, email us or DM us on social media for a <strong>link to our Slack workspace</strong>.
@@ -326,7 +326,7 @@ const FAQItems = {
             <span>
               We welcome all types of feedback, as we are happy and eager to improve this initiative as much as
               possible. Feel free to contact us directly at{' '}
-              <a href="mailto:buildforblacklives@hackbeanpot.com">buildforblacklives@hackbeanpot.com</a> with the
+              <a href="mailto:contact@buildforblacklives.com">contact@buildforblacklives.com</a> with the
               subject line: "Feedback".
             </span>
           )
