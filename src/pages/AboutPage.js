@@ -25,11 +25,8 @@ const AboutPage = () => (
           the tech and design industries.
         </p>
         <p>
-          Build for Black Lives was created by
-          <a href="https://hackbeanpot.com/" target="_blank" rel="noopener noreferrer"> HackBeanpot</a>,
-          a 501(c)(3), Boston-based hackathon that aims to build a diverse, inclusive, learning-focused tech community.
-          Given that racism has long been an issue in the tech space, we started this platform to bring the anti-racist
-          tech community together to take action to support Black lives and fight white supremacy.
+          Build for Black Lives was created in 2020 by a group of nine women on the
+          <a href="https://hackbeanpot.com/" target="_blank" rel="noopener noreferrer"> HackBeanpot</a> organizing team.
         </p>
       </Col>
     </Row>
@@ -110,7 +107,7 @@ const AboutPage = () => (
           <Col>
             <h4>Have additional resources you think should be featured?</h4>
             <p>
-              Email us at: <a href="mailto:buildforblacklives@hackbeanpot.com">buildforblacklives@hackbeanpot.com</a>{' '}
+              Email us at: <a href="mailto:contact@buildforblacklives.com">contact@buildforblacklives.com</a>{' '}
               with the subject line: "Resource Suggestion".
             </p>
           </Col>

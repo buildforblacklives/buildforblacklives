@@ -4,14 +4,10 @@ const Footer = () => (
   <div className="footer">
     <div className="footer-content">
       <span className="footer-text">
-        Made in solidarity by{' '}
-        <a href="https://hackbeanpot.com/" target="_blank" rel="noopener noreferrer">
-          HackBeanpot
-        </a>
-        .
+        Made in Solidarity.
       </span>
       <div className="footer-icons">
-        <a href="mailto:buildforblacklives@hackbeanpot.com" target="_blank" rel="noopener noreferrer">
+        <a href="mailto:contact@buildforblacklives.com" target="_blank" rel="noopener noreferrer">
           <i className="fas fa-envelope fa-2x footer-social-icon footer-text"></i>
         </a>
         <a
