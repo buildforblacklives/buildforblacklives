@@ -1,15 +1,14 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
+import { ResourceItems } from '../data/resources';
+import * as constants from '../data/constants';
 
 import Logo from '../assets/logo.js';
 import MailIcon from '../assets/email-icon.js';
 import NewsIcon from '../assets/news-icon.js';
-
 import TechDesign from '../assets/tech-design.js';
 
 import '../styling/AboutPage.css';
-
-import { ResourceItems } from '../data/resources';
 
 const AboutPage = () => (
   <Container className="about-page" fluid>
@@ -107,7 +106,7 @@ const AboutPage = () => (
           <Col>
             <h4>Have additional resources you think should be featured?</h4>
             <p>
-              Email us at: <a href="mailto:contact@buildforblacklives.com">contact@buildforblacklives.com</a>{' '}
+              Email us at: <a href={constants.EMAIL_MAILTO}>{constants.EMAIL}</a>{' '}
               with the subject line: "Resource Suggestion".
             </p>
           </Col>
@@ -168,7 +167,7 @@ const AboutPage = () => (
       <Col>
         <h2>Contact Us</h2>
         <p>Want to get involved, or have questions, thoughts, feedback, or concerns?
-           Email us at <a href="mailto:buildforblacklives@hackbeanpot.com">buildforblacklives@hackbeanpot.com</a>.
+           Email us at <a href={constants.EMAIL_MAILTO}>{constants.EMAIL}</a>.
         </p>
         <p>
         Please use one of the following subject lines to help us filter through questions:
@@ -181,23 +180,23 @@ const AboutPage = () => (
         </p>
         <Row className="about-social-logo-row">
           <Col className="col-12">
-            <a href="mailto:buildforblacklives@hackbeanpot.com" target="_blank" rel="noopener noreferrer">
+            <a href={constants.EMAIL_MAILTO} target="_blank" rel="noopener noreferrer">
               <i className="fas fa-envelope fa-2x about-social-logo footer-text"></i>
             </a>
             <a
-              href="https://www.facebook.com/Build-for-Black-Lives-105258644589291"
+              href={constants.FACEBOOK}
               target="_blank"
               rel="noopener noreferrer"
             >
               <i className="fab fa-facebook fa-2x about-social-logo footer-text" aria-hidden="true"></i>
             </a>
-            <a href="https://www.instagram.com/buildforblacklives/" target="_blank" rel="noopener noreferrer">
+            <a href={constants.INSTAGRAM} target="_blank" rel="noopener noreferrer">
               <i className="fab fa-instagram fa-2x about-social-logo footer-text" aria-hidden="true"></i>
             </a>
-            <a href="https://twitter.com/bld4blacklives" target="_blank" rel="noopener noreferrer">
+            <a href={constants.TWITTER} target="_blank" rel="noopener noreferrer">
               <i className="fab fa-twitter fa-2x about-social-logo footer-text" aria-hidden="true"></i>
             </a>
-            <a href="https://www.linkedin.com/company/build-for-black-lives/" target="_blank" rel="noopener noreferrer">
+            <a href={constants.LINKEDIN} target="_blank" rel="noopener noreferrer">
               <i className="fab fa-linkedin fa-2x about-social-logo footer-text" aria-hidden="true"></i>
             </a>
           </Col>

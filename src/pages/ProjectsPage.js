@@ -7,6 +7,7 @@ import ProjectCard from '../components/ProjectCard';
 import ProjectSelectFlow from '../assets/flow_diagrams/project_selection_flow';
 import { fetchOpenProjects, allTags } from '../state/utils'
 import { createProjects } from '../state/projects';
+import * as constants from '../data/constants';
 
 import '../styling/ProjectsPage.css';
 
@@ -78,7 +79,7 @@ const ProjectsPage = () => {
     <Container className="projects-page">
       <Row>
         <h1 className="projects-header">Open Projects</h1>
-        <LinkContainer className="projects-matched-button projects-matched-order-2" to={`/matched-projects`}>
+        <LinkContainer className="projects-matched-button projects-matched-order-2" to={constants.URL_MATCHED_PROJECTS}>
           <Button className="primary-button projects-matched-button">See our matched projects!</Button>
         </LinkContainer>
         <ProjectSelectFlow className="flow-images projects-matched-order-1" />
@@ -107,8 +108,8 @@ const ProjectsPage = () => {
         <h5 className="text-center mb-4">Join our Facebook group to stay updated on new projects</h5>
         <Button className="primary-button" aria-disabled="false" size="sm">
           <a
-            className="heading-link"
-            href="https://www.facebook.com/groups/buildforblacklives/"
+            className="projects-join-fb-group-button"
+            href={constants.FACEBOOK_GROUP}
             target="_blank"
             rel="noopener noreferrer"
           >
