@@ -20,6 +20,12 @@
   margin-left: auto;
 }
 
+.projects-join-fb-group-button,
+.projects-join-fb-group-button:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
 .preview-card {
   border-radius: 16px;
   margin: 16px 0px;

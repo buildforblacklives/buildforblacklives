@@ -14,8 +14,9 @@ import { ProjectWorkPage } from './pages/ProjectWorkPage';
 import ProjectSelectPage from './pages/ProjectSelectPage';
 import NotFoundPage from './pages/NotFoundPage';
 import ScrollToTop from './components/ScrollToTop';
+import * as constants from './data/constants';
 
-ReactGA.initialize('UA-177347140-1');
+ReactGA.initialize(process.env.GA_TAG);
 
 const App = () => {
   return (
@@ -48,13 +49,13 @@ const Routes = () => {
 
   return (
     <Switch>
-      <Route exact path="/" component={HomePage} />
-      <Route path="/about" component={AboutPage} />
-      <Route exact path="/projects" component={ProjectsPage} />
-      <Route path="/project-request" component={RequestPage} />
-      <Route path="/matched-projects" component={MatchedProjects} />
-      <Route path="/community-partners" component={CommPartnersPage} />
-      <Route path="/faq" component={FAQPage} />
+      <Route exact path={constants.URL_HOME} component={HomePage} />
+      <Route path={constants.URL_ABOUT} component={AboutPage} />
+      <Route exact path={constants.URL_PROJECTS} component={ProjectsPage} />
+      <Route path={constants.URL_PROJECT_REQUEST} component={RequestPage} />
+      <Route path={constants.URL_MATCHED_PROJECTS} component={MatchedProjects} />
+      <Route path={constants.URL_COMMUNITY_PARTNERS} component={CommPartnersPage} />
+      <Route path={constants.URL_FAQ} component={FAQPage} />
       <Route exact path="/projects/:projectId" component={ProjectSelectPage} />
       <Route path="/projects/:projectId/work" component={ProjectWorkPage} />
       <Route component={NotFoundPage} />

@@ -2,10 +2,11 @@ import React from 'react';
 import { Button, Col, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { LinkContainer } from 'react-router-bootstrap';
+import * as constants from '../data/constants';
+
 import Logo from '../assets/logo.js';
 import ProjectFlow from '../assets/flow_diagrams/project_selection_flow.js';
 import RequestFlow from '../assets/flow_diagrams/request_flow.js';
-import CommunityPartnersImage from '../assets/community-partners.js';
 import ArrowDown from '../assets/arrow_down.js';
 
 import '../styling/HomePage.css';
@@ -31,7 +32,7 @@ const HomePage = () => (
           Black business owners, activists, organizers, and community advocates:
         </span>
         <div>
-          <LinkContainer to="/project-request">
+          <LinkContainer to={constants.URL_PROJECT_REQUEST}>
             <Button className="primary-button" size="lg">
               Request a Project
             </Button>
@@ -43,7 +44,7 @@ const HomePage = () => (
           Anti-racist designers, programmers, data scientists, illustrators, writers:
         </span>
         <div>
-          <LinkContainer to="/projects">
+          <LinkContainer to={constants.URL_PROJECTS}>
             <Button className="primary-button" size="lg">
               Work on a Project
             </Button>
@@ -67,7 +68,7 @@ const HomePage = () => (
         <p>
           Are you a Black business owner, activist, protest organizer, or community advocate looking for free services
           building a website or online platform, creating social media content, data visualizations, or other projects?{' '}
-          <Link className="links" to="/project-request">
+          <Link className="links" to={constants.URL_PROJECT_REQUEST}>
             Submit a project request.
           </Link>
         </p>
@@ -83,29 +84,10 @@ const HomePage = () => (
         <p>
           Are you an anti-racist designer, developer, data scientist, or marketing specialist interested in committing
           to pro bono projects to work towards reparations and racial justice?{' '}
-          <Link className="links" to="/projects">
+          <Link className="links" to={constants.URL_PROJECTS}>
             Work on one of our available projects.
           </Link>
         </p>
-      </Col>
-    </Row>
-
-    <h2 className="home-track-titles">Partner With Us</h2>
-    <Row className="justify-content-center d-flex flex-wrap align-items-center">
-      <CommunityPartnersImage className="mx-auto d-block home-comm-partners-icon" fluid />
-    </Row>
-    <Row className="home-track-body">
-      <Col xs={12} md={{ span: 8, offset: 2 }}>
-        <p>
-          Interested in partnering with us? Our community partner responsibilities range from helping us spread the
-          word, offering their services to organizations, to finding other unique ways to get involved. We are open to
-          partnering with organizations that are committed to fighting racial inequity.
-        </p>
-        <LinkContainer to="/community-partners" className="mt-3">
-          <Button className="primary-button" size="lg">
-            Learn More
-          </Button>
-        </LinkContainer>
       </Col>
     </Row>
   </Container>
