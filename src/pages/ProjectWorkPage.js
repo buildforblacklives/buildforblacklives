@@ -8,8 +8,9 @@ import CustomAccordion from '../components/CustomAccordion';
 import ConfirmationCheck from '../components/ProjectWork/ConfirmationCheck';
 import ContactSection from '../components/ProjectWork/ContactSection';
 import ProjectDetails from '../components/ProjectWork/ProjectDetails';
-import ProjectFlow from '../assets/flow_diagrams/project_steps_flow.js';
 import { translateAirtableRecord } from '../state/utils';
+import * as constants from '../data/constants';
+import ProjectFlow from '../assets/flow_diagrams/project_steps_flow.js';
 
 import '../styling/ProjectWorkPage.css';
 
@@ -52,7 +53,7 @@ const ProjectWorkPage = ({ match }) => {
         <div className="col-md-8 mt-5">
           <h1>Oops! Looks like this project doesn't exist or has already been matched</h1>
           <Button
-            href="/projects"
+            href={constants.URL_PROJECTS}
             className="primary-button mt-5"
             size="lg"
             target="_blank"
@@ -114,7 +115,7 @@ const ProjectWorkPage = ({ match }) => {
                 anti-racist technology.
               </p>
               <div className="bottom-button-container">
-                <Link smooth to="/about#resources">
+                <Link smooth to={constants.URL_ABOUT_RESOURCES}>
                   <Button className="primary-button">Take me to Anti-Racist Resources</Button>
                 </Link>
               </div>

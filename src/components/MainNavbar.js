@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Nav, Navbar, NavbarBrand, NavLink } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
+import * as constants from '../data/constants';
 import Logo from '../assets/logo.js';
 
 const MainNavbar = () => {
@@ -8,7 +9,7 @@ const MainNavbar = () => {
 
   return (
     <Navbar className="navbar-center-align" variant="dark" expand="lg" expanded={expanded} sticky="top">
-      <LinkContainer to="/">
+      <LinkContainer to={constants.URL_HOME}>
         <NavbarBrand
           onClick={() =>
             setTimeout(() => {
@@ -23,7 +24,7 @@ const MainNavbar = () => {
       <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setExpanded(expanded ? false : 'expanded')} />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
-          <LinkContainer to="/about">
+          <LinkContainer to={constants.URL_ABOUT}>
             <NavLink
               className="navbar-text"
               onClick={() =>
@@ -35,7 +36,7 @@ const MainNavbar = () => {
               About
             </NavLink>
           </LinkContainer>
-          <LinkContainer to="/projects">
+          <LinkContainer to={constants.URL_PROJECTS}>
             <NavLink
               className="navbar-text"
               onClick={() =>
@@ -47,7 +48,7 @@ const MainNavbar = () => {
               Open Projects
             </NavLink>
           </LinkContainer>
-          <LinkContainer to="/project-request">
+          <LinkContainer to={constants.URL_PROJECT_REQUEST}>
             <NavLink
               className="navbar-text"
               onClick={() =>
@@ -59,7 +60,7 @@ const MainNavbar = () => {
               Project Request
             </NavLink>
           </LinkContainer>
-          <LinkContainer to="/community-partners">
+          <LinkContainer to={constants.URL_COMMUNITY_PARTNERS}>
             <NavLink
               className="navbar-text"
               onClick={() =>

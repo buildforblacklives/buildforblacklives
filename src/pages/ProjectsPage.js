@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { LinkContainer } from 'react-router-bootstrap';
 import { Button, Row, Col, Container, Spinner } from 'react-bootstrap';
-import NewsletterForm from '../components/NewsletterForm';
 import { ProjectsPageTemp } from './ProjectsPageTemp';
 import ProjectCard from '../components/ProjectCard';
 import ProjectSelectFlow from '../assets/flow_diagrams/project_selection_flow';
 import { fetchOpenProjects, allTags } from '../state/utils'
 import { createProjects } from '../state/projects';
+import * as constants from '../data/constants';
 
 import '../styling/ProjectsPage.css';
 
@@ -79,7 +79,7 @@ const ProjectsPage = () => {
     <Container className="projects-page">
       <Row>
         <h1 className="projects-header">Open Projects</h1>
-        <LinkContainer className="projects-matched-button projects-matched-order-2" to={`/matched-projects`}>
+        <LinkContainer className="projects-matched-button projects-matched-order-2" to={constants.URL_MATCHED_PROJECTS}>
           <Button className="primary-button projects-matched-button">See our matched projects!</Button>
         </LinkContainer>
         <ProjectSelectFlow className="flow-images projects-matched-order-1" />
@@ -105,8 +105,17 @@ const ProjectsPage = () => {
       )}
       <Row className="full-width projects-newsletter-banner flex-column align-items-center">
         <h3 className="text-center mb-3">Looking for more?</h3>
-        <h5 className="text-center mb-4">Join our newsletter to stay updated on new projects</h5>
-        <NewsletterForm />
+        <h5 className="text-center mb-4">Join our Facebook group to stay updated on new projects</h5>
+        <Button className="primary-button" aria-disabled="false" size="sm">
+          <a
+            className="projects-join-fb-group-button"
+            href={constants.FACEBOOK_GROUP}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Join Now
+          </a>
+        </Button>
       </Row>
     </Container>
   );
