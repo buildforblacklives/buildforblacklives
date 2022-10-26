@@ -3,7 +3,7 @@ import ProjectTags from '../ProjectTags'
 import { formatUrlsInString } from '../../state/utils'
 
 const ProjectDetails = ({ project }) => {
-  const { orgName, orgAbout, projectTitle, projectAbout, projectDeadline, tags, orgSocial } = project
+  const { projectTitle, projectDesc, orgName, orgDesc, projectTypes, oldLink } = project
 
   return (
     <div className="project-details-section">
@@ -13,20 +13,16 @@ const ProjectDetails = ({ project }) => {
       </div>
       <div className="info-container">
         <h5>Project Type</h5>
-        <ProjectTags tags={tags} />
-      </div>
-      <div className="info-container">
-        <h5>Project Deadline</h5>
-        <p>{!!projectDeadline ? projectDeadline : 'Not Specified'}</p>
+        <ProjectTags projectTypes={projectTypes} /> // TODO verify PM tag is visible on selected view
       </div>
       <div className="info-container">
         <h5>About {orgName}</h5>
-        {orgSocial && <p dangerouslySetInnerHTML={{ __html: formatUrlsInString(orgSocial) }} />}
-        <p>{orgAbout}</p>
+        {oldLink && <p dangerouslySetInnerHTML={{ __html: formatUrlsInString(oldLink) }} />}
+        <p>{orgDesc}</p>
       </div>
       <div className="info-container  mb-0">
         <h5>Project Description</h5>
-        <p>{projectAbout}</p>
+        <p>{projectDesc}</p>
       </div>
     </div>
   );

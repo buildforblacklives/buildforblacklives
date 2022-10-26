@@ -60,15 +60,13 @@ const ProjectsPage = () => {
     setFilters(defaultFilters)
   }
 
-  const shouldShowProject = (isUrgent, needsPM, projectTags) => {
+  const shouldShowProject = (pmWanted, projectTypes) => {
     if (Object.values(filters).every((val) => !val)) {
       return true
-    } else if (isUrgent && filters["Urgent"]) {
-      return true
-    } else if (needsPM && filters["PM"]) {
+    } else if (pmWanted && filters["PM"]) { // TODO use constant for PM
       return true
     }
-    return projectTags.some((tag) => filters[tag])
+    return projectTypes.some((tag) => filters[tag])
   }
 
   if (hasLoaded && projects.length === 0) {
@@ -89,7 +87,7 @@ const ProjectsPage = () => {
           <FilterBar updateFilters={updateFilters} clearFilters={clearFilters} filters={filters} />
           <Row className="d-flex justify-content-left">
             {projects.map((project) => (
-              shouldShowProject(project.isUrgent, project.needsPM, project.tags) &&
+              shouldShowProject(project.pmWanted, project.projecTypes) &&
               (
                 <Col key={project.id} lg={4} md={6} sm={12}>
                   <ProjectCard project={project} isSelectedView={false} tagSelectedStatus={filters} />

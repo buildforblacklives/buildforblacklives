@@ -1,44 +1,26 @@
 import Airtable from 'airtable'
 
-const mapTags = {
-  "Mobile app" : "Mobile App",
-  "Website (marketing site, interactive platform, informational site)" : "Website/Web App",
-  "Design work (flyers, graphics, posters, logo)" : "Design",
-  "Social media content (campaigns, email templates, marketing)" : "Social Media",
-  "Data (analysis, research, visualizations, storage)" : "Data",
-  "Video marketing (ads, tutorials, testimonial, editing, sfx)": "Video"
-}
-
-export const allTags = [
-  "Urgent",
-  "Mobile App",
-  "Website/Web App",
-  "Design",
-  "Social Media",
-  "Data",
-  "Video",
-  "PM"
-]
-
 export const translateAirtableRecord = (record) => {
-  const recordTags = record.get('Project Type') || [];
-
+  const allTags = {}; // TODO map pulled from new table. add PM
+    
   return {
     id: record.id,
-    isUrgent: record.get('urgent?') || false,
-    needsPM: record.get('project manager?') || false,
-    orgAbout: record.get('Org Description'),
-    orgEmail: record.get('Email'),
-    orgName: record.get('Organization Name'),
     projectTitle: record.get('Project Title'),
-    projectAbout: record.get('Project desc'),
-    projectDeadline: record.get('Due date'),
-    projectUpdates: record.get('Project Updates'),
-    tags: recordTags.map((tag) => mapTags[tag]),
-    orgSocial: record.get('Org website/social media account'),
-    screenshots: record.get('Screenshots') || [],
-    redirectLink: record.get('Project Update Links'),
-    pmEmail: record.get('PM Email')
+    projectDesc: record.get('Project Description'),
+    projectTypes: record.get('Project Types') || [], // FIXME may need to parse reference to get only one column from new table
+    requestedTeamSize: record.get('Requested Team Size'),
+    orgName: record.get('Organization Name'),
+    addressedAs: record.get('Addressed As'),
+    orgDesc: record.get('Organization Description'),
+    orgEmail: record.get('Email'),
+    pmWanted: record.get('PM Wanted') || false,
+    pmName: record.get('PM Name'),
+    pmEmail: record.get('PM Email'),
+    numVolunteers: record.get('Number of Volunteers'),
+    oldLink: record.get('Site/Social Link'),
+    newLink: record.get('Updated Links'),
+    highlights: record.get('Highlights'),
+    screenshots: record.get('Screenshots') || []
   };
 };
 
@@ -53,14 +35,13 @@ export const fetchOpenProjects = (doOnSuccess) => {
   const base = new Airtable({ apiKey: process.env.REACT_APP_AIRTABLE_KEY }).base('appBzqG0sB4hqtE0I');
   let airtableRecords = [];
 
-  base('Design projects')
+  base('Projects')
     .select({
-      view: 'Approved Projects'
+      view: 'Approved'
     })
     .eachPage(
       async (records, fetchNextPage) => {
         airtableRecords = records.map((record) => translateAirtableRecord(record));
-        airtableRecords = airtableRecords.sort((projA, projB) => projA.isUrgent && !projB.isUrgent ? -1 : 0)
         doOnSuccess(airtableRecords)
         fetchNextPage();
       },

@@ -63,13 +63,13 @@ const MatchedProjects = () => {
       </p>
       {projects.map((data) => {
         console.log(data);
-        const { screenshots, orgName, projectUpdates, redirectLink } = data;
+        const { screenshots, orgName, projectUpdates, newLink } = data;
         return (
           <MatchedProjectEntry
             images={screenshots}
             companyName={orgName}
             description={projectUpdates}
-            link={redirectLink}
+            link={newLink}
           />
         );
       })}

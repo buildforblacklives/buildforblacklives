@@ -10,7 +10,7 @@ import { createProjects } from '../state/projects';
 const { Body, Subtitle } = Card;
 
 const SelectedCard = ({ project }) => {
-  const { id, orgName, orgAbout, projectTitle, projectAbout, projectDeadline, isUrgent, needsPM, tags, orgSocial } = project;
+  const { id, projectTitle, projectDesc, projectTypes, orgName, orgDesc, pmWanted, oldLink } = project;
 
   return (
     <Card className="project-description-card">
@@ -20,21 +20,14 @@ const SelectedCard = ({ project }) => {
         </LinkContainer>
         <h4> {projectTitle}</h4>
         <Subtitle className="mb-2 project-description-subtitle">{orgName}</Subtitle>
-        <ProjectTags isUrgent={isUrgent} needsPM={needsPM} tags={tags} />
-
-        {projectDeadline && (
-          <>
-            <h5 className="pt-3"> Project Deadline</h5>
-            <p className="card-text">{projectDeadline}</p>
-          </>
-        )}
+        <ProjectTags pmWanted={pmWanted} projectTypes={projectTypes} />
 
         <h5 className="pt-3"> About {orgName} </h5>
-        {orgSocial && <p dangerouslySetInnerHTML={{ __html: formatUrlsInString(orgSocial) }} />}
-        <p>{orgAbout}</p>
+        {oldLink && <p dangerouslySetInnerHTML={{ __html: formatUrlsInString(oldLink) }} />}
+        <p>{orgDesc}</p>
 
         <h5 className="pt-3"> About the Project </h5>
-        <p>{projectAbout}</p>
+        <p>{projectDesc}</p>
 
         <hr/>
         <p className="project-description-note">
