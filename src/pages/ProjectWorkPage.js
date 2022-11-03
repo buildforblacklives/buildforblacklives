@@ -25,7 +25,7 @@ const ProjectWorkPage = ({ match }) => {
     const fetchProject = async () => {
       const base = new Airtable({ apiKey: process.env.REACT_APP_AIRTABLE_KEY }).base('appBzqG0sB4hqtE0I');
 
-      base('Design projects').find(projectId, (err, record) => {
+      base('Projects').find(projectId, (err, record) => {
         if (err) {
           console.error(err);
           setHasLoaded(true);

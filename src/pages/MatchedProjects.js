@@ -21,9 +21,9 @@ const MatchedProjects = () => {
       const base = new Airtable({ apiKey: process.env.REACT_APP_AIRTABLE_KEY }).base('appBzqG0sB4hqtE0I');
       let airtableRecords = [];
 
-      base('Design projects')
+      base('Projects')
         .select({
-          view: 'Matched Projects'
+          view: 'Matched'
         })
         .eachPage(
           async (records, fetchNextPage) => {
