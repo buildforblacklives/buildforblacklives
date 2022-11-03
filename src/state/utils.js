@@ -1,26 +1,51 @@
 import Airtable from 'airtable'
 
-export const translateAirtableRecord = (record) => {
-  const allTags = {}; // TODO map pulled from new table. add PM
+const base = new Airtable({ apiKey: process.env.REACT_APP_AIRTABLE_KEY }).base('appBzqG0sB4hqtE0I');
+
+export const allTags = fetchTags();
+
+export const mapTag = (type) => {
+  return {
+    tag: type.get('Name'),
+    description: type.get('Description'),
+    formatted: type.get('Formatted')
+  };
+};
+
+export const translateAirtableRecord = (project) => {
+  const projectTags = project.get('Project Type') || []
+
+  function getScreenshotURLs(folder, files) {
+    if (files == "") {
+      return []
+    }
+    fileNames = files.split(",")
+    urls = []
+    const path = "https://raw.githubusercontent.com/buildforblacklives/buildforblacklives/assets/project_highlights/".concat(folder)
+    fileNames.array.forEach(file => {
+      urls.push(path.concat(file.trim()))
+    });
+    return urls;
+  }
     
   return {
-    id: record.id,
-    projectTitle: record.get('Project Title'),
-    projectDesc: record.get('Project Description'),
-    projectTypes: record.get('Project Types') || [], // FIXME may need to parse reference to get only one column from new table
-    requestedTeamSize: record.get('Requested Team Size'),
-    orgName: record.get('Organization Name'),
-    addressedAs: record.get('Addressed As'),
-    orgDesc: record.get('Organization Description'),
-    orgEmail: record.get('Email'),
-    pmWanted: record.get('PM Wanted') || false,
-    pmName: record.get('PM Name'),
-    pmEmail: record.get('PM Email'),
-    numVolunteers: record.get('Number of Volunteers'),
-    oldLink: record.get('Site/Social Link'),
-    newLink: record.get('Updated Links'),
-    highlights: record.get('Highlights'),
-    screenshots: record.get('Screenshots') || []
+    id: project.id,
+    projectTitle: project.get('Project Title'),
+    projectDesc: project.get('Project Description'),
+    projectTypes: projectTags.map((tag) => allTags[tag]), // FIXME may need to parse reference to get only one column from new table
+    requestedTeamSize: project.get('Requested Team Size'),
+    orgName: project.get('Organization Name'),
+    addressedAs: project.get('Addressed As'),
+    orgDesc: project.get('Organization Description'),
+    orgEmail: project.get('Email'),
+    pmWanted: project.get('PM Wanted') || false,
+    pmName: project.get('PM Name'),
+    pmEmail: project.get('PM Email'),
+    numVolunteers: project.get('Number of Volunteers'),
+    oldLink: project.get('Site/Social Link'),
+    newLink: project.get('Highlight Links'),
+    highlights: project.get('Highlights'),
+    screenshots: getScreenshotURLs(project.get('Asset Folder'), project.get('Screenshots')) || []
   };
 };
 
@@ -31,8 +56,31 @@ export const formatUrlsInString = (str) => {
   )
 }
 
+export const fetchTags = () => {
+  let tags = [];
+  tagMap = {}
+
+  base('Tags')
+    .select({
+      view: 'All Tags'
+    })
+    .eachPage(
+      async (records, fetchNextPage) => {
+        tags = records.map((record) => mapTag(record));
+        tags.forEach((tag) => tagMap.set(tag.formatted, tag);
+        fetchNextPage();
+      },
+      (err) => {
+        if (err) {
+          console.error(err);
+          return;
+        }
+      }
+    );
+  return tagMap;
+}
+
 export const fetchOpenProjects = (doOnSuccess) => {
-  const base = new Airtable({ apiKey: process.env.REACT_APP_AIRTABLE_KEY }).base('appBzqG0sB4hqtE0I');
   let airtableRecords = [];
 
   base('Projects')
@@ -40,8 +88,8 @@ export const fetchOpenProjects = (doOnSuccess) => {
       view: 'Approved'
     })
     .eachPage(
-      async (records, fetchNextPage) => {
-        airtableRecords = records.map((record) => translateAirtableRecord(record));
+      async (projects, fetchNextPage) => {
+        airtableRecords = projects.map((project) => translateAirtableRecord(project));
         doOnSuccess(airtableRecords)
         fetchNextPage();
       },
