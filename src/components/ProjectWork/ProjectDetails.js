@@ -3,7 +3,7 @@ import ProjectTags from '../ProjectTags'
 import { formatUrlsInString } from '../../state/utils'
 
 const ProjectDetails = ({ project }) => {
-  const { projectTitle, projectDesc, orgName, orgDesc, projectTypes, oldLink } = project
+  const { projectTitle, projectDesc, orgName, orgDesc, projectTypes, pmWanted, oldLink } = project
 
   return (
     <div className="project-details-section">
@@ -13,7 +13,7 @@ const ProjectDetails = ({ project }) => {
       </div>
       <div className="info-container">
         <h5>Project Type</h5>
-        <ProjectTags projectTypes={projectTypes} />
+        <ProjectTags projectTypes={projectTypes} pmWanted={pmWanted} />
       </div>
       <div className="info-container">
         <h5>About {orgName}</h5>
