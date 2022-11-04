@@ -1,10 +1,10 @@
 import React from 'react'
 import * as constants from '../data/constants'
 
-const ProjectTags = ({ tags, pmWanted, selectedStatus={} }) => (
+const ProjectTags = ({ projectTypes, pmWanted, selectedStatus={} }) => (
   <>
     <div>
-      {tags.map(tag => (
+      {projectTypes.map(tag => (
         <span key={tag} className={`project-tag ${selectedStatus[tag] ? 'project-tag-selected' : ''}`}>{tag}</span>
       ))}
       {pmWanted &&
