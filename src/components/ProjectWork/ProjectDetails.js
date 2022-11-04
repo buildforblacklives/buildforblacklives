@@ -13,7 +13,7 @@ const ProjectDetails = ({ project }) => {
       </div>
       <div className="info-container">
         <h5>Project Type</h5>
-        <ProjectTags projectTypes={projectTypes} /> // TODO verify PM tag is visible on selected view
+        <ProjectTags projectTypes={projectTypes} />
       </div>
       <div className="info-container">
         <h5>About {orgName}</h5>

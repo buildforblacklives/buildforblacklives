@@ -29,7 +29,7 @@ const ProjectCard = ({ project, isSelectedView, selected, tagSelectedStatus={} }
             <div className="project-card-tags">
               <ProjectTags
                 pmWanted={pmWanted}
-                projectTypes={projectTypes}
+                tags={projectTypes}
                 selectedStatus={tagSelectedStatus}
               />
             </div>

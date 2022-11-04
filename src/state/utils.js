@@ -2,25 +2,49 @@ import Airtable from 'airtable'
 
 const base = new Airtable({ apiKey: process.env.REACT_APP_AIRTABLE_KEY }).base('appBzqG0sB4hqtE0I');
 
+export const fetchTags = () => {
+  let tags = [];
+  var tagMap = new Map();
+
+  base('Tags')
+    .select({
+      view: 'All Tags'
+    })
+    .eachPage(
+      async (records, fetchNextPage) => {
+        tags = records.map((record) => mapTag(record));
+        tags.forEach((tag) => tagMap.set(tag.formatted, tag));
+        fetchNextPage();
+      },
+      (err) => {
+        if (err) {
+          console.error(err);
+          return;
+        }
+      }
+    );
+  return tagMap;
+};
+
 export const allTags = fetchTags();
 
 export const mapTag = (type) => {
   return {
-    tag: type.get('Name'),
+    tag: type.get('Tag'),
     description: type.get('Description'),
     formatted: type.get('Formatted')
   };
 };
 
 export const translateAirtableRecord = (project) => {
-  const projectTags = project.get('Project Type') || []
+  const projectTags = project.get('Project Types') || []
 
   function getScreenshotURLs(folder, files) {
-    if (files == "") {
+    if (files === undefined || files === "") {
       return []
     }
-    fileNames = files.split(",")
-    urls = []
+    let fileNames = files.split(",")
+    let urls = []
     const path = "https://raw.githubusercontent.com/buildforblacklives/buildforblacklives/assets/project_highlights/".concat(folder)
     fileNames.array.forEach(file => {
       urls.push(path.concat(file.trim()))
@@ -32,7 +56,7 @@ export const translateAirtableRecord = (project) => {
     id: project.id,
     projectTitle: project.get('Project Title'),
     projectDesc: project.get('Project Description'),
-    projectTypes: projectTags.map((tag) => allTags[tag]), // FIXME may need to parse reference to get only one column from new table
+    projectTypes: projectTags.map((item) => allTags.get(item).tag),
     requestedTeamSize: project.get('Requested Team Size'),
     orgName: project.get('Organization Name'),
     addressedAs: project.get('Addressed As'),
@@ -54,30 +78,6 @@ export const formatUrlsInString = (str) => {
   return str.replace(urlRegex, (url) =>
     `<a href="${url.startsWith('http') ? '' : 'https://'}${url}" target="__blank">${url}</a>`
   )
-}
-
-export const fetchTags = () => {
-  let tags = [];
-  tagMap = {}
-
-  base('Tags')
-    .select({
-      view: 'All Tags'
-    })
-    .eachPage(
-      async (records, fetchNextPage) => {
-        tags = records.map((record) => mapTag(record));
-        tags.forEach((tag) => tagMap.set(tag.formatted, tag);
-        fetchNextPage();
-      },
-      (err) => {
-        if (err) {
-          console.error(err);
-          return;
-        }
-      }
-    );
-  return tagMap;
 }
 
 export const fetchOpenProjects = (doOnSuccess) => {

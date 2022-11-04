@@ -1,4 +1,5 @@
 import React from 'react'
+import * as constants from '../data/constants'
 
 const ProjectTags = ({ tags, pmWanted, selectedStatus={} }) => (
   <>
@@ -8,8 +9,8 @@ const ProjectTags = ({ tags, pmWanted, selectedStatus={} }) => (
       ))}
       {pmWanted &&
        <span
-        className={`project-tag ${selectedStatus['PM'] ? 'project-tag-selected' : ''}`}> // FIXME creaate constant "PM" from allTags
-          PM // TODO use constant here as well
+        className={`project-tag ${selectedStatus[constants.PM] ? 'project-tag-selected' : ''}`}>
+          {constants.PM}
         </span>
       }
     </div>
