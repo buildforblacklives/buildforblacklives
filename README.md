@@ -1,5 +1,5 @@
 ## Instructions for working on Build for Black Lives repo: 
-- Main branch: production-ready site that gets deployed. Merging should only happen from development to master.
+- Main branch: production-ready site that gets deployed. Merging should only happen from development to main.
 - Development branch: branch for developers to merge in their features as they are completed. PR should be made from feature branch to `dev`.
 - Feature branches: Each developer should make a new branch for their work from the development branch in the following format: `cari-feature-name`. Make a pull request into develop after your work has been completed. Please note that new experimental changes to your code should not be made when a PR is open.
 
