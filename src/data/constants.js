@@ -20,3 +20,5 @@ export const FACEBOOK_GROUP = "https://www.facebook.com/groups/buildforblacklive
 export const LINKEDIN = "https://www.linkedin.com/company/build-for-black-lives";
 export const INSTAGRAM = "https://www.instagram.com/buildforblacklives";
 export const TWITTER = "https://twitter.com/bld4blacklives";
+
+export const PM = "PM";

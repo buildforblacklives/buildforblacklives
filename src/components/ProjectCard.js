@@ -6,7 +6,7 @@ import ProjectTags from '../components/ProjectTags'
 const { Body, Subtitle } = Card;
 
 const ProjectCard = ({ project, isSelectedView, selected, tagSelectedStatus={} }) => {
-  const { id, projectTitle, orgName, isUrgent, needsPM, tags } = project;
+  const { id, projectTitle, orgName, pmWanted, projectTypes } = project;
   const getClass = () => {
     let className = 'preview-card';
     if (isSelectedView) {
@@ -28,9 +28,8 @@ const ProjectCard = ({ project, isSelectedView, selected, tagSelectedStatus={} }
             <Subtitle className="mb-2 preview-subtitle">{orgName}</Subtitle>
             <div className="project-card-tags">
               <ProjectTags
-                isUrgent={isUrgent}
-                needsPM={needsPM}
-                tags={tags}
+                pmWanted={pmWanted}
+                projectTypes={projectTypes}
                 selectedStatus={tagSelectedStatus}
               />
             </div>

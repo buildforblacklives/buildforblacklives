@@ -15,8 +15,8 @@ const FilterBar = ({updateFilters, clearFilters, filters}) => (
   <div className="projects-filter-bar">
     <div>
       <span>Filter: </span>
-      {allTags.map(tag => (
-        <span key={tag} className={`project-filter-tag ${filters[tag] ? 'project-filter-tag-selected' : ''} project-tag`} onClick={() => updateFilters(tag)}>{tag}</span>
+      {Array.from(allTags.values()).map(item => (
+        <span key={item.tag} className={`project-filter-tag ${filters[item.tag] ? 'project-filter-tag-selected' : ''} project-tag`} onClick={() => updateFilters(item.tag)}>{item.tag}</span>
       ))}
     </div>
     <span className="project-filter-clear" onClick={clearFilters}>Clear all</span>
@@ -28,7 +28,7 @@ const ProjectsPage = () => {
 
   const getDefaultFilters = () => {
     const defaultFilters = {}
-    allTags.forEach((tag) => defaultFilters[tag] = false)
+    Array.from(allTags.values()).forEach((item) => defaultFilters[item.tag] = false)
     return defaultFilters
   }
 
@@ -60,15 +60,13 @@ const ProjectsPage = () => {
     setFilters(defaultFilters)
   }
 
-  const shouldShowProject = (isUrgent, needsPM, projectTags) => {
+  const shouldShowProject = (pmWanted, projectTypes) => {
     if (Object.values(filters).every((val) => !val)) {
       return true
-    } else if (isUrgent && filters["Urgent"]) {
-      return true
-    } else if (needsPM && filters["PM"]) {
+    } else if (pmWanted && filters[constants.PM]) {
       return true
     }
-    return projectTags.some((tag) => filters[tag])
+    return projectTypes.some((tag) => filters[tag])
   }
 
   if (hasLoaded && projects.length === 0) {
@@ -89,7 +87,7 @@ const ProjectsPage = () => {
           <FilterBar updateFilters={updateFilters} clearFilters={clearFilters} filters={filters} />
           <Row className="d-flex justify-content-left">
             {projects.map((project) => (
-              shouldShowProject(project.isUrgent, project.needsPM, project.tags) &&
+              shouldShowProject(project.pmWanted, project.projectTypes) &&
               (
                 <Col key={project.id} lg={4} md={6} sm={12}>
                   <ProjectCard project={project} isSelectedView={false} tagSelectedStatus={filters} />

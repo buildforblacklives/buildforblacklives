@@ -89,16 +89,6 @@
   background-color: var(--light-yellow);
 }
 
-.project-tag-urgent {
-  border: 2px solid var(--main-blue);
-  color: var(--main-blue);
-}
-
-.project-tag-urgent.project-tag-urgent-selected {
-  color: var(--main-black);
-  background-color: var(--main-blue);
-}
-
 .project-card-tags {
   margin-top: 16px;
 }
@@ -114,7 +104,7 @@
   color: var(--dark-blue);
 }
 
-.preview-card:not(.is-select-preview-card):hover .project-card-urgent {
+.preview-card:not(.is-select-preview-card):hover {
   border: 2px solid var(--dark-blue);
   color: var(--dark-blue);
 }
@@ -231,7 +221,7 @@
   color: var(--main-cream);
 }
 
-.is-select-preview-card .project-card-urgent {
+.is-select-preview-card {
   border: 2px solid var(--main-black);
   color: var(--main-black);
 }

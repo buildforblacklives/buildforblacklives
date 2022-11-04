@@ -1,44 +1,75 @@
 import Airtable from 'airtable'
 
-const mapTags = {
-  "Mobile app" : "Mobile App",
-  "Website (marketing site, interactive platform, informational site)" : "Website/Web App",
-  "Design work (flyers, graphics, posters, logo)" : "Design",
-  "Social media content (campaigns, email templates, marketing)" : "Social Media",
-  "Data (analysis, research, visualizations, storage)" : "Data",
-  "Video marketing (ads, tutorials, testimonial, editing, sfx)": "Video"
-}
+const base = new Airtable({ apiKey: process.env.REACT_APP_AIRTABLE_KEY }).base('appBzqG0sB4hqtE0I');
 
-export const allTags = [
-  "Urgent",
-  "Mobile App",
-  "Website/Web App",
-  "Design",
-  "Social Media",
-  "Data",
-  "Video",
-  "PM"
-]
+export const fetchTags = () => {
+  let tags = [];
+  var tagMap = new Map();
 
-export const translateAirtableRecord = (record) => {
-  const recordTags = record.get('Project Type') || [];
+  base('Tags')
+    .select({
+      view: 'All Tags'
+    })
+    .eachPage(
+      async (records, fetchNextPage) => {
+        tags = records.map((record) => mapTag(record));
+        tags.forEach((tag) => tagMap.set(tag.formatted, tag));
+        fetchNextPage();
+      },
+      (err) => {
+        if (err) {
+          console.error(err);
+          return;
+        }
+      }
+    );
+  return tagMap;
+};
 
+export const allTags = fetchTags();
+
+export const mapTag = (type) => {
   return {
-    id: record.id,
-    isUrgent: record.get('urgent?') || false,
-    needsPM: record.get('project manager?') || false,
-    orgAbout: record.get('Org Description'),
-    orgEmail: record.get('Email'),
-    orgName: record.get('Organization Name'),
-    projectTitle: record.get('Project Title'),
-    projectAbout: record.get('Project desc'),
-    projectDeadline: record.get('Due date'),
-    projectUpdates: record.get('Project Updates'),
-    tags: recordTags.map((tag) => mapTags[tag]),
-    orgSocial: record.get('Org website/social media account'),
-    screenshots: record.get('Screenshots') || [],
-    redirectLink: record.get('Project Update Links'),
-    pmEmail: record.get('PM Email')
+    tag: type.get('Tag'),
+    description: type.get('Description'),
+    formatted: type.get('Formatted')
+  };
+};
+
+export const translateAirtableRecord = (project) => {
+  const projectTags = project.get('Project Types') || []
+
+  function getScreenshotURLs(folder, files) {
+    if (files === undefined || files === "") {
+      return []
+    }
+    var fileNames = Array.from(files.split(","))
+    var urls = []
+    const path = "https://raw.githubusercontent.com/buildforblacklives/buildforblacklives/assets/project_highlights/".concat(folder).concat("/")
+    fileNames.forEach((file) => {
+      urls.push(path.concat(file.trim()))
+    });
+    return urls;
+  }
+    
+  return {
+    id: project.id,
+    projectTitle: project.get('Project Title'),
+    projectDesc: project.get('Project Description'),
+    projectTypes: projectTags.map((item) => allTags.get(item).tag),
+    requestedTeamSize: project.get('Requested Team Size'),
+    orgName: project.get('Organization Name'),
+    addressedAs: project.get('Addressed As'),
+    orgDesc: project.get('Organization Description'),
+    orgEmail: project.get('Email'),
+    pmWanted: project.get('PM Wanted') || false,
+    pmName: project.get('PM Name'),
+    pmEmail: project.get('PM Email'),
+    numVolunteers: project.get('Number of Volunteers'),
+    oldLink: project.get('Site/Social Link'),
+    newLink: project.get('Highlight Links'),
+    highlights: project.get('Highlights'),
+    screenshots: getScreenshotURLs(project.get('Asset Folder'), project.get('Screenshots')) || []
   };
 };
 
@@ -50,17 +81,15 @@ export const formatUrlsInString = (str) => {
 }
 
 export const fetchOpenProjects = (doOnSuccess) => {
-  const base = new Airtable({ apiKey: process.env.REACT_APP_AIRTABLE_KEY }).base('appBzqG0sB4hqtE0I');
   let airtableRecords = [];
 
-  base('Design projects')
+  base('Projects')
     .select({
-      view: 'Approved Projects'
+      view: 'Approved'
     })
     .eachPage(
-      async (records, fetchNextPage) => {
-        airtableRecords = records.map((record) => translateAirtableRecord(record));
-        airtableRecords = airtableRecords.sort((projA, projB) => projA.isUrgent && !projB.isUrgent ? -1 : 0)
+      async (projects, fetchNextPage) => {
+        airtableRecords = projects.map((project) => translateAirtableRecord(project));
         doOnSuccess(airtableRecords)
         fetchNextPage();
       },
