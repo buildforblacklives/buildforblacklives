@@ -43,10 +43,10 @@ export const translateAirtableRecord = (project) => {
     if (files === undefined || files === "") {
       return []
     }
-    let fileNames = files.split(",")
-    let urls = []
-    const path = "https://raw.githubusercontent.com/buildforblacklives/buildforblacklives/assets/project_highlights/".concat(folder)
-    fileNames.array.forEach(file => {
+    var fileNames = Array.from(files.split(","))
+    var urls = []
+    const path = "https://raw.githubusercontent.com/buildforblacklives/buildforblacklives/assets/project_highlights/".concat(folder).concat("/")
+    fileNames.forEach((file) => {
       urls.push(path.concat(file.trim()))
     });
     return urls;

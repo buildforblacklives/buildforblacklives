@@ -62,13 +62,12 @@ const MatchedProjects = () => {
         volunteers have done!
       </p>
       {projects.map((data) => {
-        console.log(data);
-        const { screenshots, orgName, projectUpdates, newLink } = data;
+        const { screenshots, orgName, highlights, newLink } = data;
         return (
           <MatchedProjectEntry
             images={screenshots}
-            companyName={orgName}
-            description={projectUpdates}
+            orgName={orgName}
+            description={highlights}
             link={newLink}
           />
         );

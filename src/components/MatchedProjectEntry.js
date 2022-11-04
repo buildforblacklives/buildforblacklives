@@ -4,15 +4,15 @@ import { Row, Col } from 'react-bootstrap';
 import { ControlledCarousel } from './ControlledCarousel';
 
 const MatchedProjectEntry = (props) => {
-  const { images, companyName, description, link } = props;
+  const { images, orgName, description, link } = props;
   return (
     <Row className="matched-projects-row">
       <Col xs={12} md={4}>
         <>
-          <h5 className="text-center">{companyName}</h5>
+          <h5 className="text-center">{orgName}</h5>
           <p className="text-justify"> {description}</p>
           <a className="matched-projects-learn-more" href={link}>
-            Learn More >
+            Learn More {'>'}
           </a>
         </>
       </Col>
