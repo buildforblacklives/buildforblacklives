@@ -1,12 +1,9 @@
 ## Instructions for working on Build for Black Lives repo: 
-- Master branch: production-ready site that gets deployed. Merging should only happen from development to master.
+- Main branch: production-ready site that gets deployed. Merging should only happen from development to master.
 - Development branch: branch for developers to merge in their features as they are completed. PR should be made from feature branch to `dev`.
 - Feature branches: Each developer should make a new branch for their work from the development branch in the following format: `cari-feature-name`. Make a pull request into develop after your work has been completed. Please note that new experimental changes to your code should not be made when a PR is open.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## External contributions
-If you are interested in contributing to this website, thank you! Please see [the contributing file](./CONTRIBUTING.md) for more details.
 
 ## Shared styles
 The `h1, h2, h3, h4, h5 and p` tags match the character styles from ther [XD designs](https://xd.adobe.com/view/cfe9fc7e-8850-42aa-a713-de8009844536-9aba/) and for the most part should be the only ones used without needing additional custom styling.

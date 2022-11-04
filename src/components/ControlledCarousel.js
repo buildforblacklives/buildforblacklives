@@ -19,15 +19,10 @@ const ControlledCarousel = (props) => {
       nextIcon={<span aria-hidden="true" className="carousel-control-next-icon" />}
       interval={null}
     >
-      {images.map((image, key) => {
-        const {
-          thumbnails: {
-            full: { url }
-          }
-        } = image;
+      {images.map((image) => {
         return (
           <Carousel.Item style={{textAlign: 'center'}}>
-            <Image alt={`Image ${key}`} src={url} fluid />
+            <Image src={image} fluid />
           </Carousel.Item>
         );
       })}
