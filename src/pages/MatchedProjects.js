@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Container, NavLink } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import Airtable from 'airtable';
+import { AIRTABLE_BASE } from '../data/constants';
 import { translateAirtableRecord } from '../state/utils';
 import { createMatchedProjects } from '../state/projects';
 
@@ -18,7 +19,7 @@ const MatchedProjects = () => {
 
   useEffect(() => {
     const fetchProjects = async () => {
-      const base = new Airtable({ apiKey: process.env.REACT_APP_AIRTABLE_KEY }).base('appBzqG0sB4hqtE0I');
+      const base = new Airtable({ apiKey: process.env.REACT_APP_AIRTABLE_PERSONAL_ACCESS_TOKEN }).base(AIRTABLE_BASE);
       let airtableRecords = [];
 
       base('Projects')

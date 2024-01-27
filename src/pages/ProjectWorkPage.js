@@ -23,7 +23,7 @@ const ProjectWorkPage = ({ match }) => {
 
   useEffect(() => {
     const fetchProject = async () => {
-      const base = new Airtable({ apiKey: process.env.REACT_APP_AIRTABLE_KEY }).base('appBzqG0sB4hqtE0I');
+      const base = new Airtable({ apiKey: process.env.REACT_APP_AIRTABLE_PERSONAL_ACCESS_TOKEN }).base(constants.AIRTABLE_BASE);
 
       base('Projects').find(projectId, (err, record) => {
         if (err) {
