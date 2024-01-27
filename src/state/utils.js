@@ -1,6 +1,7 @@
 import Airtable from 'airtable'
+import { AIRTABLE_BASE } from '../data/constants';
 
-const base = new Airtable({ apiKey: process.env.REACT_APP_AIRTABLE_KEY }).base('appBzqG0sB4hqtE0I');
+const base = new Airtable({ apiKey: process.env.REACT_APP_AIRTABLE_PERSONAL_ACCESS_TOKEN }).base(AIRTABLE_BASE);
 
 export const fetchTags = () => {
   let tags = [];

@@ -1,3 +1,5 @@
+export const AIRTABLE_BASE = "appBzqG0sB4hqtE0I";
+
 export const EMAIL = "contact@buildforblacklives.com";
 export const EMAIL_MAILTO = "mailto:" + EMAIL;
 
